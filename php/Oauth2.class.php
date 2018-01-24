@@ -106,3 +106,28 @@ class Oauth2
  	}
  	
 }
+
+//code 微信接口参数(必须)
+$code = @$_GET['code'];
+//state微信接口参数(不需传参则不用), 若传参可考虑规则: 'act'.'arg1'.'add'.'arg2'
+$state = @$_GET['state'];
+
+$appid = '';
+$secret = '';
+$redirect_url = '';
+
+$oauth = new Oauth2();
+$oauth->init($appid, $secret, $redirect_url);
+
+if ( empty($code) )
+{
+    //获取code, 会重定向到当前页. 若需传参, 使用$state变量传参
+    $oauth->get_code_by_authorize($state);
+    //$oauth->get_code($state); //将会重定向到生成code的页面, 仅当需要获取openid时执行该操作
+}
+$data = $oauth->get_userinfo_by_authorize();
+$openid = $oauth->get_openid();
+
+echo '</br>welcome test!';
+echo '</br>nickname: '.$data['nickname'];
+echo '</br>headimgurl: '.$data['headimgurl'];
