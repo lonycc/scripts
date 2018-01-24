@@ -281,3 +281,71 @@ try {
 } catch (Exception $e) {
     echo $e->getMessage();
 }
+
+// 实现IteratorAggregate接口
+class myData implements IteratorAggregate {
+    public $property1 = "Public property one";
+    public $property2 = "Public property two";
+    public $property3 = "Public property three";
+
+    public function __construct() {
+        $this->property4 = "last property";
+    }
+
+    public function getIterator() {
+        return new ArrayIterator($this);
+    }
+}
+
+$obj = new myData;
+
+foreach($obj as $key => $value) {
+    var_dump($value);
+    echo "\n";
+}
+
+// 自定义迭代器, 需要实现Iterator接口的final方法
+class myIterator implements Iterator {
+    private $position = 0;
+    private $array = array(
+        "firstelement",
+        "secondelement",
+        "lastelement",
+    );  
+
+    public function __construct() {
+        $this->position = 0;
+    }
+
+    function rewind() {
+        var_dump(__METHOD__);
+        $this->position = 0;
+    }
+
+    function current() {
+        var_dump(__METHOD__);
+        return $this->array[$this->position];
+    }
+
+    function key() {
+        var_dump(__METHOD__);
+        return $this->position;
+    }
+
+    function next() {
+        var_dump(__METHOD__);
+        ++$this->position;
+    }
+
+    function valid() {
+        var_dump(__METHOD__);
+        return isset($this->array[$this->position]);
+    }
+}
+
+$it = new myIterator;
+
+foreach($it as $key => $value) {
+    var_dump($key, $value);
+    echo "\n";
+}
