@@ -71,7 +71,7 @@ function obj(a,b){
 
 function name(obj){alert(obj);}
 name("wang");  //自调用
-var test = new name("xuyl"); //实例化一个对象
+var test = new name("zhang"); //实例化一个对象
 test();
 console.log(typeof name);  //function
 console.log(typeof test);  //object
