@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>baidu suggest</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <form id="search-form" action="/search" method="get">
+        <input type="text" id="search" name="q" autocomplete="off" placeholder="" />
+        <input type="submit" id="btnSearch" value="Search" class="blue" />
+    </form>
+    <script charset="gbk" type="text/javascript" src="//www.baidu.com/js/opensug.js"></script>
+    <script>
+    var params = { "XOffset": 0, "YOffset": 0, "fontColor": "#444", "fontColorHI": "#000", "fontSize": "16px", "fontFamily": "arial", "borderColor": "gray", "bgcolorHI": "#ebebeb", "sugSubmit": false };
+    BaiduSuggestion.bind("search", params);
+    </script>
+</body>
+
+</html>
