@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # coding=utf-8
 
-
 # n个点最多把线分成几段
 def A(n):
 	return n+1
@@ -795,3 +794,85 @@ def entropy(rows: list) -> float:
         p = float(r) / rows_len
         ent -= p * math.log2(p)
     return ent
+
+#---------------------------------------------------------------------------------------------
+# 邮件发送
+
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+
+sender = 'sender@domain.com'
+receiver = ['fun@fun.com','demo@demo.com']
+subject = 'python email test'
+smtpserver = 'smtp.domain.com'
+username = 'sender@domain.com'
+password = 'password'
+
+# 1. 普通文本
+msg = MIMEText(u'你好','plain','utf-8')
+msg['Subject'] = Header(subject, 'utf-8')
+
+# 2. 可以发送html文本
+# msg = MIMEText(u'''<pre><h1>你好</h1></pre>''','html','utf-8')
+# msg['Subject'] = subject
+
+
+# 3. 可以带附件
+'''
+binary_str = '''<b> Some <i> HTML </i> text </b > and an image.<img alt="" src="cid:image1"/>good!'''
+msg = MIMEMultipart('related')
+msg['Subject'] = subject
+
+msgText = MIMEText(binary_str, 'html', 'utf-8')
+msg.attach(msgText)
+
+fp = open('F:\\work\\mail.png', 'rb')
+msgImage = MIMEImage(fp.read())
+fp.close()
+
+msgImage.add_header('Content-ID', '<image1>')
+msg.attach(msgImage)
+'''
+
+smtp = smtplib.SMTP()
+smtp.connect(smtpserver)
+smtp.login(username, password)
+smtp.sendmail(sender, receiver, msg.as_string())
+smtp.quit()
+
+#---------------------------------------------------------------------------------------------
+'''
+deferToThread把同步函数变为异步(返回一个Deferred), 也返回一个deferred对象
+不过回调函数在另一个线程处理,主要用于数据库/文件读取操作
+deferToThread使用线程实现的, 考虑到线程死锁等问题, 不推荐过多使用
+'''
+
+from twisted.internet import defer, reactor
+from twisted.internet.threads import deferToThread
+
+import functools
+import time
+
+# 耗时操作 这是一个同步阻塞函数
+def mySleep(timeout):
+    time.sleep(timeout)
+    # 返回值相当于加进了callback里
+    return 3
+
+def say(result):
+    print('耗时操作结束了, 并把它返回的结果给我了', result)
+
+# 用functools.partial包装一下, 传递参数进去
+cb = functools.partial(mySleep, 3)
+d = deferToThread(cb) 
+d.addCallback(say)
+
+print('你还没有结束我就执行了, 哈哈')
+
+reactor.run()
+
+#---------------------------------------------------------------------------------------------
+
