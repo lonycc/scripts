@@ -369,3 +369,35 @@ alert(p1.Say == p2.Say);  //true
 ```
 
 `'<pre style="white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;">'+content.innerHTML + '</pre>'` #文本预定义格式
+
+# chrome extensions
+
+## 1、chrome扩展文件
+`.crx`文件，其实是一个压缩文件，可以用压缩软件打开。而打开以后，文件目录类似web应用。
+
+## 2、Browser Actions 
+也就是扩展安装后，在工具栏的显示图标。在manifest.json文件中，将扩展图标等参数注册到Browser Actions。
+
+## 3、Page Actions
+有些chrome扩展，图标显示在地址栏内部右边，比如添加书签的扩展。与Browser Actions的区别在于, 前者并非随时都显示的，必须在特定页面中这个功能才能使用。
+
+## 4、popup弹出窗口
+popup属于Browser Actions，当点击图标时出现这个窗口，可以在里面放置任何html元素，它的宽度是自适应的。并且这个弹出窗口不会被chrome拦截。
+
+## 5、Background Pages后台页面
+这个页面不会显示，它是扩展程序的后台服务，它会一直保持运行。比如一些需要数据保存程序中，如果当前用户关闭popup，就需要Background Pages来进行相应的操作。
+
+## 6、本地存储localStorage
+`window.localStorage`，以`key/value`方式进行存储，并且`value`只能是字符串形式。如果需要使用其他数据类型，需要进行相应的转换。设置和获取`localStorage`的方法是使用`localStorage.key`，或`localStorage[key]`的形式。
+
+```
+localStorage.var1 = 'name';
+localStorage['var2'] = 'fuckoff';
+alert(localStorage.var1);
+alert(localStorage['var2']);
+localStorage.var1 = null;  //清空
+localStorage.setItem('age','25');
+var age = localStorage.getItem('age');
+localStorage.removeItem('age');
+localStorage.clear();  //清空所有
+```
