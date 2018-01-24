@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test page</title>
+</head>
+
+<body>
+    <button>点击测试ajax</button>
+    <img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" style="width:20px;border:solid 1px #999;" />
+    
+    <script>
+    // jsonp的常规写法, 动态创建script标签引入脚本
+    var url = 'http://api.k780.com/?app=finance.rate_cnyquot&curno=USD&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&jsoncallback=data';
+    var script = document.createElement('script');
+    script.setAttribute('src', url);
+    document.getElementsByTagName('head')[0].appendChild(script);
+    var data = function(data) {
+        console.log(data.success);
+    };
+
+    // ajax调用jsonp
+    $.ajax({
+        type: 'get',
+        async: false,
+        url: url,
+        dataType: 'jsonp',
+        jsonp: 'callback',
+        jsonpCallback: 'data',
+        success: function(data) {
+            if (data.success != '1') {
+                alert(data.msgid + ' ' + data.msg);
+                exit;
+            }
+            //遍历
+            var description = "";
+            for (var i in data.result) {
+                var property = data.result[i];
+                description += i + " = " + property + "\n";
+            }
+            alert(description);
+        },
+        error: function() {
+            alert('fail');
+        }
+    });
+
+    // 兼容ie8的ajax请求
+    $(function() {
+        $('button').on('click', function() {
+            var param = { appkey: '628abc', s: 'fuck' };
+            if (!$.support.cors) {
+                param = JSON.stringify(param);
+                console.log('fuck ie');
+            }
+
+            $.ajax('http://www.domain.com/api', {
+                type: 'post',
+                dataType: 'json',
+                data: param,
+                success: function(resp) {
+                    console.log(resp);
+                }
+            });
+        });
+    });
+    </script>
+    <!--<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>-->
+    <!--<script src="https://cdn.bootcss.com/jquery-ajaxtransport-xdomainrequest/1.0.4/jQuery.XDomainRequest.js"></script>-->
+    <!--统计代码-->
+    <script>
+    var _maq = _maq || [];
+    _maq.push(['_setAccount', 'testname']);
+    (function() {
+        var ma = document.createElement('script');
+        ma.type = 'text/javascript';
+        ma.async = true;
+        ma.src = ('https:' == document.location.protocol ? 'https://localhost' : 'http://localhost') + '/analysis.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ma, s);
+    })();
+    </script>
+</body>
+
+</html>
