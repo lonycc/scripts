@@ -186,9 +186,9 @@ iptables -A OUTPUT -s 192.168.1.5/24 -p icmp -j ACCEPT #允许ping 如果OUTPUT 
 iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT   #允许本机
 iptables -A INPUT -p tcp --dport 20 -j ACCEPT  #允许ftp接收
 iptables -A INPUT -p tcp --dport 21 -j ACCEPT  #允许ftp发送
-iptables -A INPUT -s 192.168.1.5 -p tcp --dport 22 -j ACCEPT  #允许来自172.23.170.51的ssh连接
+iptables -A INPUT -s 192.168.1.5 -p tcp --dport 22 -j ACCEPT  #允许来自的ssh连接
 
-iptables -A INPUT -s !192.168.1.5 -p tcp --dport 22 -j ACCEPT  #允许除172.23.170.51之外的所有ssh连接
+iptables -A INPUT -s !192.168.1.5 -p tcp --dport 22 -j ACCEPT  #允许除之外的所有ssh连接
 
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT    #允许http
 iptables -A INPUT -m state --state NEW -p udp --dport 123 -j ACCEPT    #允许ntpd
