@@ -128,6 +128,19 @@ git checkout master
 echo ---change owner---
 chown -R $WEB_USER:$WEB_USERGROUP $WEB_PATH
 
+
+# 按天切割nginx日志
+logs_path="/usr/local/nginx/logs"
+pid_path="/usr/local/nginx/logs/nginx.pid"
+mv ${logs_path}/access.log ${logs_path}/$(date -d "yesterday" +"%Y%m%d").log
+
+if [ -f ${pid_path} ]; then
+    kill -USR1 `cat ${pid_path}`
+else
+    /sbin/service nginx restart
+fi
+
+
 # 递归遍历目录
 function read_dir(){
 	for file in `ls $1`
