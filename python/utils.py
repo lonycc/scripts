@@ -875,4 +875,162 @@ print('你还没有结束我就执行了, 哈哈')
 reactor.run()
 
 #---------------------------------------------------------------------------------------------
+# pymysql 数据库连接操作
+config = {
+    'host':'127.0.0.1',
+    'port':3306,
+    'user':'root',
+    'password':'123456',
+    'db':'test',
+    'charset':'utf8mb4',
+    'cursorclass':pymysql.cursors.DictCursor,
+}
 
+conn = pymysql.connect(**config)  #数据库连接设置
+cur = conn.cursor() #数据库指针
+
+#---------------------------------------------------------------------------------------------
+# 多线程测试
+import threading
+import queue
+import time
+
+class WorkManager(object):
+    def __init__(self, work_num=100, thread_num=2):
+        self.work_queue = queue.Queue()
+        self.threads = []
+        self.__init_work_queue(work_num)
+        self.__init_thread_pool(thread_num)
+
+    def __init_thread_pool(self, thread_num):
+        for i in range(thread_num):
+            self.threads.append(Work(self.work_queue))
+
+    def __init_work_queue(self,work_num):
+        for i in range(work_num):
+            self.add_job(do_job,i)
+
+    def add_job(self,func,*args):
+        self.work_queue.put((func, list(args)))  #任务入列, Queue内部实现同步机制
+
+    def check_queue(self):
+        return self.work_queue.qsize()
+
+    def wait_all_complete(self):
+        for item in self.threads:
+            if item.isAlive():
+                item.join()
+
+class Work(threading.Thread):
+    def __init__(self, work_queue):
+        threading.Thread.__init__(self)
+        self.work_queue = work_queue
+        self.start()
+
+    def run(self):
+        while 1:
+            try:
+                do, args = self.work_queue.get(block=False) #任务异步出列
+                do(args)
+                self.work_queue.task_done()
+            except Exception as e:
+                print(e)
+                break
+
+def do_job(args):
+    print(args)
+    time.sleep(0.3)
+    print(threading.current_thread(), list(args))
+
+if __name__ == '__main__':
+    start = time.time()
+    work_manager = WorkManager(100, 20)
+    work_manager.wait_all_complete()
+    end = time.time()
+    print('cost all time: %s' % (end-start))
+
+#---------------------------------------------------------------------------------------------
+# 多进程/池
+import time
+import os
+from multiprocessing import Pool, Process
+
+def fork_child_process():
+    print('Process (%s) get started' % os.getpid())
+    pid = os.fork()
+    if pid == 0:
+    	print('I am child process (%s) and my paren is %s.' % (os.getpid() ,os.getppid()))
+    else:
+    	print('I (%s) just created a child process (%s).' % (os.getpid(), pid))
+
+def run_proc(name):
+	print('Run child process %s (%s)...' % (name, os.getpid()))
+	time.sleep(1)
+	
+def call_child_process():
+	print('Parent process %s.' % os.getpid())
+	p = Process(target=run_proc, args=('test',)) 
+	print('Child process will start.')
+	p.start()
+	p.join()  #等待子进程结束后再往下执行
+	print('Child process end.')
+
+def long_time_task(name):
+	print('Run task %s (%s)...' % (name,os.getpid()))
+	start = time.time()
+	time.sleep(random.random() * 3)
+	end = time.time()
+	print('Task %s run %0.2f seconds.' % (name, (end-start)))
+	
+def process_pool_test():
+	print('Parent processing %s.' % os.getpid())
+	p = Pool(4)
+	for i in range(5):
+		p.apply_async(long_time_task, args=(i,))
+	print('Waiting for all subprocess done...')
+	p.close()
+	p.join()
+	print('all task done')
+
+def consumer():
+	r = ''
+	while True:
+		n = yield r
+		print('after yield r, n is %s' % n)
+		if not n:
+			return
+		print('[CONSUMER] Consuming %s...' % n)
+		r = '200 OK'
+
+def produce(c):
+	c.send(None)  #这是为了启动生成器
+	n = 0
+	while n < 5:
+		n = n + 1
+		print('[PRODUCER] Producing %s...' % n)
+		r = c.send(n)
+		print('[PRODUCER] Consumer return: %s' % r)
+	c.close()
+
+if __name__ == '__main__':
+    fork_child_process()
+    call_child_process()
+    process_pool_test()
+    c = consumer()
+    produce(c)
+
+#---------------------------------------------------------------------------------------------
+# signal模块
+
+os.kill(31986, signal.SIGTERM)
+os.kill(19939, signal.SIGUSR1)
+
+def task():
+    print('this is a signal')
+
+signal.signal(signal.SIGCHLD, task) #生成一个子进程
+
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
