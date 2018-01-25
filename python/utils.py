@@ -887,8 +887,14 @@ config = {
 }
 
 conn = pymysql.connect(**config)  #数据库连接设置
-cur = conn.cursor() #数据库指针
+#cur = conn.cursor() #数据库指针
+with conn.cursor() as cursor:
+    cursor.execute('insert into `users` (`email`, `password`) values (%s, %s)', ('tony', '1234'))
+conn.commit()
 
+cur.execute('select ...')
+rs = cur.fetchone()  #cur.fetchall()
+conn.close()
 #---------------------------------------------------------------------------------------------
 # 多线程测试
 import threading
