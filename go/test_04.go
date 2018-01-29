@@ -67,3 +67,35 @@ func main() {
   sort.SearchFloat64s(a []float64, x float64) int
   sort.SearchStrings(a []string, x string) int
 }
+
+func testMap() {
+  var mapLit map[string]int  //声明一个map
+  mapLit = map[string]int{"one": 1, "two": 2} //赋值
+  
+  map2 := make(map[string]float32 [, cap])  //通过make()创建map, 容量参数可选
+  
+  mf := map[int]func() int { }  //map的值类型可以是函数
+  
+  map3 := make(map[int][]int) //值类型是切片
+  map4 := make(map[int]*[]int) //值类型是切片的引用
+  
+  _, ok = map2[key] //如果存在key, 则ok为true
+  delete(map2, key) //删除key
+  
+  // map是无序的, 若需要一个排序的列表, 使用结构体切片
+  for key, value := range map1 {
+  }
+  
+  type name struct {
+    key string
+    value string
+  }
+  
+  // map类型切片, 通过索引使用切片的map元素
+ 	items := make([]map[int]int, 5)
+	for i:= range items {
+		items[i] = make(map[int]int, 1)
+		items[i][1] = 2
+	} 
+  
+}
