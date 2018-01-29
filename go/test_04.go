@@ -92,10 +92,9 @@ func testMap() {
   }
   
   // map类型切片, 通过索引使用切片的map元素
- 	items := make([]map[int]int, 5)
-	for i:= range items {
-		items[i] = make(map[int]int, 1)
-		items[i][1] = 2
-	} 
-  
+  items := make([]map[int]int, 5)
+  for i:= range items {
+    items[i] = make(map[int]int, 1)
+    items[i][1] = 2
+  }
 }
