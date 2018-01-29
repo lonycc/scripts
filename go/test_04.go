@@ -50,5 +50,20 @@ func main() {
   c := [5]string{3: "Chris", 4: "Ron"} //数组, 只有索引3和4别赋值, 其他元素被设置为空
   
   n := copy(m, b) //将切片b复制到切片m, 返回b的长度n
-  n2 := append(b, 'e', 'f', 'g')
+  n2 := append(b, 'e', 'f', 'g') //切片b扩充e/f/g
+  
+  //字符串本质是一个字节数组, 字符串的内存结构: 一个指向实际数据的指针和记录字符串长度的整数, 占用两个字节
+  bt := []byte("what")
+  copy(bt []byte, "abc")
+  append(bt, s...)
+  
+  // 字符串不可变, 需要转为数组后再改变指定索引的值
+  
+  // 排序和搜索
+  sort.Ints(a)
+  sort.Float64s(a []float64)
+  sort.Strings(a []string)
+  sort.IntAreSorted(a []int) bool
+  sort.SearchFloat64s(a []float64, x float64) int
+  sort.SearchStrings(a []string, x string) int
 }
