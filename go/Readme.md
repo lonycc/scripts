@@ -1,5 +1,7 @@
 # 记录go语言学习笔记
 
+> 标准库手册[docs](https://gowalker.org/search?q=gorepos)
+
 ## test_01.go
 
 - 程序基本结构和基本数据类型
