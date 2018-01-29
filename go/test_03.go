@@ -78,9 +78,39 @@ fplus := func(x, y int) int { return x + y }
 fplus(2, 4)
 func(x, y int) int { return x + y } (2, 4)  //直接调用
 
-// 将函数作为返回值
+// 将函数作为返回值, 调用方式 f := Adder(1); f(3);
 func Adder(a int) func(b int) int {
 	return func(b int) int {
 		return a + b
 	}
 }
+
+// 闭包的另一种写法, 变量在函数体内声明, 调用方式 f = Adder(); f(1); f(20); f(200); 分别返回1/21/221
+// 闭包函数保存并积累其中的变量的值, 不管外部函数退出与否, 它都能够继续操作外部函数中的局部变量. 在这里外部函数值的是f
+func Adder() func(int) int {
+	var x int
+	return func(delta int) int {
+		x += delta
+		return x
+	}
+}
+
+// 使用闭包调试
+where := func() {
+	_, file, line, _ := runtime.Caller(1)
+	log.Printf("%s:%d", file, line)
+}
+where()
+// some code
+where()
+// some more code
+where()
+
+// 计算执行时间
+start := time.Now()
+// some code
+end := time.Now()
+delta := end.Sub(start)
+
+// 通过内存缓存提升性能, 避免重复计算, 将重复利用的计算结果存入数组, 比如计算斐波那契数列
+var fibs [41] uint64
