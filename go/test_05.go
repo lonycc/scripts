@@ -55,3 +55,46 @@ import "包的本地路径或URL地址"
 import "./demo/myTest"  //从当前目录demo/myTest导入
 import "project/demo"  //从$GOPATH/src/project/demo导入
 import "github.com/xxx/yyy"  //先从远程下载到本地$GOPATH再导入
+
+
+// 结构体
+type identifier struct {
+  field1 type1
+  field2 type2
+  field3 map[type]*field3
+  //...
+}
+var t *T = new(T) //struct as a pointer
+t.field1 = xx
+(*t).field2 = yy
+
+var t T  // struct as a value type
+t.field1 = 5
+
+t := &T{10, "Chris"} //struct-iteral
+
+// 二叉树结构
+type Btree struct {
+  pri *Node
+  data float64
+  su *Node
+}
+
+
+type File struct {
+  fd      int     // 文件描述符
+  name    string  // 文件名
+}
+
+//工厂方法以new/New开头
+func NewFile(fd int, name string) *File {
+  if fd < 0 {
+    return nil
+  }
+  return &File{fd, name}
+}
+
+f := NewFile(10, "./test.txt")  //实例化
+
+//对于结构体 type A struct { a, b int} 可以使用y := new(A) 不能使用 y := make(A)
+//对于结构体 type B map[string]string 可以使用y := make(B) 不能使用 y := new(B)
