@@ -52,5 +52,6 @@ rm = big.NewRate(math.MaxInt64, 1990) //声明有理数, 参数1为分子, 参�
 
 // 自定义包和可见性
 import "包的本地路径或URL地址"
-import "./demo/myTest"
-import "github.com/xxx/yyy"
+import "./demo/myTest"  //从当前目录demo/myTest导入
+import "project/demo"  //从$GOPATH/src/project/demo导入
+import "github.com/xxx/yyy"  //先从远程下载到本地$GOPATH再导入
