@@ -57,7 +57,7 @@ import "project/demo"  //从$GOPATH/src/project/demo导入
 import "github.com/xxx/yyy"  //先从远程下载到本地$GOPATH再导入
 
 
-// 结构体
+// 结构体, 可看做类的简化形式
 type identifier struct {
   field1 type1
   field2 type2
@@ -98,3 +98,34 @@ f := NewFile(10, "./test.txt")  //实例化
 
 //对于结构体 type A struct { a, b int} 可以使用y := new(A) 不能使用 y := make(A)
 //对于结构体 type B map[string]string 可以使用y := make(B) 不能使用 y := new(B)
+
+// 带标签的结构体
+type TagType struct { // tags
+  field1 bool   "An important answer"
+  field2 string "The name of the thing"
+  field3 int    "How much there are"
+}
+
+func refTag(tt TagType, ix int) {
+  ttType := reflect.TypeOf(tt)
+  ixField := ttType.Field(ix)
+  fmt.Printf("%v\n", ixField.Tag)
+}
+
+// 匿名字段
+type innerS struct {
+  in1 int
+  in2 int
+}
+
+type outerS struct {
+  b int
+  c float32
+  int  //匿名字段
+  innerS  //匿名字段
+}
+
+// 定义方法
+func (recv receiver_type) methodName(parameter_list) (return_value_list) { ... }
+
+// 方法和函数的区别: 函数将变量作为参数, function(recv); 方法在变量上被调用, recv.method()
