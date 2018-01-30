@@ -1,8 +1,8 @@
 package main
 
 import (
-	"container/list"
-	"fmt"
+  "container/list"
+  "fmt"
   "regexp"
 )
 
@@ -20,8 +20,8 @@ func testList() {
 
 // 正则包
 func testReg() {
-	searchIn := "John: 2578.34 William: 4567.23 Steve: 5632.18" //要查找的字符串
-	pat := "[0-9]+.[0-9]+" //模式
+  searchIn := "John: 2578.34 William: 4567.23 Steve: 5632.18" //要查找的字符串
+  pat := "[0-9]+.[0-9]+" //模式
   
   ok, _ := regexp.Match(pat, []byte(searchIn))
   ok, _ := regexp.MatchString(pat, searchIn)
@@ -80,6 +80,8 @@ type Btree struct {
   su *Node
 }
 
+// 非结构体类型
+type IntVector []int
 
 type File struct {
   fd      int     // 文件描述符
@@ -122,10 +124,70 @@ type outerS struct {
   b int
   c float32
   int  //匿名字段
-  innerS  //匿名字段
+  innerS  //内嵌结构体
 }
 
-// 定义方法
+//命名冲突问题
+type A struct {a int}
+type B struct {a, b int}
+type C struct {A; B}
+var c C;
+c.A.a
+c.B.a
+type D struct {B; b float32}
+var d D  
+d.b  //来自结构体D的字段b
+d.B.b //继承自B的字段b
+
+// 定义方法, recv类似OOP中的this或self; 如果方法中不需要使用recv的值, 可用_替换它
 func (recv receiver_type) methodName(parameter_list) (return_value_list) { ... }
 
 // 方法和函数的区别: 函数将变量作为参数, function(recv); 方法在变量上被调用, recv.method()
+type TwoInts struct {a, b int}
+two1 := new(TwoInts)
+two1.a = 10
+two1.b = 20
+two1.AddItem(30)
+
+two2 := TwoInts{3, 4}
+two2.AddItem(5)
+
+func (tn *TwoInts) AddItem(param int) int {
+  return tn.a + tn.b + param
+}
+
+// 类型和作用在它上面定义的方法必须在同一个包里定义, 但有个间接方法可行
+type myTime struct {
+  time.time
+}
+fun (t myTime) first3Chars() string {
+  return t.Time.String()[0:3]
+}
+
+// 指针方法和值方法都可以在指针或非指针上被调用
+
+// 内嵌类型的方法和继承
+type Engine interface {
+	Start()
+	Stop()
+}
+type car struct {  // 结构体car的实例将继承接口Engine的方法
+	Engine
+}
+
+// 类型中嵌入功能, A: 聚合, 包含一个所需功能类型的具名字段; B: 内嵌所需功能类型
+type Log struct {
+	msg string
+}
+// 包含所需功能类型具名字段
+type Customer struct {
+	name string
+	log *Log
+}
+// 内嵌所需功能类型
+type Shop struct {
+	name string
+	Log
+}
+
+// 多重继承
