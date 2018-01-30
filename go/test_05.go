@@ -190,4 +190,28 @@ type Shop struct {
 	Log
 }
 
-// 多重继承
+// 多重继承, 通过接口实现多态
+type Camera struct {}
+type Phone struct {}
+type CameraPhone struct {
+	Camera
+	Phone
+}
+
+// 类型的String()方法和格式化描述符
+func (t T) String() string {
+	// ...
+}
+// %v 默认格式; %T 类型的完整规格; %#v 实例的完整输出; %+v 打印结构体会添加字段名; %% 打印百分号; %t 布尔占位符;
+// %b 二进制; %c 相应Unicode码点表示的字符; %d 十进制; %o 八进制; %q 带引号; %x 十六进制小写; %X 十六进制大写;
+// %U Unicode格式; %e 科学计数法; %f 浮点数
+
+// 垃圾回收和SetFinalizer
+runtime.GC()  //显示触发, 默认是自动触发的
+
+var m runtime.MemStats
+runtime.ReadMemStats(&m)
+fmt.Printf("%d Kb\n", m.Alloc / 1024) //当前已分配内存Kb
+
+// 在对象obj被GC回收之前, 执行函数func, 比如写日志
+runtime.SetFinalizer(obj, func(obj *typeObj))
