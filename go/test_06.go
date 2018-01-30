@@ -6,5 +6,5 @@ package main
 type Namer interface {
     Method1(param_list) return_type
     Method2(param_list) return_type
-    ...
+    // ...
 }
