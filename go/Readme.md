@@ -38,3 +38,15 @@
 - map
   - map声明、初始化
   - map类型切片、map排序
+
+## test_05.go
+
+- 包
+  - 标准包使用
+  - 自定义包的导入、godoc、go install、go get、go test等
+
+- 结构 struct 与方法 method
+  - 结构体定义、实例
+  - 带标签的结构体、匿名字段、内嵌结构体
+  - 方法、继承、多态
+  - 类型的String()方法、垃圾回收和SetFinalizer
