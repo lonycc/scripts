@@ -15,8 +15,8 @@
   - if-else
   - swtich-case
   - for
-  - break 与 continue
-  - 标签 与 goto
+  - break 与 continue
+  - 标签 与 goto
 
 ## test_03.go
 
