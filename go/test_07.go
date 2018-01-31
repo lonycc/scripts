@@ -68,3 +68,7 @@ ow := bufio.NewWriter(of)
 ow.WriteString("hello demo")
 ow.Flush()
 // 如果写入内容很简单, 可直接 fmt.Fprintf(of, "some data\n"), 而无需创建ow; 或者也可of.WriteString("some data\n")
+
+ // 文件复制
+ io.Copy(dst Writer, src Reader) (written int64, err error)
+ io.CopyBuffer(dst Writer, src Reader, buf []byte) (written int64, err error)
