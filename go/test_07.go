@@ -132,6 +132,15 @@ import "encoding/xml"
 
 // gob传输数据
 import "encoding/gob"
- 
- 
- 
+
+// 加密解密相关
+import "crypto/sha1" 
+hasher := sha1.New()  // 创建一个hash.Hash对象
+io.WritString(hasher, "test")
+b : = []byte{}
+hasher.Sum(b)
+
+hasher.Reset()
+n, err := hasher.Write([]byte("what about"))
+checksum := hasher.Sum(b)
+	
