@@ -45,3 +45,28 @@ func errorHandler(fn fType1) fType1 {
 		fn(a, b)
 	}
 }
+
+// 启动外部命令和程序
+env := os.Environ()
+procAttr = &os.ProcAttr{
+	Env:env,
+	Files: []*os.Files{
+		os.Stdin,
+		os.Stdout,
+		os.Stderr,
+	},
+}
+pid, err := os.StartProcess("/bin/ls", []string{"ls", "-al"}, procAttr)
+
+cmd := exec.Command("ls", "-al")
+err = cmd.Run()
+
+// go中的单元测试和基准测试
+// 单元测试执行 go test fmt_test.go --chatty
+// 基准测试执行 go test -test.bench=.*
+import testing
+
+func TestFuncName(t *testing.T)
+func BenchmarkReverse(b *testing.B)
+
+// 性能调试
