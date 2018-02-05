@@ -25,3 +25,23 @@ func test() {
 	badCall() //执行了Panicing bad end就退出
 	fmt.Printf("After bad call\r\n") //这里不会执行
 }
+
+// 自定义包中的错误处理和panicking
+// 1. 在包内部, 总是应该从panic中recover, 不允许显示的超出包范围的panic.
+// 2. 向包的调用者返回错误值, 而非panic
+
+// 一种闭包处理错误的模式, 所有函数都是同一种签名时
+fType1 = func f(a type1, b type2)
+
+func check(err error) { if err != nil { panic(err) } }
+
+func errorHandler(fn fType1) fType1 {
+	return func(a type1, b type2) {
+		defer func() {
+			if err, ok := recover().(error); ok {
+				log.Printf(“run time panic: %v”, err)
+			}
+		}()
+		fn(a, b)
+	}
+}
