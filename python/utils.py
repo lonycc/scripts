@@ -277,15 +277,28 @@ class Singleton(object):
 
 # 爬取百度搜索结果列表
 def crawlerBaidu(url):
-    headers = {}
+    headers = {
+    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Encoding':'gzip, deflate, br',
+    'Accept-Language':'zh,en;q=0.9,en-US;q=0.8,zh-CN;q=0.7',
+    'Cache-Control':'no-cache',
+    'Connection':'keep-alive',
+    'Host':'www.baidu.com',
+    'Pragma':'no-cache',
+    'Referer':'https://www.baidu.com/',
+    'Upgrade-Insecure-Requests':'1',
+    'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' 
+    }
     r = requests.get(url, headers=headers)
     html = pyquery.PyQuery(r.text)
     for site in html('h3.t a').items():
         r1 = requests.get(site.attr('href'), headers=headers, allow_redirects=False)
         if r1.status_code == 200:
-            re.search(r'URL=\'(.*?)\'', r1.text.encode('utf-8'), re.S).group(1)
+            href = re.search(r'URL=\'(.*?)\'', r1.text.encode('utf-8'), re.S).group(1)
+            print(href)
         elif r1.status_code == 302:
-            r1.headers.get('location') #跳转后的地址
+            href = r1.headers.get('location') #跳转后的地址
+            print(href)
         else:
             pass
 
