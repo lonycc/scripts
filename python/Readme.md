@@ -222,7 +222,7 @@ while c:   #或者也可以判断 while p.poll() == None:
 p.wait()
 ```
 
-# python2.x 到python3.x内置模块的变动
+**python2.x 到python3.x内置模块的变动**
 
 | python2 | python3 |
 |:--|:--|
@@ -236,7 +236,7 @@ p.wait()
 | CGIHttpServer | http.server |
 | urlparse | urllib.parse |
 
-# python signal
+**python signal**
 
 为异步事件设置操作句柄; signal.signal() 允许定义一个句柄来执行接收到的信号，操作系统规定了进程收到信号以后的默认行为，但我们可以通过绑定信号处理函数来修改进程收到信号后的行为；有两个信号不可更改，SIGTOP和SIGKILL
 
@@ -253,3 +253,29 @@ p.wait()
 `signal.NSIG` #比最大信号量大一 
 
 `signal.ITIMER_REAL`
+
+**pyenv**
+
+`pip install pyenv`
+
+`pipenv --three`  #使用当前系统的python3创建环境
+
+`pipenv --two` #使用当前系统的python2创建环境
+
+`pip --python 3.6` #创建指定版本环境
+
+`pipenv shell`  #激活虚拟环境
+
+`pipenv --where`  #显示目录信息
+
+`pipenv --venv`  #显示虚拟环境信息
+
+`pipenv --py`  #显示python解释器信息
+
+`pipenv install xx=1.1`  #安装相应模块并加入到Pipfile
+
+`pipenv graph`  #查看目前安装的库及其依赖
+
+`pipenv check`  #PEP检查
+
+`pipenv uninstall --all`  #卸载全部包并从Pipfile中移除
