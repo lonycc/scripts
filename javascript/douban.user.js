@@ -89,6 +89,7 @@ function run () {
 	];
 	var Buy_links = [
 		{ html: "淘宝", href: "https://s.taobao.com/search?q=" + keyword1},
+		{ html: "当当网", href: "http://search.dangdang.com/?key="+keyword2+"&category_path=01.00.00.00.00.00#J_tab"},
 		{ html: "Amazon", href: "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" + keyword1},
 		{ html: "澜瑞外文", href: "https://www.lanree.com/search?keywords=" + keyword1},
 		{ html: "蔚蓝网", href: "http://www.wl.cn/search?keywords=" + keyword1},
