@@ -2,7 +2,7 @@
 
 // 在main函数里执行耗时任务, 可以加上go关键字, 就将以协程方式执行 
 go longTimetask()
-time.Sleep(2 * 1e9)
+time.Sleep(2 * 1e9) //主进程中必须sleep足够的时间以等待协程任务执行完成
 
 // 指定使用核心数量, 一个经验法则: GOMAXPROCS = 核心数 - 1
 runtime.GOMAXPROCS(2)
@@ -13,9 +13,21 @@ aa = make(chan int)
 // or
 aa := make(chan int)
 
-//流向通道(发送)
+// 流向通道(发送)
 ch <- int1
-//从通道流出(接收)
+// 从通道流出(接收)
 int2 = <- ch
-//单独调用获取通道的值
-<- ch 
+// 单独调用获取通道的值
+fmt.Println(<-ch) 
+
+// 通道阻塞, 只有生产者而无消费者时
+c := make(chan int)
+go func() {
+	time.Sleep(1 * 1e9)
+	x := <-c
+	fmt.Println("received", x)
+}()
+fmt.Println("sending", 10)
+c <- 10
+fmt.Println("sent", 10)
+
