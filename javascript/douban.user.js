@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name           Douban Download Search（支持https）
-// @namespace      https://github.com/ywzhaiqi
+// @name           豆瓣增强工具
+// @namespace      https://github.com/tonyxyl
 // @description    增加豆瓣电影、图书，音乐的下载搜索链接
-// @author         peter(原作者ywzhaiqi） 维护者liubinyan @豆瓣
-// @version        1.5.7
+// @author         peter
+// @version        0.0.1
 // @include        *//movie.douban.com/subject/*
 // @include        *//music.douban.com/subject/*
 // @include        *//book.douban.com/subject/*
@@ -125,13 +125,10 @@ function run () {
 
 	function appendLinks(items, appendTo){
 		items.forEach(function(item, i){
-			$("<a>")
-				.html(item.html)
-				.attr({
-					href: item.href,
-					target: "_blank"
-				})
-				.appendTo(appendTo);
+			$("<a>").html(item.html).attr({
+				href: item.href,
+				target: "_blank"
+			}).appendTo(appendTo);
 
 			if(i != items.length -1){
 				appendTo.append(" / ");
