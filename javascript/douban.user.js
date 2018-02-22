@@ -22,6 +22,13 @@ function run () {
 
 	var Movie_links = [
 		// { html: "百度盘", href: "http://www.baidu.com/s?wd=" + encodeURIComponent(keyword1 + " site:pan.baidu.com")},
+		{ html: "磁力数据库", href: "http://cilidb.net/page/"+keyword1+"/1-0-0.shtml"},
+		{ html: "磁力吧", href: "https://www.ciliba.org/s/"+keyword1+".html"},
+		{ html: "btdigg", href: "http://btdiggs.com/search/"+keyword2+"/1/0/0.html"},
+		{ html: "torrentkitty", href: "https://tw.torrentkitty.tv/search/"+keyword1+"/"},
+		{ html: "西林街", href: "http://www.xilinjie.com/s?q="+keyword1},
+		{ html: "胖次", href: "http://www.panc.cc/s/"+keyword1+"/td_0"},
+		{ html: "盘搜", href: "http://pansou123.com/?search="+keyword1},
 		{ html: "百度盘", href: "http://pansou.com/?q=" + keyword1},
 		{ html: "zimuzu", href: "http://www.zimuzu.tv/search/index?keyword=" + movieSimpleTitle },
 		{ html: "天天美剧", href: "http://www.ttmeiju.vip/index.php/search/index.html?keyword=" + movieSimpleTitle },
@@ -31,21 +38,14 @@ function run () {
 		{ html: "电影首发站", href: "http://www.dysfz.cc/key/" + keyword1 +"/" },
 		{ html: "KickAss", href: "https://kickass2.ch/usearch/" + movieFinalTitle +"/" },
 		{ html: "胖鸟电影", href: "http://www.pniao.com/Mov/so/" + keyword1},
-		{ html: "楓林網", href: "http://8maple.ru/搜尋結果/?q=" + keyword1},
-		{ html: "比特大雄", href: "http://www.btdx8.com/?s=" + keyword1},
 		{ html: "憨憨电影", href: "https://www.hanhanfilm.com/search/keyword?q=" + keyword1},
 		{ html: "ED2000", href: "http://www.ed2000.me/search.aspx?SearchWord=" + keyword1 + "&searchMethod=ED2000"},
-		{ html: "哔哩哔哩", href: "https://search.bilibili.com/all?keyword=" + keyword1 + "&from_source=banner_search"},
-		{ html: "AcFun", href: "http://www.acfun.cn/search/#query=" + keyword1},
 		{ html: "The Pirate Bay", href: "https://thepiratebay.org/search/" + movieFinalTitle},
 		{ html: "RARBG", href: "https://rarbg.is/torrents.php?search=" + movieFinalTitle + "&category[]=14&category[]=48&category[]=17&category[]=44&category[]=45&category[]=47&category[]=50&category[]=51&category[]=52&category[]=42&category[]=46&category[]=18&category[]=41&category[]=49"},
 		{ html: "磁力猫", href: "http://www.cilimao.me/search?word=" + keyword1 + "&page=1"},
 		{ html: "BT之家", href: "http://www.btbtt88.com/search-index-keyword-" + keyword1 + ".htm" },
 		{ html: "BT蚂蚁", href: "http://www.btmyi.com/search.html?kw=" + keyword1},
 		{ html: "MiniMP4", href: "http://www.minimp4.com/search?q=" + keyword1},
-        { html: "西林街", href: "http://www.xilinjie.com/s?q="+keyword1},
-        { html: "胖次", href: "http://www.panc.cc/s/"+keyword1+"/td_0"},
-        { html: "盘搜", href: "http://pansou123.com/?search="+keyword1},
 	];
 	var Music_links = [
 		{ html: "百度盘", href: "http://pansou.com/?q=" + keyword1},
@@ -122,7 +122,6 @@ function run () {
 	}
 
 	$('#info').append(link);
-
 
 	function appendLinks(items, appendTo){
 		items.forEach(function(item, i){
