@@ -12,7 +12,7 @@
 ## test_02.go
 
 - 控制结构
-  - if-else
+  - if-else
   - swtich-case
   - for
   - break 与 continue
