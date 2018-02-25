@@ -357,3 +357,15 @@ Route::get('/home', function (Illuminate\Http\Request $request) {
 `URL::action('ArticlesController@index')`
 
 `Route::controller('users', 'UsersController');`  //会生成rest风格路由
+
+**命名路由**
+
+1. 通过route路由中的as关键字实现
+
+`Route::get('api/user', ['as'=>'web.user'], 'messageController@user');`
+
+2. 通过Route的magic方法name来实现命名路由
+
+`Route::get('api/user', 'messageController@user')->name('web.user');`
+
+代码中可以`$this->visit(route('web.user'));`; 在模板中`<a href="{{route('web.user')}}">user</a>`
