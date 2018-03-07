@@ -7,7 +7,7 @@ time.Sleep(2 * 1e9) //主进程中必须sleep足够的时间以等待协程任�
 // 指定使用核心数量, 一个经验法则: GOMAXPROCS = 核心数 - 1
 runtime.GOMAXPROCS(2)
 
-// 声明channel, 未初始化的channel值未nil
+// 声明channel, 未初始化的channel值为nil
 var aa chan int
 aa = make(chan int)
 // or
@@ -31,3 +31,5 @@ fmt.Println("sending", 10)
 c <- 10
 fmt.Println("sent", 10)
 
+// 带缓冲的通道
+ch1 := make(chan string, buffer_size)
