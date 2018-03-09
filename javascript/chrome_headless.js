@@ -43,3 +43,31 @@ var port = (arguments.length > 1 && /^[6-9][0-9]{3}$/.test(arguments[1]) ) ? arg
     //await page.pdf({path: 'music.pdf', format: 'A4'});
     await browser.close();
 })();
+
+
+/* puppeteer作为web服务
+const express = require('express') 
+
+const app = express(); 
+let browser; 
+let page; 
+(async () => { 
+    const puppeteer = require('puppeteer'); 
+    browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']}); 
+    page = await browser.newPage(); 
+})();
+
+app.get('/word/:vocabulary', function (req, res) { 
+    var url = req.params.url; 
+    var vocabulary = req.params.vocabulary; 
+    (async() => {
+        await page.goto('http://www.iciba.com/'+vocabulary); 
+        const html = await page.$eval('div.article div.article-section', e => e.outerHTML); 
+        res.send(html);
+    })();
+}) 
+
+app.listen(5000, function () {
+    // do something
+});
+*/
