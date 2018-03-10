@@ -36,3 +36,58 @@ ch1 := make(chan string, buffer_size)
 
 // 在缓冲满载（缓冲被全部使用）之前，给一个带缓冲的通道发送数据是不会阻塞的，而从通道读取数据也不会阻塞，直到缓冲空了。
 // 如果容量是0或者未设置，通信仅在收发双方准备好的情况下才可以成功。
+
+// 使用通道让main程序等待协程完成, 即信号量模式
+c := make(chan int)
+go func(c chan int) { c <- 10 }
+doSth()
+rs := <- c //等待协程完成
+<- c //不返回
+
+// 并行for循环
+for i, j := range data {
+	go func(i, j int){ doSth(i, j) }(i, j) //立即执行匿名函数
+}
+
+// 通道工厂模式, 不将通道作为参数传递给协程, 而用函数来生成一个通道并返回(工厂角色)
+stream := pump() //生成一个通道, 函数内有个匿名函数被协程调用
+go suck(stream)
+
+// 生产者消费者模式
+for {
+	Consume(Produce())
+}
+
+// 通道的方向
+var send_only chan<- int
+var recv_only <-chan int
+
+func (in <-chan int, out chan<- string) {
+	for inValue := in {
+		result := inValue
+		out <- result
+	}
+}
+
+// 关闭通道, 仅当发送和接收通道不同步时要手工执行
+close(ch)
+
+// select 切换线程
+for {
+	select {
+	case c := <- ch1:
+		//...
+	case c := <- ch2:
+		//...
+	default:
+		//...
+	}
+}
+
+// time.Tick(1e9)   //定时通道
+// time.After(5e9)  //停止通道
+// 协程和恢复recover, defer修饰的函数中, 用了recover来避免panic
+// 使用通道处理异步任务, 而非互斥锁
+
+// 惰性生成器
+// 实现futures模式, 需要计算得到的变量用协程计算, 以实现并行
