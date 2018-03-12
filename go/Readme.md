@@ -68,3 +68,56 @@
   - 文件读写/缓冲读写
   - json/xml/gob数据格式
   - go密码学
+
+**golang 交叉编译**
+
+`CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build hello.go`
+
+`CGO_ENABLED=1 GOOS=linux GOARCH=386 go build hello.go`
+
+`GOOS=linux GOARCH=arm go build hello.go`
+
+`GOOS=windows GOARCH=amd64 go build hello.go`
+
+`GOOS=windows GOARCH=386 go build hello.go`
+
+`GOOS=darwin GOARCH=amd64 go build hello.go`
+
+`GOOS=darwin GOARCH=386 go build hello.go`
+
+> 其中CGO_ENABLED配置表示是否用C语言版本的GO编译器执行编译; GOOS表示目标系统, GOARCH表示目标架构;
+
+**makefile**
+
+```
+GOCMD=go
+GOBUILD=$(GOCMD) build
+GOCLEAN=$(GOCMD) clean
+GOTEST=$(GOCMD) test
+GOGET=$(GOCMD) get
+BINARY_NAME=mybinary
+BINARY_UNIX=$(BINARY_NAME)_unix
+
+all: test build
+build:
+        $(GOBUILD) -o $(BINARY_NAME) -v
+test:
+        $(GOTEST) -v ./...
+clean:
+        $(GOCLEAN)
+        rm -f $(BINARY_NAME)
+        rm -f $(BINARY_UNIX)
+run:
+        $(GOBUILD) -o $(BINARY_NAME) -v ./...
+        ./$(BINARY_NAME)
+deps:
+        $(GOGET) github.com/markbates/goth
+        $(GOGET) github.com/markbates/pop
+
+
+# 交叉编译
+build-linux:
+        CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_UNIX) -v
+docker-build:
+        docker run --rm -it -v "$(GOPATH)":/go -w /go/src/bitbucket.org/rsohlich/makepost golang:latest go build -o "$(BINARY_UNIX)" -v
+```
