@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>live push</title>
+    <meta charset="UTF-8">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form>
+        <input id="select_camera" type="radio" name="play_type" value="camera" checked>摄像头
+        <br>
+        <input id="select_video" type="radio" name="play_type" value="files">视频文件
+        <br>
+        <input type="file" name="file_selector" id="file_selector" style="display: none;" />
+    </form>
+    <p id="message"></p>
+    <video controls="controls" style="display: none" id="video"></video>
+    <canvas id="canvas" style="display: none"></canvas>
+    <br>
+    <button id="start_push">开始推送</button> |
+    <button id="stop_push">停止推送</button>
+    <br>
+    <br>
+    <label for="compress_precent">压缩比例:</label>
+    <input type="text" name="compress_precent" id="compress_precent" value="70" style="width: 28px"> %
+    <script>
+    var ws = new WebSocket("ws://127.0.0.1:12450/push");
+    localStorage.selector = 1;
+    ws.onopen = function() {
+        console.log("handshake success");
+    };
+    ws.onmessage = function(e) {
+
+    };
+    ws.onerror = function() {
+        $('#message').text('Websocket Error');
+        console.log("error");
+    };
+    var video = document.querySelector('video');
+    var canvas = window.canvas = document.querySelector('canvas');
+    $('#select_video').on('click', function() {
+        localStorage.selector = 0;
+        $('#file_selector').show();
+    })
+    $('#select_camera').on('click', function() {
+        localStorage.selector = 1;
+        $('#file_selector').hide();
+    })
+    $('#start_push').on('click', function() {
+        $('#canvas').show();
+        var id = setInterval(function() { draw(id) }, 24);
+        if (parseInt(localStorage.selector) == 1) {
+            navigator.mediaDevices.getUserMedia(constraints).
+            then(handleSuccess).catch(handleError);
+        } else {
+            $('#video')[0].play();
+        }
+    });
+    $('#stop_push').on('click', function() {
+        clearInterval(parseInt(localStorage.interval_id));
+        $('#video')[0].pause();
+    });
+
+    document.querySelector('input[name=file_selector]').onchange = function(e) {
+        var file = e.target.files[0];
+        var objecturl = window.URL.createObjectURL(file);
+        $('#video')[0].src = objecturl;
+    }
+
+    function draw(id) {
+        localStorage.interval_id = id;
+        if (ws.readyState == 1) {
+            var compress_precent = parseInt($('#compress_precent').val()) / 100;
+            canvas.width = video.videoWidth * compress_precent;
+            canvas.height = video.videoHeight * compress_precent;
+            canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+            push(canvas.toDataURL('image/webp'));
+        }
+    }
+
+    function push(data) {
+        ws.send(data);
+    }
+    var constraints = {
+        audio: false,
+        video: true
+    };
+
+    function handleSuccess(stream) {
+        window.stream = stream; // make stream available to browser console
+        video.srcObject = stream;
+    }
+
+    function handleError(error) {
+        console.log('navigator.getUserMedia error: ', error);
+    }
+    </script>
+</body>
+
+</html>
