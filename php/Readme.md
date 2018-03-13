@@ -871,3 +871,41 @@ echo 'after' . $myValue;                // prints the new value of $obj->value, 
 `call_user_func(array('class_name', 'method_name'), arg)` #调用`class_name`类中的`method_name`方法, 并传入参数`arg`
 
 `call_user_func_array()`  #同`call_user_func`, 只不过参数部分用`array`组织
+
+[php7 protobuf demo](https://segmentfault.com/a/1190000009389032)
+
+1 下载pear
+
+> curl -O http://pear.php.net/go-pear.phar
+
+2 安装pear, 回车默认安装
+
+> sudo php -d detect_unicode=0 go-pear.phar
+
+> pear version
+
+3 安装protobuf
+
+> sudo pecl install protof-{VERSION}
+
+4 配置开启protobuf扩展
+
+> echo "extension=protobuf.so" >> php.ini
+
+`composer require "google/protobuf"`
+
+5 demo.proto
+
+```
+syntax = "proto3";
+
+message SearchRequest {
+  string query = 1;
+  int32 page_number = 2;
+  int32 result_per_page = 3;
+}
+```
+
+6 执行命令生成php文件
+
+`protoc --plugin=vendor/google/protobuf/php/generate_descriptor_protos.sh --php_out=src/ src/demo.proto`
