@@ -14,7 +14,7 @@
         person.go  用户模型
 ```
 
-**涉及数据表 test.person **
+**涉及数据表 test.person**
 ```
 CREATE TABLE `person` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
