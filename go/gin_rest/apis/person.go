@@ -44,6 +44,7 @@ func GetPersons(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "没有用户",
 		})
+		return
 	}
 	c.JSON(http.StatusOK, gin.H{
 		"persons": persons,
