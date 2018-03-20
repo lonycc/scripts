@@ -121,3 +121,47 @@ build-linux:
 docker-build:
         docker run --rm -it -v "$(GOPATH)":/go -w /go/src/bitbucket.org/rsohlich/makepost golang:latest go build -o "$(BINARY_UNIX)" -v
 ```
+
+**glide工具**
+
+glide init #初始化
+
+glide install #安装依赖
+
+glide up #升级依赖
+
+glide get github.com/xxx/yyy  #获取依赖
+
+glide mirror set golang.org/x/crypto github.com/golang/crypto #设置镜像
+
+glide mirror set golang.org/x/sys github.com/golang/sys
+
+glide mirror remove golang.org/x/crypto  #移除镜像
+
+GLIDE_HOME 默认 $HOME/.glide
+
+glide --home [path]  #设置glide_home
+
+cat $HOME/.glide/mirrors.yaml
+
+```
+repos:
+- original: https://golang.org/x/crypto
+  repo: https://github.com/golang/crypto
+- original: https://golang.org/x/crypto/acme/autocert
+  repo: https://github.com/golang/crypto
+  base: golang.org/x/crypto
+- original: https://golang.org/x/sys/unix
+  repo: https://github.com/golang/sys
+  base: golang.org/x/sys
+- original: https://golang.org/x/net
+  repo: https://github.com/golang/net
+- original: https://golang.org/x/sync
+  repo: https://github.com/golang/sync
+- original: https://golang.org/x/tools
+  repo: https://github.com/golang/tools
+- original: https://golang.org/x/grpc
+  repo: https://github.com/golang/grpc
+- original: https://golang.org/x/time
+  repo: https://github.com/golang/time
+```
