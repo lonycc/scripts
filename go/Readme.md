@@ -156,12 +156,16 @@ repos:
   base: golang.org/x/sys
 - original: https://golang.org/x/net
   repo: https://github.com/golang/net
+- original: https://golang.org/x/oauth2
+  repo: https://github.com/golang/oauth2
 - original: https://golang.org/x/sync
   repo: https://github.com/golang/sync
 - original: https://golang.org/x/tools
   repo: https://github.com/golang/tools
-- original: https://golang.org/x/grpc
-  repo: https://github.com/golang/grpc
 - original: https://golang.org/x/time
   repo: https://github.com/golang/time
+- original: https://google.golang.org/grpc
+  repo: https://github.com/grpc/grpc-go
+- original: https://google.golang.org/cloud
+  repo: https://github.com/GoogleCloudPlatform/gcloud-golang
 ```
