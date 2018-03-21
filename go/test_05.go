@@ -62,6 +62,9 @@ type identifier struct {
   field1 type1
   field2 type2
   field3 map[type]*field3
+	Id int `json:"id"`  //字段名映射,
+	Name string `json:"name"`
+	Admin bool `json:"-"`  //"-"表示跳过该字段
   //...
 }
 var t *T = new(T) //struct as a pointer
@@ -215,3 +218,26 @@ fmt.Printf("%d Kb\n", m.Alloc / 1024) //当前已分配内存Kb
 
 // 在对象obj被GC回收之前, 执行函数func, 比如写日志
 runtime.SetFinalizer(obj, func(obj *typeObj))
+
+
+// 自定义标签处理器
+const tagName = "validate"
+type User struct {
+	Id int `validate:"-"`
+	Name string `validate:"presence,min=2,max=32"`
+	Email string `validate:"email,required"`
+}
+
+user := User{
+	Id, 1,
+	Name: "John Doe",
+	Email: "john@xx",
+}
+t := reflect.TypeOf(user)
+t.Name() //User
+t.Kind() //struct
+t.NumField() //3
+field = t.Field(0)
+field.Name //Id
+field.Type.Name() //int
+tag := field.Tag.Get(tagName)  //-
