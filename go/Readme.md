@@ -169,3 +169,30 @@ repos:
 - original: https://google.golang.org/cloud
   repo: https://github.com/GoogleCloudPlatform/gcloud-golang
 ```
+
+
+**上下文模块context**
+
+```
+type Context interface {
+    // context被取消或超时时返回一个关闭的channel
+    Done() <-chan struct{}
+    // context取消的原因
+    Err() error
+    // context将被取消的时间
+    Deadline() (deadline time.Time, ok bool)
+    // context相关数据或nil
+    Value(key interface{}) interface{}
+}
+
+// Backgroud()是所有context的root, 不能被cancel
+func Background() Context
+
+// 返回一个继承的context, 这个context在父context的Done被关闭时(或者在自己被cancel时)关闭自己的Done通道; 同时还返回一个取消函数cancel, 用于取消当前context
+func Withcancel(parent Context) (ctx context, cancel CancelFunc)
+
+// 
+func withTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) {
+    return WithDeadline(parent, time.Now().Add(timeout))
+}
+```
