@@ -55,7 +55,7 @@ let page;
     browser = await puppeteer.launch({
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
         executablePath: 'd:/chrome-win32/chrome.exe',
-        headless: false,
+        headless: true,
         slowMo: 200,
         ignoreHTTPSErrors: true,
         timeout: 30000
@@ -74,6 +74,6 @@ app.get('/word/:vocabulary', function (req, res) {
 });
 
 app.listen(5000, function () {
-    console('server listening on http://localhost:5000');
+    console.log('server listening on http://localhost:5000');
 });
 */
