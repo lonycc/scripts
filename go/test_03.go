@@ -114,3 +114,24 @@ delta := end.Sub(start)
 
 // 通过内存缓存提升性能, 避免重复计算, 将重复利用的计算结果存入数组, 比如计算斐波那契数列
 var fibs [41] uint64
+
+// defer语句的用法
+func a() {
+	db := sql.connect()
+	defer db.close()  //在函数返回前执行关闭连接操作
+}
+
+// 在外围函数返回时遵循"先进后出"顺序, 类似于stack, 本例输出3210
+func b() {
+	for i := 0; i < 4; i++ {
+		defer fmt.Print(i)
+	}
+}
+
+// defer函数会读取并赋值外围函数的命名返回值, 本例会返回3
+func c() {
+	defer func() { i++ }()
+	return 2
+}
+
+// panic用法
