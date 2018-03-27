@@ -46,14 +46,20 @@ var port = (arguments.length > 1 && /^[6-9][0-9]{3}$/.test(arguments[1]) ) ? arg
 
 
 /* puppeteer作为web服务
-const express = require('express') 
-
+const express = require('express');
 const app = express(); 
 let browser; 
 let page; 
 (async () => { 
     const puppeteer = require('puppeteer'); 
-    browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']}); 
+    browser = await puppeteer.launch({
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        executablePath: 'd:/chrome-win32/chrome.exe',
+        headless: false,
+        slowMo: 200,
+        ignoreHTTPSErrors: true,
+        timeout: 30000
+    }); 
     page = await browser.newPage(); 
 })();
 
@@ -65,9 +71,9 @@ app.get('/word/:vocabulary', function (req, res) {
         const html = await page.$eval('div.article div.article-section', e => e.outerHTML); 
         res.send(html);
     })();
-}) 
+});
 
 app.listen(5000, function () {
-    // do something
+    console('server listening on http://localhost:5000');
 });
 */
