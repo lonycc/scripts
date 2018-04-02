@@ -192,3 +192,66 @@ e.Use(middleware.ProxyWithConfig(middleware.ProxyConfig{
   Balancer: middleware.RoundRobinBalancer(targets),
 }))
 ```
+
+**Recover Middleware**
+
+> 恢复中间件可以从任何地方的panic恢复, 打印栈追踪信息并把控制器权交给中心化的HTTPErrorHandler.
+
+`e.Use(middleware.Recover())`
+或
+```
+e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{
+  Skipper: nil,
+  StackSize:  4 << 10, // 10 KB
+  DisableStackAll: false,
+  DisablePrintStack: false,
+}))
+```
+
+**Redirect Middleware**
+
+> 重定向中间件, http请求重定向
+
+```go
+e.Pre(middleware.HTTPSRedirect())  //重定向到https://
+e.Pre(middleware.HTTPSWWWRedirect())  //重定向到https://wwww.xx.com
+e.Pre(middleware.HTTPSNonWWWRedirect())  //重定向到https://xx.com
+e.Pre(middleware.WWWRedirect()) //重定向到http://www.xx.com
+e.Pre(middleware.NonWWWRedirect()) //重定向到http://xx.com
+
+e.Use(middleware.HTTPSRedirectWithConfig(middleware.RedirectConfig{
+  Skipper: nil,
+  Code: http.StatusTemporaryRedirect,
+}))
+```
+
+**Static Middleware**
+
+> 静态资源中间件, 处理静态资源查找
+
+`e.Use(middleware.Static("/static"))`
+或
+```
+e.Use(middleware.StaticWithConfig(middleware.StaticConfig{
+  Skipper: nil,
+  Root:   "static",
+  Index: "index.html",
+  HTML5: true,
+  Browse: false,
+}))
+```
+
+**Request ID Middleware**
+
+> 为每个请求生成一个唯一的id
+
+`e.Use(middleware.RequestID())`
+或
+```
+e.Use(middleware.RequestIDWithConfig(middleware.RequestIDConfig{
+  Skipper: nil,
+  Generator: func() string {
+    return customGenerator()
+  },
+}))
+```
