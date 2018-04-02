@@ -255,3 +255,110 @@ e.Use(middleware.RequestIDWithConfig(middleware.RequestIDConfig{
   },
 }))
 ```
+
+**Key Auth Middleware**
+
+> 基于key的认证中间件
+
+```
+e.Use(middleware.KeyAuth(func(key string, c echo.Context) (bool, error) {
+  return key == "valid-key", nil
+}))
+
+// 或
+e.Use(middleware.KeyAuthWithConfig(middleware.KeyAuthConfig{
+  Skipper: nil,
+  // 也可选header:Authorization
+  KeyLookup: "query:api-key",
+  AuthScheme: "Bearer",
+  Validator: func() bool {},
+}))
+```
+
+**Gzip Middleware**
+
+> 压缩http响应
+
+```
+e.Use(middleware.GzipWithConfig(middleware.GzipConfig{
+  Skipper: nil,
+  Level: 5,
+}))
+```
+
+**Secure Middleware**
+
+> 该中间件提供xss防护.
+
+`e.Use(middleware.Secure())`
+或
+```
+e.Use(middleware.SecureWithConfig(middleware.SecureConfig{
+	Skipper: nil,
+	XSSProtection: "1; mode=block",
+	ContentTypeNosniff: "nosniff",
+	XFrameOptions: "SAMEORIGIN",
+	HSTSMaxAge: 0,
+	HSTSExcludeSubdomains: false,
+	ContentSecurityPolicy: "default-src 'self'",
+}))
+```
+
+**Rewrite Middleware**
+
+> url重写中间件
+
+```
+e.Pre(middleware.Rewrite(map[string]string{
+  "/old":              "/new",
+  "/api/*":            "/$1",
+  "/js/*":             "/public/javascripts/$1",
+  "/users/*/orders/*": "/user/$1/order/$2",
+}))
+
+// 或
+e.Pre(middleware.RewriteWithConfig(middleware.RewriteConfig{
+	Skipper: nil,
+	Rules: map[string]string{},
+}))
+```
+
+**Trailing Slash Middleware**
+
+> 尾斜杠中间件, 给URI末尾加斜杠.
+
+```
+e.Pre(middleware.AddTrailingSlash())
+e.Pre(middleware.RemoveTrailingSlash())
+
+e.Use(middleware.AddTrailingSlashWithConfig(middleware.TrailingSlashConfig{
+  Skipper: DefaultSkipper,
+  RedirectCode: http.StatusMovedPermanently,
+}))
+```
+
+**Session Middleware**
+
+> http 回话管理, 默认的实现提供cookie和文件系统两种回话存储方式;
+
+```
+e.Use(session.Middleware(sessions.NewCookieStore([]byte("secret"))))
+
+// 或
+e.Use(session.MiddlewareWithConfig(session.Config{
+	Skipper: nil,
+	Store: sessions.NewCookieStore([]byte("secret")),
+}))
+
+e.GET("/", func(c echo.Context) error {
+  sess, _ := session.Get("session", c)
+  sess.Options = &sessions.Options{
+    Path:     "/",
+    MaxAge:   86400 * 7,
+    HttpOnly: true,
+  }
+  sess.Values["foo"] = "bar"
+  sess.Save(c.Request(), c.Response())
+  return c.NoContent(http.StatusOK)
+})
+```
