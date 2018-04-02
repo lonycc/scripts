@@ -143,3 +143,52 @@ e.Use(middleware.JWTWithConfig(middleware.JWTConfig{
   AuthScheme: "Bearer",
 }))
 ```
+
+**Logger Middleware**
+
+> 日志中间件记录每个http请求的信息
+
+`e.Use(middleware.Logger())`
+或
+```go
+e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
+  Skipper: nil,
+  Format: "time=${time_unix}, user_agent=${user_agent}, method=${method}, uri=${uri}, status=${status}\n",
+  Output: os,Stdout,
+}))
+```
+
+**Method Override Middleware**
+
+> 方法重载中间件, 只有POST方法可以被重载.
+
+`e.Pre(middleware.MethodOverride())`
+或
+```
+e.Pre(middleware.MethodOverrideWithConfig(middleware.MethodOverrideConfig{
+  Skipper: nil,
+  Getter: middleware.MethodFromForm("_method"),
+}))
+```
+
+**Proxy Middleware**
+
+> 代理中间件提供一个http/websocket反向代理
+
+```
+url_1, err := url.Parse("http://localhost:8081")
+url_2, err := url.Parse("http://localhost:8082")
+targets := []*middleware.ProxyTarget{
+  {
+    URL: url_1,
+  },
+  {
+    URL: url_2,
+  },
+}
+
+e.Use(middleware.ProxyWithConfig(middleware.ProxyConfig{
+  Skipper: nil,
+  Balancer: middleware.RoundRobinBalancer(targets),
+}))
+```
