@@ -339,7 +339,7 @@ e.Use(middleware.AddTrailingSlashWithConfig(middleware.TrailingSlashConfig{
 
 **Session Middleware**
 
-> http 回话管理, 默认的实现提供cookie和文件系统两种回话存储方式;
+> http 会话管理, 默认的实现提供cookie和文件系统两种会话存储方式;
 
 ```
 e.Use(session.Middleware(sessions.NewCookieStore([]byte("secret"))))
