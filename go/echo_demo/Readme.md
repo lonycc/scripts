@@ -560,3 +560,21 @@ func main() {
 	r.GET("", auth)
 }
 ```
+
+**流式响应**
+
+```
+var locations = []Geolocation{}
+e.GET("/", func(c echo.Context) error {
+	c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
+	c.Response().WriteHeader(http.StatusOK)
+	for _, l := range locations {
+		if err := json.NewEncoder(c.Response()).Encode(l); err != nil {
+			return err
+		}
+		c.Response().Flush()
+		time.Sleep(1 * time.Second)
+	}
+	return nil
+})
+```
