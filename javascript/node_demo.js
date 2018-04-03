@@ -213,3 +213,24 @@ https.createServer(options, (req, res) => {
   res.end('hello world\n');
 }).listen(8000);
 */
+
+/* 全局对象process, 提供当前node.js进程的信息查询和操作控制;
+// exit事件
+process.on('exit', (code) => {
+  console.log(`About to exit with code: ${code}`);
+});
+
+process.abort(); //退出当前进程
+process.arch; //处理器架构
+process.argv;  //参数数组, 第一项是process.execPath; 第二项为被执行的脚本文件
+process.argv0;  //如果process.execPath为/usr/local/bin/node, 则process.argv0为node;
+process.channel; //对象, 仅当进程是由ipc通道产生时才存在
+process.chdir('/tmp'); //切换目录
+process.config;  //对象, 进程配置
+process.connected;  //布尔值, 仅当进程是由ipc通道产生时才存在
+process.cpuUsage({ user: 123176, system: 25168 })  //cpu使用情况, 参数可选
+process.cwd(); //当前目录
+process.debugPort; //调试端口, 可读可写;
+process.disconnect(); //关闭ipc通道
+
+*/
