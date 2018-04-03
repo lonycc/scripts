@@ -2,7 +2,7 @@
 
 > echo框架相当轻量, 核心只提供了http请求处理、路由配置以及中间件使用.ORM、RPC之类都由第三方包提供, 有很大的灵活性.
 
-**中间件**
+## 中间件
 
 - 在路由处理request之前, 可用于修改request属性, `Echo.Pre()`
 
@@ -361,4 +361,53 @@ e.GET("/", func(c echo.Context) error {
   sess.Save(c.Request(), c.Response())
   return c.NoContent(http.StatusOK)
 })
+```
+
+## cookbook
+
+**自动tls**
+
+> 从Let's Encrypt获取tls证书并自动绑定到域名
+
+```
+import "golang.org/x/crypto/acme/autocert"
+
+// 主机白名单, 需严格匹配
+e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("domain.com")
+// 缓存证书
+e.AutoTLSManager.Cache = autocert.DirCache("/path/to/.cache")
+e.Logger.Fatal(e.StartAutoTLS(":443"))
+```
+
+**内嵌资源**
+
+```
+import "github.com/GeertJohan/go.rice"
+
+assetHandler := http.FileServer(rice.MustFindBox("app").HTTPBox())
+// 返回app/index.html
+e.GET("/", echo.WrapHandler(assetHandler))
+// 对静态资源自动加前缀/static/
+e.GET("/static/*", echo.WrapHandler(http.StripPrefix("/static/", assetHandler)))
+```
+
+**响应形式***
+```
+e.GET("/html", func(c echo.Context) error {
+	return c.HTML(200, `<p>this is html</p>`)
+})
+e.GET("/file", func(c echo.Context) error {
+	return c.File("file.go")
+})
+e.GET("/inline", func(c echo.Context) error {
+	return c.Inline("file.go", "displayed.go")
+})
+e.GET("/attachment", func(c echo.Context) error {
+	return c.Attachment("file.go", "saved.go")
+})
+```
+
+**文件上传**
+```
+
 ```
