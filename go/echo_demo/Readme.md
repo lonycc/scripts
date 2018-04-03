@@ -470,3 +470,93 @@ func main() {
 	e.Logger.Fatal(e.StartTLS(":1323", "cert.pem", "key.pem")
 )
 ```
+
+**jsonp请求和响应**
+```
+// curl localhost:1323/jsonp?callback=?
+var content struct {
+	Response  string    `json:"response"`
+	Timestamp time.Time `json:"timestamp"`
+	Random    int       `json:"random"`
+}
+
+e.GET("/jsonp", func(c echo.Context) error {
+	callback := c.QueryParam("callback")
+	content.Response = "Sent via JSONP"
+	content.Timestamp = time.Now().UTC()
+	content.Random = rand.Intn(1000)
+	return c.JSONP(http.StatusOK, callback, &content)
+})
+```
+**jwt认证授权**
+```
+import "github.com/dgrijalva/jwt-go"
+
+type jwtCustomClaims struct {
+	Name  string `json:"name"`
+	Admin bool   `json:"admin"`
+	jwt.StandardClaims
+}
+
+func login(c echo.Context) error {
+	username := c.FormValue("username")
+	password := c.FormValue("password")
+
+	if username == "aaa" && password == "bbb" {
+		/* payload声明, 采用的映射声明
+		token := jwt.New(jwt.SigningMethodHS256)
+		
+		claims := token.Claims.(jwt.MapClaims)
+		claims["name"] = "tony"
+		claims["admin"] = true
+		claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
+		*/
+		
+		/* 自定义payload声明
+		claims := &jwtCustomClaims{
+			"tony",
+			true,
+			jwt.StandardClaims{
+				ExpiresAt: time.Now().Add(time.Hour * 72).Unix(),
+			},
+		}
+		token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+		*/
+
+		
+		t, err := token.SignedString([]byte("secret"))
+		if err != nil {
+			return err
+		}
+		return c.JSON(http.StatusOK, map[string]string{
+			"token": t,
+		})
+	}
+	return echo.ErrUnauthorized
+}
+
+func auth(c echo.Context) error {
+	user := c.Get("user").(*jwt.Token)
+	/* 自定义payload声明
+	claims := user.Claims.(*jwtCustomClaims)
+	name := claims.Name
+	*/
+	/* 映射声明
+	claims := user.Claims.(jwt.MapClaims)
+	name := claims["name"].(string)
+	*/
+	return c.String(http.StatusOK, "Welcome " + name + "!")
+}
+
+func main() {
+	r := e.Group("/auth")
+	config := middleware.JWTConfig{
+		Claims:     &jwtCustomClaims{},
+		SigningKey: []byte("secret"),
+	}
+	r.Use(middleware.JWTWithConfig(config))
+	// 映射声明
+	//r.Use(middleware.JWT([]byte("secret")))
+	r.GET("", auth)
+}
+```
