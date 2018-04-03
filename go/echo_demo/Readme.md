@@ -377,6 +377,9 @@ e.AutoTLSManager.HostPolicy = autocert.HostWhitelist("domain.com")
 // 缓存证书
 e.AutoTLSManager.Cache = autocert.DirCache("/path/to/.cache")
 e.Logger.Fatal(e.StartAutoTLS(":443"))
+
+// 指定证书和公钥
+//e.Logger.Fatal(e.StartTLS(":1323", "cert.pem", "key.pem"))
 ```
 
 **内嵌资源**
@@ -391,7 +394,7 @@ e.GET("/", echo.WrapHandler(assetHandler))
 e.GET("/static/*", echo.WrapHandler(http.StripPrefix("/static/", assetHandler)))
 ```
 
-**响应形式***
+**响应形式**
 ```
 e.GET("/html", func(c echo.Context) error {
 	return c.HTML(200, `<p>this is html</p>`)
@@ -407,7 +410,63 @@ e.GET("/attachment", func(c echo.Context) error {
 })
 ```
 
-**文件上传**
+**子域名**
+```
+type (
+	Host struct {
+		Echo *echo.Echo
+	}
+)
+
+hosts := map[string]*Host{}
+
+api := echo.New()
+hosts["api.localhost:1323"] = &Host{api}
+api.GET("/", func(c echo.Context) (err error) {
+	retrun c.JSON(http.StatusOK, "this is api"}
+}
+
+admin := echo.New()
+hosts["admin.localhost:1323"] = &Host{admin}
+admin.GET("/", func(c echo.Context) (err error) {
+	return c.String(200, "this is admin")
+}
+
+e := echo.New()
+e.Any("/*", func(c echo.Context) (err error) {
+	req := c.Request()
+	res := c.Response()
+	host := hosts[req.Host]
+	if host == nil {
+		err = echo.ErrNotFound
+	} else {
+		host.Echo.ServeHTTP(res, req)
+	}
+	return
+})
+e.Logger.Fatal(e.Start(":1323"))
 ```
 
+**http2 服务端推送**
+```
+func main() {
+	e := echo.New()
+	e.Static("/", "static")
+	e.GET("/", func(c echo.Context) (err error) {
+		pusher, ok := c.Response().Writer.(http.Pusher)
+		if ok {
+			if err = pusher.Push("/app.css", nil); err != nil {
+				return
+			}
+			if err = pusher.Push("/app.js", nil); err != nil {
+				return
+			}
+			if err = pusher.Push("/echo.png", nil); err != nil {
+				return
+			}
+		}
+		return c.File("index.html")
+	})
+	e.Logger.Fatal(e.StartTLS(":1323", "cert.pem", "key.pem")
+)
 ```
