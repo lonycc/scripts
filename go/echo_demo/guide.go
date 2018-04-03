@@ -85,6 +85,53 @@ func customHTTPErrorHandler(err error, c echo.Context) {
 	c.Logger().Error(err)
 }
 
+// 单个文件上传
+func upload(c echo.Context) error {
+	file, err := c.FormFile("file")
+	if err != nil {
+		return err
+	}
+	src, err := file.Open()
+	if err != nil {
+		return err
+	}
+	defer src.Close()
+	dst, err := os.Create(file.Filename)
+	if err != nil {
+		return err
+	}
+	defer dst.Close()
+	if _, err = io.Copy(dst, src); err != nil {
+		return err
+	}
+	return c.HTML(http.StatusOK, fmt.Sprintf("<p>File %s uploaded</p>", file.Filename))
+}
+
+// 多个文件上传
+func multi_upload(c echo.Context) error {
+	form, err := c.MultipartForm()
+	if err != nil {
+		return err
+	}
+	files := form.File["files"]
+	for _, file := range files {
+		src, err := file.Open()
+		if err != nil {
+			return err
+		}
+		defer src.Close()
+		dst, err := os.Create(file.Filename)
+		if err != nil {
+			return err
+		}
+		defer dst.Close()
+		if _, err = io.Copy(dst, src); err != nil {
+			return err
+		}
+	}
+	return c.HTML(http.StatusOK, fmt.Sprintf("<p>Uploaded successfully %d files", len(files)))
+}
+
 // 自定义数据绑定
 type CustomBinder struct{}
 
@@ -150,7 +197,7 @@ func main() {
 		return json.NewEncoder(c.Response()).Encode(u)
 	})
 
-  // 使用自定义的上下文处理请求返回响应
+  	// 使用自定义的上下文处理请求返回响应
 	e.GET("/context", func(c echo.Context) error {
 		cc := c.(*CustomContext)
 		cc.Foo()
@@ -175,6 +222,10 @@ func main() {
 			"name": "Dolly!",
 		})
 	}).Name = "foobar"
+	
+	// 指定静态目录在根目录public路径下
+	e.STATIC("/", "public")
+	e.POST("/upload", upload)
 
 	// e.Any(path string, h Handler)  //任何方法
 	// e.Match(methods []string, path string, h Handler)
