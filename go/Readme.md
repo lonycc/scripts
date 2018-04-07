@@ -196,3 +196,29 @@ func withTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) {
     return WithDeadline(parent, time.Now().Add(timeout))
 }
 ```
+
+**golang/flag包**
+
+```
+cmd -flag  //只支持bool类型
+cmd -flag=x
+cmd -flag x  //只支持非bool类型
+```
+以上语法对一个`-`或两个`-`效果一致; 对于int flag, 合法的值可以为1234, 0664, 0x1234或负数; 对于bool flag, 合法的值可以为1, 0, t, f, true, false, TRUE, FALSE, True, False等;
+
+```
+// 第一个参数为flag名称, 第二个为flag默认值, 第三个为说明
+// flag.String(), flag.Bool(), flag.Int(), 返回的是变量引用
+var f = flag.Int("flagname", 1234, "help message")
+
+// 通过flag.XxxVar()将flag绑定到一个变量
+var flagvar int
+flag.IntVar(&flagvar, "flagname", 1234, "help message")
+
+// 通过flag.Var()绑定自定义类型, 自定义类型需实现Value接口
+flag.Var(&flagVar, "name", "help message")
+
+// 解析命令行参数到定义的flag
+flag.Parse()
+args := flag.Args()
+```
