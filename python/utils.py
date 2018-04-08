@@ -97,6 +97,45 @@ s = requests.Session()
 s.get('http://httpbin.org/cookies/set/sessioncookie/123456789')
 r = s.get("http://httpbin.org/cookies")
 
+# requests_html demo
+# http://html.python-requests.org/
+from requests_html import HTMLSession
+
+s = HTMLSession()
+r = s.get(url)
+r.html.links #所有a标签src值
+r.html.absolute_links  #绝对地址
+r.html.render()  #第一次运行会下载Chromium, 保存在~/.pyppter/目录
+r.html.search('what a {} haha')[0]  #文本查找
+r.html.search('python2 will retire in only {aa} months')['aa']
+about = r.html.find('#about', first=True)
+r.html.xpath('a')  #选择器也支持xpath语法
+about.text  #所有文本,包含子标签的文本
+about.attrs #返回一个元组, 属性名和值
+about.html  #html文本, 包含子标签
+about.find('a')
+about.absolute_links
+
+#智能分页
+[html for html in r.html]
+r.html.next()
+
+#html本地文本
+from requests_html import HTML
+
+html = HTML(html=html_str)
+html.links
+html.html
+script = '''
+() => {
+	return {
+		width: document.documentElement.clientWidth,
+		height: document.documentElement.clientWHeight,
+		deviceScaleFactor: window.devicePixelRatio,
+	}
+}
+'''
+val = html.render(script=script, reload=False) #执行脚本
 #---------------------------------------------------------------------------------------------
 # struct模块, 用于对数据格式进行转换
 
