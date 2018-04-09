@@ -364,3 +364,19 @@ fclose($stdin);
 fwrite($stdout, 'php://stdout/n');
 fclose($stdout);
 fwrite(STDOUT, 'STDOUT/n');
+
+// fsockopen()模拟socket通信
+function check_url($url) {
+	$url_slice = parse_url($url);
+	$path = isset($url_slice['path']) ? $url_slice['path'] : '/';
+	$port = isset($url_slice['port']) ? $url_slice['port'] : '80';
+	$host = $url_slice['host'];
+	if ( $fp = fsockopen($host, $port, $errno, $errstr, $timeout) ) {
+		$msg = "HEAD {$path} HTTP/1.1\r\nHOST: {$host}\r\nCONNECTION: CLOSE\r\n\r\n";
+		fwrite($fp, $msg);
+		$data = fgets($fp, 128);
+		flose($fp);
+		return $data;
+	}
+	return $errstr;
+}
