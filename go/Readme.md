@@ -222,3 +222,30 @@ flag.Var(&flagVar, "name", "help message")
 flag.Parse()
 args := flag.Args()
 ```
+
+
+**docker容器化部署golang项目**
+```
+# 拉取centos基础镜像
+docker pull centos:7.4.1708
+# 创建并进入容器
+docker run -p 8888:80 --name godocker -e ENV="dev" -it [image_id or image_name] /bin/bash
+# 退出容器
+exit
+
+# 项目构建, 会在项目目录下生成一个与项目目录名同名的二进制文件
+cd /path/to/project_name && go build .
+# 将二进制文件拷贝到容器指定目录
+docker cp /path/to/project_name/project_name godocker:/var/www/
+
+# 将容器转为镜像
+docker commit -m "提交信息" -a "附加信息" [container_id or container_name] tony/centos-go:1.0.0
+# 镜像打包
+docker save -o /path/to/centos-go-1.0.0.tar [container_id or container_name]
+# 删除镜像
+docker rmi [container_id or container_name]
+# 恢复镜像
+docker load < /path/to/centos-go-1.0.0.tar
+# 启动上一步恢复的镜像
+docker run -it [image_id or image_name] /bin/bash
+```
