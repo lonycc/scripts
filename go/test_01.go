@@ -12,6 +12,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 	"time"
+	"net/url"
 )
 
 /* go命令行
@@ -55,6 +56,17 @@ type HotsContent struct {
 // init函数在每个包完成初始化后自动执行, 比main优先级高
 func init() {
 	Pi = 4 * math.Atan(1)
+}
+
+// 测试url包, 获取绝对地址
+func test_url() {
+	uri := "12#aa-comment"
+	line := "http://jandan.net/demo"
+	base, _ := url.Parse(line)
+	u, _ := url.Parse(uri)
+	v := line.ResolveReference(uri)
+	fmt.Println(base)
+	fmt.Println(v)
 }
 
 func crawl(url string, page int) {
