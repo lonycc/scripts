@@ -238,30 +238,51 @@ process.disconnect(); //关闭ipc通道
  * 全局对象global, 除了global本身之外其他都是global对象的属性
  * global作为全局变量的宿主, 当定义一个全局变量时, 它就同时也是全局对象的属性
  */
- console.log(__filename); //当前脚本绝对路径
- console.log(__dirname);  //当前脚本所在目录
+__filename; //当前脚本绝对路径
+__dirname;  //当前脚本所在目录
 
- setTimeout(func_name, ms);  //设置一个定时器
- clearTimeout(t);  //停止一个定时器t
- setInterval(func_name, ms);  //定时器,一直循环执行
- clearInterval(t);  //停止定时器
+setTimeout(func_name, ms);  //设置一个定时器
+clearTimeout(t);  //停止一个定时器t
+setInterval(func_name, ms);  //定时器,一直循环执行
+clearInterval(t);  //停止定时器
 
- function hello(){
+ function hello() {
 	console.log(new Date());
  }
 
- var t = setTimeout(hello, 2000);
- clearTimeout(t);
- var t1 = setInterval(hello, 1000);
- clearInterval(t1);
+var t = setTimeout(hello, 2000);
+clearTimeout(t);
+var t1 = setInterval(hello, 1000);
+clearInterval(t1);
 
- console.log('%s', 1234);
- //console.info();
- //console.error();
- //console.warn();
- var obj = {"a": "b"};
- console.dir(obj);  //检查对象
- console.time(label);  //计时开始
- console.timeEnd(label);  //计时结束
- console.trace();  //当前调用栈
- console.assert(value[, message][, ...]); //判断某个表达式或变量是否为真
+console.log('%s', 1234);
+console.info();
+console.error();
+console.warn();
+var obj = {"a": "b"};
+console.dir(obj);  //检查对象
+console.time(label);  //计时开始
+console.timeEnd(label);  //计时结束
+console.trace();  //当前调用栈
+console.assert(value[, message][, ...]); //判断某个表达式或变量是否为真
+
+// buffer用于存放二进制数据, 类似一个整数数组
+var buf1 = new Buffer(10); //创建10字节buffer实例
+var buf2 = new Buffer([10, 20, 30, 40]); //通过给定数组创建buffer实例
+var buf3 = new Buffer("www.domain.com", "utf-8"); //通过字符串创建
+
+// buf.write(string [, offset='utf8'][, length][, encoding]); //写入,返回实际写入字节数
+var len = buf1.write('what the fuck');
+console.log('bytes write to buf1: ', len);
+
+// buf.toString([encoding][, start][, end]) //读取
+console.log(buf1.toString('ascii', 0, 5));
+
+var json = buf1.toJSON(buf1); //转为json
+console.log(json);
+
+// Buffer.concat(list[, totalLength]); //缓冲区合并
+var buf4 = Buffer.concat([buf1, buf3]);
+console.log("buf4内容: " + buf4.toString());
+var dd = buf1.compare(buf3); //比较, 返回一个数字
+// buf.copy(targetBuffer[, targetStart][, sourceStart][, sourceEnd]);  //拷贝
