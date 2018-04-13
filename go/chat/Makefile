@@ -6,6 +6,7 @@ GOGET=$(GOCMD) get
 BINARY_NAME=chat
 BINARY_LINUX=$(BINARY_NAME)_linux64
 BINARY_WINDOWS=$(BINARY_NAME)_win64.exe
+BINARY_MACOS=$(BINARY_NAME)_macos_64
 
 .PHONY: all
 all: deps build
@@ -26,6 +27,7 @@ clean:
 	rm -f $(BINARY_NAME)
 	rm -f $(BINARY_LINUX)
 	rm -f $(BINARY_WINDOWS)
+	rm -f $(BINARY_MACOS)
 
 .PHONY: run
 run:
@@ -37,7 +39,10 @@ test:
 	$(GOTEST) -v ./...
 
 build-linux:
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_LINUX) -v
+	CGO_ENABLED=1 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_LINUX) -v
 
 build-windows:
-	GOOS=windows GOARCH=amd64 $(GOBUILD) -o $(BINARY_WINDOWS) -v
+	CGO_ENABLED=1 GOOS=windows GOARCH=amd64 $(GOBUILD) -o $(BINARY_WINDOWS) -v
+
+build-macos:
+	GOOS=darwin GOARCH=amd64 $(GOBUILD) -o $(BINARY_MACOS) -v
