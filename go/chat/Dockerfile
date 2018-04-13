@@ -1,5 +1,5 @@
 # 基础镜像
-FROM tony/golang:1.9.1
+FROM tony/golang:1.9
 
 # 维护者
 MAINTAINER tony "tony@dmm.net"
