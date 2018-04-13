@@ -369,3 +369,7 @@ Route::get('/home', function (Illuminate\Http\Request $request) {
 `Route::get('api/user', 'messageController@user')->name('web.user');`
 
 代码中可以`$this->visit(route('web.user'));`; 在模板中`<a href="{{route('web.user')}}">user</a>`
+
+**docker容器化部署laravel项目**
+
+`docker run -d --name php7.1 -p 80:80 -p 443:443 -v /path/to/project_name:/var/www/html/project_name richarvey/nginx-php-fpm:latest`
