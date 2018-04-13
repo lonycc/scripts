@@ -370,6 +370,51 @@ Route::get('/home', function (Illuminate\Http\Request $request) {
 
 代码中可以`$this->visit(route('web.user'));`; 在模板中`<a href="{{route('web.user')}}">user</a>`
 
+**laravel+nginx**
+
+```
+server {
+    listen 80;
+    server_name example.com;
+    root /example.com/public;
+
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Content-Type-Options "nosniff";
+
+    index index.html index.htm index.php;
+
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+
+    error_page 404 /index.php;
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+    }
+
+    location ~ /\.(?!well-known).* {
+        deny all;
+    }
+}
+```
+**laravel优化**
+
+`composer install --optimize-autoloader`
+
+`php artisan config:cache`
+
+`php artisan route:cache`
+
 **docker容器化部署laravel项目**
 
 `docker run -d --name php7.1 -p 80:80 -p 443:443 -v /path/to/project_name:/var/www/html/project_name richarvey/nginx-php-fpm:latest`
