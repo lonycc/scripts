@@ -286,3 +286,42 @@ var buf4 = Buffer.concat([buf1, buf3]);
 console.log("buf4内容: " + buf4.toString());
 var dd = buf1.compare(buf3); //比较, 返回一个数字
 // buf.copy(targetBuffer[, targetStart][, sourceStart][, sourceEnd]);  //拷贝
+
+
+// 事件监听触发机制
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+// eventEmitter.on('eventName', eventHandler);  //注册事件监听器,一个事件名可注册多个事件监听器
+// eventEmitter.addListener('eventName', eventHandler);
+// eventEmitter.emit('eventName');  //触发事件
+
+var connectHandler = function connected() {
+    console.log('connection被触发');
+    eventEmitter.emit('data_received', '参数1', '参数2');
+};
+
+eventEmitter.on('connection', connectHandler);
+
+eventEmitter.once('connection', function(stream) {
+    console.log('once被触发');
+});
+
+eventEmitter.addListener('connection', function(){console.log('connection监视器被触发');});
+
+eventEmitter.on('data_received', function(arg1, arg2) {
+    console.log('data_received被触发', arg1, arg2);
+});
+
+eventEmitter.emit('connection');
+
+eventEmitter.setMaxListeners(10); //设定监听器个数
+
+// eventEmitter.removeListener('connection', h2);  //移除指定监视器,removeListener事件被触发
+// eventEmitter.removeAllListeners('connection');   //移除指定事件的所有监视器
+
+console.log(eventEmitter.listeners('connection')); //返回指定事件的监听器数组
+
+console.log(events.EventEmitter.listenerCount(eventEmitter, 'connection'));
+
+// eventEmitter.emit('error'); //触发error事件
