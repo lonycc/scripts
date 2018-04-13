@@ -232,5 +232,36 @@ process.cpuUsage({ user: 123176, system: 25168 })  //cpu使用情况, 参数可�
 process.cwd(); //当前目录
 process.debugPort; //调试端口, 可读可写;
 process.disconnect(); //关闭ipc通道
-
 */
+
+/**
+ * 全局对象global, 除了global本身之外其他都是global对象的属性
+ * global作为全局变量的宿主, 当定义一个全局变量时, 它就同时也是全局对象的属性
+ */
+ console.log(__filename); //当前脚本绝对路径
+ console.log(__dirname);  //当前脚本所在目录
+
+ setTimeout(func_name, ms);  //设置一个定时器
+ clearTimeout(t);  //停止一个定时器t
+ setInterval(func_name, ms);  //定时器,一直循环执行
+ clearInterval(t);  //停止定时器
+
+ function hello(){
+	console.log(new Date());
+ }
+
+ var t = setTimeout(hello, 2000);
+ clearTimeout(t);
+ var t1 = setInterval(hello, 1000);
+ clearInterval(t1);
+
+ console.log('%s', 1234);
+ //console.info();
+ //console.error();
+ //console.warn();
+ var obj = {"a": "b"};
+ console.dir(obj);  //检查对象
+ console.time(label);  //计时开始
+ console.timeEnd(label);  //计时结束
+ console.trace();  //当前调用栈
+ console.assert(value[, message][, ...]); //判断某个表达式或变量是否为真
