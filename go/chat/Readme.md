@@ -1,5 +1,9 @@
 # golang项目打包成镜像部署
 
+**本地编译**
+
+`make build-linux`
+
 **构建镜像**
 
 `cd /path/to/chat`
