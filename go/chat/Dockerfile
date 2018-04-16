@@ -18,6 +18,8 @@ COPY . $GOPATH/src/chat
 # COPY命令复制压缩包不会解压, ADD会解压
 # COPY aaa.tar $GOPATH/src/aaa.tar
 
+RUN make all
+
 # 暴露端口
 EXPOSE 8080
 
