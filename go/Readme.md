@@ -234,7 +234,8 @@ docker run -p 8888:80 --name godocker -e ENV="dev" -it [image_id or image_name] 
 exit
 
 # 项目构建, 会在项目目录下生成一个与项目目录名同名的二进制文件
-cd /path/to/project_name && go build .
+cd /path/to/project_name
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o project_name -v
 # 将二进制文件拷贝到容器指定目录
 docker cp /path/to/project_name/project_name godocker:/var/www/
 
