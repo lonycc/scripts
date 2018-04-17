@@ -418,3 +418,19 @@ server {
 **docker容器化部署laravel项目**
 
 `docker run -d --name php7.1 -p 80:80 -p 443:443 -v /path/to/project_name:/var/www/html/project_name richarvey/nginx-php-fpm:latest`
+
+**alpine中安装php扩展ldap**
+
+[alpine仓库](http://dl-3.alpinelinux.org/alpine/)
+
+[alpine pkgs](https://pkgs.alpinelinux.org/packages)
+
+[alpine wiki](http://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management)
+
+```
+apk add --no-cache openldap
+apk add --no-cache openldap-dev
+/usr/local/bin/docker-php-ext-configure ldap
+/usr/local/bin/docker-php-ext-install ldap
+/usr/local/bin/docker-php-ext-enable ldap
+```
