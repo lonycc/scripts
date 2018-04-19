@@ -315,7 +315,9 @@ class Singleton(object):
         return cls._instance
 
 # 爬取百度搜索结果列表
-def crawlerBaidu(url):
+s = requests.Session()
+def crawlerBaidu(url, referer='https://www.baidu.com/'):
+    global s
     headers = {
     'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
     'Accept-Encoding':'gzip, deflate, br',
@@ -324,11 +326,12 @@ def crawlerBaidu(url):
     'Connection':'keep-alive',
     'Host':'www.baidu.com',
     'Pragma':'no-cache',
-    'Referer':'https://www.baidu.com/',
+    'Referer': referer,
     'Upgrade-Insecure-Requests':'1',
+    'X-Requested-With': 'XMLHttpRequest',
     'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36' 
     }
-    r = requests.get(url, headers=headers)
+    r = s.get(url, headers=headers)
     html = pyquery.PyQuery(r.text)
     for site in html('h3.t a').items():
         r1 = requests.get(site.attr('href'), headers=headers, allow_redirects=False)
@@ -340,6 +343,12 @@ def crawlerBaidu(url):
             print(href)
         else:
             pass
+    next_page = html('div#page a.n')
+    time.sleep(0.5)
+    if next_page.items():
+        next_a = next(next_page.items())
+        next_url = 'https://www.baidu.com' + next_a.attr('href')
+        crawlerBaidu(next_url, referer=url)
 
 # 爬取百度热词
 def baidu_hotword():
