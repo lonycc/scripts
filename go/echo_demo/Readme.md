@@ -530,6 +530,7 @@ func login(c echo.Context) error {
 		}
 		return c.JSON(http.StatusOK, map[string]string{
 			"token": t,
+			"code": "200",
 		})
 	}
 	return echo.ErrUnauthorized
@@ -545,10 +546,16 @@ func auth(c echo.Context) error {
 	claims := user.Claims.(jwt.MapClaims)
 	name := claims["name"].(string)
 	*/
-	return c.String(http.StatusOK, "Welcome " + name + "!")
+	return c.JSON(http.StatusOK, claims)
 }
 
 func main() {
+	e := echo.New()
+	e.Use(middleware.Logger())
+	e.Use(middleware.Recover())
+
+	e.POST("/login", login)
+	
 	r := e.Group("/auth")
 	config := middleware.JWTConfig{
 		Claims:     &jwtCustomClaims{},
@@ -558,6 +565,8 @@ func main() {
 	// 映射声明
 	//r.Use(middleware.JWT([]byte("secret")))
 	r.GET("", auth)
+	
+	e.Logger.Fatal(e.Start(":1323"))
 }
 ```
 
