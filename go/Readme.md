@@ -250,3 +250,42 @@ docker load < /path/to/centos-go-1.0.0.tar
 # 启动上一步恢复的镜像
 docker run -it [image_id or image_name] /bin/bash
 ```
+
+**云原生与微服务**
+
+```
+go-micro rpc框架, 抽象出了分布式系统的细节
+service discovery(服务发现)  负责微服务的自动注册和名字解析
+load balancing(负载均衡)  基于服务发现,智能的客户端负载均衡
+synchronous comms(同步通信) 对基于rpc通信的双向流的支持
+asynchronous comms(异步通信) 事件驱动架构的发布订阅接口
+message encoding(消息编码)  基于内容类型如protobuf和json的动态编码
+service interface(服务接口) 所有特性都封装在简单的高级接口
+
+go-micro 模块分解
+transport  服务间的同步请求/响应
+broker  异步通信的消息代理
+codec 请求响应编码, json/protobuf/bson/msgpack等, 支持rpc格式json-rpc/proto-rpc
+registry  服务发现
+selector 负载均衡
+client  发送请求, rpc客户端
+server  处理请求, rpc服务端
+
+micro 云原生应用开发工具集
+api gateway 轻量级网关/代理, 用于将http请求转为rpc请求
+cli  命令行接口
+sidecar  非go-micro应用的http代理
+web ui/proxy 可视化查看服务
+
+
+IaaS: 基础设置服务, 提供基础资源如服务器/存储/网络; 商业方案有AWS / Digital Ocean / vSphere, 开源的有OpenStack;
+PaaS: 平台服务, 提供应用开发/运行环境; 商业方案有GAE / OpenShift / Heroku; 开源的有Deis / OpenShift;
+SaaS: 软件服务, 提供直面用户的互联网服务; 比如Dropbox / Google Apps / Facebook / Twitter / Instagram;
+
+服务网格 Service Mesh, 在Kubernetes上践行微服务架构进行服务治理所必须的组件;
+无服务器架构 Serverless, 以Faas为代表;
+
+虚拟化是通过软件手段对计算机硬件资源镜像整合管理和再分配的一种技术。最常用的就是基于虚拟机（Hypervisor-based）的虚拟化，它通过一个软件层的封装，提供和物理硬件相同的输入输出表现，实现了操作系统和计算机硬件的解耦，将OS和计算机间从1对1变成了多对多（实际上是1对多）的关系。该软件层称为虚拟机管理器（VMM/Hypervisor），它可以直接运行在裸机上（Xen、VMware EXSi），也可以运行在操作系统上（KVM、VMware workstation）。
+基于虚拟机的虚拟化方案存在一个缺陷，在虚拟机上运行了一个完整的OS（GuestOS），在其下执行的还有虚拟化层和宿主机OS，比直接在物理机上运行相当的服务性能差。而且有GuestOS的存在，虚拟机镜像大至几G到几十G，占用存储空间，便携性差，迁移时通信代价大，不便于集群管理。想要增加硬件资源，需要启动新的虚拟机，要等待GuestOS启动，耗时几分钟。
+Docker容器技术，基于Linux内核的两个机制：Cgroups(实现资源按需分配)和Namespace(实现任务隔离)。多个容器共用一个OS内核，容器内只包含应用和runtime，因此容器大小通常只有几十到几百M，轻量便携，启动速度快，更高密度的存储和使用，更方便集群管理。
+```
