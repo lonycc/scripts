@@ -427,6 +427,12 @@ server {
 
 [alpine wiki](http://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management)
 
+`apk add --no-cache pkg_name`
+
+`apk add openldap --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main/ --allow-untrusted`
+
+`apk add openldap-dev --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/main/ --allow-untrusted`
+
 ```
 apk add --no-cache openldap
 apk add --no-cache openldap-dev
