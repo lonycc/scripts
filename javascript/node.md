@@ -23,6 +23,27 @@
 
 `pm2 list`  # 监控运行状态
 
+## nodemon, 热更新
+
+`npm i -g nodemon`
+
+```
+nodemon.json, 启动服务会自动加载配置文件
+{
+    "ignore": ["dist"],
+    "verbose": true,
+    "env": {
+        "NODE_ENV": "development"
+    }
+}
+```
+
+`nodemon ./app.js`
+
+`nodemon ./app.js  localhost 3000`
+
+`nodemon --debug ./app.js 3000`
+
 ## npm相关
 
 `npm init` #初始化, 创建package.json
