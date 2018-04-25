@@ -92,6 +92,12 @@ r.requests.headers #请求headers
 jar = requests.cookies.RequestsCookieJar()
 jar.set('key1', 'val1')
 
+# 将文本流保存到文件里
+r = requests.get('https://api.github.com/events', stream=True)
+with open(filename, 'wb') as fd:
+    for chunk in r.iter_content(chunk_size):
+        fd.write(chunk)
+
 # 会话对象, 跨请求保持某些参数
 s = requests.Session()
 s.get('http://httpbin.org/cookies/set/sessioncookie/123456789')
