@@ -575,6 +575,96 @@ function getPlatformEndianness() {
   }
 }
 ```
+每种TypedArray的构造函数, 都有个`BYTES_PER_ELEMENT`属性, 表示该种数据类型占据的字节数. 这个属性也可以TypedArray实例上获取`Uint8Array.prototype.BYTES_PER_ELEMENT`或`uint8Array.BYTES_PER_ELEMENT`.
+
+ArrayBuffer与字符串的互相转换, 前提是字符串的编码方式确定.
+
+```
+// ArrayBuffer 转为字符串，参数为 ArrayBuffer 对象
+function ab2str(buf) {
+  // 注意，如果是大型二进制数组，为了避免溢出，
+  // 必须一个一个字符地转
+  if (buf && buf.byteLength < 1024) {
+    return String.fromCharCode.apply(null, new Uint16Array(buf));
+  }
+
+  const bufView = new Uint16Array(buf);
+  const len =  bufView.length;
+  const bstr = new Array(len);
+  for (let i = 0; i < len; i++) {
+    bstr[i] = String.fromCharCode.call(null, bufView[i]);
+  }
+  return bstr.join('');
+}
+
+// 字符串转为 ArrayBuffer 对象，参数为字符串
+function str2ab(str) {
+  const buf = new ArrayBuffer(str.length * 2); // 每个字符占用2个字节
+  const bufView = new Uint16Array(buf);
+  for (let i = 0, strLen = str.length; i < strLen; i++) {
+    bufView[i] = str.charCodeAt(i);
+  }
+  return buf;
+}
+```
+
+溢出, 视图类型放入的数值超过其位数; 正向溢出(overflow): 当输入值大于当前数据类型的最大值, 结果等于当前数据类型的最小值加上余值, 再减1;
+负向溢出(underflow): 当输入值小于当前数据类型的最小值, 结果等于当前数据类型的最大值减去余值, 再加1; `Uint8ClampedArray`视图的溢出规则, 凡是正向溢出, 结果等于255; 负向溢出, 结果等于0;
+
+```
+const uint8 = new Uint8Array(1);
+uint8[0] = 256; // 1 0000 0000
+uint8[0];  // 保留后8位, 即 0000 0000
+uint8[0] = -1; // -1对应正值1, 取否1111 1110, 再加1, 得到255
+uint8[0]; // 255
+```
+
+`TypedArray.prototype.buffer`, 返回内存中对应的ArrayBuffer对象, 只读;
+
+`TypedArray.prototype.byteLength`, 返回TypedArray数组字节长度;
+
+`TypedArray.prototype.byteOffset`, 返回TypedArray数组从底层ArrayBuffer对象的偏移量;
+
+`TypedArray.prototype.length`, 返回TypedArray数组成员数;
+
+`TypedArray.prototype.set(typedArray [, offset])`, 复制数组内容;
+
+`TypedArray.prototype.subarray(start [, end])`, 截取一部分;
+
+`TypedArray.prototype.slice(position)`, 类似subarray, 表示截取从指定位置到结束;
+
+`TypedArray.of()`, 静态方法, 将参数转为一个TypedArray实例, `Float32Array.of(0.15, -8, 3.5)`, `Int8Array.of(127, 126, 125).map(x => 2 * x)`;
+
+`TypedArray.from()`, 静态方法, 接收一个iterable结构参数, 返回TypedArray实例;`Uint16Array.from([10, 23, 56])`, 
+
+`Uint16Array.from(Uint8Array.of(0, 1, 2))`, `Int16Array.from(Int8Array.of(127, 126, 125), x => 2 * x)`;
+
+复合视图, 由于视图的构造函数可以指定起始位置和长度, 所以在同一段内存中, 可以依次存放不同类型的数据, 形成复合视图;
+
+```
+const buffer = new ArrayBuffer(24);
+
+const idView = new Uint32Array(buffer, 0, 1); // 0~3字节
+const usernameView = new Uint8Array(buffer, 4, 16); // 4~19字节
+const amountDueView = new Float32Array(buffer, 20, 1); // 20~23字节
+```
+
+DataView视图, 操作不同类型数据, `DataView(ArrayBuffer buffer [, start [, length]])`;
+
+`DataView.prototype.buffer`
+
+`DataView.prototype.byteLength`
+
+`DataView.prototype.byteOffset`
+
+`DataView.prototype.getIn8(index)`, 读取指定位置的8位整数
+
+`DataView.prototype.getUint16(index [, bool=false])`, 默认使用大端字节序
+
+`DataView.prototype.setInt32(index, data [, bool=false])`, 在index位置, 写入data, 默认大端字节序
+
+二进制数组的应用, 在xhr2中, 指定responseType为arraybuffer; Canvas二进制像素数据; WebSocket发送接收二进制数据; Fetch API取回的数据; File API; SharedArrayBuffer,
+
 
 
 **使用export和import实现模块化**
