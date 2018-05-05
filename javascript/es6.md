@@ -665,27 +665,22 @@ DataView视图, 操作不同类型数据, `DataView(ArrayBuffer buffer [, start 
 
 二进制数组的应用, 在xhr2中, 指定responseType为arraybuffer; Canvas二进制像素数据; WebSocket发送接收二进制数据; Fetch API取回的数据; File API; SharedArrayBuffer,
 
+**ES6编程风格**
 
+块级作用域, 用let取代var; 全局环境, 使用const, 而非let;
 
-**使用export和import实现模块化**
+静态字符串一律使用单引号或反引号, 动态字符串使用反引号;
 
-// 导出常量
-export const sqrt = Math.sqrt;
+使用数组成员对变量赋值时优先使用解构赋值 `const [a, b] = [1, 2]`; 函数的参数是对象的成员优先使用解构赋值 `function dn({f1, f2}){}`; 如果函数返回多个值, 优先使用对象的解构赋值, 而非数组;
 
-// 导出函数
-export function square(x) {
-    return x * x;
-}
+定义单行的对象, 最后一个成员不以逗号结尾 `const a = {k1:v1, k2:v2}`; 定义多行对象, 最后一个成员以逗号结尾;
 
-// 导出函数
-export function diag(x, y) {
-    return sqrt(square(x) + square(y));
-}
+对象尽量静态化, 一旦定义就不得随意添加属性; 添加属性使用`Object.assign`方法; 
 
-export let foo = () => { console.log('haha'); return 'haha'; };
+使用扩展运算符`...`拷贝数组; 使用`Array.from()`将array-link对象转为数组;
 
-// 一次导出多个
-export{ sqrt as sqrt_s , square, diag}
+立即执行函数写成箭头函数形式, `( () => { console.log('ha'); } )()`; 需要用到函数表达式的场合, 用箭头函数, `[1, 2, 3].map(x => x * x)`; 箭头函数取代`Function.prototype.bind`, `const boundMethod = (...params) => method.apply(this, params)`; 布尔值不直接作为参数, `{option = false} = {}`; 
 
-// 导入
-import { sqrt_s as sqrt, square, diag } from './lib';
+使用Class写法, 取代prototype操作, `class Q {}`; 使用extends实现继承, `class P extends Q {}`;
+
+使用import取代require, 使用export取代module.exports; 如果模块只有一个输出, 使用export default; 如果模块默认输出一个函数, 函数名首字母应小写, 如果模块默认输出一个对象, 对象首字母应大写;
