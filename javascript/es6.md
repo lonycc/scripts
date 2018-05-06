@@ -684,3 +684,175 @@ DataView视图, 操作不同类型数据, `DataView(ArrayBuffer buffer [, start 
 使用Class写法, 取代prototype操作, `class Q {}`; 使用extends实现继承, `class P extends Q {}`;
 
 使用import取代require, 使用export取代module.exports; 如果模块只有一个输出, 使用export default; 如果模块默认输出一个函数, 函数名首字母应小写, 如果模块默认输出一个对象, 对象首字母应大写;
+
+
+**使用export和import实现模块化**
+
+在ES6之前, 社区制定了模块加载方案, 有CommonJS和AMD两种, 前者用于服务器, 后者用于浏览器; import是静态执行的, 不能使用表达式或变量; import语句是Singleton模式的;
+
+```
+// 导出常量
+export const sqrt = Math.sqrt;
+
+// 导出函数
+export function square(x) {
+    return x * x;
+}
+
+// 导出函数
+export function diag(x, y) { return sqrt(square(x) + square(y)); }
+
+export let foo = () => { console.log('haha'); return 'haha'; };
+
+// 一次导出多个, 用as重命名
+export { sqrt as sqrt_s , square, diag};
+
+// 导入多个, 用as重命名
+import { sqrt_s as sqrt, square, diag } from './lib';
+
+// 整体加载模块
+import * as circle from './circle';
+
+// 如果模块使用了export default, 那么在import的时候, 可以任意命名;
+
+// 加载默认方法和其他接口
+import _, { aa, aa as bb } from './moduleA';
+
+// 模块的继承
+export * from 'moduleA'; 
+export default xx;
+```
+
+传统HTML页面, 浏览器通过`<script>`标签加载脚本, 默认是同步加载, 如果需要异步加载, 需要设置`<script src="" defer></script>`或`<script src="" async></script>`, defer是渲染完再执行, async是下载完即执行;
+
+加载ES6模块, `<script type="module" src="">`, 模块顶层this关键字返回`undefined`, 而非指向`window`;
+
+CommonJS模块输出值拷贝, ES6模块输出值引用; CommonJS模块运行时加载, ES6模块编译时输出接口;
+
+
+**async await**
+
+> `async`函数就是将`generator`函数的`*`去掉, 在`function`前加`async`, 将`yield`替换成`await`;
+
+`async`函数对`generator`函数的改进, `generator`函数的执行必须靠执行器, 而`async`函数自带执行器; `async`函数返回值是`Promise`对象, 而`generator`返回的是`Iterator`对象; `await`后可以是`Promise`对象或原始类型的值, `co`模块规定`yield`命令后只能是`Thunk`函数或`Promise`对象; 
+
+```
+// 函数声明
+async function foo() {}
+
+// 函数表达式
+const foo = async function () {};
+const foo = async () => {};
+
+// 对象的方法
+let obj = { async foo() {} };
+obj.foo().then(//...);
+```
+
+async函数返回一个Promise对象, 其内部return语句返回的值, 会被then方法回调函数接收到. async函数内部抛出错误, 会导致返回的Promise对象状态转为reject, 抛出的错误对象会被catch方法回调函数接收到.
+
+```
+async function f() {
+  throw new Error('出错了');
+}
+
+f()
+.then(v => console.log(v))
+.catch(e => console.log(e));
+```
+
+一般在await命令后面是一个Promise对象, 如果不是, 会被转成一个立即resolve的Promise对象; 一个await语句后的Promise转为reject, 那么整个async函数都会中断执行, 可以将await放入`try...catch`结构或者`await Promise.reject('').catch();`
+
+```
+async function dbFunc(db) {
+	let docs = [{}, {}, {}];
+	let promises = docs.map((doc) => db.post(doc));
+	return await Promise.all(promises);
+}
+
+async function logInOrder(urls) {
+  // 并发读取远程URL
+  const textPromises = urls.map(async url => {
+    const response = await fetch(url);
+    return response.text();
+  });
+
+  // 按次序输出
+  for (const textPromise of textPromises) {
+    console.log(await textPromise);
+  }
+}
+```
+
+**Class基本语法**
+
+类方法内部如何有`this`, 它默认指向类的实例. 
+
+```
+let methodName = 'getArea';
+class Point {
+  	constructor(x, y) {
+  		console.log(new.target === Point);
+   		this.x = x;
+    	this.y = y;
+  	}
+  	
+	get prop() { return 'getter'; }
+	
+	set prop(value) { console.log('setter: ' + value); }
+	
+	* [Symbol.iterator]() {} // generator方法
+
+	static methodA() {}  // 静态方法, 直接通过类调用, 不能被实例继承
+	
+  	toString() {
+    	return '(' + this.x + ', ' + this.y + ')';
+  	}
+  
+  	// 类的属性名可以是表达式
+  	[methodName]() {
+  	}
+}
+
+let p = new Point(5, 6);  // true, 表示构造函数是new命令调用的
+p.prop = 123;  // setter, 定义静态属性
+p.prop;  // getter, 获得静态属性
+typeof Point;  // function
+Point === Point.prototype.constructor; // true
+p.constructor === Point.prototype.constructor;  // true
+Point.name; // name属性返回class关键字后面的类名
+
+// 静态属性, class本身属性, 即Class.propName, 而非定义在实例对象this上的属性
+
+p
+
+// 在类的实例上调用方法, 其实就是调用原型上的方法; 
+
+// 向类添加方法
+Object.assign(Point.prototype, {
+	toValue(){},
+	toA(){}
+});
+
+Object.keys(Point.prototype); // [], 类内部定义的方法不可枚举
+p.__proto__.hasOwnProperty('toString'); // true
+
+// class表达式, 如果类内部未用到类名, 则Me可以省略; 如果需要立即执行, 同函数一样
+const myClass = class Me {};
+```
+
+**Class 的继承**
+
+> 通过`extends`关键字实现继承; 子类内部通过`super`关键字调用父类方法和属性; 子类必须在构造函数中调用`super()`方法才能使用`this`关键字;
+
+`Object.getPrototypeOf(childClass)`, 用于从子类上获取父类
+
+```
+class A {} 
+class B extends A {}
+
+B.__proto__ === A; // true
+B.prototype.__proto__ === A.prototype;  // true
+```
+
+Mixin模式, 多个对象合成一个新对象, 新对象具有各个组成成员的接口.
