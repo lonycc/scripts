@@ -440,3 +440,79 @@ apk add --no-cache openldap-dev
 /usr/local/bin/docker-php-ext-install ldap
 /usr/local/bin/docker-php-ext-enable ldap
 ```
+
+**用户认证**
+
+config/auth.php
+
+```
+guard (看守器)
+guards.web.driver session
+guards.api.driver token
+guards.api.driver passport
+guards.web.provider users (这里可自定义名字)
+guards.api.provider users
+
+
+provider (提供器)
+providers.users.driver eloquent
+providers.users.model App\User::class
+
+providers.users.driver database
+providers.users.table xxx
+```
+
+
+快速生成身份验证所需路由和视图
+`php artisan make:auth`
+
+自定义`guard`, 在`App\Http\Controllers\Auth`命名空间里
+`LoginController` / `RegisterController` / `ResetPasswordController`中定义`guard`方法, 返回一个`gurad`实例:
+
+```
+use Illuminate\Support\Facades\Auth;
+
+protected function guard()
+{
+    return Auth::guard('guard-name');
+}
+```
+
+自定义验证/存储, 可以在`RegisterController`里修改`validator`方法.
+
+检索认证用户, 用 `Auth` facade 访问: `Auth::user();` / `Auth::id();`, 或者利用`Illuminate\Http\Request`实例来访问`$request->user();`.
+
+确认当前用户是否认证, 用 `Auth::check();`.
+
+保护路由, 只需对路由加上中间件, `Route::get('profile', function() {})->middleware('auth');`; 如果在控制器中, 则只需在其构造方法中调用`$this->middleware('auth');`.
+
+指定guard, 将auth中间件添加到路由时, 还需指定guard, 例如
+`$this->middleware('auth:api');`, 表示适用于api的guard.
+
+登录限制, `LoginController` 包含了 `Illuminate\Foundation\Auth\ThrottlesLogins` trait, 默认多次尝试认证失败会被限制;
+
+手动认证用户, 通过 `Auth` facade 来访问Laravel的认证服务, 然后使用 `attempt` 方法, `Auth::attempt(request('email', 'password)); redirect()->intended('dashboard);`
+
+访问指定的guard实例, 通过 `Auth` facade 的 `guard` 方法指定要使用的guard实例. 
+
+```
+if ( Auth::guard('admin')->attempt($credentials) ) {
+	//
+}
+```
+
+注销用户`Auth::logout();`
+
+记住用户`Auth::attempt(['email' => $email, 'password' => $password], $remember);`, 通过`Auth::viaRemember();`检查用户是否使用[记住我] cookie进行认证;
+
+`Auth::login($user);` //登录用户
+
+`Auth::login($user, true);`  //登录并记住用户
+
+`Auth::guard('admin')->login($user);`
+
+`Auth::loginUsingId(1);`  //通过id验证用户
+
+`Auth::loginUsingId(1, true);`  //登录并记住用户
+
+`Auth::once($credentials);`  //仅验证用户一次, 不使用session/cookies
