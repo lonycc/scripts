@@ -516,3 +516,89 @@ if ( Auth::guard('admin')->attempt($credentials) ) {
 `Auth::loginUsingId(1, true);`  //登录并记住用户
 
 `Auth::once($credentials);`  //仅验证用户一次, 不使用session/cookies
+
+
+***laravel/passport实现的oauth2授权认证**
+
+```
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Passport\Client;
+use Illuminate\Http\Request;
+
+class DemoController extends Controller
+{
+    use AuthenticatesUsers;
+
+    public function __construct()
+    {
+        $this->middleware('auth:api')->only(['logout']);
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        $remember_me = $request->has('remember') ? true : false;
+        if ( $this->guard('api')->attempt($credentials, $remember_me) )
+        {
+            $this->clearLoginAttempts($request);
+            $password_client = Client::query()->where('password_client', 1)->latest()->first();
+    
+            $request->request->add([
+                'grant_type' => 'password',
+                'client_id' => $password_client->id,
+                'client_secret' => $password_client->secret,
+                'username' => $credentials['email'],
+                'password' => $credentials['password'],
+                'scope' => ''
+            ]);
+    
+            $proxy = Request::create(
+                'oauth/token',
+                'POST'
+            );
+    
+            $response = \Route::dispatch($proxy);
+            return ['code' => 200, 'data' => json_decode($response->original, true)];
+        }
+        return ['code' => 401, 'message' => '授权失败'];
+    }
+
+    public function logout(Request $request)
+    {
+        if ( Auth::guard('api')->check() )
+        {
+            Auth::guard('api')->user()->token()->revoke();
+        }
+        return ['code' => 200, 'message' => '注销成功'];
+    }
+
+    public function refresh(Request $request)
+    {
+        $password_client = Client::query()->where('password_client', 1)->latest()->first();
+        $refresh_token = $request->has('refresh_token') ? $request->get('refresh_token') : '';
+        $request->request->add([
+            'refresh_token' => $refresh_token,
+            'grant_type' => 'refresh_token',
+            'client_id' => $password_client->id,
+            'client_secret' => $password_client->secret,
+            'scope' => '',
+        ]);
+        $proxy = Request::create(
+            'oauth/token',
+            'POST'
+        );
+
+        $response = \Route::dispatch($proxy);
+        if ( array_key_exists('message', json_decode($response->original, true)) )
+        {
+            return ['code' => 401, 'data' => json_decode($response->original, true)];
+        }
+        return ['code' => 200, 'data' => json_decode($response->original, true)];
+    }
+}
+```
