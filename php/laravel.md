@@ -518,7 +518,7 @@ if ( Auth::guard('admin')->attempt($credentials) ) {
 `Auth::once($credentials);`  //仅验证用户一次, 不使用session/cookies
 
 
-***laravel/passport实现的oauth2授权认证**
+**laravel/passport实现的oauth2授权认证**
 
 ```
 <?php
