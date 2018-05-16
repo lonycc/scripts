@@ -77,9 +77,36 @@ if ( Auth::guard('admin')->attempt($credentials) ) {
 
 **laravel/passport实现的oauth2授权认证**
 
-- 首先安装`composer require laravel/passport`
+- 安装`composer require laravel/passport`
 
-- 然后配置`config/auth.php`, `guards.api.driver=passport`
+- 数据库迁移`php artisan migrate`
+
+- 生成密钥和客户端`php artisan passport:install`
+
+- 配置`config/auth.php`, `guards.api.driver=passport`
+
+- 修改`app/Providers/AuthServiceProvider.php`, 新增内容如下:
+
+```
+use Laravel\Passport\Passport;
+use Carbon\Carbon;
+
+class AuthServiceProvider extends ServiceProvider
+{
+    public function boot()
+    {
+        $this->registerPolicies();
+
+        //
+        Passport::routes();
+        Passport::tokensCan([
+            'conference' => '请求访问您的个人信息'
+        ]);
+        Passport::tokensExpireIn(Carbon::now()->addMinute(100));
+        Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
+    }
+}
+```
 
 - `routes/api.php` 如下:
 
