@@ -1,3 +1,7 @@
+[基于 Laravel Passport API 的多用户认证](https://laravel-china.org/articles/7358/multiuser-and-multi-field-authentication-system-based-on-laravel-passport-api-two)
+
+[基于 Laravel Passport API 的多字段认证](https://laravel-china.org/articles/7361/multiuser-and-multi-field-authentication-system-based-on-laravel-passport-api-three)
+
 **用户认证**
 
 config/auth.php
