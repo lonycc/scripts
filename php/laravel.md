@@ -529,6 +529,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Passport\Client;
 use Illuminate\Http\Request;
+use Validator;
+
 
 class DemoController extends Controller
 {
@@ -539,6 +541,9 @@ class DemoController extends Controller
         $this->middleware('auth:api')->only(['logout']);
     }
 
+    /**
+     * 登录, 密码模式认证授权
+     */
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -568,6 +573,9 @@ class DemoController extends Controller
         return ['code' => 401, 'message' => '授权失败'];
     }
 
+    /**
+     * 注销令牌
+     */
     public function logout(Request $request)
     {
         if ( Auth::guard('api')->check() )
@@ -577,10 +585,14 @@ class DemoController extends Controller
         return ['code' => 200, 'message' => '注销成功'];
     }
 
+    /**
+     * 更新令牌
+     */
     public function refresh(Request $request)
     {
         $password_client = Client::query()->where('password_client', 1)->latest()->first();
         $refresh_token = $request->has('refresh_token') ? $request->get('refresh_token') : '';
+
         $request->request->add([
             'refresh_token' => $refresh_token,
             'grant_type' => 'refresh_token',
@@ -588,6 +600,7 @@ class DemoController extends Controller
             'client_secret' => $password_client->secret,
             'scope' => '',
         ]);
+        
         $proxy = Request::create(
             'oauth/token',
             'POST'
@@ -600,5 +613,52 @@ class DemoController extends Controller
         }
         return ['code' => 200, 'data' => json_decode($response->original, true)];
     }
+
+    /**
+     * 创建个人访问token， 该token永久有效
+     */
+    public function token()
+    {
+        $user = \App\Models\User::find(1);
+        $token = $user->createToken('ptoken')->accessToken;
+        // $token = $user->createToken('My Token', ['place-orders'])->accessToken;
+        return $token;
+    }
+
+    /**
+     * 注册后自动生成token
+     */
+    public function register(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name'    => 'required|unique:users',
+            'email' => 'required|unique:users',
+            'password' => 'required|between:8,32',
+        ]);
+
+        if ( $validator->fails() )
+        {
+            return ['code' => 401, 'message' => $validator->errors()->toArray()];
+        }
+
+        $client = Client::query()->where('password_client', 1)->latest()->first();
+        $request->request->add([
+            'grant_type' => 'password',
+            'client_id' => $client->id,
+            'client_secret' => $client->secret,
+            'username' => $request->email,
+            'password' => $request->password,
+            'scope' => ''
+        ]);
+
+        $proxy = Request::create(
+            'oauth/token',
+            'POST'
+        );
+
+        $response = \Route::dispatch($proxy);
+        return ['code' => 200, 'data' => json_decode($response->original, true)];
+    }
+
 }
 ```
