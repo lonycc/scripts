@@ -1,6 +1,30 @@
 **[node.js框架选型](http://cnodejs.org/topic/58caaec27dee71e5193a53ce)**
 
 
+**centos系统安装node.js**
+
+```
+# 安装node.js
+cd /usr/local/src
+wget http://nodejs.org/dist/v8.11.3/node-v8.11.3-linux-x64.tar.xz
+tar -xvf node-v8.11.3-linux-x64.tar.xz -C /usr/local
+
+# node环境配置
+vim /etc/profile
+
+加入以下几行
+export NODE_HOME=/usr/local/node-v8.11.3-linux-x64
+export PATH=$PATH:$NODE_HOME/bin
+export NODE_PATH=$NODE_HOME/lib/node_modules
+
+# 立即生效使用配置
+source /etc/profile
+
+# 检查是否正常
+node -v
+npm -v
+```
+
 ## 利用anyproxy做代理抓包分析
 
 `anyproxy --root` # 生成证书
