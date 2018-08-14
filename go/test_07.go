@@ -2,7 +2,7 @@ package main
 
 fmt.Scan(a ...interface{}) (n int, err error) //扫描来自标准输入的文本, 空格分隔, 换行也算空格
 fmt.Scan(&a, &b)
-fmt.Scanln(a ...interface{}) (n int, err error)  //扫描来自标准输入的文本, 将空格分隔的值一次存放在后续参数内, 知道遇到换行
+fmt.Scanln(a ...interface{}) (n int, err error)  //扫描来自标准输入的文本, 将空格分隔的值一次存放在后续参数内, 直到遇到换行
 fmt.Scanf(format string, a ...interface{}) (n int, err error)  //格式化字符串, 决定如何读取
 fmt.Scanf("%3s%d", &a, &b)
 fmt.Sscan(str string, a ...interface{}) (n int, err error)  //第一个参数是输入字符串
@@ -143,4 +143,3 @@ hasher.Sum(b)
 hasher.Reset()
 n, err := hasher.Write([]byte("what about"))
 checksum := hasher.Sum(b)
-	
