@@ -503,6 +503,7 @@ func login(c echo.Context) error {
 	password := c.FormValue("password")
 
 	if username == "aaa" && password == "bbb" {
+	
 		/* payload声明, 采用的映射声明
 		token := jwt.New(jwt.SigningMethodHS256)
 		
@@ -538,14 +539,17 @@ func login(c echo.Context) error {
 
 func auth(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
+	
 	/* 自定义payload声明
 	claims := user.Claims.(*jwtCustomClaims)
 	name := claims.Name
 	*/
+	
 	/* 映射声明
 	claims := user.Claims.(jwt.MapClaims)
 	name := claims["name"].(string)
 	*/
+	
 	return c.JSON(http.StatusOK, claims)
 }
 
@@ -557,15 +561,20 @@ func main() {
 	e.POST("/login", login)
 	
 	r := e.Group("/auth")
+	
+	/* 自定义声明
 	config := middleware.JWTConfig{
 		Claims:     &jwtCustomClaims{},
 		SigningKey: []byte("secret"),
 	}
 	r.Use(middleware.JWTWithConfig(config))
-	// 映射声明
-	//r.Use(middleware.JWT([]byte("secret")))
-	r.GET("", auth)
+	*/
 	
+	/* 映射声明
+	r.Use(middleware.JWT([]byte("secret")))
+	*/
+	
+	r.GET("", auth)
 	e.Logger.Fatal(e.Start(":1323"))
 }
 ```
