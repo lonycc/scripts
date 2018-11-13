@@ -108,3 +108,27 @@ func Printf(format string, args ... interface{}) (n int, err error) //...参数�
 func typeof(v interface{}) string {
 	return reflect.TypeOf(v).String()
 }
+
+
+type User struct {
+	Id    int    `validate:"-" json:"id"`
+	Name  string `validate:"presence,min=2,max=32" json:"name"`
+	Email string `validate:"email,required" json:"email"`
+}
+
+func testUser() {
+	user := User{
+		Id:    1,
+		Name:  "novak djokovic",
+		Email: "john@example.com",
+	}
+	
+	t := reflect.TypeOf(user)
+	fmt.Println("type : ", t.Name())
+	fmt.Println("kind : ", t.Kind())
+	for i := 0; i < t.NumField(); i++ {
+		field := t.Field(i)
+		tag := field.Tag.Get("validate")
+		fmt.Printf("%d. %v(%v), tag:'%v'\n", i+1, field.Name, field.Type.Name(), tag)
+	}
+}
