@@ -104,3 +104,7 @@ v.Method(i).Call(nil) //调用指定索引的方法, 传入参数nil
 // Prinft和反射
 func Printf(format string, args ... interface{}) (n int, err error) //...参数为空接口类型
 
+// 获取v的类型
+func typeof(v interface{}) string {
+	return reflect.TypeOf(v).String()
+}
