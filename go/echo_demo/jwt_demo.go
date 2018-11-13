@@ -9,19 +9,37 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
-func login(c echo.Context) error {
-	username := c.FormValue("username")
-	password := c.FormValue("password")
+type jwtCustomClaims struct {
+	Name  string `json:"name"`
+	Admin bool   `json:"admin"`
+	jwt.StandardClaims
+}
 
-	if username == "jon" && password == "shhh!" {
+type User struct {
+	Username string `json: "username"`
+	Password string `json: "password"`
+}
+
+func login(c echo.Context) error {
+	//username := c.FormValue("username")
+	//password := c.FormValue("password")
+	
+	u := new(User)
+	if err := c.Bind(u); err != nil {
+		return err
+	}
+	username := u.Username
+	password := u.Password
+	
+	if username == "aaa" && password == "bbb" {
 		// Create token
 		token := jwt.New(jwt.SigningMethodHS256)
 
 		// Set claims
 		claims := token.Claims.(jwt.MapClaims)
-		claims["name"] = "Jon Snow"
+		claims["name"] = username
 		claims["admin"] = true
-		claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
+		claims["exp"] = time.Now().Add(time.Hour * 1).Unix()
 
 		// Generate encoded token and send it as response.
 		t, err := token.SignedString([]byte("secret"))
@@ -33,7 +51,6 @@ func login(c echo.Context) error {
 			"code":  "200",
 		})
 	}
-
 	return echo.ErrUnauthorized
 }
 
@@ -48,6 +65,7 @@ func restricted(c echo.Context) error {
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(jwt.MapClaims)
 	// name := claims["name"].(string)
+	// admin := claims["admin"](.bool)
 	return c.JSON(http.StatusOK, claims)
 }
 
@@ -73,9 +91,11 @@ func main() {
 }
 
 /*
-curl -X POST -d 'username=jon' -d 'password=shhh!' localhost:1323/login
+form 表单方式提交
+curl -X POST -d 'username=aaa&password=bbb' localhost:1323/login
+json格式提交
+curl -X POST -H 'Content-Type: application/json' -d '{"username": "aaa", "password": "bbb"}' localhost:1323/login
 
-curl localhost:1323/restricted -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNTI0Mzg3MTIxLCJuYW1lIjoiSm9uIFNub3cifQ.XTPeGqwFT33ji41hCE9E05QbDGASF6yj2QR-dngFe6U"
-
+curl localhost:1323/restricted -H "Authorization: Bearer xxxx"
 curl -X GET localhost:1323/
 */
