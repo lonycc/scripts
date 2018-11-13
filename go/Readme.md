@@ -2,6 +2,10 @@
 
 > 标准库手册[docs](https://gowalker.org/search?q=gorepos)
 
+[xorm](http://xorm.io/docs)
+
+[gorm](http://gorm.io/docs/index.html)
+
 ## test_01.go
 
 - 程序基本结构和基本数据类型
