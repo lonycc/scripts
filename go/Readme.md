@@ -170,6 +170,23 @@ repos:
   repo: https://github.com/GoogleCloudPlatform/gcloud-golang
 ```
 
+**bufio包的使用**
+
+```
+func testBufio() {
+	counts := make(map[string]int)
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan() {
+		counts[input.Text()]++
+	}
+	for line, n := range counts {
+		if n > 1 {
+			fmt.Printf("%d\t%s\n", n, line)
+		}
+	}
+	fmt.Println(counts)
+}
+```
 
 **上下文模块context**
 
