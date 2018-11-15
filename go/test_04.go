@@ -43,6 +43,65 @@ for k = range slice1
 // 切片重组
 s1 = s1[0, len(s1)+1]
 
+
+var (
+	arr          = [...]int{0, 1, 2, 3, 4, 5, 6, 7, 8, 9} // array
+	slice0 []int = arr[3:7]
+	slice1 []int = arr[:5]
+	slice2 []int = arr[5:]
+	slice3 []int = arr[:]
+	slice4       = arr[:len(arr)-1]
+	slice5       = make([]int, 10)
+	slice6       = make([]int, 10, 10)
+	arr2         = [][]int{
+		[]int{1, 2, 3},
+		[]int{12, 13},
+		[]int{5, 6, 7, 8},
+	}
+)
+
+func testSlice() {
+	fmt.Println("----------------------------------")
+	a := []int{1, 2, 3} // slice
+	a[1] = 10
+	fmt.Printf("a is %v\n", a)
+
+	p := &a[2]
+	*p += 100
+	fmt.Printf("after p := &a[2]; *p += 100; a is %v\n", a)
+
+	// make 用于创建内置引用类型map/slice/channel, new 用于创建值类型和用户自定义类型
+	b := make([]int, 3) // make分配内存并初始化成员结构, 返回对象
+	b[1] = 10
+	fmt.Printf("make([]int, 3) is %v\n", b)
+
+	c := new([]int) // new计算类型大小, 分配零值内存, 返回指针
+	fmt.Printf("new([]int) is %v\n", c)
+
+	d := [5]struct {
+		x int
+	}{}
+	fmt.Printf("stuct array/slice %v\n", d)
+	s := d[:]
+	d[1].x = 10
+	s[2].x = 100
+	fmt.Printf("modified stuct array/slice is %v\n", d)
+	fmt.Printf("&d=%p, &d[0]=%p, so &d == &d[0]\n", &d, &d[0])
+
+	fmt.Printf("arr is %v, cap(arr)=%d\n", arr, cap(arr))
+	fmt.Printf("slice0 := arr[3:7] is %v\n", slice0)
+	fmt.Printf("slice1 := arr[:5] is %v\n", slice1)
+	fmt.Printf("slice2 := arr[5:] is %v, cap(slice2)=%d\n", slice2, cap(slice2))
+	fmt.Printf("slice3 := arr[:] is  %v\n", slice3)
+	fmt.Printf("slice4 := arr[:len(arr)-1] is %v\n", slice4)
+	fmt.Printf("slice5 := make([]int 10) is %v\n", slice5)
+	fmt.Printf("slice6 := make([]int, 10, 10) is %v\n", slice6)
+	s1 := []int{0, 1, 2, 3, 8: 15} // 通过初始化表达式构造, s1[8] = 15, s1[4/5/6/7] = 0
+	fmt.Printf("s1 is %v, len(s1)=%v, cap(s1)=%v\n", s1, len(s1), cap(s1))
+	fmt.Printf("2-d slice arr2 is %v\n", arr2)
+}
+
+
 func main() {
   a := [...]string{"a", "b", "c", "d"} //数组
   b := []string{"a", "b", "c", "d"}  //切片
