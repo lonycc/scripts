@@ -97,7 +97,9 @@ func testSlice() {
 	fmt.Printf("slice5 := make([]int 10) is %v\n", slice5)
 	fmt.Printf("slice6 := make([]int, 10, 10) is %v\n", slice6)
 	s1 := []int{0, 1, 2, 3, 8: 15} // 通过初始化表达式构造, s1[8] = 15, s1[4/5/6/7] = 0
-	fmt.Printf("s1 is %v, len(s1)=%v, cap(s1)=%v\n", s1, len(s1), cap(s1))
+	d1 := s1[:2:3]   // d1是切片, 值为[0, 1], cap(s)=3
+	d1.append(d1, 100, 200) //对d1扩容, 超出了cap(s), 切片扩容的规律通常是以2倍递增
+	fmt.Printf("s1 is %v, len(s1)=%d, cap(s1)=%d\n", s1, len(s1), cap(s1))
 	fmt.Printf("2-d slice arr2 is %v\n", arr2)
 }
 
