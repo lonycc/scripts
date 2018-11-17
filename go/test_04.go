@@ -159,10 +159,29 @@ func testMap() {
   for key, value := range map1 {
   }
   
-  type name struct {
-    key string
-    value string
+  type user struct {
+    name string
+    age int
   }
+  m := map[int]user{ //
+    1: {"user1", 25},
+    2: {"user2", 26},
+  }
+  // m[1].name= "tony" 是禁止的, 不能通过value修改原对象
+  u := m[1]
+  u.name = "tony"  
+  m[1] = u
+  
+  m2 := map[int]*user{
+    1: &user{"user1", 25},
+  }
+  m2[1].name = "jack"   // 通过指针直接修改原对象
+  
+  // map排序: 先获取所有key, 对key排序, 然后按排好序的key取value
+  // map反转: 初始化另外一个map, 把key/value互换
+  // map[type] struct
+  // map[type] *struct
+
   
   // map类型切片, 通过索引使用切片的map元素
   items := make([]map[int]int, 5)
