@@ -1,5 +1,42 @@
 // 协程和通道, go利用goroutines处理并发, 利用channels同步goroutines.
 
+// 只读channel声明
+var 变量名 <-chan 类型
+
+// 只写channel声明
+var 变量名 chan<- 类型
+
+
+func testChann() {
+	/* channel, 用于多个 goroutine 通讯
+	   a. 类似unix中管道（pipe）
+	   b. 先进先出, 类似队列
+	   c. 线程安全，多个goroutine同时访问，不需要加锁
+	   d. channel是有类型的，一个整数的channel只能存放整数
+	*/
+	c1 := make(chan int)    // 无缓冲, 同步
+	c2 := make(chan int, 1) // 有缓冲, 非同步
+	c1 <- 1                 // 流向通道, 写入
+	a := <-c1               // 流出通道, 读取
+	
+	close(c1)  // 关闭通道
+	if b, ok := <- c1; ok {
+		// 判断c1是否关闭
+	}
+	//len(c1), cap(c1)
+	
+	c := make(chan int, 3)
+	var send chan<- int = c // send-only
+	var recv <-chan int = c // receive-only
+
+	send <- 1
+	val, ok := <-recv
+	if ok {
+		fmt.Println(val)
+	}	
+}
+
+
 // 在main函数里执行耗时任务, 可以加上go关键字, 就将以协程方式执行 
 go longTimetask()
 time.Sleep(2 * 1e9) //主进程中必须sleep足够的时间以等待协程任务执行完成
