@@ -114,9 +114,21 @@ func main() {
   n2 := append(b, 'e', 'f', 'g') //切片b扩充e/f/g
   
   //字符串本质是一个字节数组, 字符串的内存结构: 一个指向实际数据的指针和记录字符串长度的整数, 占用两个字节
-  bt := []byte("what")
-  copy(bt []byte, "abc")
-  append(bt, s...)
+  bt := []byte("what")  // 中文字符需要用[]rune(str)
+  // 应及时将所需数据 copy 到较小的 slice，以便释放超大号底层数组内存。的长度的部分会丢掉
+  // 将"abc"复制到切片bt, bt的值变成[]byte("abct"), 超过bt原来
+  copy(bt, "abc") 
+  
+  s := make([]byte, 3)
+  bt = append(bt, s...)  // 切片bt后添加切片s
+	
+  // 切片resize
+  c := bt[1:2]  // ["b"]
+  d := c[0:3] // ["b", "c", "d"]
+	
+  // string底层就是byte数组, 故字符串可进行切片操作
+  str := "hello world"
+  s2: = str[0:5]
   
   // 字符串不可变, 需要转为数组后再改变指定索引的值
   
