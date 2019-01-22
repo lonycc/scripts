@@ -15,7 +15,7 @@ func main() {
 
 	type binOp func(int, int) int  //函数类型
   
-  arr := []int{7,9,3,5,1}
+  	arr := []int{7,9,3,5,1}
 	x = min(arr...)  // func min(a ...int) int {}
   
 }
