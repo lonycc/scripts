@@ -310,3 +310,13 @@ SaaS: 软件服务, 提供直面用户的互联网服务; 比如Dropbox / Google
 基于虚拟机的虚拟化方案存在一个缺陷，在虚拟机上运行了一个完整的OS（GuestOS），在其下执行的还有虚拟化层和宿主机OS，比直接在物理机上运行相当的服务性能差。而且有GuestOS的存在，虚拟机镜像大至几G到几十G，占用存储空间，便携性差，迁移时通信代价大，不便于集群管理。想要增加硬件资源，需要启动新的虚拟机，要等待GuestOS启动，耗时几分钟。
 Docker容器技术，基于Linux内核的两个机制：Cgroups(实现资源按需分配)和Namespace(实现任务隔离)。多个容器共用一个OS内核，容器内只包含应用和runtime，因此容器大小通常只有几十到几百M，轻量便携，启动速度快，更高密度的存储和使用，更方便集群管理。
 ```
+
+
+**go引用**
+```
+import math/rand   //实际引用从rand开始
+import fmt
+import "github.com/xx/yy"    //从网络库引入
+import _ "github.com/aa/bb"  //别名, "_"表示忽略掉,
+import "./aaa"    // 其中aaa为aaa为文件名, 实际使用时要从packege名前缀引入
+```
