@@ -1,11 +1,19 @@
 // 协程和通道, go利用goroutines处理并发, 利用channels同步goroutines.
 
+import "fmt"
+
 // 只读channel声明
 var 变量名 <-chan 类型
 
 // 只写channel声明
 var 变量名 chan<- 类型
 
+// 函数接收一个只写通道作为参数
+func readFromChannel(input <-chan string) {}
+// 函数返回通道
+func getChannel() chan bool {
+	return make(chan bool)
+}
 
 func testChann() {
 	/* channel, 用于多个 goroutine 通讯
@@ -16,30 +24,36 @@ func testChann() {
 	*/
 	c1 := make(chan int)    // 无缓冲, 同步
 	c2 := make(chan int, 1) // 有缓冲, 非同步
-	c1 <- 1                 // 流向通道, 写入
+	go func() { c1 <- 1 }()  // 流向通道, 写入
 	a := <-c1               // 流出通道, 读取
+	fmt.Printf("len(c1)=%d, cap(c1)=%d\n", len(c1), cap(c1))
 	
-	close(c1)  // 关闭通道
-	if b, ok := <- c1; ok {
+	defer close(c1)  // 关闭通道
+	if b, ok := <-c1; ok {
 		// 判断c1是否关闭
 	}
-	//len(c1), cap(c1)
+		
+	c2 <- 2
+	fmt.Println(<-c2)
 	
 	c := make(chan int, 3)
-	var send chan<- int = c // send-only
-	var recv <-chan int = c // receive-only
-
-	send <- 1
-	val, ok := <-recv
-	if ok {
+	var send_c chan<- int = c //只写
+	var recv_c <-chan int = c //只读
+	
+	r := make(<-chan string)   // 只读通道
+	w := make(chan<- []os.FileInfo)  //只写通道
+	c3 = make(chan<- chan bool)   //只写通道, 其值类型是另一个通道
+	
+	send_c <- 1
+	if val, ok := <-recv_c; ok {
 		fmt.Println(val)
-	}	
+	}
 }
 
 
-// 在main函数里执行耗时任务, 可以加上go关键字, 就将以协程方式执行 
+// 在main函数里执行耗时任务, 可以加上go关键字, 就将以goroutines方式执行 
 go longTimetask()
-time.Sleep(2 * 1e9) //主进程中必须sleep足够的时间以等待协程任务执行完成
+time.Sleep(2 * 1e9) //主进程中必须sleep足够的时间以等待goroutines任务执行完成
 
 // 指定使用核心数量, 一个经验法则: GOMAXPROCS = 核心数 - 1
 runtime.GOMAXPROCS(2)
@@ -50,9 +64,9 @@ aa = make(chan int)
 // or
 aa := make(chan int)
 
-// 流向通道(发送)
+// 流向通道
 ch <- int1
-// 从通道流出(接收)
+// 从通道流出
 int2 = <- ch
 // 单独调用获取通道的值
 fmt.Println(<-ch) 
@@ -76,10 +90,10 @@ ch1 := make(chan string, buffer_size)
 
 // 使用通道让main程序等待协程完成, 即信号量模式
 c := make(chan int)
-go func(c chan int) { c <- 10 }
+go func(c chan int) { c <- 10 }()
 doSth()
 rs := <- c //等待协程完成
-<- c //不返回
+<-c //不返回
 
 // 并行for循环
 for i, j := range data {
@@ -95,9 +109,8 @@ for {
 	Consume(Produce())
 }
 
-// 通道的方向
-var send_only chan<- int
-var recv_only <-chan int
+
+
 
 func (in <-chan int, out chan<- string) {
 	for inValue := in {
@@ -109,7 +122,7 @@ func (in <-chan int, out chan<- string) {
 // 关闭通道, 仅当发送和接收通道不同步时要手工执行
 close(ch)
 
-// select 切换线程
+// select 切换通道, case条件生效仅当通道可操作
 for {
 	select {
 	case c := <- ch1:
