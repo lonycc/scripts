@@ -74,7 +74,7 @@ fmt.Println(<-ch)
 // 通道阻塞, 只有生产者而无消费者时
 c := make(chan int)
 go func() {
-	time.Sleep(1 * 1e9)
+	time.Sleep(1e9)
 	x := <-c
 	fmt.Println("received", x)
 }()
@@ -109,15 +109,12 @@ for {
 	Consume(Produce())
 }
 
-
-
-
 func (in <-chan int, out chan<- string) {
 	for inValue := in {
 		result := inValue
 		out <- result
 	}
-}
+}()
 
 // 关闭通道, 仅当发送和接收通道不同步时要手工执行
 close(ch)
@@ -134,8 +131,20 @@ for {
 	}
 }
 
-// time.Tick(1e9)   //定时通道
-// time.After(5e9)  //停止通道
+tick := time.Tick(1e9)   //定时通道
+boom := time.After(5e9)  //停止通道
+for {
+	select {
+	case <-tick:
+		fmt.Println("tick")
+	case <-boom:
+		fmt.Println("boom")
+		return
+	default:
+		time.Sleep(1e9)
+	}
+}
+
 // 协程和恢复recover, defer修饰的函数中, 用了recover来避免panic
 // 使用通道处理异步任务, 而非互斥锁
 
