@@ -2,58 +2,52 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/contrib/sessions"
+	"github.com/gin-gonic/gin"
 	"net/http"
 )
 
+type JsonHolder struct {
+	Id   int    `json:"id"`
+	Name string `json:"name"`
+}
+
 func main() {
 	gin.SetMode(gin.DebugMode)
+
 	router := gin.Default()
 
 	//添加中间件
 	store, _ := sessions.NewRedisStore(10, "tcp", "localhost:6379", "", []byte("secret"))
 	router.Use(sessions.Sessions("test-session", store))
 	store.Options(sessions.Options{
-		MaxAge: 3600,
-		Path: "/",
-		Secure: true,
+		MaxAge:   3600,
+		Path:     "/",
+		Secure:   true,
 		HttpOnly: true,
 	})
-	
+
 	router.Use(Middleware)
-	router.Use(CORSMiddleware)
+	router.Use(cors.New(cors.Config{
+		AllowOrigins:  []string{"*"},
+		AllowMethods:  []string{"PUT", "PATCH", "GET", "POST", "DELETE"},
+		AllowHeaders:  []string{"content-type"},
+		ExposeHeaders: []string{"X-Total-Count"},
+	}))
 	//注册接口
 	router.GET("/get", GetHandler)
+	router.GET("/test", TestHandler)
 	router.POST("/post", PostHandler)
 	router.PUT("/put", PutHandler)
 	router.DELETE("/delete", DeleteHandler)
 	//监听端口
-	http.ListenAndServe(":8080", router)
-	//router.Run(":8080")
+	//http.ListenAndServe(":8080", router)
+	router.Run(":8080")
 }
 
 func Middleware(c *gin.Context) {
 	fmt.Println("this is a middleware")
-}
-
-// 跨域允许中间件
-func CORSMiddleware() gin.HandlerFunc {
-	return func(c *gin.Context) {
-		c.Writer.Header().Set("Access-Control-Allow-Origin", "http://localhost")
-		c.Writer.Header().Set("Access-Control-Max-Age", "86400")
-		c.Writer.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, UPDATE")
-		c.Writer.Header().Set("Access-Control-Allow-Headers", "X-Requested-With, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding, x-access-token")
-		c.Writer.Header().Set("Access-Control-Expose-Headers", "Content-Length")
-		c.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
-
-		if c.Request.Method == "OPTIONS" {
-			fmt.Println("OPTIONS")
-			c.AbortWithStatus(200)
-		} else {
-			c.Next()
-		}
-	}
 }
 
 func GetHandler(c *gin.Context) {
@@ -66,12 +60,7 @@ func GetHandler(c *gin.Context) {
 }
 
 func PostHandler(c *gin.Context) {
-	type JsonHolder struct {
-		Id   int    `json:"id"`
-		Name string `json:"name"`
-	}
 	holder := JsonHolder{Id: 1, Name: "my name"}
-	//若返回json数据，可以直接使用gin封装好的JSON方法
 	c.JSON(http.StatusOK, holder)
 	return
 }
