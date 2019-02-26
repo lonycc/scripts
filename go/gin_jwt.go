@@ -82,7 +82,7 @@ func main() {
 /*
 http -v --json POST localhost:8000/login username=admin password=admin
 
-http -f GET localhost:8000/auth/hello "Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQxMjg3NzQsImlkIjoiYWRtaW4iLCJvcmlnX2lhdCI6MTUyNDEyNTE3NH0.eeiRsSjZAk6yhnZ4vQppi_6PsYik8LOvAvsG-JSr4NE" "Content-Type: application/json"
+http -f GET localhost:8000/auth/hello "Content-Type: application/json" "Authorization:Bearer "
 
-http -v -f GET localhost:8000/auth/refresh_token "Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MjQxMjg3NzQsImlkIjoiYWRtaW4iLCJvcmlnX2lhdCI6MTUyNDEyNTE3NH0.eeiRsSjZAk6yhnZ4vQppi_6PsYik8LOvAvsG-JSr4NE"  "Content-Type: application/json"
+http -v -f GET localhost:8000/auth/refresh_token "Content-Type: application/json" "Authorization:Bearer "
 */
