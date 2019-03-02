@@ -370,6 +370,14 @@ Route::get('/home', function (Illuminate\Http\Request $request) {
 
 代码中可以`$this->visit(route('web.user'));`; 在模板中`<a href="{{route('web.user')}}">user</a>`
 
+
+**laravel 获取上次执行的sql语句的主键id**
+
+$id = DB::getPdo()->lastInsertId();
+
+或者指定id
+$id = DB::table('tb_name')->insertGetId(['id'=>10, 'name'=>'tony']);  //返回10
+
 **laravel+nginx**
 
 ```
