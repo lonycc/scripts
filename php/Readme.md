@@ -909,3 +909,7 @@ message SearchRequest {
 6 执行命令生成php文件
 
 `protoc --plugin=vendor/google/protobuf/php/generate_descriptor_protos.sh --php_out=src/ src/demo.proto`
+
+**href/src匹配**
+
+`preg_match_all('/(src|href)=("(.*?)"|\'(.*?)\')/i', $html, $rs)`
