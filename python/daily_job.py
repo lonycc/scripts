@@ -35,14 +35,17 @@ def guanren(start=42219, end=42250):
     print('finished')
 
 def jporn():
+    from urllib.request import urlopen
     for i in range(3011, 3050):
         url = 'http://jporn.link/units/{0}'.format(i)
         rs = s.get(url, headers=headers, timeout=10)
         soup = bs(rs.text, "html.parser")
         video = soup.find('source')
         if video:
+            r = urlopen('http://jporn.link/units/{}/download'.format(i))
+            name = r.info().get_filename()
             p = urljoin(url, video.get('src'))
-            print(f'[]({p})')
+            print(f'[{name}]({p})')
     print('finished')
 
 def fuliba(start_url = 'http://fulibus.net/page/1'):
