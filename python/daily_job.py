@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # coding=utf-8
 
-import requests
+from requests import Session
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin
+from urllib.request import urlopen
 import time
 
-s = requests.Session()
+s = Session()
 headers = {
 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
 'Accept-Encoding': 'gzip, deflate',
@@ -24,7 +25,7 @@ def guanren(start=42219, end=42250):
         url = 'https://www.guanren4.com/play/{}.html'.format(i)
         print(i)
         r = s.get(url, timeout=30)
-        soup = BS(r.text, 'html.parser')
+        soup = bs(r.text, 'html.parser')
         title = soup.find('div', class_='block_title')
         if title:
             title = title.text
@@ -35,7 +36,6 @@ def guanren(start=42219, end=42250):
     print('finished')
 
 def jporn():
-    from urllib.request import urlopen
     for i in range(3011, 3050):
         url = 'http://jporn.link/units/{0}'.format(i)
         rs = s.get(url, headers=headers, timeout=10)
