@@ -18,6 +18,22 @@ headers = {
 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.3 Safari/537.36'    
 }
 
+def guanren(start=42219, end=42250):
+    fs = open('p.md', 'a+')
+    for i in range(start, end):
+        url = 'https://www.guanren4.com/play/{}.html'.format(i)
+        print(i)
+        r = s.get(url, timeout=30)
+        soup = BS(r.text, 'html.parser')
+        title = soup.find('div', class_='block_title')
+        if title:
+            title = title.text
+            title = title.strip('[').replace(']', ' ')
+            video_url = 'https://www.didiaass.com/filets/{0}/list.m3u8'.format(i)
+            fs.write('[' + title + '](' + video_url +')\n\n')
+    fs.close()
+    print('finished')
+
 def jporn():
     for i in range(3011, 3050):
         url = 'http://jporn.link/units/{0}'.format(i)
@@ -26,10 +42,10 @@ def jporn():
         video = soup.find('source')
         if video:
             p = urljoin(url, video.get('src'))
-            print('<p><a href="{0}" target="__blank">{1}</a></p>'.format(p, p.split('/')[5].split('.mp4')[0]))
+            print(f'[]({p})')
     print('finished')
 
-def fuliba(start_url = 'http://fuliba.net/page/1'):
+def fuliba(start_url = 'http://fulibus.net/page/1'):
     rs =  s.get(start_url, headers=headers, timeout=10)
     if rs.status_code == 200:
         soup = bs(rs.text, 'html.parser')
