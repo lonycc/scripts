@@ -493,6 +493,10 @@ def subprocess_demo():
   outs = subprocess.check_output('ipconfig',shell=True)
   print(outs.decode('utf-8'))
 
+# html过滤标签
+def strip_tags(html):
+	dr = re.compile(r'<[^>]+>', re.S)
+	return dr.sub('', html)
 #---------------------------------------------------------------------------------------------
 
 # 正则匹配nginx login format
