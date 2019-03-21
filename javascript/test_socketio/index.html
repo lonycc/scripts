@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>test socket.io</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div>
+        <p id="onLineNum">在线人数 0</p>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    var socket = io.connect('http://localhost:1234');
+
+    function onLineNum(num) {
+        document.querySelector('#onLineNum').innerText = `在线人数 ${num}`;
+    }
+    socket.emit('get_num'); // 向server发送get_num事件
+    socket.on('open', function(data) { onLineNum(data.num); });
+    socket.on('close', function(data) { onLineNum(data.num); });
+    socket.on('set_num', function(data) { onLineNum(data.num); });
+
+    socket.on('news', function(data) {   // 监听服务端的news事件
+        console.log(data);
+        socket.emit('my other event', { my: 'data' });
+    });
+    </script>
+</body>
+
+</html>
