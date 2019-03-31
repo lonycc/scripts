@@ -48,17 +48,32 @@ def jporn():
             print(f'[{name}]({p})')
     print('finished')
 
-def fuliba(start_url = 'http://fulibus.net/page/1'):
-    rs =  s.get(start_url, headers=headers, timeout=10)
-    if rs.status_code == 200:
-        soup = bs(rs.text, 'html.parser')
-        h2 = soup.find_all('h2', class_="entry-name")
-        if h2:
-            titles = [h.find('a').text.strip('\n').strip() for h in h2]
-            detail_url = [h.find('a').get('href') for h in h2]
-            for i in range(0, len(titles)):
-                print('<p><a target="__blank" href="{0}">{1}</a></p>'.format(detail_url[i], titles[i]))
-
+def fuliba_list(start_url = 'http://fulibus.net/page/1'):
+    r =  s.get(start_url, headers={}, timeout=10)
+    if r.status_code == 200:
+        soup = bs(r.text, 'html.parser')
+        articles = soup.find_all('article')
+        for article in articles:
+            h2 = article.find('h2').find('a')
+            print(f'<p>{h2}</p>') 
+                
+def fuliba_tu(start=45, end=60):
+    for i in range(start, end):
+        url = 'http://fulibus.net/2019%03d.html/2' % i
+        r =  s.get(url, headers={}, timeout=10)
+        if r.status_code == 200:
+            soup = bs(r.text, 'html.parser')
+            article = soup.find('article', class_='article-content')
+            for img in article.find_all('img'):
+                print(f"![]({img.get('src')})")
+                
+def upload_sinaimg(url):
+    r = s.get('https://api.yum6.cn/sinaimg.php', params={'img':url, '_': int(time.time())}, timeout=30)
+    j = loads(r.text)
+    if j['code'] == '200':
+        print(j['url'].replace('/thumb150/', '/large/'))
+        
+        
 def tumblr(start=400, end=1500):
     for i in range(1558, 1583):
         url = 'http://mar-bee.tumblr.com/page/{0}'.format(i)
@@ -78,7 +93,10 @@ def t66y(url):
     soup = bs(r.text, 'html.parser')
     content = soup.find('div', class_='tpc_content do_not_catch')
     for img in content.find_all('img'):
-        print(img.get('data-src'))
+        url = img.get('data-src')
+        print(f'![]({url})')
+        #upload_sinaimg(url)
+    print('finished')
 
 def douban():
      params = {
