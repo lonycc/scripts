@@ -5,6 +5,7 @@ from requests import Session
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin
 from urllib.request import urlopen
+from json import loads, dumps
 import time
 
 s = Session()
@@ -18,6 +19,33 @@ headers = {
 'Upgrade-Insecure-Requests': '1',
 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.3 Safari/537.36'    
 }
+post_headers = {
+'Accept': '*/*',
+'Accept-Encoding': 'gzip, deflate',
+'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+'Connection': 'keep-alive',
+'Content-Length': 136,
+'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+'Host': 'jandan.net',
+'Origin': 'http://jandan.net',
+'Referer': 'http://jandan.net/ooxx',
+'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
+'X-Requested-With': 'XMLHttpRequest'
+}
+
+def jandan_comment():
+    data = {
+        'author': 'zoo',
+        'email': 'zoo@zoo.zoo',
+        'comment': 'https://ws1.sinaimg.cn/large/007awY0bly1fzbu58fadjj30m80xcqar.jpg',
+        'comment_post_ID': 21183
+    }
+    post_headers['Content-Length'] = str(len(dumps(data)))
+    r = s.post('http://jandan.net/jandan-comment.php', 
+           data=data, 
+           headers=post_headers, 
+           timeout=30)
+    print(r.text)
 
 def guanren(start=42219, end=42250):
     fs = open('p.md', 'a+')
