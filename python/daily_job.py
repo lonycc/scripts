@@ -78,8 +78,37 @@ def t66y(url):
     soup = bs(r.text, 'html.parser')
     content = soup.find('div', class_='tpc_content do_not_catch')
     for img in content.find_all('img'):
-        print(img.get('src'))
+        print(img.get('data-src'))
 
+def douban():
+     params = {
+        'sort': 'hot',
+        'start': 0,
+        'count':20,
+        'status_full_text':1,
+        'guest_only':0,
+        'ck':'null'
+    }
+    headers = {
+    'Accept': 'application/json, text/javascript, */*; q=0.01',
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Origin': 'https://www.douban.com',
+    'Referer': 'https://www.douban.com/gallery/topic/57110/',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.3 Safari/537.36'
+    }
+    for i in range(0, 24):
+        print(i)
+        params['start'] = i * 20
+        r = s.get('https://m.douban.com/rexxar/api/v2/gallery/topic/57110/items', params=params, headers=headers)
+        j = loads(r.text)
+        for k in j['items']:
+            if 'status' in k['target']:
+                for img in k['target']['status']['images']:
+                    print(f"![]({img['normal']['url']})")
+            elif 'photos' in k['target']:
+                for img in k['target']['photos']:
+                    print(f"![]{img['src']}")
+                    
 def maimai():
     url = 'https://acc.maimai.cn/reg0?fr=&uidtype=0&regfr=&abtype=&udef_data=-1&cusdata=&ab=a'
     r = s.post(url, 
