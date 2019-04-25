@@ -254,7 +254,7 @@ def fun_name_2(x=1, y=3):
 fun_name_2(5)
 fun_name_2(x=5)
 # x取默认值, y=8
-fun_name_2(8)
+fun_name_2(y=8)
 
 # 3. 参数个数未定, 在函数内可通过名为args的tuple访问所有参数值
 def fun_name_3(*args):
