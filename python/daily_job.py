@@ -39,20 +39,21 @@ def jandan_comment():
     print(r.text)
 
     
-def guanren(start=42219, end=42250):
-    fs = open('p.md', 'a+')
+def guanren(start=5735, end=5738):
     for i in range(start, end):
         url = 'https://www.guanren4.com/play/{}.html'.format(i)
-        print(i)
         r = s.get(url, timeout=30)
-        soup = bs(r.text, 'html.parser')
-        title = soup.find('div', class_='block_title')
-        if title:
-            title = title.text
-            title = title.strip('[').replace(']', ' ')
-            video_url = 'https://www.didiaass.com/filets/{0}/list.m3u8'.format(i)
-            fs.write('[' + title + '](' + video_url +')\n\n')
-    fs.close()
+        status_code = r.status_code
+        if status_code == 200:
+            soup = bs(r.text, 'html.parser')
+            title = soup.find('div', class_='block_title')
+            if title:
+                title = title.text
+                title = title.strip('[').replace(']', ' ')
+                video_url = 'https://www.didiaass.com/filets/{0}/list.m3u8'.format(i)
+                print(f'[{title}]({video_url})\n')
+        else:
+            print(f'{url} not found')
     print('finished')
 
     
