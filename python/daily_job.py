@@ -155,28 +155,3 @@ def douban():
                 for img in k['target']['photos']:
                     print(f"![]{img['src']}")
                     
-def maimai():
-    url = 'https://acc.maimai.cn/reg0?fr=&uidtype=0&regfr=&abtype=&udef_data=-1&cusdata=&ab=a'
-    r = s.post(url, 
-               timeout=10, 
-               data={'fr': '', 'payload': '', 'uidtype': 0, 'u': 0, 'tel': 15011971011},
-               headers={
-                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-                'accept-encoding': 'gzip, deflate',
-                'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7',
-                'cache-control': 'max-age=0',
-                'referer': 'https://acc.maimai.cn/reg0?fr=&uidtype=0&regfr=&abtype=&udef_data=-1&cusdata=&ab=a',
-                'upgrade-insecure-requests': '1',
-                'origin': 'https://acc.maimai.cn',
-                'content-type': 'application/x-www-form-urlencoded',
-                'content-length': '42',
-                'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.3 Safari/537.36' 
-               }
-              )
-    soup = bs(r.text, 'html.parser')
-    ul = soup.find('ul', class_='regList')
-    if ul:
-        for li in ul.find_all('li'):
-            img = li.find('img').get('src')
-            name = li.find('p').text
-            job = li.find('p', class_='regListJob').text
