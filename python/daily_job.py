@@ -9,16 +9,7 @@ from json import loads, dumps
 import time
 
 s = Session()
-headers = {
-'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-'Accept-Encoding': 'gzip, deflate',
-'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8,ja;q=0.7',
-'Connection': 'keep-alive',
-'Host': '',
-'Referer': '',
-'Upgrade-Insecure-Requests': '1',
-'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3322.3 Safari/537.36'    
-}
+
 post_headers = {
 'Accept': '*/*',
 'Accept-Encoding': 'gzip, deflate',
@@ -47,6 +38,7 @@ def jandan_comment():
            timeout=30)
     print(r.text)
 
+    
 def guanren(start=42219, end=42250):
     fs = open('p.md', 'a+')
     for i in range(start, end):
@@ -63,6 +55,7 @@ def guanren(start=42219, end=42250):
     fs.close()
     print('finished')
 
+    
 def jporn():
     for i in range(3011, 3050):
         url = 'http://jporn.link/units/{0}'.format(i)
@@ -76,6 +69,7 @@ def jporn():
             print(f'[{name}]({p})')
     print('finished')
 
+    
 def fuliba_list(start_url = 'http://fulibus.net/page/1'):
     r =  s.get(start_url, headers={}, timeout=10)
     if r.status_code == 200:
@@ -84,7 +78,8 @@ def fuliba_list(start_url = 'http://fulibus.net/page/1'):
         for article in articles:
             h2 = article.find('h2').find('a')
             print(f'<p>{h2}</p>') 
-                
+   
+
 def fuliba_tu(start=45, end=60):
     for i in range(start, end):
         url = 'http://fulibus.net/2019%03d.html/2' % i
@@ -101,20 +96,6 @@ def upload_sinaimg(url):
     if j['code'] == '200':
         print(j['url'].replace('/thumb150/', '/large/'))
         
-        
-def tumblr(start=400, end=1500):
-    for i in range(1558, 1583):
-        url = 'http://mar-bee.tumblr.com/page/{0}'.format(i)
-        #print(f'now page {i}')
-        r = s.get(url, timeout=6)
-        soup = bs(r.text, 'html.parser')
-        posts = soup.find_all('div', class_='post-photo')
-        #posts = soup.find_all('img', class_='photo')
-        for post in posts:
-            print(post.find('img').get('src'))
-            #print(post.get('src'))
-        time.sleep(0.1)
-    print('finish')
 
 def t66y(url):
     r = s.get(url, timeout=6, proxies={'http': 'http://127.0.0.1:1087'})
@@ -126,6 +107,7 @@ def t66y(url):
         #upload_sinaimg(url)
     print('finished')
 
+    
 def douban():
      params = {
         'sort': 'hot',
