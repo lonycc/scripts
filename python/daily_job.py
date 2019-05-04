@@ -39,7 +39,7 @@ def jandan_comment():
     print(r.text)
 
     
-def guanren(start=54126, end=54150):
+def guanren(start=54401, end=54450):
     for i in range(start, end, 1):
         url = 'https://www.guanren4.com/play/{}.html'.format(i)
         r = s.get(url, timeout=30)
