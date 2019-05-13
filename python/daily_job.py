@@ -39,7 +39,7 @@ def jandan_comment():
     print(r.text)
 
     
-def guanren(start=54401, end=54450):
+def guanren(start=54646, end=54700):
     for i in range(start, end, 1):
         url = 'https://www.guanren4.com/play/{}.html'.format(i)
         r = s.get(url, timeout=30)
@@ -50,7 +50,7 @@ def guanren(start=54401, end=54450):
             if title:
                 title = title.text
                 title = title.strip('[').replace(']', ' ')
-                video_url = 'https://www.didiaass.com/filets/{0}/list.m3u8'.format(i)
+                video_url = 'https://www.xunleiee.com/filets/{0}/list.m3u8'.format(i)
                 print(f'[{title}]({video_url})\n')
         else:
             print(f'{url} not found')
