@@ -80,11 +80,11 @@ array=(a b c)
 fun "$(echo ${array[@]})" 
 
 # 下载bing封面图
-domain='https://cn.bing.com'
-pic_url=`curl -s $domain | grep -E "g_img" | awk -F "g_img={url: " '{print $2}' | awk -F '"' '{print $2}'`
-echo $domain$pic_url
-# wget -P /home/bing $domain$pic_url
-curl -O $domain$pic_url
+index_page='https://cn.bing.com'
+pic_url=`curl -s $index_page | grep -E 'id="bgLink" rel="preload" href="(.*?)"' | awk -F 'href' '{print $2}' | awk -F '"' '{print $2}'`
+echo $index_page$pic_url
+# wget -P /home/bing $index_page$pic_url
+curl -O $index_page$pic_url
 
 # 通过ftp下载整个目录
 wget ftp://IP:PORT/* --ftp-user=xxx --ftp-password=xxx -r
