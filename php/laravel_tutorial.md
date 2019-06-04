@@ -37,10 +37,10 @@ composer.json
 
 **配置中国全量镜像**
 
-`composer config -g repo.packagist composer https://packagist.phpcomposer.com`
+`composer config -g repo.packagist composer https://packagist.laravel-china.org`
 
 **当前项目配置**
-`composer config repo.packagist composer https://packagist.phpcomposer.com`
+`composer config repo.packagist composer https://packagist.laravel-china.org`
 
 **一些常用包**
 
