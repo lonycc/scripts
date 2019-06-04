@@ -448,3 +448,22 @@ apk add --no-cache openldap-dev
 /usr/local/bin/docker-php-ext-install ldap
 /usr/local/bin/docker-php-ext-enable ldap
 ```
+
+**laravel 内部调用**
+
+```
+    public function index(Request $request)
+    {
+        $request->request->add([
+            'access_token' => 'abcd',
+        ]);
+
+        $proxy = Request::create(
+            'api/oauth/info',
+            'POST'
+        );
+
+        $response = \Route::dispatch($proxy);
+        return $response;
+    }
+```
