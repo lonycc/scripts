@@ -1,4 +1,40 @@
-**异常**
+**request**
+
+
+
+**response**
+
+```
+from sanic.reponse import html, text, json, file, stream, file_stream, redirect, raw
+
+@app.route('/response')
+async def test(request):
+    return html('<h3>html response</h3>')
+    return text('text response')
+    return json({'data': 'json response'}, headers={}, status=200)
+    return file('/var/www/abc.jpg')
+    return await file_stream('/var/www/abc.jpg')
+    return redirect('/api/test')
+    return raw(b'raw data')
+    return stream(stream_fn, content-type='text/plain')
+```
+
+
+**cookie**
+
+```
+@app.route("/cookie")
+async def test(request):
+    value = request.cookies.get('key')  # 读取
+    response = text('test cookie')
+    response.cookies['key'] = 'value'  # 设置
+    response.cookies['key']['domain'] = '.test.com'
+    response.cookies['key']['httponly'] = True
+    del response.cookies['key']   # 删除
+    return response
+```
+
+**exception**
 
 ```
 from sanic import Sanic
@@ -34,7 +70,7 @@ async def ignore_404s(request, exception):
     return json({'errcode': 404, 'errmsg': f'{request.url} not found'}, status=200)
 ```
 
-**版本控制**
+**version**
 
 ```
 @app.route("/text", version=1)  # 对应的路由/v1/text
@@ -85,7 +121,7 @@ app.add_websocket_route(feed, '/test_feed')  # 支持两种方法添加websocket
 app.run(host='0.0.0.0', port=8000, protocol=WebSocketProtocol)  # 显示声明仅支持ws协议
 ```
 
-**处理器装饰器**
+**handler decorator**
 
 ```
 from functools import wraps
@@ -214,4 +250,45 @@ async def index(request):
         filename='test.tar.gz',
         mime-type='application/gzip',
     )
+```
+
+**基于类的视图**
+
+```
+from sanic import Sanic
+from sanic.views import HTTPMethodView, CompositionView
+from sanic.response import text
+
+app = Sanic('some_name')
+
+class SimpleView(HTTPMethodView):
+    decorators = [common_decorator]  # 通用装饰器
+    
+    async def get(self, request, name):
+        return text(f'get {name}')
+
+    def post(self, request, name):
+        return text('I am post method')
+
+    @decorator_put  # 只对put方法
+    def put(self, request):
+        return text('I am put method')
+
+    def patch(self, request):
+        return text('I am patch method')
+
+    def delete(self, request):
+        return text('I am delete method')
+
+app.add_route(SimpleView.as_view(), '/<name:str>')  # 参数仅支持接收参数的方法, 本例中为get/post
+
+app.url_for('SimpleView')  # 获取基于类的视图的url, 参数传递类名
+
+def get_handler(request):
+    return text('test get handler')
+
+view = CompositionView()
+view.add(['GET'], get_handler)
+view.add(['POST', 'PUT'], lambda request: text('I am a post/put method'))
+app.add_route(view, '/compositionview')
 ```
