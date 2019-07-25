@@ -1,11 +1,20 @@
 package main
 
-// 数组声明, 数组也是值类型
+// 数组声明, 数组也是值类型（不同于C/C++指向首元素的指针)
 var identifier [len] type
 
 // 声明数组的两种方式, 区别在于aa的类型是[3]int, bb的类型是*[3]int
-var aa [5]int
+var aa [3]int
 var bb = new([3]int)
+aa := *bb  // 将bb赋值给aa, 内存拷贝, 而非引用
+cc := [...]int{1, 2, 3, 4, 5}    //长度可忽略
+
+
+// 字符串可作为字节数组被遍历
+ss := "abcd"
+for i := range ss {
+	fmt.Println(i)   // ascii 码点 97/98/99/100
+}
 
 // 多维数组
 var cc = [3][4]int
