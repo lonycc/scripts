@@ -5,10 +5,13 @@ var identifier [len] type
 
 // 声明数组的两种方式, 区别在于aa的类型是[3]int, bb的类型是*[3]int
 var aa [3]int
-var bb = new([3]int)
+var bb *[3]int = new([3]int)
 aa := *bb  // 将bb赋值给aa, 内存拷贝, 而非引用
-cc := [...]int{1, 2, 3, 4, 5}    //长度可忽略
-
+  
+ss := [...]string{"a", "b", "c", "d"}  //长度用...代替
+pp := [5]int{1, 2, 3, 4, 5}
+oo := []int{1, 2, 3}                  // 切片
+rr := [5]string{3: "tony", 4: "andy"} // first 3 is empty
 
 // 字符串可作为字节数组被遍历
 ss := "abcd"
@@ -23,19 +26,21 @@ var cc = [3][4]int
 
 // 切片是对数组一个连续片段的引用, 提供了一个相关数组的动态窗口, 因此切片可看作长度可变的数组.切片的容量
 var identifier []type
-var s1 []int = aa[1:3] //长度为len(s)=3-1=2, 容量cap(s1) = len(s)+数组aa除切片之外的长度=2+(5-3)=4
+var s1 []int = aa[1:3] //长度为len(s)=3-1=2, 容量cap(s1) = len(s)+ 数组aa除切片之外的长度 =2+(5-3)=4
 var s2 []int = [3]int{1,2,3}[:]
 var s1 = s1[1:] //切片可后移, 不可前移
 
-// 将切片传递给函数, 而非数组
+// 将切片传递给函数, 而非数组(减少内存开销)
 
 // 用make()创建一个切片
-var dd = make([]int, 10)
+var dd = make([]int, 10)  //容量=长度=10
 var ee = make([]int, 5, 10) //长度为5, 容量为10
 var ff = new([5]int{1,3,5,7,9})[:2]
 
+// make([]int, 50, 100)  和 new([100]int)[0:50] 创建的slice是一样的
+
 // new()和make()的区别
-// new(T)返回一个指向类型为T, 值为0的地址的指针, 适用于数组和结构体; make(T)返回一个类型为T的初始值, 适用于切片/map/channel;
+// new(T)返回一个指向类型为T, 值为0的地址的指针, 适用于array/struct; make(T)返回一个类型为T的初始值, 适用于slice/map/channel;
 // 多维切片, 内层切片必须单独分配
 
 // bytes包, 专门用于处理[]byte类型的切片
