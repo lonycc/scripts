@@ -46,21 +46,6 @@ def close_mysql():
     except Exception as e:
         print(e)
 
-def jandan_comment():
-    data = {
-        'author': 'zoo',
-        'email': 'zoo@zoo.zoo',
-        'comment': 'https://ws1.sinaimg.cn/large/007awY0bly1fzbu58fadjj30m80xcqar.jpg',
-        'comment_post_ID': 21183
-    }
-    headers['Content-Length'] = str(len(dumps(data)))
-    headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
-    r = session.post('http://jandan.net/jandan-comment.php', 
-           data=data, 
-           headers=headers, 
-           timeout=30)
-    print(r.text)
-
     
 def guanren(start=60000, end=61000):
     for i in range(start, end, 1):
@@ -73,7 +58,7 @@ def guanren(start=60000, end=61000):
             if title:
                 title = title.text
                 title = title.strip('[').replace(']', ' ')
-                video_url = 'https://www.xunleiee.com/filets/{0}/list.m3u8'.format(i)
+                video_url = 'https://www.xunleibb.com/filets/{0}/list.m3u8'.format(i)
                 print(f'[{title}]({video_url})\n')
         else:
             print(f'{url} not found')
