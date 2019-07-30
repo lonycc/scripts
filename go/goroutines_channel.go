@@ -8,11 +8,22 @@ var 变量名 <-chan 类型
 // 只写channel声明
 var 变量名 chan<- 类型
 
-// 函数接收一个只写通道作为参数
+// 函数接收一个read-only channel作为参数
 func readFromChannel(input <-chan string) {}
-// 函数返回通道
+
 func getChannel() chan bool {
 	return make(chan bool)
+}
+
+ch := make(chan int, 2)
+
+v := <-ch  // blocking read
+v, ok := <-ch  // nonblocking read
+ch <- v // blocking write
+// nonblocking write, 需要注意 default 分支不能省略，否则会堵塞住
+select {
+    case ch<-v:
+    default:
 }
 
 func testChann() {
@@ -22,8 +33,8 @@ func testChann() {
 	   c. 线程安全，多个goroutine同时访问，不需要加锁
 	   d. channel是有类型的，一个整数的channel只能存放整数
 	*/
-	c1 := make(chan int)    // 无缓冲, 同步
-	c2 := make(chan int, 1) // 有缓冲, 非同步
+	c1 := make(chan int)    // 无缓冲, 阻塞
+	c2 := make(chan int, 1) // 有缓冲, 非阻塞
 	go func() { c1 <- 1 }()  // 流向通道, 写入
 	a := <-c1               // 流出通道, 读取
 	fmt.Printf("len(c1)=%d, cap(c1)=%d\n", len(c1), cap(c1))
@@ -64,9 +75,9 @@ aa = make(chan int)
 // or
 aa := make(chan int)
 
-// 流向通道
+// 流向通道, 写
 ch <- int1
-// 从通道流出
+// 从通道流出, 读
 int2 = <- ch
 // 单独调用获取通道的值
 fmt.Println(<-ch) 
