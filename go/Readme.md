@@ -60,53 +60,6 @@ docker-build:
         docker run --rm -it -v "$(GOPATH)":/go -w /go/src/bitbucket.org/rsohlich/makepost golang:latest go build -o "$(BINARY_UNIX)" -v
 ```
 
-**glide工具**
-
-glide init #初始化
-
-glide install #安装依赖
-
-glide up #升级依赖
-
-glide get github.com/xxx/yyy  #获取依赖
-
-glide mirror set golang.org/x/crypto github.com/golang/crypto #设置镜像
-
-glide mirror set golang.org/x/sys github.com/golang/sys
-
-glide mirror remove golang.org/x/crypto  #移除镜像
-
-GLIDE_HOME 默认 $HOME/.glide
-
-glide --home [path]  #设置glide_home
-
-cat $HOME/.glide/mirrors.yaml
-
-```
-repos:
-- original: https://golang.org/x/crypto
-  repo: https://github.com/golang/crypto
-- original: https://golang.org/x/crypto/acme/autocert
-  repo: https://github.com/golang/crypto
-  base: golang.org/x/crypto
-- original: https://golang.org/x/sys/unix
-  repo: https://github.com/golang/sys
-  base: golang.org/x/sys
-- original: https://golang.org/x/net
-  repo: https://github.com/golang/net
-- original: https://golang.org/x/oauth2
-  repo: https://github.com/golang/oauth2
-- original: https://golang.org/x/sync
-  repo: https://github.com/golang/sync
-- original: https://golang.org/x/tools
-  repo: https://github.com/golang/tools
-- original: https://golang.org/x/time
-  repo: https://github.com/golang/time
-- original: https://google.golang.org/grpc
-  repo: https://github.com/grpc/grpc-go
-- original: https://google.golang.org/cloud
-  repo: https://github.com/GoogleCloudPlatform/gcloud-golang
-```
 
 **bufio包的使用**
 
@@ -252,5 +205,23 @@ import math/rand   //实际引用从rand开始
 import fmt
 import "github.com/xx/yy"    //从网络库引入
 import _ "github.com/aa/bb"  //别名, "_"表示忽略掉,
-import "./aaa"    // 其中aaa为aaa为文件名, 实际使用时要从packege名前缀引入
+import "./aaa"    // 同级目录aaa.go, 实际引入aaa.Method()
 ```
+
+**go structTag**
+
+```
+type User struct {
+    UserId   int    `json:"user_id" bson:"user_id"`
+    UserName string `json:"user_name" bson:"user_name"`
+}
+
+u := &User{UserId: 1, UserName: "tony"}
+j, _ := json.Marshal(u)
+fmt.Println(string(j))   // {"user_id": 1, "user_name": "tony"}
+
+t := reflect.TypeOf(u)
+field := t.Elem().Field(0)
+fmt.Println(field.Tag.Get("json"))  // user_id
+```
+
