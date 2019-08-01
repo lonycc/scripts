@@ -12,7 +12,7 @@ class myclass(object):
 	x = '公开成员变量'
 	def __init__(self, xxx, yyy):
 		self.x = 'instance' # 公开属性
-		self.xxx = xxx   # 公开属性
+		self._x = xxx   # 公开属性
 		self.__yyy = yyy # 私有属性
 
 	@staticmethod
@@ -22,9 +22,22 @@ class myclass(object):
 	@classmethod
 	def class_method(cls):
 		print('类方法被调用:' + cls.x)
+		cls().inst()  # 调用成员方法
 
 	def inst(self):
 		print(self.x)
+		
+	@property
+	def x(self):
+		return self._x
+	
+	@x.setter
+	def x(self, value):
+		self._x = value
+	
+	@x.deleter
+	def x(self):
+		del self._x
 
 	def get_xxx(self):
 	    return self.xxx
@@ -55,7 +68,8 @@ print('类访问类方法：类名.类方法名')
 myclass.class_method()
 
 print('类访问静态方法：类名.静态方法名')
-myclass.static_method()
+myclass.static_method()   #非实例化调用
+myclass().static_method()  #实例化调用
 
 print('类访问公开成员变量: 类名.公开成员变量名')
 print(myclass.x)
