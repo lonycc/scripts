@@ -57,6 +57,50 @@ path = "bin/bin1.rs"
 `cargo run --example timeout`
 
 
+**rust注释**
+
+```
+行注释
+// 这里是注释
+
+文档注释, 一般用于函数或结构体（字段）的说明，置于要说明的对象上方; 支持markdown语法
+/// # 这里是xxx
+/// `let c = 5:i32;`
+/// > xxx
+
+模块注释, 用于说明本模块的功能。一般置于模块文件的头部
+//! # The Rust Standard Library
+//!
+
+同样支持C语言风格的多行注释 /* */, 但不推荐
+```
+
+**rust流程控制**
+
+```
+// if 是表达式而非语句
+if expr {}
+if expr {} else {}
+if expr {] else if expr2 {} else {}
+if let Some(y) = x {}  // 简写的match表达式
+
+for (index,value) in (5..10).enumerate() {
+    println!("index = {} and value = {}", index, value);
+}
+
+let lines = "Content of line one
+Content of line two
+Content of line three
+Content of line four".lines();
+for (linenumber, line) in lines.enumerate() {}
+
+while expr {} // 循环
+loop {}  // 死循环
+break; // 跳出当前层循环
+continue;  // 执行当前层下一次迭代
+label标记循环, 可用于break label; continue label;
+```
+
 
 **变量绑定与原生类型**
 
