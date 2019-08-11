@@ -1,22 +1,61 @@
-## 记录学习rust笔记
-
 **cargo用法**
 
-`cargo new proj_name`  # 创建一个项目
+`cargo new proj_name --bin`  # 创建一个项目
 
 `cd proj_name`
 
-`cargo run`  # 运行项目
+`cargo build`  # 编译构建
 
-在Cargo.toml里新增依赖
-
-`cargo build`  # 构建
+`cargo run`  # 运行项目, 如果有变动会重新构建
 
 `cargo test`  # 测试
 
 `cargo doc`  # 构建文档
 
+`cargo clean`  # 清除target
+
+`cargo update`  # 更新依赖
+
+`cargo install`  # 生产部署
+
 `cargo publish` # 发布库
+
+**Cargo.toml依赖管理**
+
+```
+[dependencies]
+typemap = "0.3"
+plugin = "0.2*"
+hammer = { version = "0.5.0"}
+color = { git = "https://github.com/bjz/color-rs" }
+geometry = { path = "crates/geometry" }
+```
+
+**Cargo.toml集成测试入口、测试用例、可执行程序**
+
+```
+[[test]]
+name = "testinit"
+path = "tests/testinit.rs"
+
+[[test]]
+name = "testtime"
+path = "tests/testtime.rs"
+
+
+[[example]]
+name = "timeout"
+path = "examples/timeout.rs"
+
+[[bin]]
+name = "bin1"
+path = "bin/bin1.rs"
+```
+
+`cargo run --bin bin1`
+
+`cargo run --example timeout`
+
 
 
 **变量绑定与原生类型**
