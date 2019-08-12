@@ -180,3 +180,84 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
         (- x (add y z))))
 (display (fix 100 20 30))  ; 50
 ```
+
+**常用结构**
+
+```
+顺序结构
+(begin 
+    (display "Hello world!")  ; 输出"Hello world!"
+    (newline))              ; 换行
+
+
+if结构
+(if (= x 0) 
+    (display "is zero")
+    (display "not zero"))
+
+(if (< x 100) (display "lower than 100"))   ; 条件成立则执行
+
+
+cond结构, 类似C语言switch结构
+(define w (lambda (x)
+      (cond ((< x 0) 'lower)
+           ((> x 0) 'upper)
+           (else 'equal))))
+
+
+case结构, 结构中的值可以是复合类型数据，如列表，向量表等
+(case (* 2 3)
+    ((2 3 5 7) 'prime)
+    ((1 4 6 8 9) 'composite))
+    (else 'none)
+
+
+and结构
+(and (boolean? #f) (string? 'a))  ; #f
+(and (list 1 2 3) (vector 'a 'b 'c))  ; #(a b c), 表达式的值都不是boolean, 返回最后一个表达式的值
+(and 1 2 3 4 )   ; 4
+(and 'e 'd 'c 'b 'a)  ; 'a
+
+
+or结构
+(or #f #t)  ; #t
+```
+
+**递归**
+
+```
+(define  factoral (lambda (x)
+    (if (<= x 1) 1
+        (* x (factoral (- x 1))))))
+
+
+(define (factoral n)
+    (define (iter product counter)
+        (if (> counter n)
+            product
+            (iter (* counter product) (+ counter 1))))
+    (iter 1 1))
+(display (factoral 4))
+
+
+递归实现循环
+(define loop
+    (lambda(x y)
+        (if (<= x y)
+            (begin (display x) (display #\\space) (set! x (+ x 1))
+                (loop x y)))))
+(loop 1 10)
+```
+
+**变量和过程的绑定**
+
+```
+(let ((x 2) (y 5)) (* x y)) ; let将变量或过程绑定在过程内部, 即局部变量, 10
+
+(let ((x 5))
+    (define foo (lambda (y) (bar x y)))
+    (define bar (lambda (a b) (+ (* a b) a)))
+    (foo (+ x 3)))  ; 过程是先(foo 8), 展开后(bar 5 8), 再展开(+ (* 5 8) 5), 得到45
+
+```
+
