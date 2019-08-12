@@ -18,6 +18,23 @@ def C(n):
 	return C(n-1) + B(n-1)
 
 #---------------------------------------------------------------------------------------------
+# 上下文管理器
+
+from contextlib import contextmanager
+@contextmanager
+def demo():
+    print('[Allocate resources]')
+    print('Code before yield-statement executes in __enter__')
+    yield('*** contextmanager demo ***')
+    print('Code after yield-statement executes in __exit__')
+    print('[Free resources]')
+ 
+with demo() as value:
+    print('Assigned Value: %s' % value)
+
+#with nested(A(), B(), C()) as (X, Y, Z):
+
+#---------------------------------------------------------------------------------------------
 # python redis操作, 可用连接池或单独初始化连接, 操作可用pipeline(类似事务)
 import redis
 
