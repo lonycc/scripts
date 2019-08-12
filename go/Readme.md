@@ -25,6 +25,25 @@
 
 > 其中CGO_ENABLED配置表示是否用C语言版本的GO编译器执行编译; GOOS表示目标系统, GOARCH表示目标架构;
 
+**GOGC 环境变量**
+
+`GOGC = 新分配对象 / 上次 GC 后剩余对象`
+
+> 默认100(%), 表示新分配对象数量等于上次GC后剩余对象数量时, 进行GC;
+
+> 启动一个GO程序时, 设置`GODEBUG=gctrace=1`打印GC日志;
+
+**import "runtime/debug"**
+
+> `func FreeOSMemory()` 释放系统内存
+
+> `func SetGCPercent(percent int) int` 设置GC触发比例值, 返回之前的值;
+
+> `func SetMaxStack(bytes int) int` 设置单个goroutine堆栈能使用的最大内存数值, 返回之前的值, 初始为1GB/64bit系统, 250MB/32bit系统;
+
+> `func SetMaxThreads(threads int) int` 设置go程序最大能跑的系统线程数, 返回之前的值, 初始为10000线程;
+
+
 **makefile**
 
 ```
