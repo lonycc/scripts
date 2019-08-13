@@ -45,6 +45,19 @@ form（块), scheme程序最小单元, ()包围
  #\0 字符0
  #\space 空格符
  #\newline 换行符
+(char=? #\a #\b)  ; ascii码点是否相等
+(char<? #\a #\b)
+(char>? #\a #\b)
+(char<=? #\a #\b #\c)
+(char>=? #\a #\b #\c)
+(char-ci=? #\a #\A)  ;大小写不敏感
+(char-alphabetic? #\c)   ; 字符是否是字母
+(char-numeric? #\3)  ; 是否是数字
+(char-whitespace? #\space)   ; 是否是空格
+(char-upper-case? #\C)   ; 是否大写字符
+(char-lower-case? #\c)   ; 是否小写字符
+(char-upcase #\c)   ; 转大写
+(char-downcase #\C)  ; 转小写
  
  符号型(symbol), 可以是单个字符或括号里的多个字符
  define a (quote xyz)) ; 定义变量a为符号类型, 值为xyz
@@ -59,7 +72,11 @@ form（块), scheme程序最小单元, ()包围
 (string-ref name 3)  ; 取得字符串左侧第3个字符（从0开始）
 (define other (string #\h #\e #\l #\l #\o ))  ; 同 (define other "hello")
 (string-append "aa" "bb" "cc")    ; 字符串连接, "aabbcc"
-
+(make-string n c) ; 返回n个字符c组成的字符串, c可选, 默认为\x00
+(substring s start end)  ; 字符串截取, 索引为start到end-1的部分
+(string-copy s)  ; 复制字符串
+(string->list s)  ; 字符串转字符列表
+(list->string ls)  ; 列表转字符串
 
 ; 点对(pair)
 (define p (cons 4 5)) ; (4 . 5)
@@ -116,12 +133,7 @@ vector-length v)  ; 求vector的长度, 3
 (negative? -1)  ; 是否负数
 (zero? 0)  ; 是否0
 (string=? "aa" "bb" "cc")  ; 字符串是否相等
-(string-ci=? "aa" "aa" "aa")  
-(char=? #\a #\b)
-(char<? #\a #\b)
-(char>? #\a #\b)
-(char<=? #\a #\b #\c)
-(char>=? #\a #\b #\c)
+(string-ci=? "aa" "Aa" "aA" "AA")  ; 大小写不敏感
 
 (define x 5)
 (symbol? x)   ; #f
