@@ -25,10 +25,10 @@ form（块), scheme程序最小单元, ()包围
 **数据类型**
 
 ```
-逻辑型(boolean)
+; 逻辑型(boolean)
 #f #t 分别代表false和true
 
-数字型(number), 包括 整型(integer)，有理数型(rational)，实型(real)，复数型(complex)
+; 数字型(number), 包括 整型(integer)，有理数型(rational)，实型(real)，复数型(complex)
 (define c 3+2i)  ; 复数
 (define d 22/7)  ; 实数
 (define e 10)    ; 整数
@@ -39,7 +39,7 @@ form（块), scheme程序最小单元, ()包围
  #d98   ; 十进制, 前缀#d可省略
  #x1afc ; 十六进制
  
- 字符型(char)
+ ; 字符型(char)
  字符型数据均以符号组合 "#\" 开始，表示单个字符，只接受Ascii字符
  #\A 字符A
  #\0 字符0
@@ -52,7 +52,7 @@ form（块), scheme程序最小单元, ()包围
  单引号和'等价
  
  
-字符串(string)
+; 字符串(string)
 (define name "tomson")
 (string-length name)  ; 取字符串的长度
 (string-set! name 0 #\g)  ; 更改字符串首字母(第0个字符)为小写字母g (#\g)
@@ -60,7 +60,7 @@ form（块), scheme程序最小单元, ()包围
 (define other (string #\h #\e #\l #\l #\o ))  ; 同 (define other "hello")
 
 
-点对(pair)
+; 点对(pair)
 (define p (cons 4 5)) ; (4 . 5)
 (car p)  ; 4
 (cdr p)  ; 5
@@ -68,7 +68,7 @@ form（块), scheme程序最小单元, ()包围
 (set-cdr! p "good")
 
 
-列表(list)
+; 列表(list)
 (define la (list 1 2 3 4 ))
 (length la)   ; 列表长度, 4
 (list-ref la 2)  ; 索引为2的项, 3
@@ -76,7 +76,7 @@ form（块), scheme程序最小单元, ()包围
 (define y (make-list 5 6))  ; 创建列表y, 5个6组成
 
 
-list是pair的子类型
+; list是pair的子类型
 (define a (cons 1 (cons 2 (cons 3 '()))))   ; a (1 2 3), '()是特殊值, 等同null
 (define ls (list 1 2 3 4))
 (list? ls)   ; #t
@@ -87,10 +87,10 @@ list是pair的子类型
 (cddr ls)  ; ls的cdr的cdr, (3 4)
 (caddr ls)  ; ls的cdr的cdr的car, 3
 (cddddr ls)  ; ls的cdr的cdr的cdr, 4
-最多支持c[\a\d]{4}r, 也就是中间最多四个
+; 最多支持c[\a\d]{4}r, 也就是中间最多四个
 
 
-向量(vector)
+; 向量(vector)
 (define v (vector 3 4 5)) 
 (define v #(3 4 5))
 (vector-ref v 0)  ; 求第1个变量的值, 3
@@ -99,7 +99,7 @@ vector-length v)  ; 求vector的长度, 3
 (define x (make-vector 5 6))  ; 创建向量表, #(6 6 6 6 6)
 
 
-类型判断  (类型? 变量)
+; 类型判断  (类型? 变量)
 (boolean? 0)  ; #f
 (char? #\space)  ; #t
 (number? 22/7)  ; #t
@@ -110,7 +110,7 @@ vector-length v)  ; 求vector的长度, 3
 (define x 5)
 (symbol? x)   ; #f
 
-比较运算
+; 比较运算
 (eqv? 34 34)  ; 比较值, #t
 (define x 0)
 (= x 0)  ; #t
@@ -124,7 +124,7 @@ vector-length v)  ; 求vector的长度, 3
 (equal? v w)  ; #t, 比较两个对象的值
 
 
-算术运算
+; 算术运算
 (- 4)  ; -4
 (/ 4)  ; 1/4
 (max 1 0 5 3)  ; 求最大
@@ -133,7 +133,7 @@ vector-length v)  ; 求vector的长度, 3
 此外还支持很多数学公式, 如三角函数sin/cos, 
 
 
-类型转换
+; 类型转换
 (number->string 123)  ; 数字转换为字符串
 (string->number "456")  ; 字符串转换为数字
 (char->integer #\a)   ; 字符转换为整型数，小写字母a的ASCII码值为96
@@ -172,7 +172,7 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 
 ((lambda (x) (+ x x)) 5)  ; 匿名过程, 10
 
-过程嵌套定义
+; 过程嵌套定义
 (define fix 
     (lambda (x y z)
         (define add 
@@ -184,13 +184,13 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 **常用结构**
 
 ```
-顺序结构
+; 顺序结构
 (begin 
     (display "Hello world!")  ; 输出"Hello world!"
     (newline))              ; 换行
 
 
-if结构
+; if结构
 (if (= x 0) 
     (display "is zero")
     (display "not zero"))
@@ -198,28 +198,28 @@ if结构
 (if (< x 100) (display "lower than 100"))   ; 条件成立则执行
 
 
-cond结构, 类似C语言switch结构
+; cond结构, 类似C语言switch结构
 (define w (lambda (x)
       (cond ((< x 0) 'lower)
            ((> x 0) 'upper)
            (else 'equal))))
 
 
-case结构, 结构中的值可以是复合类型数据，如列表，向量表等
+; case结构, 结构中的值可以是复合类型数据，如列表，向量表等
 (case (* 2 3)
     ((2 3 5 7) 'prime)
     ((1 4 6 8 9) 'composite))
     (else 'none)
 
 
-and结构
+; and结构
 (and (boolean? #f) (string? 'a))  ; #f
 (and (list 1 2 3) (vector 'a 'b 'c))  ; #(a b c), 表达式的值都不是boolean, 返回最后一个表达式的值
 (and 1 2 3 4 )   ; 4
 (and 'e 'd 'c 'b 'a)  ; 'a
 
 
-or结构
+; or结构
 (or #f #t)  ; #t
 ```
 
@@ -240,7 +240,7 @@ or结构
 (display (factoral 4))
 
 
-递归实现循环
+; 递归实现循环
 (define loop
     (lambda(x y)
         (if (<= x y)
@@ -259,5 +259,125 @@ or结构
     (define bar (lambda (a b) (+ (* a b) a)))
     (foo (+ x 3)))  ; 过程是先(foo 8), 展开后(bar 5 8), 再展开(+ (* 5 8) 5), 得到45
 
+(let ((x 2) (y 5))
+    (let* ((x 6)(z (+ x y)))  ; 此时x的值已为6，所以z的值应为11，如此最后的值为66
+    (* z x)))
+
+; letrec将内部定义的过程/变量进行相互引用
+(letrec ((countdown
+            (lambda (i)
+                (if (= i 0) 'listoff
+                    (begin (display i) (display ",")
+                        (countdown (- i 1)))))))
+        (countdown 10))
+
+
+; apply, 为数据赋予某一操作过程, 参数1是过程, 参数2是列表
+(apply + (list 1 2 3 4)  ; 给列表赋予相加操作, 10
+
+ (define sum
+    (lambda (x )
+        (apply + x)))
+(sum list(1 2 3 4))  ; 10
+
+(define avg
+    (lambda(x)
+        (/ (sum x) (length x))))
+(avg list(1 2 3))  ; 2
+
+; map, 为多个列表赋予操作过程
+(map + (list 1 2 3) (list 4 5 6))    ; (5 7 9)
+(map car '((a . b)(c . d)(e . f)))   ; (a c e)
 ```
 
+**输入输出**
+
+> 基于C语言的封装
+
+```
+(current-input-port)  ; 当前输入端口
+(current-output-port)  ; 当前输出端口
+(input-port? in)     ; 判断是否输入端口
+(output-port? out)   ; 判断是否输出端口
+
+(open-input-file  "/path/to/file")
+(open-output-file "/path/to/file")
+(close-input-port input_port)
+(close-output-port output_port)
+
+(define port (open-input-file "readme"))
+(read port)  ; 读取内容
+(close-input-port port)   ; 关闭
+
+(read)  ; 执行后即等待键盘输入
+(define x (read))  ; 等待键盘输入并赋值给x
+
+
+(read-char)  ; 接受单个字符
+(load "source.scm")  ; 调用源文件执行
+
+
+(define port1 (open-output-file "temp"))  ; 打开文件端口赋于port1
+(write "hi\\n,what's up" port1)  ; 写入内容
+(close-output-port port1)
+```
+
+**语法扩展**
+
+> scheme允许扩展如cond/let等的宏关键字
+
+```
+(define-syntax 宏名
+    (syntax-rules()
+        ((模板) 操作))
+        . . . ))
+
+; 自定义一个start宏, 功能同begin
+(define-syntax start
+        (syntax-rules ()
+                ((start exp1)
+                        exp1)
+                ((start exp1 exp2 ...)
+                        (let ((temp exp1)) (start exp2 ...))) ))
+(start (display "hello") (newline))
+
+
+
+(use-modules (ice-9 popen))  ; 引用ice-9模块, popen过程
+(use-modules (ice-9 pretty-print))    ; 引用漂亮输出模块
+(pretty-print '(define fix (lambda (n)
+        (cond ((= n 0) 'iszero)
+                ((< n 0) 'lower)
+                (else 'upper)))))   ; 代码格式混乱
+
+; 格式化后的输出
+(define fix
+  (lambda (n)
+    (cond ((= n 0) 'iszero)
+          ((< n 0) 'lower)
+          (else 'upper))))
+
+
+; 命令行参数
+#! /usr/local/bin/guile -s
+!#
+(define cmm (command-line))
+(display "应用程序名称：")
+(display (car cmm))  
+(newline)
+(define args (cdr cmm))
+(define long (length args))
+(define loop (lambda (count len obj)
+    (if (<= count len)
+        (begin
+            (display "参数 ")
+            (display count)
+            (display " 是：")
+            (display (list-ref obj (- count 1)))
+            (newline)
+            (set! count (+ count 1))
+            (loop count len obj)))))
+(loop 1 long args)
+
+; 执行方法  ./t.scm abc 123
+```
