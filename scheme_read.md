@@ -58,14 +58,17 @@ form（块), scheme程序最小单元, ()包围
 (string-set! name 0 #\g)  ; 更改字符串首字母(第0个字符)为小写字母g (#\g)
 (string-ref name 3)  ; 取得字符串左侧第3个字符（从0开始）
 (define other (string #\h #\e #\l #\l #\o ))  ; 同 (define other "hello")
+(string-append "aa" "bb" "cc")    ; 字符串连接, "aabbcc"
 
 
 ; 点对(pair)
 (define p (cons 4 5)) ; (4 . 5)
+(define w '(1 2 3 4)) ;
 (car p)  ; 4
 (cdr p)  ; 5
 (set-car! p "hello")
 (set-cdr! p "good")
+
 
 
 ; 列表(list)
@@ -107,6 +110,19 @@ vector-length v)  ; 求vector的长度, 3
 (null? '())  ; #t
 (symbol? 'x)  ; #t
 
+(odd? 5) ; 是否为基数
+(even? 10)  ; 是否为偶数
+(positive? 1) ; 是否正数
+(negative? -1)  ; 是否负数
+(zero? 0)  ; 是否0
+(string=? "aa" "bb" "cc")  ; 字符串是否相等
+(string-ci=? "aa" "aa" "aa")  
+(char=? #\a #\b)
+(char<? #\a #\b)
+(char>? #\a #\b)
+(char<=? #\a #\b #\c)
+(char>=? #\a #\b #\c)
+
 (define x 5)
 (symbol? x)   ; #f
 
@@ -121,7 +137,6 @@ vector-length v)  ; 求vector的长度, 3
 (eq? v w)   ; #f, 此时v和w是两个对象, eq比较两个参数是否指向同一个对象
 (eqv? v w)  ; #f, 同eq
 (equal? v w) ; #t, equal比较两个对象的结构和内容
-(equal? v w)  ; #t, 比较两个对象的值
 
 
 ; 算术运算
@@ -163,7 +178,7 @@ vector-length v)  ; 求vector的长度, 3
 (define add5 (lambda (x) (+ x 5)))   ; 定义了一个过程, 给输入的整数+5
 (add5 11)  ; 16
 
-define square (lambda (x)  (* x x)))
+(define square (lambda (x)  (* x x)))
 
 (define (add6 x) (+ x 6))  ; 省略lambda
 (add6 10)
@@ -227,8 +242,11 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 (and 'e 'd 'c 'b 'a)  ; 'a
 
 
-; or结构
+; or结构, 返回第一个不为#f的值
 (or #f #t)  ; #t
+(or #f 0)   ; 0
+(or 1 2 3)  ; 1
+(or #f 1 2 3)  ; 1
 ```
 
 **递归**
@@ -260,13 +278,18 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 **变量和过程的绑定**
 
 ```
-(let ((x 2) (y 5)) (* x y)) ; let将变量或过程绑定在过程内部, 即局部变量, 10
+(let ((p1 v1) (p2 v2) ...) exp1 exp2 ...) ; 变量作用域在exp中, 其实就是lambda的语法糖
+
+((lambda (p1 p2 ...) exp1 exp2 ...) v1 v2)
+
+(let ((x 2) (y 5)) (* x y)) ; let将变量或过程绑定在过程内部, 即局部变量, 10, x y仅在(* x y)中有效
 
 (let ((x 5))
     (define foo (lambda (y) (bar x y)))
     (define bar (lambda (a b) (+ (* a b) a)))
     (foo (+ x 3)))  ; 过程是先(foo 8), 展开后(bar 5 8), 再展开(+ (* 5 8) 5), 得到45
 
+; let*表达式可以用于引用定义在同一个绑定中的变量
 (let ((x 2) (y 5))
     (let* ((x 6)(z (+ x y)))  ; 此时x的值已为6，所以z的值应为11，如此最后的值为66
     (* z x)))
