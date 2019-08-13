@@ -130,7 +130,14 @@ vector-length v)  ; 求vector的长度, 3
 (max 1 0 5 3)  ; 求最大
 (min 1 0 5 3)  ; 求最小
 (abs -7)  ; 绝对值
-此外还支持很多数学公式, 如三角函数sin/cos, 
+(quotient 5 2)  ; 除法, 求商(整数部分), 2
+(modulo 5 2)   ; 除法, 求余, 1
+(remainder 5 2)  ; 求余, 1
+(sqrt 8)  ; 平方根
+(log 1000) ; 对数
+(expt 2 5) ; 幂次 32
+(exp 2) ; 指数, 自然常数e为底
+此外还支持很多数学公式, 如三角函数sin/cos/asin/atan/acos, atan接受1或2个参数,
 
 
 ; 类型转换
@@ -143,6 +150,7 @@ vector-length v)  ; 求vector的长度, 3
 (list->string (make-list 4 #\a)) ; 列表转换为字符串, "aaaa"
 (string->symbol "good")  ; 字符串转换为符号类型, good
 (symbol->string 'better)  ; 符号类型转换为字符串, "better"
+(exact->inexact (/ 29 3 7))  ; 分数转浮点数
 ```
 
 **过程**
