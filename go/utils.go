@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"io/ioutil"
 	"path/filepath"
 	"regexp"
 	"runtime"
@@ -61,9 +62,14 @@ func HttpClient(proxy_c string, url string) {
 	client.Transport = httpTransport
 	httpTransport.Dial = dialer.Dial
 	resp, err := client.Get(url)
-
+	defer resp.Body.Close()
 	if err != nil {
 		color.Red("Query failed with err: %s", err.Error())
+		os.Exit(1)
+	}
+	html, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		color.Red("ioutil.ReadAll with error: %s", err.Error())
 		os.Exit(1)
 	}
 	color.Green(resp.Body)
