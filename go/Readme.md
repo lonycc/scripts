@@ -147,7 +147,7 @@ flag.Var(&flagVar, "name", "help message")
 
 // 解析命令行参数到定义的flag
 flag.Parse()
-args := flag.Args()
+args := flag.Args()  // flag绑定之外的参数, 比如  go run t.go -a xx -b yy aa bb,  args是一个数组,只能获取到[aa bb]
 ```
 
 
