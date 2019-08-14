@@ -13,6 +13,7 @@ import (
 	"unicode/utf8"
 	"time"
 	"net/url"
+	"unsafe"
 )
 
 /* go命令行
@@ -56,6 +57,24 @@ type HotsContent struct {
 // init函数在每个包完成初始化后自动执行, 比main优先级高
 func init() {
 	Pi = 4 * math.Atan(1)
+}
+
+type Request struct {
+	data []int
+	ret  chan int
+}
+
+func NewRequest(data ...int) *Request {
+	return &Request{data, make(chan int, 1)}
+}
+
+func Process(req *Request) {
+	x := 0
+	for _, i := range req.data {
+		x += i
+	}
+
+	req.ret <- x
 }
 
 // 测试url包, 获取绝对地址
@@ -232,6 +251,20 @@ func main() {
 
 	//slice := make([]string, 3)  /*声明切片, 初始长度为3*/
 	//crawl("https://www.qiushibaike.com/hot/page/1/", 1)
+
+	// 测试channel, 生产者-消费者模式
+	req := NewRequest(10, 20, 30)
+	Process(req)
+	fmt.Println(<-req.ret)
+
+	x := 0x12345678
+
+	p := unsafe.Pointer(&x) // *int -> Pointer
+	n := (*[4]byte)(p)      // Pointer -> *[4]byte
+
+	for i := 0; i < len(n); i++ {
+		fmt.Printf("%X \n", n[i])
+	}
 }
 
 /**
