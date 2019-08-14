@@ -72,7 +72,7 @@ func HttpClient(proxy_c string, url string) {
 		color.Red("ioutil.ReadAll with error: %s", err.Error())
 		os.Exit(1)
 	}
-	color.Green(resp.Body)
+	color.Green(resp.html)
 }
 
 func LoopBit() {
