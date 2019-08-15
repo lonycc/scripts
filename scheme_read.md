@@ -20,6 +20,7 @@ form（块), scheme程序最小单元, ()包围
 (+ 1 2)  ; 加法运算, 波兰式, 前缀表达式
 (* 4 5 6) ; 乘法运算
 (display "hello world")  ; 过程
+(newline)  ; 新行
 ```
 
 **数据类型**
@@ -348,8 +349,15 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 (close-input-port input_port)
 (close-output-port output_port)
 
+(call-with-output-file filename procedure)
+打开文件filename用于输出，并调用过程procedure。该函数以输出端口为参数。
+
+(with-output-to-file filename procedure)
+打开文件filename作为标准输出，并调用过程procedure。该过程没有参数。当控制权从过程procedure中返回时，文件被关闭。
+
 (define port (open-input-file "readme"))
-(read port)  ; 读取内容
+(read port)  ; 读取一行内容
+(read-char port);  ; 读取一个字符
 (close-input-port port)   ; 关闭
 
 (read)  ; 执行后即等待键盘输入
@@ -360,9 +368,65 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 (load "source.scm")  ; 调用源文件执行
 
 
+; 下面的函数可用于输出。如果参数port被省略的话，则输出至标准输出。
+(write obj port) ; 该函数将obj输出至port。字符串被双引号括起而字符具有前缀#\。
+(display obj port) ; 该函数将obj输出至port。字符串不被双引号括起而字符不具有前缀#\。
+(newline port)  ; 向 port 输出一个换行符。
+(write-char char port)  ;该函数向port写入一个字符。
+
+
 (define port1 (open-output-file "temp"))  ; 打开文件端口赋于port1
 (write "hi\\n,what's up" port1)  ; 写入内容
 (close-output-port port1)
+
+
+(define (read-file file-name)
+  (let ((p (open-input-file file-name)))
+    (let loop((ls1 '()) (c (read-char p)))
+      (if (eof-object? c)
+      (begin
+        (close-input-port p)
+        (list->string (reverse ls1)))
+      (loop (cons c ls1) (read-char p))))))
+
+
+(read-file "test.txt")
+(display (read-file "test.txt"))
+
+; (call-with-input-file filename procedure)
+; 该函数将名为filename的文件打开以供读取输入。函数procedure接受一个输入端口作为参数
+(define (read-file file-name)
+  (call-with-input-file file-name
+    (lambda (p)
+      (let loop((ls1 '()) (c (read-char p)))
+    (if (eof-object? c)
+        (begin
+          (close-input-port p)
+          (list->string (reverse ls1)))
+        (loop (cons c ls1) (read-char p)))))))
+
+; (with-input-from-file filename procedure) 
+; 该函数将名为filename的文件作为标准输入打开。函数procedure不接受任何参数
+(define (read-file file-name)
+  (with-input-from-file file-name
+    (lambda ()
+      (let loop((ls1 '()) (c (read-char)))
+    (if (eof-object? c)
+        (list->string (reverse ls1))
+        (loop (cons c ls1) (read-char)))))))
+
+; 文件复制过程, (my-copy-file "a.txt" "a2.txt")
+(define (my-copy-file from to)
+  (let ((pfr (open-input-file from))
+    (pto (open-output-file to)))
+    (let loop((c (read-char pfr)))
+      (if (eof-object? c)
+      (begin
+        (close-input-port pfr)
+        (close-output-port pto))
+      (begin
+        (write-char c pto)
+        (loop (read-char pfr)))))))
 ```
 
 **语法扩展**
@@ -385,8 +449,13 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 (start (display "hello") (newline))
 
 
-
+; 模块引用
 (use-modules (ice-9 popen))  ; 引用ice-9模块, popen过程
+
+(use-modules (srfi srfi-19))  ; 时间日期模块
+(display (date->string (current-date)
+    "~A, ~B ~e ~Y ~H:~S"))
+
 (use-modules (ice-9 pretty-print))    ; 引用漂亮输出模块
 (pretty-print '(define fix (lambda (n)
         (cond ((= n 0) 'iszero)
@@ -400,6 +469,13 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
           ((< n 0) 'lower)
           (else 'upper))))
 
+; web服务器
+(use-modules (web server))
+(define (my-handler request request-body)
+    (values '((content-type . (text/plain)))
+        "Hello World!"))
+
+(run-server my-handler)  ; 本机localhost:8080访问
 
 ; 命令行参数
 #! /usr/local/bin/guile -s
@@ -423,4 +499,43 @@ fun(add 100 200)  ; 300, 同fun(+ 100 200)
 (loop 1 long args)
 
 ; 执行方法  ./t.scm abc 123
+```
+
+**高阶函数**
+
+```
+(sort '(1 3 2 4 7 5) <)   ; 按从小到大排序
+(sort '(1 3 2 4 7 5) >)   ; 按从大到小排序
+(sort '(7883 9099 6729 2828 7754 4179 5340 2644 2958 2239) 
+    (lambda (x y) (< (modulo x 100) (modulo y 100))))   ; 按低两位从小到大排列
+
+; (map procedure list1 list2 ...), 对表中元素批量执行同一过程
+(map + '(1 2 3) '(4 5 6))   ; (5 6 7)
+(map (lambda (x) (* x x)) '(1 2 3))  ; (1 4 9)
+
+
+; for-each不返回具体的值, 只用于副作用
+(define sum 0)
+(for-each (lambda (x) (set! sum (+ sum x))) '(1 2 3 4))
+sum  ; 10
+
+(define (my-list . x) x)   ; 定义过程时, 多个参数用 . x表示
+
+; 编写高阶过程
+(define (member-if proc ls)
+  (cond
+   ((null? ls) #f)
+   ((proc (car ls)) ls)
+   (else (member-if proc (cdr ls)))))
+
+(member-if positive? '(0 -1 -2 3 5 -7))
+
+
+(define (member proc obj ls)
+  (cond
+   ((null? ls) #f)
+   ((proc obj (car ls)) ls)
+   (else (member proc obj (cdr ls)))))
+
+(member string=? "hello" '("hi" "guys" "bye" "hello" "see you"))
 ```
