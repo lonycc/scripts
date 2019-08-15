@@ -538,4 +538,33 @@ sum  ; 10
    (else (member proc obj (cdr ls)))))
 
 (member string=? "hello" '("hi" "guys" "bye" "hello" "see you"))
+
+
+关联表, 由pair或list组成
+(define wc '((hi . 3) (everybody . 5) (nice . 3) (to . 10) (meet . 4) (you . 8)))
+(assq 'hi wc)  ; assq从关联表中搜索, 用eq?比较key, 最快
+
+(define n '((1 2 3) (4 5 6) (7 8 9)))
+(assv 1 n) ; assq用eqv?比较key, 次之
+(assoc 1 n) ; assoc用equal?比较key, 最慢
+
+哈希表
+(define h (make-hash-table 3))  ; 创建hash表
+(hashq-set! h 'foo "bar")
+(hashq-create-handle! h 'frob #f)  ; 设置key/value对
+(hashq-ref h 'foo)  ; 获取key为foo的值, 若不存在返回#f
+(hashq-get-handle h 'foo) ; 基于assq, 更快
+
+; 计算元素个数
+(hash-fold (lambda (key value seed) (+ 1 seed)) 0 h)
+(hash-count (const #t) h)
+(hash-count (lambda (key value) (string? value)) h)
+
+惰性求值
+(delay proc)  ; 以过程proc创建一个延时对象(promise)
+(promise? obj)  ; 对象是否是延时对象
+(force promise)  ; 对延时对象求值
+
+(define laz (delay (+ 1 2)))
+(force laz) ; force没有副作用, laz可重复使用
 ```
