@@ -1,8 +1,3 @@
-[laravel 事件](https://blog.csdn.net/zhaoxuejie/article/details/52809038)
-
-[laravel事件](https://blog.csdn.net/e62ces0iem/article/details/73369280)
-
-
 **laravel事件event**
 
 > 事件是一种常见观察者模式的应用, 可以理解为if this, then that. 在laravel事件中对应 if event then listener
