@@ -568,3 +568,15 @@ sum  ; 10
 (define laz (delay (+ 1 2)))
 (force laz) ; force没有副作用, laz可重复使用
 ```
+
+1. 一个将表中所有元素翻倍的函数；
+
+(define (double ls) (map  + ls ls))
+(double '(1 2 3))
+
+2. 一个将两个表中对应位置元素相减的函数；
+
+(define (sub ls1 ls2) (map - ls1 ls2))
+(sub '(1 3 5) '(4 2 6))
+
+(define (sort_by_sin ls) (sort ls (lambda(x y) (> (sin x) (sin y)))))
