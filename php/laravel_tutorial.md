@@ -467,3 +467,36 @@ apk add --no-cache openldap-dev
         return $response;
     }
 ```
+
+
+
+**laravel多线程连接数据库带来的问题(封装的mysql/redis都是单例模式)**
+
+```
+mysql
+DB::purge('mysql');
+DB::reconnect('mysql');
+
+redis
+$redis = new \Redis();
+$re1 = $redis->connect(env('REDIS_HOST'), env('REDIS_PORT'));
+$re2 = $redis->auth(env('REDIS_PASSWORD'));
+
+for ($i=0; $i<5; $i++) {
+    $pid = pcntl_fork();
+    if ( $pid == -1 ) {
+        echo 'fork thread failed' . PHP_EOL;
+    } else if ( $pid ) {
+        echo "fork succeed, pid={$pid}" . PHP_EOL;
+    } else {
+        echo $i . PHP_EOL;
+        exit(0);
+    }
+}
+
+while ( pcntl_waitpid(0, $status) != -1 ) {
+    $status = pcntl_wexitstatus($status);
+    $pid = posix_getpid();
+    echo "{$status} -- {$pid}" . PHP_EOL;
+}
+```
