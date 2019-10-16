@@ -872,6 +872,10 @@ echo 'after' . $myValue;                // prints the new value of $obj->value, 
 
 `call_user_func_array()`  #同`call_user_func`, 只不过参数部分用`array`组织
 
+`array_walk_recursive ( array &$array , callable $callback [, mixed $userdata = NULL ] ) : bool`   # 对数组中的每个成员递归地应用用户函数
+
+
+
 [php7 protobuf demo](https://segmentfault.com/a/1190000009389032)
 
 1 下载pear
