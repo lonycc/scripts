@@ -468,6 +468,16 @@ apk add --no-cache openldap-dev
     }
 ```
 
+**laravel修改$request**
+```
+$input = $request->all();
+array_walk_recursive($input, function (&$input) {
+    $input = "<pre>{$input}</pre>";
+});
+$request->replace($input);
+dd($request->all());
+```
+
 
 
 **laravel多线程连接数据库带来的问题(封装的mysql/redis都是单例模式)**
