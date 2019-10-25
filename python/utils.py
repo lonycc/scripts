@@ -537,8 +537,8 @@ re.findall(r'(?<=href=").*?(?=")', html)
 # 抽取百度图片
 re.findall(r'(?<=class="BDE_Image" src=").*?(?=")', html)
 
-# 正则替换, 把html中的aaaa替换为bbbb
-html = re.sub('aaaa', 'bbbb', html)
+# 正则替换, 把html中的[数字]替换为''
+html = re.sub('\[\d+\]', '', html)
 
 # 正则查找
 xxx = re.search(pattern, html).group()
