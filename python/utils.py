@@ -182,6 +182,12 @@ pprint.saferepr(object)  #返回一个对象字符串
 pickle.dump(object, fileHandler [, protocol]) #将对象obj保存到文件fileHandler中
 pickle.load(fileHandler)  #从fileHandler中读取一个字符串, 并将它重构为原来的python对象
 
+pickle.dump(obj, open(filename, 'wb'))  # 将python对象保存到文件句柄中
+pickle.load(open(filename, 'rb'))   # 从文件句柄加载python对象
+
+# glob模块, 文件/目录查询
+glob.glob('/path/to/xxx/*.html')  # 指定目录下以.html为后缀的文件列表
+
 #---------------------------------------------------------------------------------------------
 # timeit 精确计算小段代码执行时间
 
