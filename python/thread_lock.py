@@ -30,7 +30,7 @@ class MyThread(threading.Thread):
 				page = pages[0]
 				pages.remove(page)
 				lock.release()  # 释放锁
-				self.extract(page)
+				self.extract(page)  # 耗时IO操作要在释放锁后执行
 				lock.acquire()   # 获取锁
 				paged.append(page)
 				lock.release()   # 释放锁
