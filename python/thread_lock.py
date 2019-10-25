@@ -46,8 +46,8 @@ try:
 		th.start()
 		th.join()
 except:
-    for th in list_thread:
+	for th in list_thread:
 		th.terminate()
-    print('error!', sys.exc_info()[0])
+	print('error!', sys.exc_info()[0])
 finally:
-    print('finished')
+	print('finished')
