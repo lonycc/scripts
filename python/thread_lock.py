@@ -41,13 +41,13 @@ class MyThread(threading.Thread):
 list_thread = []
 try:
 	for i in range(4):
-	    list_thread.append(MyThread())
+		list_thread.append(MyThread())
 	for th in list_thread:
-	    th.start()
-	    th.join()
+		th.start()
+		th.join()
 except:
     for th in list_thread:
-        th.terminate()
+		th.terminate()
     print('error!', sys.exc_info()[0])
 finally:
     print('finished')
