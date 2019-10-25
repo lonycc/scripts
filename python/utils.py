@@ -18,6 +18,22 @@ def C(n):
 	return C(n-1) + B(n-1)
 
 #---------------------------------------------------------------------------------------------
+# 日期与时间戳
+import datetime
+import time
+
+datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')  # 当前格式化的日期时间
+int(time.time())   # 当前秒级时间戳
+
+ts1 = time.strptime('2019-10-25 14:23:15', '%Y-%m-%d %H:%M:%S')  # 字符串日期时间 => time.struct_time实例
+ts2 = time.localtime(1234567)  # 秒级时间戳 => time.struct_time实例
+
+int(time.mktime(ts1))   # 转为秒级时间戳
+time.strftime('%Y-%m/%d %H:$M', ts2)  # 转为其他格式事件日期字符串
+
+ds1 = datetime.datetime.utcfromtimestamp(12345678)   # 秒级时间戳转 datetime.datetime实例
+ds1.strftime('%Y-%m-%d %H:%M:%S')  # datetime.datetime实例 => 字符串日期时间
+#---------------------------------------------------------------------------------------------
 # 上下文管理器
 
 from contextlib import contextmanager
