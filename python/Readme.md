@@ -254,15 +254,15 @@ p.wait()
 
 `signal.ITIMER_REAL`
 
-**pyenv**
+**pipenv**
 
-`pip install pyenv`
+`pip install pipenv`
 
 `pipenv --three`  #使用当前系统的python3创建环境
 
 `pipenv --two` #使用当前系统的python2创建环境
 
-`pip --python 3.6` #创建指定版本环境
+`pipenv --python 3.6` #创建指定版本环境
 
 `pipenv shell`  #激活虚拟环境
 
