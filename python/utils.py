@@ -1,5 +1,35 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # coding=utf-8
+
+import requests
+import os
+import hashlib
+
+def downloadFile(url):
+    filename = os.path.basename(url)
+    try:
+        rs = requests.get(url, timeout=10,  allow_redirects=False)
+        if rs.status_code == 200:
+            with open(filename, 'wb') as f:
+                f.write(rs.content)
+            print(filename)
+        else:
+            return None
+    except Exception as e:
+        print(e)
+
+
+# 获取文件md5值
+def getFileMD5(filename):
+    if not os.path.isfile(filename):
+        return
+    myhash = hashlib.md5()
+    with open(filename, 'rb') as f:
+        while True:
+            b = f.read(8096)
+            if not b: break
+            myhash.update(b)
+    return myhash.hexdigest()
 
 # n个点最多把线分成几段
 def A(n):
