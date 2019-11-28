@@ -5,7 +5,7 @@ from requests import Session
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin
 from urllib.request import urlopen
-from json import loads, dumps
+import json
 import time
 import pymysql
 
@@ -65,28 +65,9 @@ def guanren(start=60000, end=61000):
     print('finished')
 
     
-def jporn():
-    for i in range(3011, 3050):
-        url = 'http://jporn.link/units/{0}'.format(i)
-        rs = session.get(url, headers=headers, timeout=10)
-        soup = bs(rs.text, "html.parser")
-        video = soup.find('source')
-        if video:
-            r = urlopen('http://jporn.link/units/{}/download'.format(i))
-            name = r.info().get_filename()
-            p = urljoin(url, video.get('src'))
-            print(f'[{name}]({p})')
-    print('finished')
 
-    
-def fuliba_list(start_url = 'http://fulibus.net/page/1'):
-    r =  session.get(start_url, headers={}, timeout=10)
-    if r.status_code == 200:
-        soup = bs(r.text, 'html.parser')
-        articles = soup.find_all('article')
-        for article in articles:
-            h2 = article.find('h2').find('a')
-            print(f'<p>{h2}</p>') 
+r = urlopen('http://jporn.link/units/100/download')
+name = r.info().get_filename()
    
 
 def fuliba_tu(start=45, end=60):
@@ -101,7 +82,7 @@ def fuliba_tu(start=45, end=60):
                 
 def upload_sinaimg(url):
     r = session.get('https://api.yum6.cn/sinaimg.php', params={'img':url, '_': int(time.time())}, timeout=30)
-    j = loads(r.text)
+    j = json.loads(r.text)
     if j['code'] == '200':
         print(j['url'].replace('/thumb150/', '/large/'))
         
@@ -138,7 +119,7 @@ def douban_topic():
         print(i)
         params['start'] = i * 20
         r = session.get('https://m.douban.com/rexxar/api/v2/gallery/topic/57110/items', params=params, headers=headers)
-        j = loads(r.text)
+        j = json.loads(r.text)
         for k in j['items']:
             if 'status' in k['target']:
                 for img in k['target']['status']['images']:
