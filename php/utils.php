@@ -253,6 +253,11 @@ function is_cli()
 base64_encode('this is my pm');
 base64_decode('dGhpcyBpcyBteSBwbQ==');
 
+`system(string $command [, int &$return_var ]) : string`   返回输出的最后一行, 前面的行打印在屏幕
+`passthru(string $command [, int &$return_var ]) : void`  不返回, 输出内容打印在屏幕
+`shell_exec(string $command) : string`  输出全部返回
+`exec(string $command [, array $rs]) : string` 返回输出最后一行
+
 // base64编码图片
 $img_file = 'https://img.alicdn.com/bao/uploaded/TB1eaiELpXXXXcPXpXXSutbFXXX.jpg';
 $img_info = getimagesize($img_file);
