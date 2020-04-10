@@ -1,6 +1,28 @@
 #!/usr/bin/python3
 # coding=utf-8
 
+#-------我们讨论下动态变量的定义--------
+for i in range(3):
+	exec(f'var{i} = 0')
+print(var0, var1, var2)
+
+names = locals()  # 局部变量字典
+# names = globals()  # 全区变量字典
+for i in range(3):
+	names[f'n_{i}'] = 0
+print(n0, n1, n2)
+
+# 在类中
+class T(object):
+	def __init__(self):
+		names = self.__dict__
+		for i in range(i):
+			names[f'k_{i}'] = 0
+
+t = T()
+print(t.k0, t.k1, t.k2)
+#-----------------------------------
+
 import requests
 import os
 import hashlib
