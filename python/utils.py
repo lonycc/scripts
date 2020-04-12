@@ -608,6 +608,9 @@ re.findall(r'(?<=class="BDE_Image" src=").*?(?=")', html)
 # 正则替换, 把html中的[数字]替换为''
 html = re.sub('\[\d+\]', '', html)
 
+# 去掉所有空格和换行
+html = re.sub('\n|\s', '', html)
+
 # 正则查找
 xxx = re.search(pattern, html).group()
 
