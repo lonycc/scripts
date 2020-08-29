@@ -45,46 +45,10 @@ def close_mysql():
         mysql_conn.close()
     except Exception as e:
         print(e)
-
-    
-def guanren(start=60000, end=61000):
-    for i in range(start, end, 1):
-        url = 'https://www.guanren4.com/play/{}.html'.format(i)
-        r = session.get(url, timeout=30)
-        status_code = r.status_code
-        if status_code == 200:
-            soup = bs(r.text, 'html.parser')
-            title = soup.find('div', class_='block_title')
-            if title:
-                title = title.text
-                title = title.strip('[').replace(']', ' ')
-                video_url = 'https://www.xunleibb.com/filets/{0}/list.m3u8'.format(i)
-                print(f'[{title}]({video_url})\n')
-        else:
-            print(f'{url} not found')
-    print('finished')
-
     
 
 r = urlopen('http://jporn.link/units/100/download')
 name = r.info().get_filename()
-   
-
-def fuliba_tu(start=45, end=60):
-    for i in range(start, end):
-        url = 'http://fulibus.net/2019%03d.html/2' % i
-        r =  session.get(url, headers={}, timeout=10)
-        if r.status_code == 200:
-            soup = bs(r.text, 'html.parser')
-            article = soup.find('article', class_='article-content')
-            for img in article.find_all('img'):
-                print(f"![]({img.get('src')})")
-                
-def upload_sinaimg(url):
-    r = session.get('https://api.yum6.cn/sinaimg.php', params={'img':url, '_': int(time.time())}, timeout=30)
-    j = json.loads(r.text)
-    if j['code'] == '200':
-        print(j['url'].replace('/thumb150/', '/large/'))
         
 # 1024
 def t66y(url):
@@ -93,10 +57,6 @@ def t66y(url):
     content = soup.find('div', class_='tpc_content do_not_catch')
     for img in content.find_all('img'):
         url = img.get('data-src')
-        print(f'![]({url})')
-        #upload_sinaimg(url)
-    print('finished')
-
 
 # 豆瓣话题    
 def douban_topic():
@@ -164,31 +124,3 @@ def douban_photo(album_url):
     next_page = soup.find('span', class_='next')
     if next_page and next_page.find('a'):
         douban_photo(next_page.find('a').get('href'))
-
-# jandan list
-def jandan_list(url):
-    r = session.get(url, headers=headers, timeout=10)
-    soup = bs(r.text, 'html.parser')
-    next_page = soup.find('a', class_='previous-comment-page')
-    jandan_img(soup)
-    if next_page != None and stop_crawler == False:
-        jandan_list(urljoin(url, next_page.get('href')))
-
-# jandan img
-def jandan_img(soup):
-    global stop_crawler, OOXX_MIN_ID
-    texts = soup.find_all('div', class_='text')
-    for text in texts:
-        spans = text.find_all('a', class_='view_img_link')
-        id = text.find('span', class_='righttext').text
-        if int(id) > OOXX_MIN_ID:
-            for span in spans:
-                href = span.get('href')
-                if href.startswith('//'):
-                    href = "https:{0}".format(href)
-                sinaimg = href.replace('/mw600/', '/large/')
-                print(sinaimg, id)
-        else:
-            print('done')
-            stop_crawler = True
-            break
