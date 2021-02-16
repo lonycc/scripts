@@ -174,7 +174,7 @@
 | 2018-08-24 12:32 | [#852 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array) | EASY | 4 | 1 |
 | 2018-08-24 06:07 | [#171 Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number) | EASY | 1 | 1 |
 | 2018-08-23 17:45 | [#100 相同的树](https://leetcode-cn.com/problems/same-tree) | EASY | 1 | 1 |
-| 2018-08-23 17:33 | [#485 最大连续1的个数](https://leetcode-cn.com/problems/max-consecutive-ones) | EASY | 1 | 1 |
+| 2018-08-23 17:33 | [#485 最大连续 1 的个数](https://leetcode-cn.com/problems/max-consecutive-ones) | EASY | 1 | 1 |
 | 2018-08-23 17:21 | [#119 杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii) | EASY | 1 | 1 |
 | 2018-08-23 17:12 | [#118 杨辉三角](https://leetcode-cn.com/problems/pascals-triangle) | EASY | 2 | 1 |
 | 2018-08-23 16:48 | [#104 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree) | EASY | 7 | 1 |
