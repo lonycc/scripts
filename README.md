@@ -160,7 +160,7 @@
 | 2018-08-28 05:38 | [#20 有效的括号](https://leetcode-cn.com/problems/valid-parentheses) | EASY | 5 | 1 |
 | 2018-08-27 08:44 | [#111 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree) | EASY | 7 | 1 |
 | 2018-08-27 08:26 | [#102 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal) | MEDIUM | 1 | 1 |
-| 2018-08-27 08:21 | [#107 二叉树的层序遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii) | EASY | 1 | 1 |
+| 2018-08-27 08:21 | [#107 二叉树的层序遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii) | MEDIUM | 1 | 1 |
 | 2018-08-27 08:11 | [#637 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree) | EASY | 3 | 1 |
 | 2018-08-27 03:01 | [#804 唯一摩尔斯密码词](https://leetcode-cn.com/problems/unique-morse-code-words) | EASY | 1 | 1 |
 | 2018-08-25 04:58 | [#461 汉明距离](https://leetcode-cn.com/problems/hamming-distance) | EASY | 5 | 1 |
