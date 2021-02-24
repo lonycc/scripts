@@ -23,7 +23,7 @@
 | ---- | ---- | ---- | ---- | ---- |
 | 2020-12-21 06:33 | [#392 判断子序列](https://leetcode-cn.com/problems/is-subsequence) | EASY | 7 | 1 |
 | 2020-12-18 08:42 | [#389 找不同](https://leetcode-cn.com/problems/find-the-difference) | EASY | 6 | **2** |
-| 2020-12-04 07:12 | [#793 阶乘函数后K个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function) | HARD | 1 | 1 |
+| 2020-12-04 07:12 | [#793 阶乘函数后 K 个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function) | HARD | 1 | 1 |
 | 2020-12-03 15:48 | [#825 适龄的朋友](https://leetcode-cn.com/problems/friends-of-appropriate-ages) | MEDIUM | 1 | 1 |
 | 2020-12-03 15:02 | [#824 山羊拉丁文](https://leetcode-cn.com/problems/goat-latin) | EASY | 2 | 1 |
 | 2020-12-03 09:22 | [#46 全排列](https://leetcode-cn.com/problems/permutations) | MEDIUM | 1 | 1 |
