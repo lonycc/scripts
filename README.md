@@ -169,7 +169,7 @@
 | 2018-08-25 03:50 | [#566 重塑矩阵](https://leetcode-cn.com/problems/reshape-the-matrix) | EASY | 2 | 1 |
 | 2018-08-25 03:25 | [#344 反转字符串](https://leetcode-cn.com/problems/reverse-string) | EASY | 7 | 1 |
 | 2018-08-25 02:48 | [#645 错误的集合](https://leetcode-cn.com/problems/set-mismatch) | EASY | 11 | 1 |
-| 2018-08-24 13:52 | [#589 N叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal) | EASY | 3 | 1 |
+| 2018-08-24 13:52 | [#589 N 叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal) | EASY | 3 | 1 |
 | 2018-08-24 12:55 | [#617 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees) | EASY | 3 | 1 |
 | 2018-08-24 12:32 | [#852 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array) | EASY | 4 | 1 |
 | 2018-08-24 06:07 | [#171 Excel表列序号](https://leetcode-cn.com/problems/excel-sheet-column-number) | EASY | 1 | 1 |
