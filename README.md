@@ -32,7 +32,7 @@
 | 2020-12-02 02:33 | [#47 全排列 II](https://leetcode-cn.com/problems/permutations-ii) | MEDIUM | 2 | **2** |
 | 2020-11-30 16:12 | [#LCP 22 黑白方格画](https://leetcode-cn.com/problems/ccw6C7) | EASY | 1 | 1 |
 | 2020-11-30 09:43 | [#45 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii) | HARD | 2 | 1 |
-| 2020-11-26 08:42 | [#371 两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers) | EASY | 3 | 1 |
+| 2020-11-26 08:42 | [#371 两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers) | MEDIUM | 3 | 1 |
 | 2020-11-26 06:48 | [#367 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square) | EASY | 5 | 1 |
 | 2020-11-26 06:22 | [#357 计算各个位数不同的数字个数](https://leetcode-cn.com/problems/count-numbers-with-unique-digits) | MEDIUM | 4 | 1 |
 | 2020-11-26 03:22 | [#350 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii) | EASY | 2 | 1 |
