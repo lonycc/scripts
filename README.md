@@ -113,7 +113,7 @@
 | 2020-10-29 13:53 | [#10 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching) | HARD | 1 | 1 |
 | 2020-10-29 13:23 | [#4 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays) | HARD | 5 | 1 |
 | 2020-10-29 12:25 | [#面试题 01.01 判定字符是否唯一](https://leetcode-cn.com/problems/is-unique-lcci) | EASY | 4 | **2** |
-| 2020-10-29 11:00 | [#129 求根到叶子节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers) | MEDIUM | 4 | 1 |
+| 2020-10-29 11:00 | [#129 求根节点到叶节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers) | MEDIUM | 4 | 1 |
 | 2020-10-28 11:19 | [#1207 独一无二的出现次数](https://leetcode-cn.com/problems/unique-number-of-occurrences) | EASY | 3 | 1 |
 | 2020-09-16 13:22 | [#226 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree) | EASY | 5 | **2** |
 | 2020-09-09 16:08 | [#43 字符串相乘](https://leetcode-cn.com/problems/multiply-strings) | MEDIUM | 4 | **2** |
