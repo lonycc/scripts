@@ -21,6 +21,8 @@
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-03-22 08:13 | [#1620 网络信号最好的坐标](https://leetcode-cn.com/problems/coordinate-with-maximum-network-quality) | MEDIUM | 5 | 1 |
+| 2021-03-22 02:54 | [#1619 删除某些元素后的数组均值](https://leetcode-cn.com/problems/mean-of-array-after-removing-some-elements) | EASY | 1 | 1 |
 | 2021-03-19 15:50 | [#1603 设计停车系统](https://leetcode-cn.com/problems/design-parking-system) | EASY | 3 | **2** |
 | 2021-03-19 15:32 | [#剑指 Offer 54 二叉搜索树的第k大节点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof) | EASY | 3 | **2** |
 | 2020-12-21 06:33 | [#392 判断子序列](https://leetcode-cn.com/problems/is-subsequence) | EASY | 7 | 1 |
