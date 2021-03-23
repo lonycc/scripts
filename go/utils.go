@@ -50,6 +50,7 @@ func LoadEnv(file string) {
 	}
 	//os.Getenv("key")
 }
+
 func HttpClient(proxy_c string, url string) {
 	client := &http.Client{}
 	dialer, err := proxy.SOCKS5("tcp", proxy_c, nil, proxy.Direct)
@@ -88,4 +89,29 @@ func LoopBit() {
 		case c <- 1:
 		}
 	}
+}
+
+// 标准库遍历
+func FileList1(path string) {
+	filepath.Walk(path, func (path string, info os.FileInfo, err error) error {
+		s, _ := os.Stat(path)
+		if s.IsDir() {
+        	fmt.Println(path)
+        } else {
+        	fmt.Println("-------")
+        }
+        return nil
+    })
+}
+
+// 递归遍历目录
+func FileList2(path string) {
+    fs, _ := ioutil.ReadDir(path)
+    for _, file := range fs {
+    	new_path := path + "/" + file.Name()
+    	fmt.Println(new_path)
+        if file.IsDir() {
+            FileList2(new_path)
+        }
+    }
 }
