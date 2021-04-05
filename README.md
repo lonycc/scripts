@@ -21,6 +21,9 @@
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-03-29 08:12 | [#1748 唯一元素的和](https://leetcode-cn.com/problems/sum-of-unique-elements) | EASY | 2 | 1 |
+| 2021-03-29 03:52 | [#191 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits) | EASY | 3 | **2** |
+| 2021-03-29 03:38 | [#190 颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits) | EASY | 5 | **2** |
 | 2021-03-25 02:41 | [#1116 打印零与奇偶数](https://leetcode-cn.com/problems/print-zero-even-odd) | MEDIUM | 2 | 1 |
 | 2021-03-23 08:26 | [#1621 大小为 K 的不重叠线段的数目](https://leetcode-cn.com/problems/number-of-sets-of-k-non-overlapping-line-segments) | MEDIUM | 1 | 1 |
 | 2021-03-22 08:13 | [#1620 网络信号最好的坐标](https://leetcode-cn.com/problems/coordinate-with-maximum-network-quality) | MEDIUM | 5 | 1 |
@@ -169,8 +172,6 @@
 | 2018-08-27 08:11 | [#637 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree) | EASY | 3 | 1 |
 | 2018-08-27 03:01 | [#804 唯一摩尔斯密码词](https://leetcode-cn.com/problems/unique-morse-code-words) | EASY | 1 | 1 |
 | 2018-08-25 04:58 | [#461 汉明距离](https://leetcode-cn.com/problems/hamming-distance) | EASY | 5 | 1 |
-| 2018-08-25 04:29 | [#191 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits) | EASY | 2 | 1 |
-| 2018-08-25 04:23 | [#190 颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits) | EASY | 4 | 1 |
 | 2018-08-25 03:50 | [#566 重塑矩阵](https://leetcode-cn.com/problems/reshape-the-matrix) | EASY | 2 | 1 |
 | 2018-08-25 03:25 | [#344 反转字符串](https://leetcode-cn.com/problems/reverse-string) | EASY | 7 | 1 |
 | 2018-08-25 02:48 | [#645 错误的集合](https://leetcode-cn.com/problems/set-mismatch) | EASY | 11 | 1 |
