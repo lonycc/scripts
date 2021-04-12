@@ -93,7 +93,7 @@
 | 2020-11-11 03:53 | [#172 阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes) | EASY | 4 | 1 |
 | 2020-11-11 03:37 | [#6 Z 字形变换](https://leetcode-cn.com/problems/zigzag-conversion) | MEDIUM | 8 | 1 |
 | 2020-11-10 03:12 | [#31 下一个排列](https://leetcode-cn.com/problems/next-permutation) | MEDIUM | 3 | 1 |
-| 2020-11-09 15:25 | [#面试题30 包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof) | EASY | 2 | 1 |
+| 2020-11-09 15:25 | [#剑指 Offer 30 包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof) | EASY | 2 | 1 |
 | 2020-11-09 15:09 | [#剑指 Offer 58 - II 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof) | EASY | 2 | 1 |
 | 2020-11-09 15:06 | [#1431 拥有最多糖果的孩子](https://leetcode-cn.com/problems/kids-with-the-greatest-number-of-candies) | EASY | 3 | 1 |
 | 2020-11-09 14:51 | [#1480 一维数组的动态和](https://leetcode-cn.com/problems/running-sum-of-1d-array) | EASY | 4 | 1 |
