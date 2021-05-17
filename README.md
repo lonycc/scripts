@@ -21,6 +21,39 @@
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-05-15 08:33 | [#13 罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer) | EASY | 10 | **2** |
+| 2021-05-14 11:06 | [#面试题 16.07 最大数值](https://leetcode-cn.com/problems/maximum-lcci) | EASY | 1 | 1 |
+| 2021-05-14 11:03 | [#面试题 17.01 不用加号的加法](https://leetcode-cn.com/problems/add-without-plus-lcci) | EASY | 1 | 1 |
+| 2021-05-14 11:02 | [#面试题 17.04 消失的数字](https://leetcode-cn.com/problems/missing-number-lcci) | EASY | 1 | 1 |
+| 2021-05-14 10:59 | [#面试题 17.10 主要元素](https://leetcode-cn.com/problems/find-majority-element-lcci) | EASY | 4 | 1 |
+| 2021-05-14 10:37 | [#12 整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman) | MEDIUM | 5 | **3** |
+| 2021-05-14 10:36 | [#762 二进制表示中质数个计算置位](https://leetcode-cn.com/problems/prime-number-of-set-bits-in-binary-representation) | EASY | 1 | 1 |
+| 2021-05-14 10:28 | [#1290 二进制链表转整数](https://leetcode-cn.com/problems/convert-binary-number-in-a-linked-list-to-integer) | EASY | 1 | 1 |
+| 2021-05-14 10:22 | [#1342 将数字变成 0 的操作次数](https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-to-zero) | EASY | 4 | 1 |
+| 2021-05-14 09:50 | [#693 交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits) | EASY | 1 | 1 |
+| 2021-05-14 09:22 | [#268 丢失的数字](https://leetcode-cn.com/problems/missing-number) | EASY | 4 | 1 |
+| 2021-05-14 09:09 | [#231 2的幂](https://leetcode-cn.com/problems/power-of-two) | EASY | 1 | 1 |
+| 2021-05-14 09:05 | [#169 多数元素](https://leetcode-cn.com/problems/majority-element) | EASY | 1 | 1 |
+| 2021-05-14 08:44 | [#342 4的幂](https://leetcode-cn.com/problems/power-of-four) | EASY | 5 | 1 |
+| 2021-05-13 03:27 | [#944 删列造序](https://leetcode-cn.com/problems/delete-columns-to-make-sorted) | EASY | 1 | 1 |
+| 2021-05-13 03:12 | [#1269 停在原地的方案数](https://leetcode-cn.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps) | HARD | 4 | 1 |
+| 2021-05-13 02:38 | [#222 完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes) | MEDIUM | 3 | **2** |
+| 2021-05-13 02:30 | [#1688 比赛中的配对次数](https://leetcode-cn.com/problems/count-of-matches-in-tournament) | EASY | 3 | 1 |
+| 2021-05-13 02:18 | [#47 全排列 II](https://leetcode-cn.com/problems/permutations-ii) | MEDIUM | 3 | **3** |
+| 2021-05-12 08:20 | [#461 汉明距离](https://leetcode-cn.com/problems/hamming-distance) | EASY | 6 | **2** |
+| 2021-05-12 02:19 | [#141 环形链表](https://leetcode-cn.com/problems/linked-list-cycle) | EASY | 2 | 1 |
+| 2021-05-11 08:33 | [#剑指 Offer 68 - II 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof) | EASY | 1 | 1 |
+| 2021-05-11 08:25 | [#剑指 Offer 68 - I 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof) | EASY | 1 | 1 |
+| 2021-05-11 08:16 | [#814 二叉树剪枝](https://leetcode-cn.com/problems/binary-tree-pruning) | MEDIUM | 1 | 1 |
+| 2021-05-11 08:08 | [#543 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree) | EASY | 1 | 1 |
+| 2021-05-10 09:43 | [#965 单值二叉树](https://leetcode-cn.com/problems/univalued-binary-tree) | EASY | 1 | 1 |
+| 2021-05-10 09:38 | [#226 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree) | EASY | 7 | **3** |
+| 2021-05-10 09:23 | [#872 叶子相似的树](https://leetcode-cn.com/problems/leaf-similar-trees) | EASY | 2 | 1 |
+| 2021-05-10 09:15 | [#剑指 Offer 55 - I 二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof) | EASY | 2 | 1 |
+| 2021-05-10 09:06 | [#剑指 Offer 28 对称的二叉树](https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof) | EASY | 4 | **2** |
+| 2021-05-10 08:56 | [#剑指 Offer 32 - II 从上到下打印二叉树 II](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof) | EASY | 1 | 1 |
+| 2021-05-10 08:42 | [#剑指 Offer 55 - II 平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof) | EASY | 2 | 1 |
+| 2021-05-10 08:31 | [#剑指 Offer 27 二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof) | EASY | 3 | **2** |
 | 2021-03-29 08:12 | [#1748 唯一元素的和](https://leetcode-cn.com/problems/sum-of-unique-elements) | EASY | 2 | 1 |
 | 2021-03-29 03:52 | [#191 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits) | EASY | 3 | **2** |
 | 2021-03-29 03:38 | [#190 颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits) | EASY | 5 | **2** |
@@ -36,9 +69,7 @@
 | 2020-12-03 15:48 | [#825 适龄的朋友](https://leetcode-cn.com/problems/friends-of-appropriate-ages) | MEDIUM | 1 | 1 |
 | 2020-12-03 15:02 | [#824 山羊拉丁文](https://leetcode-cn.com/problems/goat-latin) | EASY | 2 | 1 |
 | 2020-12-03 09:22 | [#46 全排列](https://leetcode-cn.com/problems/permutations) | MEDIUM | 1 | 1 |
-| 2020-12-02 07:56 | [#12 整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman) | MEDIUM | 4 | **2** |
 | 2020-12-02 07:28 | [#11 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water) | MEDIUM | 1 | 1 |
-| 2020-12-02 02:33 | [#47 全排列 II](https://leetcode-cn.com/problems/permutations-ii) | MEDIUM | 2 | **2** |
 | 2020-11-30 16:12 | [#LCP 22 黑白方格画](https://leetcode-cn.com/problems/ccw6C7) | EASY | 1 | 1 |
 | 2020-11-30 09:43 | [#45 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii) | MEDIUM | 2 | 1 |
 | 2020-11-26 08:42 | [#371 两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers) | MEDIUM | 3 | 1 |
@@ -46,7 +77,6 @@
 | 2020-11-26 06:22 | [#357 计算各个位数不同的数字个数](https://leetcode-cn.com/problems/count-numbers-with-unique-digits) | MEDIUM | 4 | 1 |
 | 2020-11-26 03:22 | [#350 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii) | EASY | 2 | 1 |
 | 2020-11-26 02:41 | [#349 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays) | EASY | 4 | 1 |
-| 2020-11-24 15:18 | [#222 完全二叉树的节点个数](https://leetcode-cn.com/problems/count-complete-tree-nodes) | MEDIUM | 2 | 1 |
 | 2020-11-24 06:33 | [#201 数字范围按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range) | MEDIUM | 1 | 1 |
 | 2020-11-24 02:18 | [#206 反转链表](https://leetcode-cn.com/problems/reverse-linked-list) | EASY | 2 | 1 |
 | 2020-11-23 13:11 | [#1475 商品折扣后的最终价格](https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop) | EASY | 1 | 1 |
@@ -70,8 +100,6 @@
 | 2020-11-18 08:16 | [#73 矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes) | MEDIUM | 5 | 1 |
 | 2020-11-18 03:45 | [#257 二叉树的所有路径](https://leetcode-cn.com/problems/binary-tree-paths) | EASY | 3 | **2** |
 | 2020-11-18 02:29 | [#1079 活字印刷](https://leetcode-cn.com/problems/letter-tile-possibilities) | MEDIUM | 1 | 1 |
-| 2020-11-17 14:42 | [#剑指 Offer 28 对称的二叉树](https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof) | EASY | 3 | 1 |
-| 2020-11-17 13:28 | [#剑指 Offer 27 二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof) | EASY | 2 | 1 |
 | 2020-11-17 07:08 | [#416 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum) | MEDIUM | 2 | 1 |
 | 2020-11-16 23:46 | [#1030 距离顺序排列矩阵单元格](https://leetcode-cn.com/problems/matrix-cells-in-distance-order) | EASY | 2 | 1 |
 | 2020-11-16 23:27 | [#1108 IP 地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address) | EASY | 2 | 1 |
@@ -123,7 +151,6 @@
 | 2020-10-29 12:25 | [#面试题 01.01 判定字符是否唯一](https://leetcode-cn.com/problems/is-unique-lcci) | EASY | 4 | **2** |
 | 2020-10-29 11:00 | [#129 求根节点到叶节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers) | MEDIUM | 4 | 1 |
 | 2020-10-28 11:19 | [#1207 独一无二的出现次数](https://leetcode-cn.com/problems/unique-number-of-occurrences) | EASY | 3 | 1 |
-| 2020-09-16 13:22 | [#226 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree) | EASY | 5 | **2** |
 | 2020-09-09 16:08 | [#43 字符串相乘](https://leetcode-cn.com/problems/multiply-strings) | MEDIUM | 4 | **2** |
 | 2020-09-09 15:21 | [#42 接雨水](https://leetcode-cn.com/problems/trapping-rain-water) | HARD | 1 | 1 |
 | 2020-09-09 15:00 | [#41 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive) | HARD | 2 | 1 |
@@ -143,7 +170,7 @@
 | 2019-04-06 15:13 | [#8 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi) | MEDIUM | 5 | 1 |
 | 2019-04-06 12:17 | [#194 转置文件](https://leetcode-cn.com/problems/transpose-file) | MEDIUM | 1 | 1 |
 | 2018-09-28 07:47 | [#492 构造矩形](https://leetcode-cn.com/problems/construct-the-rectangle) | EASY | 1 | 1 |
-| 2018-09-26 13:47 | [#380 常数时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1) | MEDIUM | 1 | 1 |
+| 2018-09-26 13:47 | [#380 O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1) | MEDIUM | 1 | 1 |
 | 2018-09-26 13:35 | [#215 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array) | MEDIUM | 1 | 1 |
 | 2018-09-26 13:34 | [#414 第三大的数](https://leetcode-cn.com/problems/third-maximum-number) | EASY | 1 | 1 |
 | 2018-09-21 08:30 | [#415 字符串相加](https://leetcode-cn.com/problems/add-strings) | EASY | 1 | 1 |
@@ -154,7 +181,7 @@
 | 2018-08-31 07:01 | [#307 区域和检索 - 数组可修改](https://leetcode-cn.com/problems/range-sum-query-mutable) | MEDIUM | 1 | 1 |
 | 2018-08-31 06:57 | [#303 区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable) | EASY | 1 | 1 |
 | 2018-08-31 06:41 | [#50 Pow(x, n)](https://leetcode-cn.com/problems/powx-n) | MEDIUM | 6 | 1 |
-| 2018-08-29 16:19 | [#94 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal) | MEDIUM | 3 | 1 |
+| 2018-08-29 16:19 | [#94 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal) | EASY | 3 | 1 |
 | 2018-08-29 14:40 | [#53 最大子序和](https://leetcode-cn.com/problems/maximum-subarray) | EASY | 3 | 1 |
 | 2018-08-29 11:03 | [#48 旋转图像](https://leetcode-cn.com/problems/rotate-image) | MEDIUM | 3 | 1 |
 | 2018-08-29 10:23 | [#443 压缩字符串](https://leetcode-cn.com/problems/string-compression) | MEDIUM | 2 | 1 |
@@ -171,7 +198,6 @@
 | 2018-08-27 08:21 | [#107 二叉树的层序遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii) | MEDIUM | 1 | 1 |
 | 2018-08-27 08:11 | [#637 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree) | EASY | 3 | 1 |
 | 2018-08-27 03:01 | [#804 唯一摩尔斯密码词](https://leetcode-cn.com/problems/unique-morse-code-words) | EASY | 1 | 1 |
-| 2018-08-25 04:58 | [#461 汉明距离](https://leetcode-cn.com/problems/hamming-distance) | EASY | 5 | 1 |
 | 2018-08-25 03:50 | [#566 重塑矩阵](https://leetcode-cn.com/problems/reshape-the-matrix) | EASY | 2 | 1 |
 | 2018-08-25 03:25 | [#344 反转字符串](https://leetcode-cn.com/problems/reverse-string) | EASY | 7 | 1 |
 | 2018-08-25 02:48 | [#645 错误的集合](https://leetcode-cn.com/problems/set-mismatch) | EASY | 11 | 1 |
@@ -184,7 +210,6 @@
 | 2018-08-23 17:21 | [#119 杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii) | EASY | 1 | 1 |
 | 2018-08-23 17:12 | [#118 杨辉三角](https://leetcode-cn.com/problems/pascals-triangle) | EASY | 2 | 1 |
 | 2018-08-23 16:48 | [#104 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree) | EASY | 7 | 1 |
-| 2018-08-22 12:42 | [#13 罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer) | EASY | 9 | 1 |
 | 2018-08-22 12:23 | [#14 最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix) | EASY | 7 | 1 |
 | 2018-08-22 08:28 | [#262 行程和用户](https://leetcode-cn.com/problems/trips-and-users) | HARD | 1 | 1 |
 | 2018-08-22 08:13 | [#601 体育馆的人流量](https://leetcode-cn.com/problems/human-traffic-of-stadium) | HARD | 2 | 1 |
