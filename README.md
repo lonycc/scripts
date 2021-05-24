@@ -21,6 +21,20 @@
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-05-23 14:31 | [#374 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower) | EASY | 5 | 1 |
+| 2021-05-18 07:54 | [#160 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists) | EASY | 3 | 1 |
+| 2021-05-18 07:37 | [#LCP 17 速算机器人](https://leetcode-cn.com/problems/nGK0Fy) | EASY | 1 | 1 |
+| 2021-05-18 07:33 | [#LCP 29 乐团站位](https://leetcode-cn.com/problems/SNJvJP) | EASY | 1 | 1 |
+| 2021-05-18 07:13 | [#LCP 18 早餐组合](https://leetcode-cn.com/problems/2vYnGI) | EASY | 2 | 1 |
+| 2021-05-18 06:39 | [#LCP 28 采购方案](https://leetcode-cn.com/problems/4xy4Wx) | EASY | 1 | 1 |
+| 2021-05-18 06:16 | [#面试题 16.11 跳水板](https://leetcode-cn.com/problems/diving-board-lcci) | EASY | 4 | 1 |
+| 2021-05-18 05:06 | [#剑指 Offer 62 圆圈中最后剩下的数字](https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof) | EASY | 1 | 1 |
+| 2021-05-18 05:00 | [#剑指 Offer 61 扑克牌中的顺子](https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof) | EASY | 2 | 1 |
+| 2021-05-18 04:44 | [#剑指 Offer 65 不用加减乘除做加法](https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof) | EASY | 3 | 1 |
+| 2021-05-18 04:41 | [#剑指 Offer 53 - II 0～n-1中缺失的数字](https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof) | EASY | 2 | 1 |
+| 2021-05-18 03:47 | [#1442 形成两个异或相等数组的三元组数目](https://leetcode-cn.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor) | MEDIUM | 2 | 1 |
+| 2021-05-17 02:25 | [#993 二叉树的堂兄弟节点](https://leetcode-cn.com/problems/cousins-in-binary-tree) | EASY | 2 | 1 |
+| 2021-05-17 02:00 | [#面试题 05.06 整数转换](https://leetcode-cn.com/problems/convert-integer-lcci) | EASY | 8 | 1 |
 | 2021-05-15 08:33 | [#13 罗马数字转整数](https://leetcode-cn.com/problems/roman-to-integer) | EASY | 10 | **2** |
 | 2021-05-14 11:06 | [#面试题 16.07 最大数值](https://leetcode-cn.com/problems/maximum-lcci) | EASY | 1 | 1 |
 | 2021-05-14 11:03 | [#面试题 17.01 不用加号的加法](https://leetcode-cn.com/problems/add-without-plus-lcci) | EASY | 1 | 1 |
@@ -185,7 +199,7 @@
 | 2018-08-29 14:40 | [#53 最大子序和](https://leetcode-cn.com/problems/maximum-subarray) | EASY | 3 | 1 |
 | 2018-08-29 11:03 | [#48 旋转图像](https://leetcode-cn.com/problems/rotate-image) | MEDIUM | 3 | 1 |
 | 2018-08-29 10:23 | [#443 压缩字符串](https://leetcode-cn.com/problems/string-compression) | MEDIUM | 2 | 1 |
-| 2018-08-29 09:33 | [#38 外观数列](https://leetcode-cn.com/problems/count-and-say) | EASY | 14 | 1 |
+| 2018-08-29 09:33 | [#38 外观数列](https://leetcode-cn.com/problems/count-and-say) | MEDIUM | 14 | 1 |
 | 2018-08-29 07:48 | [#28 实现 strStr()](https://leetcode-cn.com/problems/implement-strstr) | EASY | 4 | 1 |
 | 2018-08-29 07:38 | [#26 删除有序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array) | EASY | 5 | 1 |
 | 2018-08-29 07:18 | [#278 第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version) | EASY | 11 | 1 |
