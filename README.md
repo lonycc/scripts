@@ -19,8 +19,11 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
+> 总提交次数: 806, 总通过次数: 462, 已通过过题数: 258
+> 已通过题目的难度和数量: EASY = 181, MEDIUM = 66, HARD = 11, 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-05-31 03:00 | [#152 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray) | MEDIUM | 2 | 1 |
 | 2021-05-29 12:06 | [#217 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate) | EASY | 2 | 1 |
 | 2021-05-28 09:09 | [#150 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation) | MEDIUM | 3 | 1 |
 | 2021-05-28 07:37 | [#477 汉明距离总和](https://leetcode-cn.com/problems/total-hamming-distance) | MEDIUM | 11 | **2** |
