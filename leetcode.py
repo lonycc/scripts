@@ -10,9 +10,6 @@ import os
 import json
 import time
 
-
-
-
 # 登录
 def login(EMAIL, PASSWORD):
     session = requests.Session()  # 建立会话
@@ -58,7 +55,6 @@ def get_submission_list(slug, session):
 
     r = session.post(url, data=payload, headers=headers, verify=False)
     response_data = json.loads(r.text)
-
     return response_data
 
 
@@ -85,17 +81,30 @@ def get_accepted_problems(session):
 
     r = session.post(url, data=payload, headers=headers, verify=False)
     response_data = json.loads(r.text)
+    return response_data['data']['userProfileQuestions']
 
-    return response_data
 
+# 获取做题总体分析
+def get_session_progress(session):
+    url = 'https://leetcode-cn.com/graphql/'
 
+    payload = json.dumps({
+            "operationName": "sessionProgress",
+            "variables": {},
+            "query": "query sessionProgress {\n  userProfileSessionProgress {\n    numAcceptedQuestions {\n      difficulty\n      count\n      __typename\n    }\n    numFailedQuestions {\n      difficulty\n      count\n      __typename\n    }\n    numUntouchedQuestions {\n      difficulty\n      count\n      __typename\n    }\n    numSubmissions\n    numAcSubmissions\n    __typename\n  }\n}\n"
+    })
+
+    headers = {"content-type": "application/json", "origin": "https://leetcode-cn.com", "referer": "https://leetcode-cn.com/progress/", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"}
+
+    r = session.post(url, data=payload, headers=headers, verify=False)
+    response_data = json.loads(r.text)
+    return response_data['data']['userProfileSessionProgress']
 
 # 生成Markdown文本
-def generate_markdown_text(response_data, session):
-
-
+def generate_markdown_text(summary_data, list_data, session):
     # 相关介绍
-    response_data = response_data['data']['userProfileQuestions']['questions']
+    total_num = list_data['totalNum']
+    list_data = list_data['questions']
     markdown_text =  "## 相关介绍\n"
     markdown_text += "这是一个简易的LeetCode自动统计程序, 可自动统计最近提交通过的题目, 并以Markdown的形式展示相关的数据。\n"
     markdown_text += "根据个人需求, 我只重点获取**提交次数**和**重刷次数**这两个指标, 目的是为了更好地辅助做题。\n"
@@ -116,12 +125,17 @@ def generate_markdown_text(response_data, session):
     markdown_text += "\n\n"
     markdown_text += "> 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数\n"
     markdown_text += "\n"
-    markdown_text += "| 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |\n| ---- | ---- | ---- | ---- | ---- |\n"
+    markdown_text += f"> 总提交次数: {summary_data['numSubmissions']}, 总通过次数: {summary_data['numAcSubmissions']}, 已通过过题数: {total_num}\n"
+    markdown_text += "> 已通过题目的难度和数量: "
+    for numAccepted in summary_data['numAcceptedQuestions']:
+        markdown_text += f"{numAccepted['difficulty']} = {numAccepted['count']}, "
 
-    for index, sub_data in enumerate(response_data):
+    markdown_text += "\n| 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |\n| ---- | ---- | ---- | ---- | ---- |\n"
+
+    for index, sub_data in enumerate(list_data):
 
         # 显示进度
-        print('{}/{}'.format(index + 1, len(response_data)))
+        print('{}/{}'.format(index + 1, len(list_data)))
 
         # 获取一些必要的信息
         lastSubmittedAt = time.strftime("%Y-%m-%d %H:%M", time.localtime(sub_data['lastSubmittedAt']))
@@ -158,16 +172,15 @@ def generate_markdown_text(response_data, session):
         # 更新Markdown文本
         markdown_text += "| " + lastSubmittedAt + " | " + "[" + translatedTitle + "]" + "(" + url + ")" + " | " + difficulty + " | " + numSubmitted + " | " + count + " |" + "\n"
 
-
     return markdown_text
-
 
 
 if __name__ == '__main__':
     session = login(sys.argv[1], sys.argv[2]) # 登录
-    response_data = get_accepted_problems(session) # 获取所有通过的题目列表
-    markdown_text = generate_markdown_text(response_data, session) # 生成Markdown文本
+    summary_data = get_session_progress(session)  # 获取做题总体数据
+    list_data = get_accepted_problems(session) # 获取所有通过的题目列表
+    markdown_text = generate_markdown_text(summary_data, list_data, session) # 生成Markdown文本
 
     # 更新README.md文件
-    with open("README.md", "w") as f:
+    with open("README.md", "w", encoding="utf-8") as f:
         f.write(markdown_text)
