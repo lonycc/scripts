@@ -19,10 +19,38 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 806, 总通过次数: 462, 已通过过题数: 258
-> 已通过题目的难度和数量: EASY = 181, MEDIUM = 66, HARD = 11, 
+> 总提交次数: 845, 总通过次数: 498, 已通过过题数: 284
+> 已通过题目的难度和数量: EASY = 198, MEDIUM = 74, HARD = 12, 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-06-04 09:31 | [#1684 统计一致字符串的数目](https://leetcode-cn.com/problems/count-the-number-of-consistent-strings) | EASY | 1 | 1 |
+| 2021-06-04 08:18 | [#1365 有多少小于当前数字的数字](https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number) | EASY | 2 | 1 |
+| 2021-06-04 07:53 | [#1832 判断句子是否为全字母句](https://leetcode-cn.com/problems/check-if-the-sentence-is-pangram) | EASY | 1 | 1 |
+| 2021-06-04 07:46 | [#1822 数组元素积的符号](https://leetcode-cn.com/problems/sign-of-the-product-of-an-array) | EASY | 1 | 1 |
+| 2021-06-04 07:43 | [#1854 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year) | EASY | 2 | 1 |
+| 2021-06-04 07:09 | [#938 二叉搜索树的范围和](https://leetcode-cn.com/problems/range-sum-of-bst) | EASY | 3 | 1 |
+| 2021-06-04 06:48 | [#1662 检查两个字符串数组是否相等](https://leetcode-cn.com/problems/check-if-two-string-arrays-are-equivalent) | EASY | 1 | 1 |
+| 2021-06-04 06:46 | [#1295 统计位数为偶数的数字](https://leetcode-cn.com/problems/find-numbers-with-even-number-of-digits) | EASY | 2 | 1 |
+| 2021-06-04 06:36 | [#1844 将所有数字用字符替换](https://leetcode-cn.com/problems/replace-all-digits-with-characters) | EASY | 1 | 1 |
+| 2021-06-04 02:54 | [#160 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists) | EASY | 4 | **2** |
+| 2021-06-04 02:47 | [#888 公平的糖果棒交换](https://leetcode-cn.com/problems/fair-candy-swap) | EASY | 1 | 1 |
+| 2021-06-03 03:03 | [#885 螺旋矩阵 III](https://leetcode-cn.com/problems/spiral-matrix-iii) | MEDIUM | 1 | 1 |
+| 2021-06-03 02:14 | [#884 两句话中的不常见单词](https://leetcode-cn.com/problems/uncommon-words-from-two-sentences) | EASY | 1 | 1 |
+| 2021-06-02 07:33 | [#700 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree) | EASY | 2 | 1 |
+| 2021-06-02 07:12 | [#698 划分为k个相等的子集](https://leetcode-cn.com/problems/partition-to-k-equal-sum-subsets) | MEDIUM | 1 | 1 |
+| 2021-06-02 06:39 | [#697 数组的度](https://leetcode-cn.com/problems/degree-of-an-array) | EASY | 1 | 1 |
+| 2021-06-02 03:37 | [#696 计数二进制子串](https://leetcode-cn.com/problems/count-binary-substrings) | EASY | 1 | 1 |
+| 2021-06-02 03:23 | [#693 交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits) | EASY | 2 | **2** |
+| 2021-06-02 03:19 | [#692 前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words) | MEDIUM | 1 | 1 |
+| 2021-06-02 02:23 | [#690 员工的重要性](https://leetcode-cn.com/problems/employee-importance) | EASY | 2 | 1 |
+| 2021-06-01 07:11 | [#面试题 08.08 有重复字符串的排列组合](https://leetcode-cn.com/problems/permutation-ii-lcci) | MEDIUM | 1 | 1 |
+| 2021-06-01 02:53 | [#面试题 08.07 无重复字符串的排列组合](https://leetcode-cn.com/problems/permutation-i-lcci) | MEDIUM | 1 | 1 |
+| 2021-06-01 02:35 | [#面试题 08.06 汉诺塔问题](https://leetcode-cn.com/problems/hanota-lcci) | EASY | 2 | **2** |
+| 2021-05-31 09:54 | [#面试题 08.05 递归乘法](https://leetcode-cn.com/problems/recursive-mulitply-lcci) | MEDIUM | 2 | 1 |
+| 2021-05-31 09:11 | [#面试题 08.04 幂集](https://leetcode-cn.com/problems/power-set-lcci) | MEDIUM | 2 | 1 |
+| 2021-05-31 08:08 | [#面试题 08.03 魔术索引](https://leetcode-cn.com/problems/magic-index-lcci) | EASY | 1 | 1 |
+| 2021-05-31 07:47 | [#154 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii) | HARD | 1 | 1 |
+| 2021-05-31 07:44 | [#153 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array) | MEDIUM | 2 | 1 |
 | 2021-05-31 03:00 | [#152 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray) | MEDIUM | 2 | 1 |
 | 2021-05-29 12:06 | [#217 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate) | EASY | 2 | 1 |
 | 2021-05-28 09:09 | [#150 逆波兰表达式求值](https://leetcode-cn.com/problems/evaluate-reverse-polish-notation) | MEDIUM | 3 | 1 |
@@ -58,7 +86,6 @@
 | 2021-05-25 03:48 | [#面试题 01.03 URL化](https://leetcode-cn.com/problems/string-to-url-lcci) | EASY | 2 | 1 |
 | 2021-05-25 03:44 | [#225 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues) | EASY | 3 | 1 |
 | 2021-05-23 14:31 | [#374 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower) | EASY | 5 | 1 |
-| 2021-05-18 07:54 | [#160 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists) | EASY | 3 | 1 |
 | 2021-05-18 07:37 | [#LCP 17 速算机器人](https://leetcode-cn.com/problems/nGK0Fy) | EASY | 1 | 1 |
 | 2021-05-18 07:33 | [#LCP 29 乐团站位](https://leetcode-cn.com/problems/SNJvJP) | EASY | 1 | 1 |
 | 2021-05-18 07:13 | [#LCP 18 早餐组合](https://leetcode-cn.com/problems/2vYnGI) | EASY | 2 | 1 |
@@ -78,7 +105,6 @@
 | 2021-05-14 10:37 | [#12 整数转罗马数字](https://leetcode-cn.com/problems/integer-to-roman) | MEDIUM | 5 | **3** |
 | 2021-05-14 10:36 | [#762 二进制表示中质数个计算置位](https://leetcode-cn.com/problems/prime-number-of-set-bits-in-binary-representation) | EASY | 1 | 1 |
 | 2021-05-14 10:22 | [#1342 将数字变成 0 的操作次数](https://leetcode-cn.com/problems/number-of-steps-to-reduce-a-number-to-zero) | EASY | 4 | 1 |
-| 2021-05-14 09:50 | [#693 交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits) | EASY | 1 | 1 |
 | 2021-05-14 09:22 | [#268 丢失的数字](https://leetcode-cn.com/problems/missing-number) | EASY | 4 | 1 |
 | 2021-05-14 09:09 | [#231 2 的幂](https://leetcode-cn.com/problems/power-of-two) | EASY | 1 | 1 |
 | 2021-05-14 09:05 | [#169 多数元素](https://leetcode-cn.com/problems/majority-element) | EASY | 1 | 1 |
