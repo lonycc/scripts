@@ -130,7 +130,7 @@ def generate_markdown_text(summary_data, list_data, session):
     for numAccepted in summary_data['numAcceptedQuestions']:
         markdown_text += f"{numAccepted['difficulty']} = {numAccepted['count']}, "
 
-    markdown_text += "\n| 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |\n| ---- | ---- | ---- | ---- | ---- |\n"
+    markdown_text += "\n\n| 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |\n| ---- | ---- | ---- | ---- | ---- |\n"
 
     for index, sub_data in enumerate(list_data):
 
