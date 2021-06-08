@@ -19,11 +19,27 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 845, 总通过次数: 498, 已通过过题数: 284
-> 已通过题目的难度和数量: EASY = 198, MEDIUM = 74, HARD = 12, 
+> 总提交次数: 870, 总通过次数: 515, 已通过过题数: 300
+> 已通过题目的难度和数量: EASY = 212, MEDIUM = 76, HARD = 12, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-06-08 03:03 | [#1436 旅行终点站](https://leetcode-cn.com/problems/destination-city) | EASY | 1 | 1 |
+| 2021-06-08 02:48 | [#657 机器人能否返回原点](https://leetcode-cn.com/problems/robot-return-to-origin) | EASY | 1 | 1 |
+| 2021-06-08 02:38 | [#面试题 02.02 返回倒数第 k 个节点](https://leetcode-cn.com/problems/kth-node-from-end-of-list-lcci) | EASY | 1 | 1 |
+| 2021-06-08 02:26 | [#1768 交替合并字符串](https://leetcode-cn.com/problems/merge-strings-alternately) | EASY | 1 | 1 |
+| 2021-06-08 02:17 | [#1049 最后一块石头的重量 II](https://leetcode-cn.com/problems/last-stone-weight-ii) | MEDIUM | 1 | 1 |
+| 2021-06-07 10:13 | [#1299 将每个元素替换为右侧最大元素](https://leetcode-cn.com/problems/replace-elements-with-greatest-element-on-right-side) | EASY | 1 | 1 |
+| 2021-06-07 10:05 | [#1859 将句子排序](https://leetcode-cn.com/problems/sorting-the-sentence) | EASY | 1 | 1 |
+| 2021-06-07 09:46 | [#1732 找到最高海拔](https://leetcode-cn.com/problems/find-the-highest-altitude) | EASY | 2 | 1 |
+| 2021-06-07 09:34 | [#1021 删除最外层的括号](https://leetcode-cn.com/problems/remove-outermost-parentheses) | EASY | 1 | 1 |
+| 2021-06-07 09:04 | [#1720 解码异或后的数组](https://leetcode-cn.com/problems/decode-xored-array) | EASY | 1 | 1 |
+| 2021-06-07 08:55 | [#859 亲密字符串](https://leetcode-cn.com/problems/buddy-strings) | EASY | 1 | 1 |
+| 2021-06-07 08:29 | [#665 非递减数列](https://leetcode-cn.com/problems/non-decreasing-array) | EASY | 1 | 1 |
+| 2021-06-07 08:16 | [#LCP 33 蓄水](https://leetcode-cn.com/problems/o8SXZn) | EASY | 8 | 1 |
+| 2021-06-07 06:54 | [#494 目标和](https://leetcode-cn.com/problems/target-sum) | MEDIUM | 1 | 1 |
+| 2021-06-07 03:47 | [#563 二叉树的坡度](https://leetcode-cn.com/problems/binary-tree-tilt) | EASY | 2 | 1 |
+| 2021-06-07 02:42 | [#561 数组拆分 I](https://leetcode-cn.com/problems/array-partition-i) | EASY | 1 | 1 |
 | 2021-06-04 09:31 | [#1684 统计一致字符串的数目](https://leetcode-cn.com/problems/count-the-number-of-consistent-strings) | EASY | 1 | 1 |
 | 2021-06-04 08:18 | [#1365 有多少小于当前数字的数字](https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number) | EASY | 2 | 1 |
 | 2021-06-04 07:53 | [#1832 判断句子是否为全字母句](https://leetcode-cn.com/problems/check-if-the-sentence-is-pangram) | EASY | 1 | 1 |
