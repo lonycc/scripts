@@ -125,8 +125,8 @@ def generate_markdown_text(summary_data, list_data, session):
     markdown_text += "\n\n"
     markdown_text += "> 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数\n"
     markdown_text += "\n"
-    markdown_text += f"> 总提交次数: {summary_data['numSubmissions']}, 总通过次数: {summary_data['numAcSubmissions']}, 已通过过题数: {total_num}\n"
-    markdown_text += "> 已通过题目的难度和数量: "
+    markdown_text += f"> 总提交次数: {summary_data['numSubmissions']}, 总通过次数: {summary_data['numAcSubmissions']}, 已通过题数: {total_num}\n"
+    markdown_text += "\n> 已通过题目的难度和数量: "
     for numAccepted in summary_data['numAcceptedQuestions']:
         markdown_text += f"{numAccepted['difficulty']} = {numAccepted['count']}, "
 
