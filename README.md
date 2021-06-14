@@ -19,12 +19,92 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 923, 总通过次数: 553, 已通过题数: 334
+> 总提交次数: 1046, 总通过次数: 646, 已通过题数: 414
 
-> 已通过题目的难度和数量: EASY = 238, MEDIUM = 84, HARD = 12, 
+> 已通过题目的难度和数量: EASY = 317, MEDIUM = 85, HARD = 12, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-06-11 19:28 | [#242 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram) | EASY | 1 | 1 |
+| 2021-06-11 19:05 | [#806 写字符串需要的行数](https://leetcode-cn.com/problems/number-of-lines-to-write-string) | EASY | 5 | 1 |
+| 2021-06-11 18:26 | [#867 转置矩阵](https://leetcode-cn.com/problems/transpose-matrix) | EASY | 1 | 1 |
+| 2021-06-11 18:16 | [#1598 文件夹操作日志搜集器](https://leetcode-cn.com/problems/crawler-log-folder) | EASY | 1 | 1 |
+| 2021-06-11 17:15 | [#961 重复 N 次的元素](https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array) | EASY | 1 | 1 |
+| 2021-06-11 17:06 | [#剑指 Offer 03 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof) | EASY | 7 | 1 |
+| 2021-06-11 16:47 | [#1332 删除回文子序列](https://leetcode-cn.com/problems/remove-palindromic-subsequences) | EASY | 2 | 1 |
+| 2021-06-11 16:28 | [#122 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii) | EASY | 1 | 1 |
+| 2021-06-11 16:18 | [#999 可以被一步捕获的棋子数](https://leetcode-cn.com/problems/available-captures-for-rook) | EASY | 2 | 1 |
+| 2021-06-11 09:55 | [#1694 重新格式化电话号码](https://leetcode-cn.com/problems/reformat-phone-number) | EASY | 5 | 1 |
+| 2021-06-11 09:35 | [#1455 检查单词是否为句中其他单词的前缀](https://leetcode-cn.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence) | EASY | 1 | 1 |
+| 2021-06-11 09:16 | [#剑指 Offer 21 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof) | EASY | 1 | 1 |
+| 2021-06-11 09:13 | [#1742 盒子中小球的最大数量](https://leetcode-cn.com/problems/maximum-number-of-balls-in-a-box) | EASY | 2 | 1 |
+| 2021-06-11 09:01 | [#883 三维形体投影面积](https://leetcode-cn.com/problems/projection-area-of-3d-shapes) | EASY | 2 | 1 |
+| 2021-06-11 08:41 | [#496 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i) | EASY | 1 | 1 |
+| 2021-06-11 08:34 | [#509 斐波那契数](https://leetcode-cn.com/problems/fibonacci-number) | EASY | 3 | 1 |
+| 2021-06-11 08:29 | [#1122 数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array) | EASY | 2 | 1 |
+| 2021-06-11 08:17 | [#521 最长特殊序列 Ⅰ](https://leetcode-cn.com/problems/longest-uncommon-subsequence-i) | EASY | 1 | 1 |
+| 2021-06-11 08:12 | [#1403 非递增顺序的最小子序列](https://leetcode-cn.com/problems/minimum-subsequence-in-non-increasing-order) | EASY | 3 | 1 |
+| 2021-06-11 07:58 | [#821 字符的最短距离](https://leetcode-cn.com/problems/shortest-distance-to-a-character) | EASY | 2 | 1 |
+| 2021-06-11 07:43 | [#1413 逐步求和得到正数的最小值](https://leetcode-cn.com/problems/minimum-value-to-get-positive-step-by-step-sum) | EASY | 1 | 1 |
+| 2021-06-11 07:29 | [#1160 拼写单词](https://leetcode-cn.com/problems/find-words-that-can-be-formed-by-characters) | EASY | 1 | 1 |
+| 2021-06-11 07:16 | [#剑指 Offer 39 数组中出现次数超过一半的数字](https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof) | EASY | 1 | 1 |
+| 2021-06-11 07:14 | [#面试题 02.01 移除重复节点](https://leetcode-cn.com/problems/remove-duplicate-node-lcci) | EASY | 2 | 1 |
+| 2021-06-11 06:55 | [#1800 最大升序子数组和](https://leetcode-cn.com/problems/maximum-ascending-subarray-sum) | EASY | 1 | 1 |
+| 2021-06-11 06:50 | [#1200 最小绝对差](https://leetcode-cn.com/problems/minimum-absolute-difference) | EASY | 1 | 1 |
+| 2021-06-11 06:42 | [#575 分糖果](https://leetcode-cn.com/problems/distribute-candies) | EASY | 1 | 1 |
+| 2021-06-11 06:30 | [#LCP 02 分式化简](https://leetcode-cn.com/problems/deep-dark-fraction) | EASY | 1 | 1 |
+| 2021-06-11 06:17 | [#811 子域名访问计数](https://leetcode-cn.com/problems/subdomain-visit-count) | EASY | 1 | 1 |
+| 2021-06-11 04:01 | [#1022 从根到叶的二进制数之和](https://leetcode-cn.com/problems/sum-of-root-to-leaf-binary-numbers) | EASY | 1 | 1 |
+| 2021-06-11 03:53 | [#682 棒球比赛](https://leetcode-cn.com/problems/baseball-game) | EASY | 1 | 1 |
+| 2021-06-11 03:38 | [#1752 检查数组是否经排序和轮转得到](https://leetcode-cn.com/problems/check-if-array-is-sorted-and-rotated) | EASY | 1 | 1 |
+| 2021-06-11 03:23 | [#908 最小差值 I](https://leetcode-cn.com/problems/smallest-range-i) | EASY | 1 | 1 |
+| 2021-06-11 03:13 | [#144 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal) | EASY | 1 | 1 |
+| 2021-06-11 03:10 | [#1710 卡车上的最大单元数](https://leetcode-cn.com/problems/maximum-units-on-a-truck) | EASY | 1 | 1 |
+| 2021-06-11 03:00 | [#1848 到目标元素的最小距离](https://leetcode-cn.com/problems/minimum-distance-to-the-target-element) | EASY | 1 | 1 |
+| 2021-06-11 02:55 | [#1217 玩筹码](https://leetcode-cn.com/problems/minimum-cost-to-move-chips-to-the-same-position) | EASY | 1 | 1 |
+| 2021-06-11 02:42 | [#476 数字的补数](https://leetcode-cn.com/problems/number-complement) | EASY | 1 | 1 |
+| 2021-06-11 02:32 | [#面试题 05.07 配对交换](https://leetcode-cn.com/problems/exchange-lcci) | EASY | 1 | 1 |
+| 2021-06-11 02:27 | [#1636 按照频率将数组升序排序](https://leetcode-cn.com/problems/sort-array-by-increasing-frequency) | EASY | 1 | 1 |
+| 2021-06-11 02:16 | [#剑指 Offer 57 - II 和为s的连续正数序列](https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof) | EASY | 1 | 1 |
+| 2021-06-10 15:30 | [#1287 有序数组中出现次数超过25%的元素](https://leetcode-cn.com/problems/element-appearing-more-than-25-in-sorted-array) | EASY | 1 | 1 |
+| 2021-06-10 15:26 | [#1185 一周中的第几天](https://leetcode-cn.com/problems/day-of-the-week) | EASY | 1 | 1 |
+| 2021-06-10 15:23 | [#面试题 03.02 栈的最小值](https://leetcode-cn.com/problems/min-stack-lcci) | EASY | 1 | 1 |
+| 2021-06-10 15:03 | [#1779 找到最近的有相同 X 或 Y 坐标的点](https://leetcode-cn.com/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate) | EASY | 3 | 1 |
+| 2021-06-10 14:36 | [#448 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array) | EASY | 1 | 1 |
+| 2021-06-10 14:26 | [#1189 “气球” 的最大数量](https://leetcode-cn.com/problems/maximum-number-of-balloons) | EASY | 1 | 1 |
+| 2021-06-10 14:17 | [#1046 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight) | EASY | 2 | 1 |
+| 2021-06-10 14:09 | [#1652 拆炸弹](https://leetcode-cn.com/problems/defuse-the-bomb) | EASY | 2 | 1 |
+| 2021-06-10 13:42 | [#剑指 Offer 57 和为s的两个数字](https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof) | EASY | 2 | 1 |
+| 2021-06-10 13:33 | [#1550 存在连续三个奇数的数组](https://leetcode-cn.com/problems/three-consecutive-odds) | EASY | 2 | 1 |
+| 2021-06-10 13:30 | [#1394 找出数组中的幸运数](https://leetcode-cn.com/problems/find-lucky-integer-in-an-array) | EASY | 2 | 1 |
+| 2021-06-10 13:27 | [#剑指 Offer 50 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof) | EASY | 1 | 1 |
+| 2021-06-10 13:12 | [#559 N 叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree) | EASY | 1 | 1 |
+| 2021-06-10 13:02 | [#922 按奇偶排序数组 II](https://leetcode-cn.com/problems/sort-array-by-parity-ii) | EASY | 1 | 1 |
+| 2021-06-10 12:53 | [#剑指 Offer 09 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof) | EASY | 1 | 1 |
+| 2021-06-10 10:18 | [#1385 两个数组间的距离值](https://leetcode-cn.com/problems/find-the-distance-value-between-two-arrays) | EASY | 1 | 1 |
+| 2021-06-10 10:10 | [#905 按奇偶排序数组](https://leetcode-cn.com/problems/sort-array-by-parity) | EASY | 1 | 1 |
+| 2021-06-10 10:05 | [#500 键盘行](https://leetcode-cn.com/problems/keyboard-row) | EASY | 1 | 1 |
+| 2021-06-10 09:52 | [#1380 矩阵中的幸运数](https://leetcode-cn.com/problems/lucky-numbers-in-a-matrix) | EASY | 1 | 1 |
+| 2021-06-10 09:45 | [#893 特殊等价字符串组](https://leetcode-cn.com/problems/groups-of-special-equivalent-strings) | EASY | 3 | 1 |
+| 2021-06-10 09:07 | [#766 托普利茨矩阵](https://leetcode-cn.com/problems/toeplitz-matrix) | EASY | 1 | 1 |
+| 2021-06-10 08:46 | [#面试题 03.04 化栈为队](https://leetcode-cn.com/problems/implement-queue-using-stacks-lcci) | EASY | 1 | 1 |
+| 2021-06-10 08:42 | [#933 最近的请求次数](https://leetcode-cn.com/problems/number-of-recent-calls) | EASY | 2 | 1 |
+| 2021-06-10 08:33 | [#1502 判断能否形成等差数列](https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence) | EASY | 1 | 1 |
+| 2021-06-10 07:09 | [#1047 删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string) | EASY | 1 | 1 |
+| 2021-06-10 06:58 | [#1304 和为零的N个唯一整数](https://leetcode-cn.com/problems/find-n-unique-integers-sum-up-to-zero) | EASY | 2 | 1 |
+| 2021-06-10 06:50 | [#977 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array) | EASY | 1 | 1 |
+| 2021-06-10 06:44 | [#剑指 Offer 15 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof) | EASY | 1 | 1 |
+| 2021-06-10 06:41 | [#1002 查找常用字符](https://leetcode-cn.com/problems/find-common-characters) | EASY | 1 | 1 |
+| 2021-06-10 06:33 | [#1252 奇数值单元格的数目](https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix) | EASY | 1 | 1 |
+| 2021-06-10 05:11 | [#897 递增顺序搜索树](https://leetcode-cn.com/problems/increasing-order-search-tree) | EASY | 2 | 1 |
+| 2021-06-10 05:07 | [#1351 统计有序矩阵中的负数](https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix) | EASY | 4 | 1 |
+| 2021-06-10 04:41 | [#1323 6 和 9 组成的最大数字](https://leetcode-cn.com/problems/maximum-69-number) | EASY | 2 | 1 |
+| 2021-06-10 03:17 | [#1051 高度检查器](https://leetcode-cn.com/problems/height-checker) | EASY | 1 | 1 |
+| 2021-06-10 03:08 | [#1460 通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-sub-arrays) | EASY | 1 | 1 |
+| 2021-06-10 03:01 | [#557 反转字符串中的单词 III](https://leetcode-cn.com/problems/reverse-words-in-a-string-iii) | EASY | 1 | 1 |
+| 2021-06-10 02:45 | [#1374 生成每种字符都是奇数个的字符串](https://leetcode-cn.com/problems/generate-a-string-with-characters-that-have-odd-counts) | EASY | 2 | 1 |
+| 2021-06-10 02:31 | [#1876 长度为三且各字符不同的子字符串](https://leetcode-cn.com/problems/substrings-of-size-three-with-distinct-characters) | EASY | 1 | 1 |
+| 2021-06-10 02:15 | [#518 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2) | MEDIUM | 1 | 1 |
 | 2021-06-09 10:02 | [#剑指 Offer 05 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof) | EASY | 1 | 1 |
 | 2021-06-09 10:00 | [#1816 截断句子](https://leetcode-cn.com/problems/truncate-sentence) | EASY | 1 | 1 |
 | 2021-06-09 09:58 | [#728 自除数](https://leetcode-cn.com/problems/self-dividing-numbers) | EASY | 2 | 1 |
