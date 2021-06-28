@@ -19,12 +19,69 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1193, 总通过次数: 722, 已通过题数: 470
+> 总提交次数: 1315, 总通过次数: 786, 已通过题数: 526
 
-> 已通过题目的难度和数量: EASY = 372, MEDIUM = 85, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 426, MEDIUM = 87, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-06-27 15:13 | [#495 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking) | EASY | 1 | 1 |
+| 2021-06-25 07:24 | [#219 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii) | EASY | 1 | 1 |
+| 2021-06-25 07:18 | [#653 两数之和 IV - 输入 BST](https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst) | EASY | 1 | 1 |
+| 2021-06-25 06:51 | [#1154 一年中的第几天](https://leetcode-cn.com/problems/day-of-the-year) | EASY | 1 | 1 |
+| 2021-06-25 06:45 | [#1175 质数排列](https://leetcode-cn.com/problems/prime-arrangements) | EASY | 1 | 1 |
+| 2021-06-24 08:59 | [#628 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers) | EASY | 1 | 1 |
+| 2021-06-24 08:57 | [#1317 将整数转换为两个无零整数的和](https://leetcode-cn.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers) | EASY | 1 | 1 |
+| 2021-06-24 08:41 | [#989 数组形式的整数加法](https://leetcode-cn.com/problems/add-to-array-form-of-integer) | EASY | 3 | 1 |
+| 2021-06-24 06:41 | [#1893 检查是否区域内所有整数都被覆盖](https://leetcode-cn.com/problems/check-if-all-the-integers-in-a-range-are-covered) | EASY | 4 | 1 |
+| 2021-06-24 06:21 | [#1897 重新分配字符使所有字符串都相等](https://leetcode-cn.com/problems/redistribute-characters-to-make-all-strings-equal) | EASY | 1 | 1 |
+| 2021-06-24 02:57 | [#917 仅仅反转字母](https://leetcode-cn.com/problems/reverse-only-letters) | EASY | 1 | 1 |
+| 2021-06-24 02:46 | [#1784 检查二进制字符串字段](https://leetcode-cn.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones) | EASY | 2 | 1 |
+| 2021-06-24 02:40 | [#1796 字符串中第二大的数字](https://leetcode-cn.com/problems/second-largest-digit-in-a-string) | EASY | 1 | 1 |
+| 2021-06-24 02:30 | [#1903 字符串中的最大奇数](https://leetcode-cn.com/problems/largest-odd-number-in-string) | EASY | 1 | 1 |
+| 2021-06-24 02:19 | [#121 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock) | EASY | 3 | 1 |
+| 2021-06-24 02:06 | [#551 学生出勤记录 I](https://leetcode-cn.com/problems/student-attendance-record-i) | EASY | 1 | 1 |
+| 2021-06-24 01:58 | [#506 相对名次](https://leetcode-cn.com/problems/relative-ranks) | EASY | 1 | 1 |
+| 2021-06-23 10:32 | [#520 检测大写字母](https://leetcode-cn.com/problems/detect-capital) | EASY | 1 | 1 |
+| 2021-06-23 10:16 | [#705 设计哈希集合](https://leetcode-cn.com/problems/design-hashset) | EASY | 1 | 1 |
+| 2021-06-23 09:59 | [#706 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap) | EASY | 1 | 1 |
+| 2021-06-23 07:34 | [#LCP 11 期望个数统计](https://leetcode-cn.com/problems/qi-wang-ge-shu-tong-ji) | EASY | 2 | 1 |
+| 2021-06-23 07:23 | [#733 图像渲染](https://leetcode-cn.com/problems/flood-fill) | EASY | 1 | 1 |
+| 2021-06-23 07:23 | [#面试题 08.10 颜色填充](https://leetcode-cn.com/problems/color-fill-lcci) | EASY | 1 | 1 |
+| 2021-06-23 07:03 | [#面试题 01.09 字符串轮转](https://leetcode-cn.com/problems/string-rotation-lcci) | EASY | 1 | 1 |
+| 2021-06-23 06:51 | [#面试题 16.15 珠玑妙算](https://leetcode-cn.com/problems/master-mind-lcci) | EASY | 3 | 1 |
+| 2021-06-23 06:37 | [#面试题 10.05 稀疏数组搜索](https://leetcode-cn.com/problems/sparse-array-search-lcci) | EASY | 1 | 1 |
+| 2021-06-23 03:45 | [#剑指 Offer 29 顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof) | EASY | 1 | 1 |
+| 2021-06-23 03:22 | [#剑指 Offer 40 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof) | EASY | 1 | 1 |
+| 2021-06-23 03:22 | [#34 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array) | MEDIUM | 6 | 1 |
+| 2021-06-23 03:01 | [#剑指 Offer 53 - I 在排序数组中查找数字 I](https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof) | EASY | 6 | 1 |
+| 2021-06-23 02:32 | [#剑指 Offer 11 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof) | EASY | 1 | 1 |
+| 2021-06-23 02:26 | [#面试题 03.01 三合一](https://leetcode-cn.com/problems/three-in-one-lcci) | EASY | 1 | 1 |
+| 2021-06-23 02:08 | [#1523 在区间范围内统计奇数数目](https://leetcode-cn.com/problems/count-odd-numbers-in-an-interval-range) | EASY | 1 | 1 |
+| 2021-06-23 02:01 | [#剑指 Offer 15 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof) | EASY | 2 | **2** |
+| 2021-06-23 01:57 | [#1446 连续字符](https://leetcode-cn.com/problems/consecutive-characters) | EASY | 1 | 1 |
+| 2021-06-22 10:08 | [#1417 重新格式化字符串](https://leetcode-cn.com/problems/reformat-the-string) | EASY | 1 | 1 |
+| 2021-06-22 09:46 | [#1422 分割字符串的最大得分](https://leetcode-cn.com/problems/maximum-score-after-splitting-a-string) | EASY | 1 | 1 |
+| 2021-06-22 09:32 | [#1360 日期之间隔几天](https://leetcode-cn.com/problems/number-of-days-between-two-dates) | EASY | 1 | 1 |
+| 2021-06-22 09:16 | [#剑指 Offer 10- II 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof) | EASY | 5 | 1 |
+| 2021-06-22 09:09 | [#面试题 17.12 BiNode](https://leetcode-cn.com/problems/binode-lcci) | EASY | 1 | 1 |
+| 2021-06-22 07:39 | [#面试题 10.01 合并排序的数组](https://leetcode-cn.com/problems/sorted-merge-lcci) | EASY | 1 | 1 |
+| 2021-06-22 06:48 | [#剑指 Offer 38 字符串的排列](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof) | MEDIUM | 1 | 1 |
+| 2021-06-22 06:46 | [#面试题 04.04 检查平衡性](https://leetcode-cn.com/problems/check-balance-lcci) | EASY | 2 | 1 |
+| 2021-06-22 06:36 | [#面试题 01.06 字符串压缩](https://leetcode-cn.com/problems/compress-string-lcci) | EASY | 5 | 1 |
+| 2021-06-22 03:46 | [#面试题 01.04 回文排列](https://leetcode-cn.com/problems/palindrome-permutation-lcci) | EASY | 2 | 1 |
+| 2021-06-22 03:33 | [#LCS 01 下载插件](https://leetcode-cn.com/problems/Ju9Xwi) | EASY | 5 | 1 |
+| 2021-06-21 09:54 | [#704 二分查找](https://leetcode-cn.com/problems/binary-search) | EASY | 4 | 1 |
+| 2021-06-21 09:14 | [#925 长按键入](https://leetcode-cn.com/problems/long-pressed-name) | EASY | 4 | 1 |
+| 2021-06-21 08:32 | [#面试题 05.03 翻转数位](https://leetcode-cn.com/problems/reverse-bits-lcci) | EASY | 1 | 1 |
+| 2021-06-21 08:22 | [#1013 将数组分成和相等的三个部分](https://leetcode-cn.com/problems/partition-array-into-three-parts-with-equal-sum) | EASY | 1 | 1 |
+| 2021-06-21 08:08 | [#680 验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii) | EASY | 1 | 1 |
+| 2021-06-21 06:30 | [#507 完美数](https://leetcode-cn.com/problems/perfect-number) | EASY | 2 | 1 |
+| 2021-06-21 03:34 | [#1033 移动石子直到连续](https://leetcode-cn.com/problems/moving-stones-until-consecutive) | EASY | 3 | 1 |
+| 2021-06-21 02:33 | [#434 字符串中的单词数](https://leetcode-cn.com/problems/number-of-segments-in-a-string) | EASY | 2 | 1 |
+| 2021-06-21 02:26 | [#面试题 08.01 三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci) | EASY | 2 | 1 |
+| 2021-06-21 02:19 | [#605 种花问题](https://leetcode-cn.com/problems/can-place-flowers) | EASY | 4 | 1 |
+| 2021-06-21 01:48 | [#1629 按键持续时间最长的键](https://leetcode-cn.com/problems/slowest-key) | EASY | 1 | 1 |
 | 2021-06-18 09:55 | [#326 3的幂](https://leetcode-cn.com/problems/power-of-three) | EASY | 2 | 1 |
 | 2021-06-18 09:03 | [#面试题 17.16 按摩师](https://leetcode-cn.com/problems/the-masseuse-lcci) | EASY | 2 | 1 |
 | 2021-06-18 08:42 | [#1018 可被 5 整除的二进制前缀](https://leetcode-cn.com/problems/binary-prefix-divisible-by-5) | EASY | 3 | 1 |
@@ -151,7 +208,6 @@
 | 2021-06-10 07:09 | [#1047 删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string) | EASY | 1 | 1 |
 | 2021-06-10 06:58 | [#1304 和为零的N个唯一整数](https://leetcode-cn.com/problems/find-n-unique-integers-sum-up-to-zero) | EASY | 2 | 1 |
 | 2021-06-10 06:50 | [#977 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array) | EASY | 1 | 1 |
-| 2021-06-10 06:44 | [#剑指 Offer 15 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof) | EASY | 1 | 1 |
 | 2021-06-10 06:41 | [#1002 查找常用字符](https://leetcode-cn.com/problems/find-common-characters) | EASY | 1 | 1 |
 | 2021-06-10 06:33 | [#1252 奇数值单元格的数目](https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix) | EASY | 1 | 1 |
 | 2021-06-10 05:11 | [#897 递增顺序搜索树](https://leetcode-cn.com/problems/increasing-order-search-tree) | EASY | 2 | 1 |
