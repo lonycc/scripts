@@ -19,12 +19,52 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1315, 总通过次数: 786, 已通过题数: 526
+> 总提交次数: 1379, 总通过次数: 829, 已通过题数: 565
 
-> 已通过题目的难度和数量: EASY = 426, MEDIUM = 87, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 459, MEDIUM = 93, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |
 | ---- | ---- | ---- | ---- | ---- |
+| 2021-07-02 07:25 | [#1128 等价多米诺骨牌对的数量](https://leetcode-cn.com/problems/number-of-equivalent-domino-pairs) | EASY | 3 | 1 |
+| 2021-07-02 07:08 | [#1346 检查整数及其两倍数是否存在](https://leetcode-cn.com/problems/check-if-n-and-its-double-exist) | EASY | 1 | 1 |
+| 2021-07-02 07:00 | [#1331 数组序号转换](https://leetcode-cn.com/problems/rank-transform-of-an-array) | EASY | 1 | 1 |
+| 2021-07-02 06:46 | [#598 范围求和 II](https://leetcode-cn.com/problems/range-addition-ii) | EASY | 2 | 1 |
+| 2021-07-02 06:36 | [#796 旋转字符串](https://leetcode-cn.com/problems/rotate-string) | EASY | 1 | 1 |
+| 2021-07-02 03:49 | [#404 左叶子之和](https://leetcode-cn.com/problems/sum-of-left-leaves) | EASY | 1 | 1 |
+| 2021-07-02 03:42 | [#1576 替换所有的问号](https://leetcode-cn.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters) | EASY | 1 | 1 |
+| 2021-07-02 03:29 | [#1833 雪糕的最大数量](https://leetcode-cn.com/problems/maximum-ice-cream-bars) | MEDIUM | 2 | **2** |
+| 2021-07-02 03:24 | [#453 最小操作次数使数组元素相等](https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements) | EASY | 2 | 1 |
+| 2021-07-02 03:08 | [#1668 最大重复子字符串](https://leetcode-cn.com/problems/maximum-repeating-substring) | EASY | 4 | 1 |
+| 2021-07-02 02:50 | [#1758 生成交替二进制字符串的最少操作数](https://leetcode-cn.com/problems/minimum-changes-to-make-alternating-binary-string) | EASY | 1 | 1 |
+| 2021-07-02 02:29 | [#1736 替换隐藏数字得到的最晚时间](https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits) | EASY | 2 | 1 |
+| 2021-07-02 02:02 | [#661 图片平滑器](https://leetcode-cn.com/problems/image-smoother) | EASY | 2 | 1 |
+| 2021-07-01 09:48 | [#1909 删除一个元素使数组严格递增](https://leetcode-cn.com/problems/remove-one-element-to-make-the-array-strictly-increasing) | EASY | 3 | 1 |
+| 2021-07-01 08:22 | [#LCS 02 完成一半题目](https://leetcode-cn.com/problems/WqXACV) | EASY | 4 | 1 |
+| 2021-07-01 08:02 | [#1370 上升下降字符串](https://leetcode-cn.com/problems/increasing-decreasing-string) | EASY | 1 | 1 |
+| 2021-07-01 07:58 | [#830 较大分组的位置](https://leetcode-cn.com/problems/positions-of-large-groups) | EASY | 1 | 1 |
+| 2021-07-01 07:50 | [#1791 找出星型图的中心节点](https://leetcode-cn.com/problems/find-center-of-star-graph) | EASY | 1 | 1 |
+| 2021-07-01 07:46 | [#1913 两个数对之间的最大乘积差](https://leetcode-cn.com/problems/maximum-product-difference-between-two-pairs) | EASY | 1 | 1 |
+| 2021-07-01 07:42 | [#1005 K 次取反后最大化的数组和](https://leetcode-cn.com/problems/maximize-sum-of-array-after-k-negations) | EASY | 1 | 1 |
+| 2021-07-01 07:04 | [#1037 有效的回旋镖](https://leetcode-cn.com/problems/valid-boomerang) | EASY | 1 | 1 |
+| 2021-07-01 06:56 | [#1103 分糖果 II](https://leetcode-cn.com/problems/distribute-candies-to-people) | EASY | 2 | 1 |
+| 2021-07-01 06:46 | [#819 最常见的单词](https://leetcode-cn.com/problems/most-common-word) | EASY | 2 | 1 |
+| 2021-07-01 02:57 | [#746 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs) | EASY | 1 | 1 |
+| 2021-07-01 02:41 | [#643 子数组最大平均数 I](https://leetcode-cn.com/problems/maximum-average-subarray-i) | EASY | 1 | 1 |
+| 2021-07-01 02:29 | [#441 排列硬币](https://leetcode-cn.com/problems/arranging-coins) | EASY | 1 | 1 |
+| 2021-07-01 02:18 | [#844 比较含退格的字符串](https://leetcode-cn.com/problems/backspace-string-compare) | EASY | 2 | 1 |
+| 2021-07-01 02:13 | [#744 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target) | EASY | 1 | 1 |
+| 2021-06-30 10:17 | [#747 至少是其他数字两倍的最大数](https://leetcode-cn.com/problems/largest-number-at-least-twice-of-others) | EASY | 2 | 1 |
+| 2021-06-30 10:10 | [#674 最长连续递增序列](https://leetcode-cn.com/problems/longest-continuous-increasing-subsequence) | EASY | 2 | 1 |
+| 2021-06-30 02:46 | [#1437 是否所有 1 都至少相隔 k 个元素](https://leetcode-cn.com/problems/check-if-all-1s-are-at-least-length-k-places-away) | EASY | 1 | 1 |
+| 2021-06-30 02:40 | [#1544 整理字符串](https://leetcode-cn.com/problems/make-the-string-great) | EASY | 1 | 1 |
+| 2021-06-29 10:18 | [#1496 判断路径是否相交](https://leetcode-cn.com/problems/path-crossing) | EASY | 3 | 1 |
+| 2021-06-29 09:42 | [#1137 第 N 个泰波那契数](https://leetcode-cn.com/problems/n-th-tribonacci-number) | EASY | 1 | 1 |
+| 2021-06-29 09:36 | [#77 组合](https://leetcode-cn.com/problems/combinations) | MEDIUM | 1 | 1 |
+| 2021-06-29 08:21 | [#78 子集](https://leetcode-cn.com/problems/subsets) | MEDIUM | 4 | 1 |
+| 2021-06-29 08:06 | [#1282 用户分组](https://leetcode-cn.com/problems/group-the-people-given-the-group-size-they-belong-to) | MEDIUM | 1 | 1 |
+| 2021-06-29 07:56 | [#1877 数组中最大数对和的最小值](https://leetcode-cn.com/problems/minimize-maximum-pair-sum-in-array) | MEDIUM | 1 | 1 |
+| 2021-06-29 07:49 | [#1689 十-二进制数的最少数目](https://leetcode-cn.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers) | MEDIUM | 1 | 1 |
+| 2021-06-29 07:41 | [#1828 统计一个圆中点的数目](https://leetcode-cn.com/problems/queries-on-number-of-points-inside-a-circle) | MEDIUM | 1 | 1 |
 | 2021-06-27 15:13 | [#495 提莫攻击](https://leetcode-cn.com/problems/teemo-attacking) | EASY | 1 | 1 |
 | 2021-06-25 07:24 | [#219 存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii) | EASY | 1 | 1 |
 | 2021-06-25 07:18 | [#653 两数之和 IV - 输入 BST](https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst) | EASY | 1 | 1 |
@@ -248,7 +288,6 @@
 | 2021-06-08 07:21 | [#剑指 Offer 64 求1+2+…+n](https://leetcode-cn.com/problems/qiu-12n-lcof) | MEDIUM | 1 | 1 |
 | 2021-06-08 07:20 | [#1672 最富有客户的资产总量](https://leetcode-cn.com/problems/richest-customer-wealth) | EASY | 1 | 1 |
 | 2021-06-08 07:17 | [#807 保持城市天际线](https://leetcode-cn.com/problems/max-increase-to-keep-city-skyline) | MEDIUM | 2 | 1 |
-| 2021-06-08 06:42 | [#1833 雪糕的最大数量](https://leetcode-cn.com/problems/maximum-ice-cream-bars) | MEDIUM | 1 | 1 |
 | 2021-06-08 06:35 | [#535 TinyURL 的加密与解密](https://leetcode-cn.com/problems/encode-and-decode-tinyurl) | MEDIUM | 3 | 1 |
 | 2021-06-08 06:21 | [#面试题 16.01 交换数字](https://leetcode-cn.com/problems/swap-numbers-lcci) | MEDIUM | 2 | 1 |
 | 2021-06-08 06:18 | [#1281 整数的各位积和之差](https://leetcode-cn.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer) | EASY | 1 | 1 |
