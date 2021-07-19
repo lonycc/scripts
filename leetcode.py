@@ -130,47 +130,12 @@ def generate_markdown_text(summary_data, list_data, session):
     for numAccepted in summary_data['numAcceptedQuestions']:
         markdown_text += f"{numAccepted['difficulty']} = {numAccepted['count']}, "
 
-    markdown_text += "\n\n| 最近提交时间 | 题目 | 题目难度 | 提交次数| 重刷次数 |\n| ---- | ---- | ---- | ---- | ---- |\n"
+    markdown_text += "\n\n| 最近提交时间 | 题目 | 题目难度 | 提交次数 |\n| ---- | ---- | ---- | ---- |\n"
 
     for index, sub_data in enumerate(list_data):
-
-        # 显示进度
-        print('{}/{}'.format(index + 1, len(list_data)))
-
-        # 获取一些必要的信息
         lastSubmittedAt = time.strftime("%Y-%m-%d %H:%M", time.localtime(sub_data['lastSubmittedAt']))
-        translatedTitle = "#{} {}".format(sub_data['frontendId'], sub_data['translatedTitle'])
-        frontendId = sub_data['frontendId']
-        difficulty = sub_data['difficulty']
-        titleSlug = sub_data['titleSlug']
-        numSubmitted = sub_data['numSubmitted']
-        numSubmitted = str(numSubmitted)
-        url = "https://leetcode-cn.com/problems/{}".format(sub_data['titleSlug'])
-
-        # 获取重刷次数
-        # 规则定义如下：提交通过的时间 与 之前提交通过的时间 不为同一天 即认为是重新刷了一遍
-        submission_dict = get_submission_list(titleSlug, session)
-        submission_list = submission_dict['data']['submissionList']['submissions']
-        submission_accepted_dict = {}
-
-        for submission in submission_list:
-            status = submission['statusDisplay']
-            if (status == 'Accepted'):
-                submission_time = time.strftime("%Y-%m-%d", time.localtime(int(submission['timestamp'])))
-                if submission_time in submission_accepted_dict.keys():
-                    submission_accepted_dict[submission_time] += 1
-                else:
-                    submission_accepted_dict[submission_time] = 1
-
-        # 重刷次数
-        count = len(submission_accepted_dict)
-        if count > 1:
-            count = "**" + str(count) + "**"
-        else:
-            count = str(count)
-
-        # 更新Markdown文本
-        markdown_text += "| " + lastSubmittedAt + " | " + "[" + translatedTitle + "]" + "(" + url + ")" + " | " + difficulty + " | " + numSubmitted + " | " + count + " |" + "\n"
+        url = f"https://leetcode-cn.com/problems/{sub_data['titleSlug']}"
+        markdown_text += f"| {lastSubmittedAt}  | [{sub_data['translatedTitle']}]({url}) | {sub_data['difficulty']} | {sub_data['numSubmitted']} |\n"
 
     return markdown_text
 
