@@ -19,12 +19,26 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1525, 总通过次数: 955, 已通过题数: 606
+> 总提交次数: 1544, 总通过次数: 970, 已通过题数: 613
 
-> 已通过题目的难度和数量: EASY = 474, MEDIUM = 119, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 473, MEDIUM = 127, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2021-08-06 07:15  | [字符串相乘](https://leetcode-cn.com/problems/multiply-strings) | MEDIUM | 7 |
+| 2021-08-05 09:38  | [杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii) | EASY | 3 |
+| 2021-08-05 09:35  | [最长回文串](https://leetcode-cn.com/problems/longest-palindrome) | EASY | 2 |
+| 2021-08-05 09:24  | [设计哈希映射](https://leetcode-cn.com/problems/design-hashmap) | EASY | 2 |
+| 2021-08-05 09:22  | [字符串相加](https://leetcode-cn.com/problems/add-strings) | EASY | 3 |
+| 2021-08-05 09:19  | [单词规律](https://leetcode-cn.com/problems/word-pattern) | EASY | 2 |
+| 2021-08-04 23:23  | [零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2) | MEDIUM | 3 |
+| 2021-08-03 08:01  | [生成匹配的括号](https://leetcode-cn.com/problems/IDBivT) | MEDIUM | 1 |
+| 2021-08-03 07:57  | [三除数](https://leetcode-cn.com/problems/three-divisors) | EASY | 1 |
+| 2021-08-03 07:07  | [最小路径和](https://leetcode-cn.com/problems/minimum-path-sum) | MEDIUM | 1 |
+| 2021-08-03 06:51  | [最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence) | MEDIUM | 1 |
+| 2021-08-03 06:36  | [最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence) | MEDIUM | 1 |
+| 2021-08-03 01:49  | [不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees) | MEDIUM | 1 |
+| 2021-08-03 01:43  | [判断子序列](https://leetcode-cn.com/problems/is-subsequence) | EASY | 8 |
 | 2021-07-30 08:44  | [等差数列划分](https://leetcode-cn.com/problems/arithmetic-slices) | MEDIUM | 1 |
 | 2021-07-30 08:00  | [不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii) | MEDIUM | 1 |
 | 2021-07-30 07:46  | [不同路径](https://leetcode-cn.com/problems/unique-paths) | MEDIUM | 1 |
@@ -34,7 +48,6 @@
 | 2021-07-30 02:18  | [字符串转化后的各位数字之和](https://leetcode-cn.com/problems/sum-of-digits-of-string-after-convert) | EASY | 1 |
 | 2021-07-30 02:10  | [多数元素](https://leetcode-cn.com/problems/majority-element) | EASY | 2 |
 | 2021-07-30 02:08  | [只出现一次的数字](https://leetcode-cn.com/problems/single-number) | EASY | 6 |
-| 2021-07-28 10:09  | [杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii) | EASY | 2 |
 | 2021-07-28 10:06  | [杨辉三角](https://leetcode-cn.com/problems/pascals-triangle) | EASY | 4 |
 | 2021-07-26 14:06  | [二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree) | MEDIUM | 1 |
 | 2021-07-26 14:02  | [单词拆分](https://leetcode-cn.com/problems/word-break) | MEDIUM | 9 |
@@ -180,7 +193,6 @@
 | 2021-06-24 01:58  | [相对名次](https://leetcode-cn.com/problems/relative-ranks) | EASY | 1 |
 | 2021-06-23 10:32  | [检测大写字母](https://leetcode-cn.com/problems/detect-capital) | EASY | 1 |
 | 2021-06-23 10:16  | [设计哈希集合](https://leetcode-cn.com/problems/design-hashset) | EASY | 1 |
-| 2021-06-23 09:59  | [设计哈希映射](https://leetcode-cn.com/problems/design-hashmap) | EASY | 1 |
 | 2021-06-23 07:34  | [期望个数统计](https://leetcode-cn.com/problems/qi-wang-ge-shu-tong-ji) | EASY | 2 |
 | 2021-06-23 07:23  | [颜色填充](https://leetcode-cn.com/problems/color-fill-lcci) | EASY | 1 |
 | 2021-06-23 07:03  | [字符串轮转](https://leetcode-cn.com/problems/string-rotation-lcci) | EASY | 1 |
@@ -210,7 +222,7 @@
 | 2021-06-21 08:22  | [将数组分成和相等的三个部分](https://leetcode-cn.com/problems/partition-array-into-three-parts-with-equal-sum) | EASY | 1 |
 | 2021-06-21 08:08  | [验证回文字符串 Ⅱ](https://leetcode-cn.com/problems/valid-palindrome-ii) | EASY | 1 |
 | 2021-06-21 06:30  | [完美数](https://leetcode-cn.com/problems/perfect-number) | EASY | 2 |
-| 2021-06-21 03:34  | [移动石子直到连续](https://leetcode-cn.com/problems/moving-stones-until-consecutive) | EASY | 3 |
+| 2021-06-21 03:34  | [移动石子直到连续](https://leetcode-cn.com/problems/moving-stones-until-consecutive) | MEDIUM | 3 |
 | 2021-06-21 02:33  | [字符串中的单词数](https://leetcode-cn.com/problems/number-of-segments-in-a-string) | EASY | 2 |
 | 2021-06-21 02:26  | [三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci) | EASY | 2 |
 | 2021-06-21 02:19  | [种花问题](https://leetcode-cn.com/problems/can-place-flowers) | EASY | 4 |
@@ -246,13 +258,12 @@
 | 2021-06-16 09:12  | [重新排列单词间的空格](https://leetcode-cn.com/problems/rearrange-spaces-between-words) | EASY | 1 |
 | 2021-06-16 08:51  | [寻找数组的中心下标](https://leetcode-cn.com/problems/find-pivot-index) | EASY | 2 |
 | 2021-06-16 08:45  | [密钥格式化](https://leetcode-cn.com/problems/license-key-formatting) | EASY | 1 |
-| 2021-06-16 08:30  | [单词规律](https://leetcode-cn.com/problems/word-pattern) | EASY | 1 |
 | 2021-06-16 08:15  | [缀点成线](https://leetcode-cn.com/problems/check-if-it-is-a-straight-line) | EASY | 2 |
 | 2021-06-16 07:58  | [旋转数字](https://leetcode-cn.com/problems/rotated-digits) | MEDIUM | 1 |
 | 2021-06-16 07:46  | [阶乘尾数](https://leetcode-cn.com/problems/factorial-zeros-lcci) | EASY | 3 |
 | 2021-06-16 07:40  | [十进制整数的反码](https://leetcode-cn.com/problems/complement-of-base-10-integer) | EASY | 1 |
 | 2021-06-16 07:35  | [动物收容所](https://leetcode-cn.com/problems/animal-shelter-lcci) | EASY | 3 |
-| 2021-06-16 07:11  | [查询后的偶数和](https://leetcode-cn.com/problems/sum-of-even-numbers-after-queries) | EASY | 2 |
+| 2021-06-16 07:11  | [查询后的偶数和](https://leetcode-cn.com/problems/sum-of-even-numbers-after-queries) | MEDIUM | 2 |
 | 2021-06-16 06:57  | [二进制间距](https://leetcode-cn.com/problems/binary-gap) | EASY | 2 |
 | 2021-06-16 06:43  | [Bigram 分词](https://leetcode-cn.com/problems/occurrences-after-bigram) | EASY | 1 |
 | 2021-06-16 06:32  | [连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof) | EASY | 1 |
@@ -297,7 +308,7 @@
 | 2021-06-11 06:50  | [最小绝对差](https://leetcode-cn.com/problems/minimum-absolute-difference) | EASY | 1 |
 | 2021-06-11 06:42  | [分糖果](https://leetcode-cn.com/problems/distribute-candies) | EASY | 1 |
 | 2021-06-11 06:30  | [分式化简](https://leetcode-cn.com/problems/deep-dark-fraction) | EASY | 1 |
-| 2021-06-11 06:17  | [子域名访问计数](https://leetcode-cn.com/problems/subdomain-visit-count) | EASY | 1 |
+| 2021-06-11 06:17  | [子域名访问计数](https://leetcode-cn.com/problems/subdomain-visit-count) | MEDIUM | 1 |
 | 2021-06-11 04:01  | [从根到叶的二进制数之和](https://leetcode-cn.com/problems/sum-of-root-to-leaf-binary-numbers) | EASY | 1 |
 | 2021-06-11 03:53  | [棒球比赛](https://leetcode-cn.com/problems/baseball-game) | EASY | 1 |
 | 2021-06-11 03:38  | [检查数组是否经排序和轮转得到](https://leetcode-cn.com/problems/check-if-array-is-sorted-and-rotated) | EASY | 1 |
@@ -344,7 +355,6 @@
 | 2021-06-10 03:08  | [通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-sub-arrays) | EASY | 1 |
 | 2021-06-10 02:45  | [生成每种字符都是奇数个的字符串](https://leetcode-cn.com/problems/generate-a-string-with-characters-that-have-odd-counts) | EASY | 2 |
 | 2021-06-10 02:31  | [长度为三且各字符不同的子字符串](https://leetcode-cn.com/problems/substrings-of-size-three-with-distinct-characters) | EASY | 1 |
-| 2021-06-10 02:15  | [零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2) | MEDIUM | 1 |
 | 2021-06-09 10:02  | [替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof) | EASY | 1 |
 | 2021-06-09 10:00  | [截断句子](https://leetcode-cn.com/problems/truncate-sentence) | EASY | 1 |
 | 2021-06-09 09:58  | [自除数](https://leetcode-cn.com/problems/self-dividing-numbers) | EASY | 2 |
@@ -495,7 +505,6 @@
 | 2021-03-22 02:54  | [删除某些元素后的数组均值](https://leetcode-cn.com/problems/mean-of-array-after-removing-some-elements) | EASY | 1 |
 | 2021-03-19 15:50  | [设计停车系统](https://leetcode-cn.com/problems/design-parking-system) | EASY | 3 |
 | 2021-03-19 15:32  | [二叉搜索树的第k大节点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof) | EASY | 3 |
-| 2020-12-21 06:33  | [判断子序列](https://leetcode-cn.com/problems/is-subsequence) | EASY | 7 |
 | 2020-12-18 08:42  | [找不同](https://leetcode-cn.com/problems/find-the-difference) | EASY | 6 |
 | 2020-12-04 07:12  | [阶乘函数后 K 个零](https://leetcode-cn.com/problems/preimage-size-of-factorial-zeroes-function) | HARD | 1 |
 | 2020-12-03 15:48  | [适龄的朋友](https://leetcode-cn.com/problems/friends-of-appropriate-ages) | MEDIUM | 1 |
@@ -569,7 +578,6 @@
 | 2020-10-29 12:25  | [判定字符是否唯一](https://leetcode-cn.com/problems/is-unique-lcci) | EASY | 4 |
 | 2020-10-29 11:00  | [求根节点到叶节点数字之和](https://leetcode-cn.com/problems/sum-root-to-leaf-numbers) | MEDIUM | 4 |
 | 2020-10-28 11:19  | [独一无二的出现次数](https://leetcode-cn.com/problems/unique-number-of-occurrences) | EASY | 3 |
-| 2020-09-09 16:08  | [字符串相乘](https://leetcode-cn.com/problems/multiply-strings) | MEDIUM | 4 |
 | 2020-09-09 15:21  | [接雨水](https://leetcode-cn.com/problems/trapping-rain-water) | HARD | 1 |
 | 2020-09-09 15:00  | [缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive) | HARD | 2 |
 | 2020-09-09 14:02  | [组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii) | MEDIUM | 2 |
@@ -587,7 +595,6 @@
 | 2018-09-26 13:47  | [O(1) 时间插入、删除和获取随机元素](https://leetcode-cn.com/problems/insert-delete-getrandom-o1) | MEDIUM | 1 |
 | 2018-09-26 13:35  | [数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array) | MEDIUM | 1 |
 | 2018-09-26 13:34  | [第三大的数](https://leetcode-cn.com/problems/third-maximum-number) | EASY | 1 |
-| 2018-09-21 08:30  | [字符串相加](https://leetcode-cn.com/problems/add-strings) | EASY | 1 |
 | 2018-09-21 08:24  | [二进制求和](https://leetcode-cn.com/problems/add-binary) | EASY | 1 |
 | 2018-08-31 07:01  | [区域和检索 - 数组可修改](https://leetcode-cn.com/problems/range-sum-query-mutable) | MEDIUM | 1 |
 | 2018-08-31 06:57  | [区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable) | EASY | 1 |
