@@ -19,12 +19,16 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1549, 总通过次数: 975, 已通过题数: 616
+> 总提交次数: 1554, 总通过次数: 979, 已通过题数: 618
 
-> 已通过题目的难度和数量: EASY = 474, MEDIUM = 129, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 476, MEDIUM = 129, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2021-08-16 08:25  | [将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree) | EASY | 2 |
+| 2021-08-16 08:23  | [最小栈](https://leetcode-cn.com/problems/min-stack) | EASY | 3 |
+| 2021-08-16 02:28  | [作为子字符串出现在单词中的字符串数目](https://leetcode-cn.com/problems/number-of-strings-that-appear-as-substrings-in-word) | EASY | 1 |
+| 2021-08-16 02:26  | [检查字符串是否为数组前缀](https://leetcode-cn.com/problems/check-if-string-is-a-prefix-of-array) | EASY | 2 |
 | 2021-08-13 04:56  | [删除字符使字符串变好](https://leetcode-cn.com/problems/delete-characters-to-make-fancy-string) | EASY | 2 |
 | 2021-08-10 02:23  | [环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii) | MEDIUM | 1 |
 | 2021-08-10 01:57  | [两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs) | MEDIUM | 1 |
@@ -382,7 +386,6 @@
 | 2021-06-09 02:37  | [找出所有子集的异或总和再求和](https://leetcode-cn.com/problems/sum-of-all-subset-xor-totals) | EASY | 2 |
 | 2021-06-09 02:33  | [数组异或操作](https://leetcode-cn.com/problems/xor-operation-in-an-array) | EASY | 1 |
 | 2021-06-08 14:45  | [有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree) | MEDIUM | 1 |
-| 2021-06-08 13:57  | [将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree) | EASY | 1 |
 | 2021-06-08 09:53  | [哪种连续子字符串更长](https://leetcode-cn.com/problems/longer-contiguous-segments-of-ones-than-zeros) | EASY | 1 |
 | 2021-06-08 09:26  | [移动所有球到每个盒子所需的最小操作数](https://leetcode-cn.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box) | MEDIUM | 1 |
 | 2021-06-08 07:21  | [求1+2+…+n](https://leetcode-cn.com/problems/qiu-12n-lcof) | MEDIUM | 1 |
@@ -540,7 +543,6 @@
 | 2020-11-16 23:16  | [所有奇数长度子数组的和](https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays) | EASY | 2 |
 | 2020-11-15 01:04  | [删除中间节点](https://leetcode-cn.com/problems/delete-middle-node-lcci) | EASY | 2 |
 | 2020-11-14 15:37  | [宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones) | EASY | 2 |
-| 2020-11-14 06:38  | [最小栈](https://leetcode-cn.com/problems/min-stack) | EASY | 2 |
 | 2020-11-13 15:50  | [解压缩编码列表](https://leetcode-cn.com/problems/decompress-run-length-encoded-list) | EASY | 2 |
 | 2020-11-12 13:54  | [第 k 个缺失的正整数](https://leetcode-cn.com/problems/kth-missing-positive-number) | EASY | 2 |
 | 2020-11-12 11:16  | [重新排列字符串](https://leetcode-cn.com/problems/shuffle-string) | EASY | 4 |
