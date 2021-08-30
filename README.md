@@ -19,12 +19,15 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1554, 总通过次数: 979, 已通过题数: 618
+> 总提交次数: 1558, 总通过次数: 982, 已通过题数: 621
 
-> 已通过题目的难度和数量: EASY = 476, MEDIUM = 129, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 478, MEDIUM = 130, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2021-08-27 08:38  | [使用特殊打字机键入单词的最少时间](https://leetcode-cn.com/problems/minimum-time-to-type-word-using-special-typewriter) | EASY | 2 |
+| 2021-08-27 08:23  | [找出数组的最大公约数](https://leetcode-cn.com/problems/find-greatest-common-divisor-of-array) | EASY | 1 |
+| 2021-08-26 06:24  | [救生艇](https://leetcode-cn.com/problems/boats-to-save-people) | MEDIUM | 1 |
 | 2021-08-16 08:25  | [将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree) | EASY | 2 |
 | 2021-08-16 08:23  | [最小栈](https://leetcode-cn.com/problems/min-stack) | EASY | 3 |
 | 2021-08-16 02:28  | [作为子字符串出现在单词中的字符串数目](https://leetcode-cn.com/problems/number-of-strings-that-appear-as-substrings-in-word) | EASY | 1 |
