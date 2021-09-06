@@ -21,7 +21,7 @@
 
 > 总提交次数: 1558, 总通过次数: 982, 已通过题数: 621
 
-> 已通过题目的难度和数量: EASY = 478, MEDIUM = 130, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 477, MEDIUM = 131, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
@@ -87,7 +87,7 @@
 | 2021-07-22 02:30  | [组合](https://leetcode-cn.com/problems/combinations) | MEDIUM | 2 |
 | 2021-07-22 02:25  | [最佳观光组合](https://leetcode-cn.com/problems/best-sightseeing-pair) | MEDIUM | 1 |
 | 2021-07-22 02:16  | [买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock) | EASY | 5 |
-| 2021-07-22 02:15  | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii) | EASY | 2 |
+| 2021-07-22 02:15  | [买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii) | MEDIUM | 2 |
 | 2021-07-22 02:14  | [二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal) | EASY | 8 |
 | 2021-07-22 02:10  | [二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal) | EASY | 4 |
 | 2021-07-22 02:10  | [二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal) | EASY | 2 |
