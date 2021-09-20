@@ -19,12 +19,15 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1558, 总通过次数: 982, 已通过题数: 621
+> 总提交次数: 1568, 总通过次数: 986, 已通过题数: 624
 
-> 已通过题目的难度和数量: EASY = 477, MEDIUM = 131, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 479, MEDIUM = 132, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2021-09-14 12:16  | [学生分数的最小差值](https://leetcode-cn.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores) | EASY | 4 |
+| 2021-09-14 12:04  | [找到数组的中间位置](https://leetcode-cn.com/problems/find-the-middle-index-in-array) | EASY | 1 |
+| 2021-09-14 11:57  | [反转单词前缀](https://leetcode-cn.com/problems/reverse-prefix-of-word) | EASY | 5 |
 | 2021-08-27 08:38  | [使用特殊打字机键入单词的最少时间](https://leetcode-cn.com/problems/minimum-time-to-type-word-using-special-typewriter) | EASY | 2 |
 | 2021-08-27 08:23  | [找出数组的最大公约数](https://leetcode-cn.com/problems/find-greatest-common-divisor-of-array) | EASY | 1 |
 | 2021-08-26 06:24  | [救生艇](https://leetcode-cn.com/problems/boats-to-save-people) | MEDIUM | 1 |
@@ -529,7 +532,7 @@
 | 2020-11-23 12:54  | [数组中的 k 个最强值](https://leetcode-cn.com/problems/the-k-strongest-values-in-an-array) | MEDIUM | 2 |
 | 2020-11-23 11:52  | [重新排列数组](https://leetcode-cn.com/problems/shuffle-the-array) | EASY | 2 |
 | 2020-11-23 09:21  | [同构字符串](https://leetcode-cn.com/problems/isomorphic-strings) | EASY | 4 |
-| 2020-11-23 06:39  | [计数质数](https://leetcode-cn.com/problems/count-primes) | EASY | 3 |
+| 2020-11-23 06:39  | [计数质数](https://leetcode-cn.com/problems/count-primes) | MEDIUM | 3 |
 | 2020-11-20 09:21  | [快乐数](https://leetcode-cn.com/problems/happy-number) | EASY | 3 |
 | 2020-11-20 08:12  | [二叉搜索树中第K小的元素](https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst) | MEDIUM | 4 |
 | 2020-11-20 07:18  | [求众数 II](https://leetcode-cn.com/problems/majority-element-ii) | MEDIUM | 5 |
