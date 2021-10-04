@@ -19,12 +19,18 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1568, 总通过次数: 986, 已通过题数: 624
+> 总提交次数: 1576, 总通过次数: 992, 已通过题数: 629
 
-> 已通过题目的难度和数量: EASY = 479, MEDIUM = 132, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 481, MEDIUM = 135, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2021-09-23 07:25  | [3的幂](https://leetcode-cn.com/problems/power-of-three) | EASY | 3 |
+| 2021-09-22 08:35  | [分隔链表](https://leetcode-cn.com/problems/split-linked-list-in-parts) | MEDIUM | 1 |
+| 2021-09-22 08:26  | [无人机方阵](https://leetcode-cn.com/problems/0jQkd0) | EASY | 3 |
+| 2021-09-22 07:17  | [心算挑战](https://leetcode-cn.com/problems/uOAnQW) | EASY | 1 |
+| 2021-09-22 06:57  | [差的绝对值为 K 的数对数目](https://leetcode-cn.com/problems/count-number-of-pairs-with-absolute-difference-k) | EASY | 1 |
+| 2021-09-22 06:37  | [执行操作后的变量值](https://leetcode-cn.com/problems/final-value-of-variable-after-performing-operations) | EASY | 1 |
 | 2021-09-14 12:16  | [学生分数的最小差值](https://leetcode-cn.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores) | EASY | 4 |
 | 2021-09-14 12:04  | [找到数组的中间位置](https://leetcode-cn.com/problems/find-the-middle-index-in-array) | EASY | 1 |
 | 2021-09-14 11:57  | [反转单词前缀](https://leetcode-cn.com/problems/reverse-prefix-of-word) | EASY | 5 |
@@ -241,7 +247,6 @@
 | 2021-06-21 02:26  | [三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci) | EASY | 2 |
 | 2021-06-21 02:19  | [种花问题](https://leetcode-cn.com/problems/can-place-flowers) | EASY | 4 |
 | 2021-06-21 01:48  | [按键持续时间最长的键](https://leetcode-cn.com/problems/slowest-key) | EASY | 1 |
-| 2021-06-18 09:55  | [3的幂](https://leetcode-cn.com/problems/power-of-three) | EASY | 2 |
 | 2021-06-18 09:03  | [按摩师](https://leetcode-cn.com/problems/the-masseuse-lcci) | EASY | 2 |
 | 2021-06-18 08:42  | [可被 5 整除的二进制前缀](https://leetcode-cn.com/problems/binary-prefix-divisible-by-5) | EASY | 3 |
 | 2021-06-18 08:18  | [字符串中不同整数的数目](https://leetcode-cn.com/problems/number-of-different-integers-in-a-string) | EASY | 1 |
@@ -360,7 +365,7 @@
 | 2021-06-10 08:33  | [判断能否形成等差数列](https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence) | EASY | 1 |
 | 2021-06-10 07:09  | [删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string) | EASY | 1 |
 | 2021-06-10 06:58  | [和为零的N个唯一整数](https://leetcode-cn.com/problems/find-n-unique-integers-sum-up-to-zero) | EASY | 2 |
-| 2021-06-10 06:41  | [查找常用字符](https://leetcode-cn.com/problems/find-common-characters) | EASY | 1 |
+| 2021-06-10 06:41  | [查找共用字符](https://leetcode-cn.com/problems/find-common-characters) | EASY | 1 |
 | 2021-06-10 06:33  | [奇数值单元格的数目](https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix) | EASY | 1 |
 | 2021-06-10 05:11  | [递增顺序搜索树](https://leetcode-cn.com/problems/increasing-order-search-tree) | EASY | 2 |
 | 2021-06-10 05:07  | [统计有序矩阵中的负数](https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix) | EASY | 4 |
@@ -557,8 +562,8 @@
 | 2020-11-11 14:49  | [转变日期格式](https://leetcode-cn.com/problems/reformat-date) | EASY | 5 |
 | 2020-11-11 14:30  | [好数对的数目](https://leetcode-cn.com/problems/number-of-good-pairs) | EASY | 1 |
 | 2020-11-11 08:44  | [Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title) | EASY | 7 |
-| 2020-11-11 07:30  | [x 的平方根](https://leetcode-cn.com/problems/sqrtx) | EASY | 10 |
-| 2020-11-11 03:53  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes) | EASY | 4 |
+| 2020-11-11 07:30  | [Sqrt(x)](https://leetcode-cn.com/problems/sqrtx) | EASY | 10 |
+| 2020-11-11 03:53  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes) | MEDIUM | 4 |
 | 2020-11-11 03:37  | [Z 字形变换](https://leetcode-cn.com/problems/zigzag-conversion) | MEDIUM | 8 |
 | 2020-11-10 03:12  | [下一个排列](https://leetcode-cn.com/problems/next-permutation) | MEDIUM | 3 |
 | 2020-11-09 15:25  | [包含min函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof) | EASY | 2 |
@@ -641,7 +646,7 @@
 | 2018-08-22 03:41  | [超过经理收入的员工](https://leetcode-cn.com/problems/employees-earning-more-than-their-managers) | EASY | 2 |
 | 2018-08-22 03:35  | [超过5名学生的课](https://leetcode-cn.com/problems/classes-more-than-5-students) | EASY | 2 |
 | 2018-08-22 03:24  | [大的国家](https://leetcode-cn.com/problems/big-countries) | EASY | 2 |
-| 2018-08-22 03:20  | [第二高的薪水](https://leetcode-cn.com/problems/second-highest-salary) | EASY | 4 |
+| 2018-08-22 03:20  | [第二高的薪水](https://leetcode-cn.com/problems/second-highest-salary) | MEDIUM | 4 |
 | 2018-08-22 03:00  | [变更性别](https://leetcode-cn.com/problems/swap-salary) | EASY | 2 |
 | 2018-08-22 02:52  | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change) | EASY | 1 |
 | 2018-08-21 16:03  | [有趣的电影](https://leetcode-cn.com/problems/not-boring-movies) | EASY | 3 |
