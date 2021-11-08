@@ -21,7 +21,7 @@
 
 > 总提交次数: 1576, 总通过次数: 992, 已通过题数: 629
 
-> 已通过题目的难度和数量: EASY = 481, MEDIUM = 135, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 480, MEDIUM = 136, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
@@ -439,7 +439,7 @@
 | 2021-06-02 03:37  | [计数二进制子串](https://leetcode-cn.com/problems/count-binary-substrings) | EASY | 1 |
 | 2021-06-02 03:23  | [交替位二进制数](https://leetcode-cn.com/problems/binary-number-with-alternating-bits) | EASY | 2 |
 | 2021-06-02 03:19  | [前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words) | MEDIUM | 1 |
-| 2021-06-02 02:23  | [员工的重要性](https://leetcode-cn.com/problems/employee-importance) | EASY | 2 |
+| 2021-06-02 02:23  | [员工的重要性](https://leetcode-cn.com/problems/employee-importance) | MEDIUM | 2 |
 | 2021-06-01 07:11  | [有重复字符串的排列组合](https://leetcode-cn.com/problems/permutation-ii-lcci) | MEDIUM | 1 |
 | 2021-06-01 02:53  | [无重复字符串的排列组合](https://leetcode-cn.com/problems/permutation-i-lcci) | MEDIUM | 1 |
 | 2021-06-01 02:35  | [汉诺塔问题](https://leetcode-cn.com/problems/hanota-lcci) | EASY | 2 |
