@@ -149,7 +149,7 @@
 | 2021-07-13 08:51  | [另一棵树的子树](https://leetcode-cn.com/problems/subtree-of-another-tree) | EASY | 4 |
 | 2021-07-13 08:05  | [重复至少 K 次且长度为 M 的模式](https://leetcode-cn.com/problems/detect-pattern-of-length-m-repeated-k-or-more-times) | EASY | 1 |
 | 2021-07-13 02:43  | [存在重复元素](https://leetcode-cn.com/problems/contains-duplicate) | EASY | 3 |
-| 2021-07-13 00:00  | [旋转数组](https://leetcode-cn.com/problems/rotate-array) | MEDIUM | 3 |
+| 2021-07-13 00:00  | [轮转数组](https://leetcode-cn.com/problems/rotate-array) | MEDIUM | 3 |
 | 2021-07-12 23:51  | [有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array) | EASY | 2 |
 | 2021-07-12 13:03  | [搜索插入位置](https://leetcode-cn.com/problems/search-insert-position) | EASY | 6 |
 | 2021-07-12 13:01  | [第一个错误的版本](https://leetcode-cn.com/problems/first-bad-version) | EASY | 12 |
