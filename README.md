@@ -305,7 +305,7 @@
 | 2021-06-11 19:05  | [写字符串需要的行数](https://leetcode-cn.com/problems/number-of-lines-to-write-string) | EASY | 5 |
 | 2021-06-11 18:26  | [转置矩阵](https://leetcode-cn.com/problems/transpose-matrix) | EASY | 1 |
 | 2021-06-11 18:16  | [文件夹操作日志搜集器](https://leetcode-cn.com/problems/crawler-log-folder) | EASY | 1 |
-| 2021-06-11 17:15  | [重复 N 次的元素](https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array) | EASY | 1 |
+| 2021-06-11 17:15  | [在长度 2N 的数组中找出重复 N 次的元素](https://leetcode-cn.com/problems/n-repeated-element-in-size-2n-array) | EASY | 1 |
 | 2021-06-11 17:06  | [数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof) | EASY | 7 |
 | 2021-06-11 16:47  | [删除回文子序列](https://leetcode-cn.com/problems/remove-palindromic-subsequences) | EASY | 2 |
 | 2021-06-11 16:18  | [可以被一步捕获的棋子数](https://leetcode-cn.com/problems/available-captures-for-rook) | EASY | 2 |
