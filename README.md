@@ -25,7 +25,7 @@
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
-| 2021-09-23 07:25  | [3的幂](https://leetcode-cn.com/problems/power-of-three) | EASY | 3 |
+| 2021-09-23 07:25  | [3 的幂](https://leetcode-cn.com/problems/power-of-three) | EASY | 3 |
 | 2021-09-22 08:35  | [分隔链表](https://leetcode-cn.com/problems/split-linked-list-in-parts) | MEDIUM | 1 |
 | 2021-09-22 08:26  | [无人机方阵](https://leetcode-cn.com/problems/0jQkd0) | EASY | 3 |
 | 2021-09-22 07:17  | [心算挑战](https://leetcode-cn.com/problems/uOAnQW) | EASY | 1 |
@@ -110,7 +110,7 @@
 | 2021-07-20 09:52  | [数组中最大数对和的最小值](https://leetcode-cn.com/problems/minimize-maximum-pair-sum-in-array) | MEDIUM | 2 |
 | 2021-07-20 03:00  | [环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray) | MEDIUM | 1 |
 | 2021-07-20 02:32  | [腐烂的橘子](https://leetcode-cn.com/problems/rotting-oranges) | MEDIUM | 1 |
-| 2021-07-20 02:05  | [最大子序和](https://leetcode-cn.com/problems/maximum-subarray) | EASY | 5 |
+| 2021-07-20 02:05  | [最大子数组和](https://leetcode-cn.com/problems/maximum-subarray) | EASY | 5 |
 | 2021-07-20 01:58  | [删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list) | EASY | 4 |
 | 2021-07-19 09:12  | [移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements) | EASY | 4 |
 | 2021-07-19 08:55  | [岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island) | MEDIUM | 1 |
@@ -431,7 +431,7 @@
 | 2021-06-04 06:48  | [检查两个字符串数组是否相等](https://leetcode-cn.com/problems/check-if-two-string-arrays-are-equivalent) | EASY | 1 |
 | 2021-06-04 06:46  | [统计位数为偶数的数字](https://leetcode-cn.com/problems/find-numbers-with-even-number-of-digits) | EASY | 2 |
 | 2021-06-04 06:36  | [将所有数字用字符替换](https://leetcode-cn.com/problems/replace-all-digits-with-characters) | EASY | 1 |
-| 2021-06-04 02:47  | [公平的糖果棒交换](https://leetcode-cn.com/problems/fair-candy-swap) | EASY | 1 |
+| 2021-06-04 02:47  | [公平的糖果交换](https://leetcode-cn.com/problems/fair-candy-swap) | EASY | 1 |
 | 2021-06-03 03:03  | [螺旋矩阵 III](https://leetcode-cn.com/problems/spiral-matrix-iii) | MEDIUM | 1 |
 | 2021-06-03 02:14  | [两句话中的不常见单词](https://leetcode-cn.com/problems/uncommon-words-from-two-sentences) | EASY | 1 |
 | 2021-06-02 07:12  | [划分为k个相等的子集](https://leetcode-cn.com/problems/partition-to-k-equal-sum-subsets) | MEDIUM | 1 |
