@@ -21,7 +21,7 @@
 
 > 总提交次数: 1576, 总通过次数: 992, 已通过题数: 629
 
-> 已通过题目的难度和数量: EASY = 480, MEDIUM = 136, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 479, MEDIUM = 137, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
@@ -639,7 +639,7 @@
 | 2018-08-22 06:55  | [部门工资最高的员工](https://leetcode-cn.com/problems/department-highest-salary) | MEDIUM | 9 |
 | 2018-08-22 06:49  | [分数排名](https://leetcode-cn.com/problems/rank-scores) | MEDIUM | 1 |
 | 2018-08-22 06:22  | [回文数](https://leetcode-cn.com/problems/palindrome-number) | EASY | 1 |
-| 2018-08-22 06:17  | [整数反转](https://leetcode-cn.com/problems/reverse-integer) | EASY | 3 |
+| 2018-08-22 06:17  | [整数反转](https://leetcode-cn.com/problems/reverse-integer) | MEDIUM | 3 |
 | 2018-08-22 04:27  | [上升的温度](https://leetcode-cn.com/problems/rising-temperature) | EASY | 1 |
 | 2018-08-22 03:52  | [从不订购的客户](https://leetcode-cn.com/problems/customers-who-never-order) | EASY | 3 |
 | 2018-08-22 03:44  | [查找重复的电子邮箱](https://leetcode-cn.com/problems/duplicate-emails) | EASY | 1 |
