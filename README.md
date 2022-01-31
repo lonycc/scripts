@@ -562,7 +562,7 @@
 | 2020-11-11 14:49  | [转变日期格式](https://leetcode-cn.com/problems/reformat-date) | EASY | 5 |
 | 2020-11-11 14:30  | [好数对的数目](https://leetcode-cn.com/problems/number-of-good-pairs) | EASY | 1 |
 | 2020-11-11 08:44  | [Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title) | EASY | 7 |
-| 2020-11-11 07:30  | [Sqrt(x)](https://leetcode-cn.com/problems/sqrtx) | EASY | 10 |
+| 2020-11-11 07:30  | [x 的平方根 ](https://leetcode-cn.com/problems/sqrtx) | EASY | 10 |
 | 2020-11-11 03:53  | [阶乘后的零](https://leetcode-cn.com/problems/factorial-trailing-zeroes) | MEDIUM | 4 |
 | 2020-11-11 03:37  | [Z 字形变换](https://leetcode-cn.com/problems/zigzag-conversion) | MEDIUM | 8 |
 | 2020-11-10 03:12  | [下一个排列](https://leetcode-cn.com/problems/next-permutation) | MEDIUM | 3 |
