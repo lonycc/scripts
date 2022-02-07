@@ -21,7 +21,7 @@
 
 > 总提交次数: 1576, 总通过次数: 992, 已通过题数: 629
 
-> 已通过题目的难度和数量: EASY = 479, MEDIUM = 137, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 478, MEDIUM = 138, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
@@ -143,7 +143,7 @@
 | 2021-07-15 01:28  | [两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii) | EASY | 3 |
 | 2021-07-14 03:02  | [合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array) | EASY | 3 |
 | 2021-07-13 17:00  | [两数之和](https://leetcode-cn.com/problems/two-sum) | EASY | 12 |
-| 2021-07-13 16:56  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted) | EASY | 13 |
+| 2021-07-13 16:56  | [两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted) | MEDIUM | 13 |
 | 2021-07-13 16:49  | [移动零](https://leetcode-cn.com/problems/move-zeroes) | EASY | 7 |
 | 2021-07-13 09:33  | [二叉搜索树节点最小距离](https://leetcode-cn.com/problems/minimum-distance-between-bst-nodes) | EASY | 1 |
 | 2021-07-13 08:51  | [另一棵树的子树](https://leetcode-cn.com/problems/subtree-of-another-tree) | EASY | 4 |
