@@ -256,7 +256,7 @@
 | 2021-06-18 03:54  | [最长和谐子序列](https://leetcode-cn.com/problems/longest-harmonious-subsequence) | EASY | 3 |
 | 2021-06-18 03:12  | [重复的子字符串](https://leetcode-cn.com/problems/repeated-substring-pattern) | EASY | 2 |
 | 2021-06-18 02:56  | [丑数](https://leetcode-cn.com/problems/ugly-number) | EASY | 2 |
-| 2021-06-18 02:46  | [1比特与2比特字符](https://leetcode-cn.com/problems/1-bit-and-2-bit-characters) | EASY | 3 |
+| 2021-06-18 02:46  | [1 比特与 2 比特字符](https://leetcode-cn.com/problems/1-bit-and-2-bit-characters) | EASY | 3 |
 | 2021-06-18 02:31  | [获取生成数组中的最大值](https://leetcode-cn.com/problems/get-maximum-in-generated-array) | EASY | 10 |
 | 2021-06-18 02:02  | [两个列表的最小索引总和](https://leetcode-cn.com/problems/minimum-index-sum-of-two-lists) | EASY | 3 |
 | 2021-06-17 10:28  | [找到小镇的法官](https://leetcode-cn.com/problems/find-the-town-judge) | EASY | 2 |
