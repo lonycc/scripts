@@ -21,7 +21,7 @@
 
 > 总提交次数: 1576, 总通过次数: 992, 已通过题数: 629
 
-> 已通过题目的难度和数量: EASY = 478, MEDIUM = 138, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 477, MEDIUM = 139, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
@@ -477,7 +477,7 @@
 | 2021-05-25 03:44  | [用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues) | EASY | 3 |
 | 2021-05-23 14:31  | [猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower) | EASY | 5 |
 | 2021-05-18 07:37  | [速算机器人](https://leetcode-cn.com/problems/nGK0Fy) | EASY | 1 |
-| 2021-05-18 07:33  | [乐团站位](https://leetcode-cn.com/problems/SNJvJP) | EASY | 1 |
+| 2021-05-18 07:33  | [乐团站位](https://leetcode-cn.com/problems/SNJvJP) | MEDIUM | 1 |
 | 2021-05-18 07:13  | [早餐组合](https://leetcode-cn.com/problems/2vYnGI) | EASY | 2 |
 | 2021-05-18 06:39  | [采购方案](https://leetcode-cn.com/problems/4xy4Wx) | EASY | 1 |
 | 2021-05-18 06:16  | [跳水板](https://leetcode-cn.com/problems/diving-board-lcci) | EASY | 4 |
