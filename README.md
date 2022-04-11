@@ -530,7 +530,7 @@
 | 2020-11-30 16:12  | [黑白方格画](https://leetcode-cn.com/problems/ccw6C7) | EASY | 1 |
 | 2020-11-26 08:42  | [两整数之和](https://leetcode-cn.com/problems/sum-of-two-integers) | MEDIUM | 3 |
 | 2020-11-26 06:48  | [有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square) | EASY | 5 |
-| 2020-11-26 06:22  | [计算各个位数不同的数字个数](https://leetcode-cn.com/problems/count-numbers-with-unique-digits) | MEDIUM | 4 |
+| 2020-11-26 06:22  | [统计各位数字都不同的数字个数](https://leetcode-cn.com/problems/count-numbers-with-unique-digits) | MEDIUM | 4 |
 | 2020-11-26 02:41  | [两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays) | EASY | 4 |
 | 2020-11-24 06:33  | [数字范围按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range) | MEDIUM | 1 |
 | 2020-11-23 13:11  | [商品折扣后的最终价格](https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop) | EASY | 1 |
