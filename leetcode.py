@@ -10,6 +10,9 @@ import os
 import json
 import time
 
+BASE_URL = 'https://leetcode.cn'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.62 Safari/537.36'
+
 # 登录
 def login(EMAIL, PASSWORD):
     session = requests.Session()  # 建立会话
@@ -23,8 +26,8 @@ def login(EMAIL, PASSWORD):
         'password': PASSWORD
     }
 
-    sign_in_url = 'https://leetcode-cn.com/accounts/login/'
-    headers = {'User-Agent': "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36", 'Connection': 'keep-alive', 'Referer': sign_in_url, "origin": "https://leetcode-cn.com/"}
+    sign_in_url = f'{BASE_URL}/accounts/login/'
+    headers = {'User-Agent': USER_AGENT, 'Connection': 'keep-alive', 'Referer': sign_in_url, "origin": BASE_URL}
 
     # 发送登录请求
     session.post(sign_in_url, headers=headers, data=login_data, timeout=10, allow_redirects=False)
@@ -38,7 +41,7 @@ def login(EMAIL, PASSWORD):
 
 # 获取某个题目的提交记录
 def get_submission_list(slug, session):
-    url = 'https://leetcode-cn.com/graphql/'
+    url = f'{BASE_URL}/graphql/'
 
     payload = json.dumps({
         "operationName": "submissions",
@@ -51,7 +54,7 @@ def get_submission_list(slug, session):
         "query": "query submissions($offset: Int!, $limit: Int!, $lastKey: String, $questionSlug: String!) {\n  submissionList(offset: $offset, limit: $limit, lastKey: $lastKey, questionSlug: $questionSlug) {\n    lastKey\n    hasNext\n    submissions {\n      id\n      statusDisplay\n      lang\n      runtime\n      timestamp\n      url\n      isPending\n      memory\n      __typename\n    }\n    __typename\n  }\n}\n"
     })
 
-    headers = {"content-type": "application/json", "origin": "https://leetcode-cn.com", "referer": "https://leetcode-cn.com/progress/", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"}
+    headers = {"content-type": "application/json", "origin": BASE_URL, "referer": f"{BASE_URL}/progress/", "user-agent": USER_AGENT}
 
     r = session.post(url, data=payload, headers=headers, verify=False)
     response_data = json.loads(r.text)
@@ -61,14 +64,14 @@ def get_submission_list(slug, session):
 
 # 获取所有通过的题目列表
 def get_accepted_problems(session):
-    url = 'https://leetcode-cn.com/graphql/'
+    url = f'{BASE_URL}/graphql/'
 
     payload = json.dumps({
             "operationName": "userProfileQuestions",
             "variables": {
                 "status": "ACCEPTED",
                 "skip": 0,
-                "first": 200000, # 一次返回的数据量
+                "first": 2000, # 一次返回的数据量
                 "sortField": "LAST_SUBMITTED_AT",
                 "sortOrder": "DESCENDING",
                 "difficulty": [
@@ -77,7 +80,7 @@ def get_accepted_problems(session):
             "query": "query userProfileQuestions($status: StatusFilterEnum!, $skip: Int!, $first: Int!, $sortField: SortFieldEnum!, $sortOrder: SortingOrderEnum!, $keyword: String, $difficulty: [DifficultyEnum!]) {\n  userProfileQuestions(status: $status, skip: $skip, first: $first, sortField: $sortField, sortOrder: $sortOrder, keyword: $keyword, difficulty: $difficulty) {\n    totalNum\n    questions {\n      translatedTitle\n      frontendId\n      titleSlug\n      title\n      difficulty\n      lastSubmittedAt\n      numSubmitted\n      lastSubmissionSrc {\n        sourceType\n        ... on SubmissionSrcLeetbookNode {\n          slug\n          title\n          pageId\n          __typename\n        }\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n"
     })
 
-    headers = {"content-type": "application/json", "origin": "https://leetcode-cn.com", "referer": "https://leetcode-cn.com/progress/", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"}
+    headers = {"content-type": "application/json", "origin": BASE_URL, "referer": f"{BASE_URL}/progress/", "user-agent": USER_AGENT}
 
     r = session.post(url, data=payload, headers=headers, verify=False)
     response_data = json.loads(r.text)
@@ -86,7 +89,7 @@ def get_accepted_problems(session):
 
 # 获取做题总体分析
 def get_session_progress(session):
-    url = 'https://leetcode-cn.com/graphql/'
+    url = f'{BASE_URL}/graphql/'
 
     payload = json.dumps({
             "operationName": "sessionProgress",
@@ -94,7 +97,7 @@ def get_session_progress(session):
             "query": "query sessionProgress {\n  userProfileSessionProgress {\n    numAcceptedQuestions {\n      difficulty\n      count\n      __typename\n    }\n    numFailedQuestions {\n      difficulty\n      count\n      __typename\n    }\n    numUntouchedQuestions {\n      difficulty\n      count\n      __typename\n    }\n    numSubmissions\n    numAcSubmissions\n    __typename\n  }\n}\n"
     })
 
-    headers = {"content-type": "application/json", "origin": "https://leetcode-cn.com", "referer": "https://leetcode-cn.com/progress/", "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36"}
+    headers = {"content-type": "application/json", "origin": BASE_URL, "referer": f"{BASE_URL}/progress/", "user-agent": USER_AGENT}
 
     r = session.post(url, data=payload, headers=headers, verify=False)
     response_data = json.loads(r.text)
@@ -147,5 +150,5 @@ if __name__ == '__main__':
     markdown_text = generate_markdown_text(summary_data, list_data, session) # 生成Markdown文本
 
     # 更新README.md文件
-    with open("README.md", "w", encoding="utf-8") as f:
+    with open('README.md', mode='w', encoding='utf-8') as f:
         f.write(markdown_text)
