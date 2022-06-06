@@ -19,12 +19,26 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1737, 总通过次数: 1129, 已通过题数: 731
+> 总提交次数: 1754, 总通过次数: 1145, 已通过题数: 742
 
-> 已通过题目的难度和数量: EASY = 572, MEDIUM = 146, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 582, MEDIUM = 147, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-06-02 09:20  | [找到和最大的长度为 K 的子序列](https://leetcode-cn.com/problems/find-subsequence-of-length-k-with-the-largest-sum) | EASY | 2 |
+| 2022-06-02 09:13  | [检查是否每一行每一列都包含全部整数](https://leetcode-cn.com/problems/check-if-every-row-and-column-contains-all-numbers) | EASY | 1 |
+| 2022-06-02 09:06  | [反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string) | EASY | 1 |
+| 2022-06-02 09:02  | [根据二叉树创建字符串](https://leetcode-cn.com/problems/construct-string-from-binary-tree) | EASY | 1 |
+| 2022-06-02 08:56  | [最短补全词](https://leetcode-cn.com/problems/shortest-completing-word) | EASY | 1 |
+| 2022-06-02 08:01  | [移除字母异位词后的结果数组](https://leetcode-cn.com/problems/find-resultant-array-after-removing-anagrams) | EASY | 1 |
+| 2022-06-02 07:52  | [有效的回文](https://leetcode-cn.com/problems/XltzEq) | EASY | 3 |
+| 2022-06-02 07:36  | [外星语言是否排序](https://leetcode-cn.com/problems/lwyVBB) | EASY | 1 |
+| 2022-06-02 07:36  | [验证外星语词典](https://leetcode-cn.com/problems/verifying-an-alien-dictionary) | EASY | 1 |
+| 2022-06-02 03:02  | [环和杆](https://leetcode-cn.com/problems/rings-and-rods) | EASY | 1 |
+| 2022-06-02 02:50  | [删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst) | MEDIUM | 1 |
+| 2022-06-02 02:00  | [文章浏览 I](https://leetcode-cn.com/problems/article-views-i) | EASY | 2 |
+| 2022-06-02 02:00  | [组合两个表](https://leetcode-cn.com/problems/combine-two-tables) | EASY | 2 |
+| 2022-06-02 01:59  | [进店却未进行过交易的顾客](https://leetcode-cn.com/problems/customer-who-visited-but-did-not-make-any-transactions) | EASY | 3 |
 | 2022-06-01 02:38  | [火柴拼正方形](https://leetcode-cn.com/problems/matchsticks-to-square) | MEDIUM | 1 |
 | 2022-06-01 02:17  | [第二高的薪水](https://leetcode-cn.com/problems/second-highest-salary) | MEDIUM | 6 |
 | 2022-06-01 02:12  | [树节点](https://leetcode-cn.com/problems/tree-node) | MEDIUM | 2 |
@@ -92,12 +106,10 @@
 | 2022-05-27 07:05  | [查询近30天活跃用户数](https://leetcode-cn.com/problems/user-activity-for-the-past-30-days-i) | EASY | 1 |
 | 2022-05-27 06:49  | [股票的资本损益](https://leetcode-cn.com/problems/capital-gainloss) | MEDIUM | 1 |
 | 2022-05-27 06:44  | [销售员](https://leetcode-cn.com/problems/sales-person) | EASY | 2 |
-| 2022-05-27 03:40  | [文章浏览 I](https://leetcode-cn.com/problems/article-views-i) | EASY | 1 |
 | 2022-05-27 03:35  | [排名靠前的旅行者](https://leetcode-cn.com/problems/top-travellers) | EASY | 1 |
 | 2022-05-27 03:27  | [销售分析III](https://leetcode-cn.com/problems/sales-analysis-iii) | EASY | 1 |
 | 2022-05-27 03:19  | [合作过至少三次的演员和导演](https://leetcode-cn.com/problems/actors-and-directors-who-cooperated-at-least-three-times) | EASY | 1 |
 | 2022-05-27 03:09  | [求关注者的数量](https://leetcode-cn.com/problems/find-followers-count) | EASY | 2 |
-| 2022-05-26 10:01  | [进店却未进行过交易的顾客](https://leetcode-cn.com/problems/customer-who-visited-but-did-not-make-any-transactions) | EASY | 2 |
 | 2022-05-26 09:56  | [查找每个员工花费的总时间](https://leetcode-cn.com/problems/find-total-time-spent-by-each-employee) | EASY | 1 |
 | 2022-05-26 09:50  | [银行账户概要 II](https://leetcode-cn.com/problems/bank-account-summary-ii) | EASY | 1 |
 | 2022-05-26 09:43  | [每天的领导和合伙人](https://leetcode-cn.com/problems/daily-leads-and-partners) | EASY | 1 |
@@ -752,7 +764,6 @@
 | 2018-08-22 03:35  | [超过5名学生的课](https://leetcode-cn.com/problems/classes-more-than-5-students) | EASY | 2 |
 | 2018-08-22 02:52  | [柠檬水找零](https://leetcode-cn.com/problems/lemonade-change) | EASY | 1 |
 | 2018-08-21 16:03  | [有趣的电影](https://leetcode-cn.com/problems/not-boring-movies) | EASY | 3 |
-| 2018-08-21 11:24  | [组合两个表](https://leetcode-cn.com/problems/combine-two-tables) | EASY | 1 |
 | 2018-08-21 11:05  | [统计词频](https://leetcode-cn.com/problems/word-frequency) | MEDIUM | 1 |
 | 2018-08-21 10:59  | [有效电话号码](https://leetcode-cn.com/problems/valid-phone-numbers) | EASY | 8 |
 | 2018-08-21 10:36  | [第十行](https://leetcode-cn.com/problems/tenth-line) | EASY | 12 |
