@@ -19,12 +19,27 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1754, 总通过次数: 1145, 已通过题数: 742
+> 总提交次数: 1770, 总通过次数: 1161, 已通过题数: 745
 
-> 已通过题目的难度和数量: EASY = 582, MEDIUM = 147, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 585, MEDIUM = 147, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-06-06 07:27  | [最多删除一个字符得到回文](https://leetcode-cn.com/problems/RQku0D) | EASY | 1 |
+| 2022-06-06 07:22  | [移除指定数字得到的最大结果](https://leetcode-cn.com/problems/remove-digit-from-number-to-maximize-result) | EASY | 2 |
+| 2022-06-06 06:55  | [极大极小游戏](https://leetcode-cn.com/problems/min-max-game) | EASY | 1 |
+| 2022-06-06 02:24  | [市场分析 I](https://leetcode-cn.com/problems/market-analysis-i) | MEDIUM | 2 |
+| 2022-06-06 02:23  | [排名靠前的旅行者](https://leetcode-cn.com/problems/top-travellers) | EASY | 2 |
+| 2022-06-06 02:23  | [股票的资本损益](https://leetcode-cn.com/problems/capital-gainloss) | MEDIUM | 2 |
+| 2022-06-06 02:23  | [查找每个员工花费的总时间](https://leetcode-cn.com/problems/find-total-time-spent-by-each-employee) | EASY | 2 |
+| 2022-06-06 02:23  | [2020年最后一次登录](https://leetcode-cn.com/problems/the-latest-login-in-2020) | EASY | 3 |
+| 2022-06-06 02:22  | [游戏玩法分析 I](https://leetcode-cn.com/problems/game-play-analysis-i) | EASY | 2 |
+| 2022-06-06 02:22  | [订单最多的客户](https://leetcode-cn.com/problems/customer-placing-the-largest-number-of-orders) | EASY | 2 |
+| 2022-06-06 02:22  | [求关注者的数量](https://leetcode-cn.com/problems/find-followers-count) | EASY | 3 |
+| 2022-06-06 02:21  | [每天的领导和合伙人](https://leetcode-cn.com/problems/daily-leads-and-partners) | EASY | 2 |
+| 2022-06-06 02:21  | [查询近30天活跃用户数](https://leetcode-cn.com/problems/user-activity-for-the-past-30-days-i) | EASY | 2 |
+| 2022-06-06 02:20  | [销售员](https://leetcode-cn.com/problems/sales-person) | EASY | 3 |
+| 2022-06-06 02:18  | [上升的温度](https://leetcode-cn.com/problems/rising-temperature) | EASY | 2 |
 | 2022-06-02 09:20  | [找到和最大的长度为 K 的子序列](https://leetcode-cn.com/problems/find-subsequence-of-length-k-with-the-largest-sum) | EASY | 2 |
 | 2022-06-02 09:13  | [检查是否每一行每一列都包含全部整数](https://leetcode-cn.com/problems/check-if-every-row-and-column-contains-all-numbers) | EASY | 1 |
 | 2022-06-02 09:06  | [反转字符串中的元音字母](https://leetcode-cn.com/problems/reverse-vowels-of-a-string) | EASY | 1 |
@@ -102,20 +117,9 @@
 | 2022-05-27 07:36  | [滑动窗口的平均值](https://leetcode-cn.com/problems/qIsx9U) | EASY | 1 |
 | 2022-05-27 07:27  | [找到一个数字的 K 美丽值](https://leetcode-cn.com/problems/find-the-k-beauty-of-a-number) | EASY | 2 |
 | 2022-05-27 07:17  | [单词距离](https://leetcode-cn.com/problems/find-closest-lcci) | MEDIUM | 1 |
-| 2022-05-27 07:09  | [市场分析 I](https://leetcode-cn.com/problems/market-analysis-i) | MEDIUM | 1 |
-| 2022-05-27 07:05  | [查询近30天活跃用户数](https://leetcode-cn.com/problems/user-activity-for-the-past-30-days-i) | EASY | 1 |
-| 2022-05-27 06:49  | [股票的资本损益](https://leetcode-cn.com/problems/capital-gainloss) | MEDIUM | 1 |
-| 2022-05-27 06:44  | [销售员](https://leetcode-cn.com/problems/sales-person) | EASY | 2 |
-| 2022-05-27 03:35  | [排名靠前的旅行者](https://leetcode-cn.com/problems/top-travellers) | EASY | 1 |
 | 2022-05-27 03:27  | [销售分析III](https://leetcode-cn.com/problems/sales-analysis-iii) | EASY | 1 |
 | 2022-05-27 03:19  | [合作过至少三次的演员和导演](https://leetcode-cn.com/problems/actors-and-directors-who-cooperated-at-least-three-times) | EASY | 1 |
-| 2022-05-27 03:09  | [求关注者的数量](https://leetcode-cn.com/problems/find-followers-count) | EASY | 2 |
-| 2022-05-26 09:56  | [查找每个员工花费的总时间](https://leetcode-cn.com/problems/find-total-time-spent-by-each-employee) | EASY | 1 |
 | 2022-05-26 09:50  | [银行账户概要 II](https://leetcode-cn.com/problems/bank-account-summary-ii) | EASY | 1 |
-| 2022-05-26 09:43  | [每天的领导和合伙人](https://leetcode-cn.com/problems/daily-leads-and-partners) | EASY | 1 |
-| 2022-05-26 09:38  | [订单最多的客户](https://leetcode-cn.com/problems/customer-placing-the-largest-number-of-orders) | EASY | 1 |
-| 2022-05-26 09:30  | [2020年最后一次登录](https://leetcode-cn.com/problems/the-latest-login-in-2020) | EASY | 2 |
-| 2022-05-26 09:00  | [游戏玩法分析 I](https://leetcode-cn.com/problems/game-play-analysis-i) | EASY | 1 |
 | 2022-05-26 08:56  | [统计是给定字符串前缀的字符串数目](https://leetcode-cn.com/problems/count-prefixes-of-a-given-string) | EASY | 1 |
 | 2022-05-26 08:50  | [回文链表](https://leetcode-cn.com/problems/aMhZSa) | EASY | 1 |
 | 2022-05-26 07:48  | [宝石补给](https://leetcode-cn.com/problems/WHnhjV) | EASY | 1 |
@@ -758,7 +762,6 @@
 | 2018-08-22 06:49  | [分数排名](https://leetcode-cn.com/problems/rank-scores) | MEDIUM | 1 |
 | 2018-08-22 06:22  | [回文数](https://leetcode-cn.com/problems/palindrome-number) | EASY | 1 |
 | 2018-08-22 06:17  | [整数反转](https://leetcode-cn.com/problems/reverse-integer) | MEDIUM | 3 |
-| 2018-08-22 04:27  | [上升的温度](https://leetcode-cn.com/problems/rising-temperature) | EASY | 1 |
 | 2018-08-22 03:44  | [查找重复的电子邮箱](https://leetcode-cn.com/problems/duplicate-emails) | EASY | 1 |
 | 2018-08-22 03:41  | [超过经理收入的员工](https://leetcode-cn.com/problems/employees-earning-more-than-their-managers) | EASY | 2 |
 | 2018-08-22 03:35  | [超过5名学生的课](https://leetcode-cn.com/problems/classes-more-than-5-students) | EASY | 2 |
