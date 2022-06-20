@@ -19,12 +19,19 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1770, 总通过次数: 1161, 已通过题数: 745
+> 总提交次数: 1778, 总通过次数: 1169, 已通过题数: 751
 
-> 已通过题目的难度和数量: EASY = 585, MEDIUM = 147, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 590, MEDIUM = 148, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-06-15 03:00  | [找出井字棋的获胜者](https://leetcode-cn.com/problems/find-winner-on-a-tic-tac-toe-game) | EASY | 1 |
+| 2022-06-15 02:48  | [对角线遍历](https://leetcode-cn.com/problems/diagonal-traverse) | MEDIUM | 2 |
+| 2022-06-14 09:53  | [烹饪料理](https://leetcode-cn.com/problems/UEcfPD) | EASY | 1 |
+| 2022-06-14 09:49  | [计算应缴税款总额](https://leetcode-cn.com/problems/calculate-amount-paid-in-taxes) | EASY | 1 |
+| 2022-06-14 07:48  | [强密码检验器 II](https://leetcode-cn.com/problems/strong-password-checker-ii) | EASY | 1 |
+| 2022-06-14 07:35  | [统计字符串中的元音子字符串](https://leetcode-cn.com/problems/count-vowel-substrings-of-a-string) | EASY | 1 |
+| 2022-06-13 07:28  | [高度检查器](https://leetcode-cn.com/problems/height-checker) | EASY | 2 |
 | 2022-06-06 07:27  | [最多删除一个字符得到回文](https://leetcode-cn.com/problems/RQku0D) | EASY | 1 |
 | 2022-06-06 07:22  | [移除指定数字得到的最大结果](https://leetcode-cn.com/problems/remove-digit-from-number-to-maximize-result) | EASY | 2 |
 | 2022-06-06 06:55  | [极大极小游戏](https://leetcode-cn.com/problems/min-max-game) | EASY | 1 |
@@ -495,7 +502,6 @@
 | 2021-06-10 05:11  | [递增顺序搜索树](https://leetcode-cn.com/problems/increasing-order-search-tree) | EASY | 2 |
 | 2021-06-10 05:07  | [统计有序矩阵中的负数](https://leetcode-cn.com/problems/count-negative-numbers-in-a-sorted-matrix) | EASY | 4 |
 | 2021-06-10 04:41  | [6 和 9 组成的最大数字](https://leetcode-cn.com/problems/maximum-69-number) | EASY | 2 |
-| 2021-06-10 03:17  | [高度检查器](https://leetcode-cn.com/problems/height-checker) | EASY | 1 |
 | 2021-06-10 03:08  | [通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-sub-arrays) | EASY | 1 |
 | 2021-06-10 02:45  | [生成每种字符都是奇数个的字符串](https://leetcode-cn.com/problems/generate-a-string-with-characters-that-have-odd-counts) | EASY | 2 |
 | 2021-06-10 02:31  | [长度为三且各字符不同的子字符串](https://leetcode-cn.com/problems/substrings-of-size-three-with-distinct-characters) | EASY | 1 |
