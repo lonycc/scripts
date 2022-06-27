@@ -19,12 +19,15 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1778, 总通过次数: 1169, 已通过题数: 751
+> 总提交次数: 1781, 总通过次数: 1172, 已通过题数: 753
 
-> 已通过题目的难度和数量: EASY = 590, MEDIUM = 148, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 591, MEDIUM = 149, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-06-21 03:53  | [螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii) | MEDIUM | 1 |
+| 2022-06-21 02:11  | [IP 地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address) | EASY | 3 |
+| 2022-06-20 02:26  | [兼具大小写的最好英文字母](https://leetcode-cn.com/problems/greatest-english-letter-in-upper-and-lower-case) | EASY | 1 |
 | 2022-06-15 03:00  | [找出井字棋的获胜者](https://leetcode-cn.com/problems/find-winner-on-a-tic-tac-toe-game) | EASY | 1 |
 | 2022-06-15 02:48  | [对角线遍历](https://leetcode-cn.com/problems/diagonal-traverse) | MEDIUM | 2 |
 | 2022-06-14 09:53  | [烹饪料理](https://leetcode-cn.com/problems/UEcfPD) | EASY | 1 |
@@ -679,7 +682,6 @@
 | 2020-11-18 02:29  | [活字印刷](https://leetcode-cn.com/problems/letter-tile-possibilities) | MEDIUM | 1 |
 | 2020-11-17 07:08  | [分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum) | MEDIUM | 2 |
 | 2020-11-16 23:46  | [距离顺序排列矩阵单元格](https://leetcode-cn.com/problems/matrix-cells-in-distance-order) | EASY | 2 |
-| 2020-11-16 23:27  | [IP 地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address) | EASY | 2 |
 | 2020-11-16 23:16  | [所有奇数长度子数组的和](https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays) | EASY | 2 |
 | 2020-11-15 01:04  | [删除中间节点](https://leetcode-cn.com/problems/delete-middle-node-lcci) | EASY | 2 |
 | 2020-11-14 15:37  | [宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones) | EASY | 2 |
