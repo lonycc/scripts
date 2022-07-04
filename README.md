@@ -19,12 +19,14 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1781, 总通过次数: 1172, 已通过题数: 753
+> 总提交次数: 1783, 总通过次数: 1174, 已通过题数: 754
 
-> 已通过题目的难度和数量: EASY = 591, MEDIUM = 149, HARD = 13, 
+> 已通过题目的难度和数量: EASY = 591, MEDIUM = 150, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-06-30 03:54  | [统计星号](https://leetcode-cn.com/problems/count-asterisks) | EASY | 1 |
+| 2022-06-30 03:39  | [质数排列](https://leetcode-cn.com/problems/prime-arrangements) | EASY | 2 |
 | 2022-06-21 03:53  | [螺旋矩阵 II](https://leetcode-cn.com/problems/spiral-matrix-ii) | MEDIUM | 1 |
 | 2022-06-21 02:11  | [IP 地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address) | EASY | 3 |
 | 2022-06-20 02:26  | [兼具大小写的最好英文字母](https://leetcode-cn.com/problems/greatest-english-letter-in-upper-and-lower-case) | EASY | 1 |
@@ -174,7 +176,7 @@
 | 2021-08-27 08:23  | [找出数组的最大公约数](https://leetcode-cn.com/problems/find-greatest-common-divisor-of-array) | EASY | 1 |
 | 2021-08-26 06:24  | [救生艇](https://leetcode-cn.com/problems/boats-to-save-people) | MEDIUM | 1 |
 | 2021-08-16 08:25  | [将有序数组转换为二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree) | EASY | 2 |
-| 2021-08-16 08:23  | [最小栈](https://leetcode-cn.com/problems/min-stack) | EASY | 3 |
+| 2021-08-16 08:23  | [最小栈](https://leetcode-cn.com/problems/min-stack) | MEDIUM | 3 |
 | 2021-08-16 02:28  | [作为子字符串出现在单词中的字符串数目](https://leetcode-cn.com/problems/number-of-strings-that-appear-as-substrings-in-word) | EASY | 1 |
 | 2021-08-16 02:26  | [检查字符串是否为数组前缀](https://leetcode-cn.com/problems/check-if-string-is-a-prefix-of-array) | EASY | 2 |
 | 2021-08-13 04:56  | [删除字符使字符串变好](https://leetcode-cn.com/problems/delete-characters-to-make-fancy-string) | EASY | 2 |
@@ -336,7 +338,6 @@
 | 2021-06-27 15:13  | [提莫攻击](https://leetcode-cn.com/problems/teemo-attacking) | EASY | 1 |
 | 2021-06-25 07:24  | [存在重复元素 II](https://leetcode-cn.com/problems/contains-duplicate-ii) | EASY | 1 |
 | 2021-06-25 06:51  | [一年中的第几天](https://leetcode-cn.com/problems/day-of-the-year) | EASY | 1 |
-| 2021-06-25 06:45  | [质数排列](https://leetcode-cn.com/problems/prime-arrangements) | EASY | 1 |
 | 2021-06-24 08:59  | [三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers) | EASY | 1 |
 | 2021-06-24 08:57  | [将整数转换为两个无零整数的和](https://leetcode-cn.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers) | EASY | 1 |
 | 2021-06-24 08:41  | [数组形式的整数加法](https://leetcode-cn.com/problems/add-to-array-form-of-integer) | EASY | 3 |
