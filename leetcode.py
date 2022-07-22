@@ -138,7 +138,7 @@ def generate_markdown_text(summary_data, list_data, session):
     for index, sub_data in enumerate(list_data):
         lastSubmittedAt = time.strftime("%Y-%m-%d %H:%M", time.localtime(sub_data['lastSubmittedAt']))
         url = f"https://leetcode-cn.com/problems/{sub_data['titleSlug']}"
-        markdown_text += f"| {lastSubmittedAt}  | [{sub_data['translatedTitle']}]({url}) | {sub_data['difficulty']} | {sub_data['numSubmitted']} |\n"
+        markdown_text += f"| {lastSubmittedAt}  | [{sub_data['frontendId']}. {sub_data['translatedTitle']}]({url}) | {sub_data['difficulty']} | {sub_data['numSubmitted']} |\n"
 
     return markdown_text
 
