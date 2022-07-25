@@ -19,12 +19,14 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 1836, 总通过次数: 1220, 已通过题数: 768
+> 总提交次数: 1838, 总通过次数: 1222, 已通过题数: 768
 
 > 已通过题目的难度和数量: EASY = 594, MEDIUM = 161, HARD = 13, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-07-22 09:58  | [剑指 Offer 42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof) | EASY | 2 |
+| 2022-07-22 09:57  | [812. 最大三角形面积](https://leetcode-cn.com/problems/largest-triangle-area) | EASY | 2 |
 | 2022-07-22 02:11  | [347. 前 K 个高频元素](https://leetcode-cn.com/problems/top-k-frequent-elements) | MEDIUM | 1 |
 | 2022-07-21 02:29  | [692. 前K个高频单词](https://leetcode-cn.com/problems/top-k-frequent-words) | MEDIUM | 2 |
 | 2022-07-21 02:18  | [1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight) | EASY | 3 |
@@ -443,8 +445,6 @@
 | 2021-06-16 07:11  | [985. 查询后的偶数和](https://leetcode-cn.com/problems/sum-of-even-numbers-after-queries) | MEDIUM | 2 |
 | 2021-06-16 06:57  | [868. 二进制间距](https://leetcode-cn.com/problems/binary-gap) | EASY | 2 |
 | 2021-06-16 06:43  | [1078. Bigram 分词](https://leetcode-cn.com/problems/occurrences-after-bigram) | EASY | 1 |
-| 2021-06-16 06:32  | [剑指 Offer 42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof) | EASY | 1 |
-| 2021-06-16 06:30  | [812. 最大三角形面积](https://leetcode-cn.com/problems/largest-triangle-area) | EASY | 1 |
 | 2021-06-16 02:36  | [LCP 07. 传递信息](https://leetcode-cn.com/problems/chuan-di-xin-xi) | EASY | 3 |
 | 2021-06-16 01:54  | [892. 三维形体的表面积](https://leetcode-cn.com/problems/surface-area-of-3d-shapes) | EASY | 2 |
 | 2021-06-15 12:46  | [面试题 16.17. 连续数列](https://leetcode-cn.com/problems/contiguous-sequence-lcci) | EASY | 1 |
