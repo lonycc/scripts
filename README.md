@@ -21,7 +21,7 @@
 
 > 总提交次数: 2255, 总通过次数: 1608, 已通过题数: 885
 
-> 已通过题目的难度和数量: EASY = 604, MEDIUM = 252, HARD = 29, 
+> 已通过题目的难度和数量: EASY = 603, MEDIUM = 253, HARD = 29, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
@@ -273,7 +273,7 @@
 | 2022-07-18 03:06  | [424. 替换后的最长重复字符](https://leetcode-cn.com/problems/longest-repeating-character-replacement) | MEDIUM | 1 |
 | 2022-07-18 02:33  | [62. 不同路径](https://leetcode-cn.com/problems/unique-paths) | MEDIUM | 2 |
 | 2022-07-18 02:16  | [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs) | EASY | 3 |
-| 2022-07-14 02:38  | [235. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | EASY | 5 |
+| 2022-07-14 02:38  | [235. 二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree) | MEDIUM | 5 |
 | 2022-07-12 09:30  | [274. H 指数](https://leetcode-cn.com/problems/h-index) | MEDIUM | 3 |
 | 2022-07-12 02:07  | [1252. 奇数值单元格的数目](https://leetcode-cn.com/problems/cells-with-odd-values-in-a-matrix) | EASY | 2 |
 | 2022-07-12 02:03  | [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal) | MEDIUM | 4 |
