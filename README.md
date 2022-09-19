@@ -19,12 +19,16 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2255, 总通过次数: 1608, 已通过题数: 885
+> 总提交次数: 2267, 总通过次数: 1619, 已通过题数: 889
 
-> 已通过题目的难度和数量: EASY = 603, MEDIUM = 253, HARD = 29, 
+> 已通过题目的难度和数量: EASY = 606, MEDIUM = 254, HARD = 29, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-09-15 15:34  | [2406. 将区间分为最少组数](https://leetcode-cn.com/problems/divide-intervals-into-minimum-number-of-groups) | MEDIUM | 3 |
+| 2022-09-15 15:26  | [2399. 检查相同字母间的距离](https://leetcode-cn.com/problems/check-distances-between-same-letters) | EASY | 2 |
+| 2022-09-15 15:21  | [2395. 和相等的子数组](https://leetcode-cn.com/problems/find-subarrays-with-equal-sum) | EASY | 3 |
+| 2022-09-15 15:12  | [2404. 出现最频繁的偶数元素](https://leetcode-cn.com/problems/most-frequent-even-element) | EASY | 4 |
 | 2022-09-02 02:56  | [687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path) | MEDIUM | 2 |
 | 2022-09-01 02:25  | [1475. 商品折扣后的最终价格](https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop) | EASY | 4 |
 | 2022-08-31 02:25  | [2389. 和有限的最长子序列](https://leetcode-cn.com/problems/longest-subsequence-with-limited-sum) | EASY | 2 |
@@ -77,7 +81,7 @@
 | 2022-08-25 03:00  | [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate) | EASY | 4 |
 | 2022-08-25 02:53  | [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof) | EASY | 9 |
 | 2022-08-25 02:23  | [658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements) | MEDIUM | 4 |
-| 2022-08-24 03:40  | [1460. 通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-sub-arrays) | EASY | 4 |
+| 2022-08-24 03:40  | [1460. 通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-subarrays) | EASY | 4 |
 | 2022-08-23 02:39  | [2379. 得到 K 个黑块的最少涂色次数](https://leetcode-cn.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks) | EASY | 2 |
 | 2022-08-23 02:31  | [2383. 赢得比赛需要的最少训练时长](https://leetcode-cn.com/problems/minimum-hours-of-training-to-win-a-competition) | EASY | 3 |
 | 2022-08-23 02:17  | [2373. 矩阵中的局部最大值](https://leetcode-cn.com/problems/largest-local-values-in-a-matrix) | EASY | 3 |
@@ -887,7 +891,7 @@
 | 2018-08-31 06:57  | [303. 区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable) | EASY | 1 |
 | 2018-08-29 10:23  | [443. 压缩字符串](https://leetcode-cn.com/problems/string-compression) | MEDIUM | 2 |
 | 2018-08-29 09:33  | [38. 外观数列](https://leetcode-cn.com/problems/count-and-say) | MEDIUM | 14 |
-| 2018-08-29 07:48  | [28. 实现 strStr()](https://leetcode-cn.com/problems/find-the-index-of-the-first-occurrence-in-a-string) | MEDIUM | 4 |
+| 2018-08-29 07:48  | [28. 找出字符串中第一个匹配项的下标](https://leetcode-cn.com/problems/find-the-index-of-the-first-occurrence-in-a-string) | MEDIUM | 4 |
 | 2018-08-27 08:44  | [111. 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree) | EASY | 7 |
 | 2018-08-27 08:21  | [107. 二叉树的层序遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii) | MEDIUM | 1 |
 | 2018-08-27 08:11  | [637. 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree) | EASY | 3 |
