@@ -19,12 +19,14 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2267, 总通过次数: 1619, 已通过题数: 889
+> 总提交次数: 2271, 总通过次数: 1623, 已通过题数: 891
 
-> 已通过题目的难度和数量: EASY = 606, MEDIUM = 254, HARD = 29, 
+> 已通过题目的难度和数量: EASY = 606, MEDIUM = 254, HARD = 31, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-09-21 02:18  | [854. 相似度为 K 的字符串](https://leetcode-cn.com/problems/k-similar-strings) | HARD | 3 |
+| 2022-09-19 09:23  | [2376. 统计特殊整数](https://leetcode-cn.com/problems/count-special-integers) | HARD | 1 |
 | 2022-09-15 15:34  | [2406. 将区间分为最少组数](https://leetcode-cn.com/problems/divide-intervals-into-minimum-number-of-groups) | MEDIUM | 3 |
 | 2022-09-15 15:26  | [2399. 检查相同字母间的距离](https://leetcode-cn.com/problems/check-distances-between-same-letters) | EASY | 2 |
 | 2022-09-15 15:21  | [2395. 和相等的子数组](https://leetcode-cn.com/problems/find-subarrays-with-equal-sum) | EASY | 3 |
@@ -838,7 +840,7 @@
 | 2020-11-14 15:37  | [771. 宝石与石头](https://leetcode-cn.com/problems/jewels-and-stones) | EASY | 2 |
 | 2020-11-13 15:50  | [1313. 解压缩编码列表](https://leetcode-cn.com/problems/decompress-run-length-encoded-list) | EASY | 2 |
 | 2020-11-12 11:16  | [1528. 重新排列字符串](https://leetcode-cn.com/problems/shuffle-string) | EASY | 4 |
-| 2020-11-12 11:05  | [1518. 换酒问题](https://leetcode-cn.com/problems/water-bottles) | EASY | 4 |
+| 2020-11-12 11:05  | [1518. 换水问题](https://leetcode-cn.com/problems/water-bottles) | EASY | 4 |
 | 2020-11-12 06:51  | [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome) | EASY | 7 |
 | 2020-11-11 14:49  | [1507. 转变日期格式](https://leetcode-cn.com/problems/reformat-date) | EASY | 5 |
 | 2020-11-11 14:30  | [1512. 好数对的数目](https://leetcode-cn.com/problems/number-of-good-pairs) | EASY | 1 |
