@@ -19,12 +19,21 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2271, 总通过次数: 1623, 已通过题数: 891
+> 总提交次数: 2294, 总通过次数: 1642, 已通过题数: 899
 
-> 已通过题目的难度和数量: EASY = 606, MEDIUM = 254, HARD = 31, 
+> 已通过题目的难度和数量: EASY = 613, MEDIUM = 255, HARD = 31, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-10-09 03:04  | [2423. 删除字符使频率相同](https://leetcode-cn.com/problems/remove-letter-to-equalize-frequency) | EASY | 2 |
+| 2022-10-09 02:59  | [2409. 统计共同度过的日子数](https://leetcode-cn.com/problems/count-days-spent-together) | EASY | 2 |
+| 2022-10-09 02:54  | [LCP 61. 气温变化趋势](https://leetcode-cn.com/problems/6CE719) | EASY | 2 |
+| 2022-10-09 02:41  | [1460. 通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-subarrays) | EASY | 7 |
+| 2022-10-09 02:19  | [LCP 66. 最小展台数量](https://leetcode-cn.com/problems/600YaG) | EASY | 3 |
+| 2022-10-09 02:06  | [2418. 按身高排序](https://leetcode-cn.com/problems/sort-the-people) | EASY | 4 |
+| 2022-10-09 01:51  | [2413. 最小偶倍数](https://leetcode-cn.com/problems/smallest-even-multiple) | EASY | 1 |
+| 2022-10-09 01:50  | [2427. 公因子的数目](https://leetcode-cn.com/problems/number-of-common-factors) | EASY | 3 |
+| 2022-10-09 01:39  | [856. 括号的分数](https://leetcode-cn.com/problems/score-of-parentheses) | MEDIUM | 3 |
 | 2022-09-21 02:18  | [854. 相似度为 K 的字符串](https://leetcode-cn.com/problems/k-similar-strings) | HARD | 3 |
 | 2022-09-19 09:23  | [2376. 统计特殊整数](https://leetcode-cn.com/problems/count-special-integers) | HARD | 1 |
 | 2022-09-15 15:34  | [2406. 将区间分为最少组数](https://leetcode-cn.com/problems/divide-intervals-into-minimum-number-of-groups) | MEDIUM | 3 |
@@ -83,7 +92,6 @@
 | 2022-08-25 03:00  | [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate) | EASY | 4 |
 | 2022-08-25 02:53  | [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof) | EASY | 9 |
 | 2022-08-25 02:23  | [658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements) | MEDIUM | 4 |
-| 2022-08-24 03:40  | [1460. 通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-subarrays) | EASY | 4 |
 | 2022-08-23 02:39  | [2379. 得到 K 个黑块的最少涂色次数](https://leetcode-cn.com/problems/minimum-recolors-to-get-k-consecutive-black-blocks) | EASY | 2 |
 | 2022-08-23 02:31  | [2383. 赢得比赛需要的最少训练时长](https://leetcode-cn.com/problems/minimum-hours-of-training-to-win-a-competition) | EASY | 3 |
 | 2022-08-23 02:17  | [2373. 矩阵中的局部最大值](https://leetcode-cn.com/problems/largest-local-values-in-a-matrix) | EASY | 3 |
