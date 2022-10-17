@@ -19,12 +19,17 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2294, 总通过次数: 1642, 已通过题数: 899
+> 总提交次数: 2300, 总通过次数: 1647, 已通过题数: 904
 
-> 已通过题目的难度和数量: EASY = 613, MEDIUM = 255, HARD = 31, 
+> 已通过题目的难度和数量: EASY = 616, MEDIUM = 257, HARD = 31, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-10-17 01:38  | [2437. 有效时间的数目](https://leetcode-cn.com/problems/number-of-valid-clock-times) | EASY | 1 |
+| 2022-10-17 01:26  | [2441. 与对应负数同时存在的最大正整数](https://leetcode-cn.com/problems/largest-positive-integer-that-exists-with-its-negative) | EASY | 1 |
+| 2022-10-17 01:22  | [904. 水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets) | MEDIUM | 2 |
+| 2022-10-13 01:53  | [769. 最多能完成排序的块](https://leetcode-cn.com/problems/max-chunks-to-make-sorted) | MEDIUM | 1 |
+| 2022-10-13 01:30  | [2432. 处理用时最长的那个任务的员工](https://leetcode-cn.com/problems/the-employee-that-worked-on-the-longest-task) | EASY | 1 |
 | 2022-10-09 03:04  | [2423. 删除字符使频率相同](https://leetcode-cn.com/problems/remove-letter-to-equalize-frequency) | EASY | 2 |
 | 2022-10-09 02:59  | [2409. 统计共同度过的日子数](https://leetcode-cn.com/problems/count-days-spent-together) | EASY | 2 |
 | 2022-10-09 02:54  | [LCP 61. 气温变化趋势](https://leetcode-cn.com/problems/6CE719) | EASY | 2 |
@@ -430,7 +435,7 @@
 | 2021-08-05 09:38  | [119. 杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii) | EASY | 3 |
 | 2021-08-05 09:24  | [706. 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap) | EASY | 2 |
 | 2021-08-05 09:19  | [290. 单词规律](https://leetcode-cn.com/problems/word-pattern) | EASY | 2 |
-| 2021-08-04 23:23  | [518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2) | MEDIUM | 3 |
+| 2021-08-04 23:23  | [518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-ii) | MEDIUM | 3 |
 | 2021-08-03 08:01  | [剑指 Offer II 085. 生成匹配的括号](https://leetcode-cn.com/problems/IDBivT) | MEDIUM | 1 |
 | 2021-08-03 07:57  | [1952. 三除数](https://leetcode-cn.com/problems/three-divisors) | EASY | 1 |
 | 2021-08-03 06:51  | [516. 最长回文子序列](https://leetcode-cn.com/problems/longest-palindromic-subsequence) | MEDIUM | 1 |
