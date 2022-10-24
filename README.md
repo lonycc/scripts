@@ -19,12 +19,19 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2300, 总通过次数: 1647, 已通过题数: 904
+> 总提交次数: 2314, 总通过次数: 1660, 已通过题数: 910
 
-> 已通过题目的难度和数量: EASY = 616, MEDIUM = 257, HARD = 31, 
+> 已通过题目的难度和数量: EASY = 616, MEDIUM = 259, HARD = 35, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-10-22 03:46  | [1235. 规划兼职工作](https://leetcode-cn.com/problems/maximum-profit-in-job-scheduling) | HARD | 2 |
+| 2022-10-21 01:58  | [901. 股票价格跨度](https://leetcode-cn.com/problems/online-stock-span) | MEDIUM | 1 |
+| 2022-10-20 01:16  | [779. 第K个语法符号](https://leetcode-cn.com/problems/k-th-symbol-in-grammar) | MEDIUM | 2 |
+| 2022-10-19 07:06  | [2386. 找出数组的第 K 大和](https://leetcode-cn.com/problems/find-the-k-sum-of-an-array) | HARD | 2 |
+| 2022-10-19 06:53  | [2416. 字符串的前缀分数和](https://leetcode-cn.com/problems/sum-of-prefix-scores-of-strings) | HARD | 3 |
+| 2022-10-19 01:49  | [1700. 无法吃午餐的学生数量](https://leetcode-cn.com/problems/number-of-students-unable-to-eat-lunch) | EASY | 4 |
+| 2022-10-18 07:11  | [902. 最大为 N 的数字组合](https://leetcode-cn.com/problems/numbers-at-most-n-given-digit-set) | HARD | 2 |
 | 2022-10-17 01:38  | [2437. 有效时间的数目](https://leetcode-cn.com/problems/number-of-valid-clock-times) | EASY | 1 |
 | 2022-10-17 01:26  | [2441. 与对应负数同时存在的最大正整数](https://leetcode-cn.com/problems/largest-positive-integer-that-exists-with-its-negative) | EASY | 1 |
 | 2022-10-17 01:22  | [904. 水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets) | MEDIUM | 2 |
@@ -771,7 +778,6 @@
 | 2021-05-28 04:46  | [剑指 Offer 18. 删除链表的节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof) | EASY | 2 |
 | 2021-05-27 07:42  | [1704. 判断字符串的两半是否相似](https://leetcode-cn.com/problems/determine-if-string-halves-are-alike) | EASY | 1 |
 | 2021-05-27 07:29  | [1701. 平均等待时间](https://leetcode-cn.com/problems/average-waiting-time) | MEDIUM | 3 |
-| 2021-05-27 03:48  | [1700. 无法吃午餐的学生数量](https://leetcode-cn.com/problems/number-of-students-unable-to-eat-lunch) | EASY | 3 |
 | 2021-05-26 09:19  | [1678. 设计 Goal 解析器](https://leetcode-cn.com/problems/goal-parser-interpretation) | EASY | 2 |
 | 2021-05-26 06:34  | [面试题 17.14. 最小K个数](https://leetcode-cn.com/problems/smallest-k-lcci) | MEDIUM | 1 |
 | 2021-05-26 03:50  | [486. 预测赢家](https://leetcode-cn.com/problems/predict-the-winner) | MEDIUM | 1 |
