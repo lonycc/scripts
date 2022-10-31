@@ -19,12 +19,22 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2314, 总通过次数: 1660, 已通过题数: 910
+> 总提交次数: 2337, 总通过次数: 1678, 已通过题数: 917
 
-> 已通过题目的难度和数量: EASY = 616, MEDIUM = 259, HARD = 35, 
+> 已通过题目的难度和数量: EASY = 619, MEDIUM = 262, HARD = 36, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-10-31 01:55  | [2451. 差值数组不同的字符串](https://leetcode-cn.com/problems/odd-string-difference) | EASY | 1 |
+| 2022-10-31 01:37  | [2446. 判断两个事件是否存在冲突](https://leetcode-cn.com/problems/determine-if-two-events-have-conflict) | EASY | 4 |
+| 2022-10-31 01:33  | [2455. 可被三整除的偶数的平均值](https://leetcode-cn.com/problems/average-value-of-even-numbers-that-are-divisible-by-three) | EASY | 5 |
+| 2022-10-31 01:24  | [481. 神奇字符串](https://leetcode-cn.com/problems/magical-string) | MEDIUM | 2 |
+| 2022-10-29 13:48  | [1773. 统计匹配检索规则的物品数量](https://leetcode-cn.com/problems/count-items-matching-a-rule) | EASY | 2 |
+| 2022-10-28 01:18  | [907. 子数组的最小值之和](https://leetcode-cn.com/problems/sum-of-subarray-minimums) | MEDIUM | 4 |
+| 2022-10-27 06:25  | [1822. 数组元素积的符号](https://leetcode-cn.com/problems/sign-of-the-product-of-an-array) | EASY | 2 |
+| 2022-10-26 01:59  | [862. 和至少为 K 的最短子数组](https://leetcode-cn.com/problems/shortest-subarray-with-sum-at-least-k) | HARD | 2 |
+| 2022-10-25 01:34  | [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge) | MEDIUM | 4 |
+| 2022-10-24 03:18  | [915. 分割数组](https://leetcode-cn.com/problems/partition-array-into-disjoint-intervals) | MEDIUM | 2 |
 | 2022-10-22 03:46  | [1235. 规划兼职工作](https://leetcode-cn.com/problems/maximum-profit-in-job-scheduling) | HARD | 2 |
 | 2022-10-21 01:58  | [901. 股票价格跨度](https://leetcode-cn.com/problems/online-stock-span) | MEDIUM | 1 |
 | 2022-10-20 01:16  | [779. 第K个语法符号](https://leetcode-cn.com/problems/k-th-symbol-in-grammar) | MEDIUM | 2 |
@@ -264,7 +274,6 @@
 | 2022-08-01 02:51  | [847. 访问所有节点的最短路径](https://leetcode-cn.com/problems/shortest-path-visiting-all-nodes) | HARD | 2 |
 | 2022-08-01 02:49  | [542. 01 矩阵](https://leetcode-cn.com/problems/01-matrix) | MEDIUM | 2 |
 | 2022-08-01 02:48  | [1091. 二进制矩阵中的最短路径](https://leetcode-cn.com/problems/shortest-path-in-binary-matrix) | MEDIUM | 1 |
-| 2022-08-01 02:42  | [934. 最短的桥](https://leetcode-cn.com/problems/shortest-bridge) | MEDIUM | 3 |
 | 2022-08-01 02:39  | [1926. 迷宫中离入口最近的出口](https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze) | MEDIUM | 1 |
 | 2022-08-01 02:37  | [1376. 通知所有员工所需的时间](https://leetcode-cn.com/problems/time-needed-to-inform-all-employees) | MEDIUM | 5 |
 | 2022-08-01 02:33  | [802. 找到最终的安全状态](https://leetcode-cn.com/problems/find-eventual-safe-states) | MEDIUM | 2 |
@@ -712,7 +721,6 @@
 | 2021-06-09 06:48  | [1572. 矩阵对角线元素的和](https://leetcode-cn.com/problems/matrix-diagonal-sum) | EASY | 1 |
 | 2021-06-09 06:41  | [1389. 按既定顺序创建目标数组](https://leetcode-cn.com/problems/create-target-array-in-the-given-order) | EASY | 3 |
 | 2021-06-09 03:25  | [1266. 访问所有点的最小时间](https://leetcode-cn.com/problems/minimum-time-visiting-all-points) | EASY | 1 |
-| 2021-06-09 02:47  | [1773. 统计匹配检索规则的物品数量](https://leetcode-cn.com/problems/count-items-matching-a-rule) | EASY | 1 |
 | 2021-06-09 02:37  | [1863. 找出所有子集的异或总和再求和](https://leetcode-cn.com/problems/sum-of-all-subset-xor-totals) | EASY | 2 |
 | 2021-06-09 02:33  | [1486. 数组异或操作](https://leetcode-cn.com/problems/xor-operation-in-an-array) | EASY | 1 |
 | 2021-06-08 14:45  | [109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree) | MEDIUM | 1 |
@@ -743,7 +751,6 @@
 | 2021-06-04 09:31  | [1684. 统计一致字符串的数目](https://leetcode-cn.com/problems/count-the-number-of-consistent-strings) | EASY | 1 |
 | 2021-06-04 08:18  | [1365. 有多少小于当前数字的数字](https://leetcode-cn.com/problems/how-many-numbers-are-smaller-than-the-current-number) | EASY | 2 |
 | 2021-06-04 07:53  | [1832. 判断句子是否为全字母句](https://leetcode-cn.com/problems/check-if-the-sentence-is-pangram) | EASY | 1 |
-| 2021-06-04 07:46  | [1822. 数组元素积的符号](https://leetcode-cn.com/problems/sign-of-the-product-of-an-array) | EASY | 1 |
 | 2021-06-04 07:43  | [1854. 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year) | EASY | 2 |
 | 2021-06-04 07:09  | [938. 二叉搜索树的范围和](https://leetcode-cn.com/problems/range-sum-of-bst) | EASY | 3 |
 | 2021-06-04 06:48  | [1662. 检查两个字符串数组是否相等](https://leetcode-cn.com/problems/check-if-two-string-arrays-are-equivalent) | EASY | 1 |
