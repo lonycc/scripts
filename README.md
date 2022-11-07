@@ -19,12 +19,14 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2337, 总通过次数: 1678, 已通过题数: 917
+> 总提交次数: 2339, 总通过次数: 1680, 已通过题数: 917
 
 > 已通过题目的难度和数量: EASY = 619, MEDIUM = 262, HARD = 36, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2022-11-02 01:35  | [1620. 网络信号最好的坐标](https://leetcode-cn.com/problems/coordinate-with-maximum-network-quality) | MEDIUM | 6 |
+| 2022-11-01 01:11  | [1662. 检查两个字符串数组是否相等](https://leetcode-cn.com/problems/check-if-two-string-arrays-are-equivalent) | EASY | 2 |
 | 2022-10-31 01:55  | [2451. 差值数组不同的字符串](https://leetcode-cn.com/problems/odd-string-difference) | EASY | 1 |
 | 2022-10-31 01:37  | [2446. 判断两个事件是否存在冲突](https://leetcode-cn.com/problems/determine-if-two-events-have-conflict) | EASY | 4 |
 | 2022-10-31 01:33  | [2455. 可被三整除的偶数的平均值](https://leetcode-cn.com/problems/average-value-of-even-numbers-that-are-divisible-by-three) | EASY | 5 |
@@ -753,7 +755,6 @@
 | 2021-06-04 07:53  | [1832. 判断句子是否为全字母句](https://leetcode-cn.com/problems/check-if-the-sentence-is-pangram) | EASY | 1 |
 | 2021-06-04 07:43  | [1854. 人口最多的年份](https://leetcode-cn.com/problems/maximum-population-year) | EASY | 2 |
 | 2021-06-04 07:09  | [938. 二叉搜索树的范围和](https://leetcode-cn.com/problems/range-sum-of-bst) | EASY | 3 |
-| 2021-06-04 06:48  | [1662. 检查两个字符串数组是否相等](https://leetcode-cn.com/problems/check-if-two-string-arrays-are-equivalent) | EASY | 1 |
 | 2021-06-04 06:46  | [1295. 统计位数为偶数的数字](https://leetcode-cn.com/problems/find-numbers-with-even-number-of-digits) | EASY | 2 |
 | 2021-06-04 06:36  | [1844. 将所有数字用字符替换](https://leetcode-cn.com/problems/replace-all-digits-with-characters) | EASY | 1 |
 | 2021-06-04 02:47  | [888. 公平的糖果交换](https://leetcode-cn.com/problems/fair-candy-swap) | EASY | 1 |
@@ -834,7 +835,6 @@
 | 2021-03-29 08:12  | [1748. 唯一元素的和](https://leetcode-cn.com/problems/sum-of-unique-elements) | EASY | 2 |
 | 2021-03-25 02:41  | [1116. 打印零与奇偶数](https://leetcode-cn.com/problems/print-zero-even-odd) | MEDIUM | 2 |
 | 2021-03-23 08:26  | [1621. 大小为 K 的不重叠线段的数目](https://leetcode-cn.com/problems/number-of-sets-of-k-non-overlapping-line-segments) | MEDIUM | 1 |
-| 2021-03-22 08:13  | [1620. 网络信号最好的坐标](https://leetcode-cn.com/problems/coordinate-with-maximum-network-quality) | MEDIUM | 5 |
 | 2021-03-22 02:54  | [1619. 删除某些元素后的数组均值](https://leetcode-cn.com/problems/mean-of-array-after-removing-some-elements) | EASY | 1 |
 | 2021-03-19 15:50  | [1603. 设计停车系统](https://leetcode-cn.com/problems/design-parking-system) | EASY | 3 |
 | 2021-03-19 15:32  | [剑指 Offer 54. 二叉搜索树的第k大节点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof) | EASY | 3 |
