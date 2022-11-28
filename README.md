@@ -19,14 +19,175 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 2974, 总通过次数: 2215, 已通过题数: 1132
+> 总提交次数: 3537, 总通过次数: 2738, 已通过题数: 1290
 
-> 已通过题目的难度和数量: EASY = 623, MEDIUM = 464, HARD = 45, 
+> 已通过题目的难度和数量: EASY = 624, MEDIUM = 614, HARD = 52, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
-| 2022-11-21 02:00  | [剑指 Offer II 058. 日程表](https://leetcode-cn.com/problems/fi9suh) | MEDIUM | 2 |
-| 2022-11-21 02:00  | [729. 我的日程安排表 I](https://leetcode-cn.com/problems/my-calendar-i) | MEDIUM | 2 |
+| 2022-11-27 05:23  | [983. 最低票价](https://leetcode-cn.com/problems/minimum-cost-for-tickets) | MEDIUM | 4 |
+| 2022-11-27 05:21  | [面试题 02.04. 分割链表](https://leetcode-cn.com/problems/partition-list-lcci) | MEDIUM | 2 |
+| 2022-11-27 05:16  | [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node-ii) | MEDIUM | 5 |
+| 2022-11-27 05:13  | [1806. 还原排列的最少操作步数](https://leetcode-cn.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation) | MEDIUM | 3 |
+| 2022-11-27 05:11  | [287. 寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number) | MEDIUM | 8 |
+| 2022-11-27 05:04  | [932. 漂亮数组](https://leetcode-cn.com/problems/beautiful-array) | MEDIUM | 7 |
+| 2022-11-27 04:58  | [1286. 字母组合迭代器](https://leetcode-cn.com/problems/iterator-for-combination) | MEDIUM | 3 |
+| 2022-11-27 04:55  | [553. 最优除法](https://leetcode-cn.com/problems/optimal-division) | MEDIUM | 6 |
+| 2022-11-27 04:51  | [1887. 使数组元素相等的减少操作次数](https://leetcode-cn.com/problems/reduction-operations-to-make-the-array-elements-equal) | MEDIUM | 5 |
+| 2022-11-27 04:47  | [1738. 找出第 K 大的异或坐标值](https://leetcode-cn.com/problems/find-kth-largest-xor-coordinate-value) | MEDIUM | 6 |
+| 2022-11-27 04:39  | [1190. 反转每对括号间的子串](https://leetcode-cn.com/problems/reverse-substrings-between-each-pair-of-parentheses) | MEDIUM | 5 |
+| 2022-11-27 04:36  | [889. 根据前序和后序遍历构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal) | MEDIUM | 6 |
+| 2022-11-27 04:32  | [1780. 判断一个数字是否可以表示成三的幂的和](https://leetcode-cn.com/problems/check-if-number-is-a-sum-of-powers-of-three) | MEDIUM | 4 |
+| 2022-11-27 04:28  | [931. 下降路径最小和](https://leetcode-cn.com/problems/minimum-falling-path-sum) | MEDIUM | 4 |
+| 2022-11-27 04:22  | [2326. 螺旋矩阵 IV](https://leetcode-cn.com/problems/spiral-matrix-iv) | MEDIUM | 2 |
+| 2022-11-27 04:20  | [669. 修剪二叉搜索树](https://leetcode-cn.com/problems/trim-a-binary-search-tree) | MEDIUM | 6 |
+| 2022-11-27 04:18  | [1238. 循环码排列](https://leetcode-cn.com/problems/circular-permutation-in-binary-representation) | MEDIUM | 4 |
+| 2022-11-27 04:14  | [1910. 删除一个字符串中所有出现的给定子字符串](https://leetcode-cn.com/problems/remove-all-occurrences-of-a-substring) | MEDIUM | 7 |
+| 2022-11-27 04:11  | [447. 回旋镖的数量](https://leetcode-cn.com/problems/number-of-boomerangs) | MEDIUM | 3 |
+| 2022-11-27 04:00  | [1765. 地图中的最高点](https://leetcode-cn.com/problems/map-of-highest-peak) | MEDIUM | 5 |
+| 2022-11-27 03:56  | [951. 翻转等价二叉树](https://leetcode-cn.com/problems/flip-equivalent-binary-trees) | MEDIUM | 4 |
+| 2022-11-27 03:41  | [2279. 装满石头的背包的最大数量](https://leetcode-cn.com/problems/maximum-bags-with-full-capacity-of-rocks) | MEDIUM | 3 |
+| 2022-11-27 03:39  | [1600. 王位继承顺序](https://leetcode-cn.com/problems/throne-inheritance) | MEDIUM | 3 |
+| 2022-11-27 03:37  | [1584. 连接所有点的最小费用](https://leetcode-cn.com/problems/min-cost-to-connect-all-points) | MEDIUM | 6 |
+| 2022-11-27 03:34  | [1140. 石子游戏 II](https://leetcode-cn.com/problems/stone-game-ii) | MEDIUM | 5 |
+| 2022-11-27 03:21  | [1318. 或运算的最小翻转次数](https://leetcode-cn.com/problems/minimum-flips-to-make-a-or-b-equal-to-c) | MEDIUM | 3 |
+| 2022-11-27 03:13  | [面试题 10.11. 峰与谷](https://leetcode-cn.com/problems/peaks-and-valleys-lcci) | MEDIUM | 4 |
+| 2022-11-27 03:11  | [1525. 字符串的好分割数目](https://leetcode-cn.com/problems/number-of-good-ways-to-split-a-string) | MEDIUM | 4 |
+| 2022-11-27 03:09  | [503. 下一个更大元素 II](https://leetcode-cn.com/problems/next-greater-element-ii) | MEDIUM | 3 |
+| 2022-11-27 03:06  | [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list) | MEDIUM | 3 |
+| 2022-11-27 02:45  | [583. 两个字符串的删除操作](https://leetcode-cn.com/problems/delete-operation-for-two-strings) | MEDIUM | 6 |
+| 2022-11-27 02:40  | [1752. 检查数组是否经排序和轮转得到](https://leetcode-cn.com/problems/check-if-array-is-sorted-and-rotated) | EASY | 2 |
+| 2022-11-26 09:52  | [786. 第 K 个最小的素数分数](https://leetcode-cn.com/problems/k-th-smallest-prime-fraction) | MEDIUM | 8 |
+| 2022-11-26 09:50  | [1447. 最简分数](https://leetcode-cn.com/problems/simplified-fractions) | MEDIUM | 3 |
+| 2022-11-26 09:47  | [1029. 两地调度](https://leetcode-cn.com/problems/two-city-scheduling) | MEDIUM | 3 |
+| 2022-11-26 09:44  | [1227. 飞机座位分配概率](https://leetcode-cn.com/problems/airplane-seat-assignment-probability) | MEDIUM | 6 |
+| 2022-11-26 09:39  | [2043. 简易银行系统](https://leetcode-cn.com/problems/simple-bank-system) | MEDIUM | 3 |
+| 2022-11-26 09:35  | [969. 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting) | MEDIUM | 3 |
+| 2022-11-26 09:27  | [2294. 划分数组使最大差为 K](https://leetcode-cn.com/problems/partition-array-such-that-maximum-difference-is-k) | MEDIUM | 2 |
+| 2022-11-26 09:24  | [712. 两个字符串的最小ASCII删除和](https://leetcode-cn.com/problems/minimum-ascii-delete-sum-for-two-strings) | MEDIUM | 3 |
+| 2022-11-26 09:18  | [1706. 球会落何处](https://leetcode-cn.com/problems/where-will-the-ball-fall) | MEDIUM | 4 |
+| 2022-11-26 09:15  | [1026. 节点与其祖先之间的最大差值](https://leetcode-cn.com/problems/maximum-difference-between-node-and-ancestor) | MEDIUM | 7 |
+| 2022-11-26 09:05  | [1415. 长度为 n 的开心字符串中字典序第 k 小的字符串](https://leetcode-cn.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n) | MEDIUM | 2 |
+| 2022-11-26 09:01  | [133. 克隆图](https://leetcode-cn.com/problems/clone-graph) | MEDIUM | 4 |
+| 2022-11-26 08:56  | [1583. 统计不开心的朋友](https://leetcode-cn.com/problems/count-unhappy-friends) | MEDIUM | 2 |
+| 2022-11-26 08:53  | [986. 区间列表的交集](https://leetcode-cn.com/problems/interval-list-intersections) | MEDIUM | 3 |
+| 2022-11-26 02:58  | [882. 细分图中的可到达节点](https://leetcode-cn.com/problems/reachable-nodes-in-subdivided-graph) | HARD | 4 |
+| 2022-11-25 14:03  | [1222. 可以攻击国王的皇后](https://leetcode-cn.com/problems/queens-that-can-attack-the-king) | MEDIUM | 4 |
+| 2022-11-25 13:58  | [2375. 根据模式串构造最小数字](https://leetcode-cn.com/problems/construct-smallest-number-from-di-string) | MEDIUM | 2 |
+| 2022-11-25 13:52  | [2177. 找到和为给定整数的三个连续整数](https://leetcode-cn.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number) | MEDIUM | 2 |
+| 2022-11-25 13:47  | [1387. 将整数按权重排序](https://leetcode-cn.com/problems/sort-integers-by-the-power-value) | MEDIUM | 4 |
+| 2022-11-25 13:35  | [1743. 从相邻元素对还原数组](https://leetcode-cn.com/problems/restore-the-array-from-adjacent-pairs) | MEDIUM | 5 |
+| 2022-11-25 13:28  | [1529. 最少的后缀翻转次数](https://leetcode-cn.com/problems/minimum-suffix-flips) | MEDIUM | 3 |
+| 2022-11-25 13:21  | [1325. 删除给定值的叶子节点](https://leetcode-cn.com/problems/delete-leaves-with-a-given-value) | MEDIUM | 2 |
+| 2022-11-25 09:27  | [1219. 黄金矿工](https://leetcode-cn.com/problems/path-with-maximum-gold) | MEDIUM | 3 |
+| 2022-11-25 08:56  | [1043. 分隔数组以得到最大和](https://leetcode-cn.com/problems/partition-array-for-maximum-sum) | MEDIUM | 2 |
+| 2022-11-25 08:41  | [1418. 点菜展示表](https://leetcode-cn.com/problems/display-table-of-food-orders-in-a-restaurant) | MEDIUM | 5 |
+| 2022-11-25 07:58  | [427. 建立四叉树](https://leetcode-cn.com/problems/construct-quad-tree) | MEDIUM | 4 |
+| 2022-11-25 03:51  | [1123. 最深叶节点的最近公共祖先](https://leetcode-cn.com/problems/lowest-common-ancestor-of-deepest-leaves) | MEDIUM | 3 |
+| 2022-11-25 03:50  | [865. 具有所有最深节点的最小子树](https://leetcode-cn.com/problems/smallest-subtree-with-all-the-deepest-nodes) | MEDIUM | 3 |
+| 2022-11-25 03:08  | [809. 情感丰富的文字](https://leetcode-cn.com/problems/expressive-words) | MEDIUM | 3 |
+| 2022-11-24 07:14  | [面试题 16.10. 生存人数](https://leetcode-cn.com/problems/living-people-lcci) | MEDIUM | 2 |
+| 2022-11-24 03:29  | [179. 最大数](https://leetcode-cn.com/problems/largest-number) | MEDIUM | 4 |
+| 2022-11-24 03:20  | [221. 最大正方形](https://leetcode-cn.com/problems/maximal-square) | MEDIUM | 5 |
+| 2022-11-24 03:15  | [223. 矩形面积](https://leetcode-cn.com/problems/rectangle-area) | MEDIUM | 2 |
+| 2022-11-24 03:10  | [147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list) | MEDIUM | 2 |
+| 2022-11-24 03:02  | [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii) | MEDIUM | 4 |
+| 2022-11-24 02:59  | [99. 恢复二叉搜索树](https://leetcode-cn.com/problems/recover-binary-search-tree) | MEDIUM | 3 |
+| 2022-11-24 02:54  | [90. 子集 II](https://leetcode-cn.com/problems/subsets-ii) | MEDIUM | 3 |
+| 2022-11-24 02:31  | [86. 分隔链表](https://leetcode-cn.com/problems/partition-list) | MEDIUM | 2 |
+| 2022-11-24 02:04  | [754. 到达终点数字](https://leetcode-cn.com/problems/reach-a-number) | MEDIUM | 2 |
+| 2022-11-24 01:58  | [816. 模糊坐标](https://leetcode-cn.com/problems/ambiguous-coordinates) | MEDIUM | 2 |
+| 2022-11-24 01:43  | [1106. 解析布尔表达式](https://leetcode-cn.com/problems/parsing-a-boolean-expression) | HARD | 2 |
+| 2022-11-24 01:24  | [1668. 最大重复子字符串](https://leetcode-cn.com/problems/maximum-repeating-substring) | EASY | 5 |
+| 2022-11-24 01:21  | [795. 区间子数组个数](https://leetcode-cn.com/problems/number-of-subarrays-with-bounded-maximum) | MEDIUM | 6 |
+| 2022-11-23 09:17  | [剑指 Offer 37. 序列化二叉树](https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof) | HARD | 2 |
+| 2022-11-23 09:15  | [297. 二叉树的序列化与反序列化](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree) | HARD | 3 |
+| 2022-11-23 09:12  | [剑指 Offer II 115. 重建序列](https://leetcode-cn.com/problems/ur2n8P) | MEDIUM | 2 |
+| 2022-11-23 09:11  | [剑指 Offer II 029. 排序的循环链表](https://leetcode-cn.com/problems/4ueAj6) | MEDIUM | 2 |
+| 2022-11-23 09:10  | [剑指 Offer II 016. 不含重复字符的最长子字符串](https://leetcode-cn.com/problems/wtcaE1) | MEDIUM | 2 |
+| 2022-11-23 09:09  | [剑指 Offer II 106. 二分图](https://leetcode-cn.com/problems/vEAB3K) | MEDIUM | 4 |
+| 2022-11-23 09:07  | [剑指 Offer II 022. 链表中环的入口节点](https://leetcode-cn.com/problems/c32eOV) | MEDIUM | 2 |
+| 2022-11-23 08:54  | [445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii) | MEDIUM | 2 |
+| 2022-11-23 08:53  | [剑指 Offer II 025. 链表中的两数相加](https://leetcode-cn.com/problems/lMSNwu) | MEDIUM | 2 |
+| 2022-11-23 08:51  | [剑指 Offer II 031. 最近最少使用缓存](https://leetcode-cn.com/problems/OrIXps) | MEDIUM | 4 |
+| 2022-11-23 08:47  | [剑指 Offer II 028. 展平多级双向链表](https://leetcode-cn.com/problems/Qv1Da2) | MEDIUM | 2 |
+| 2022-11-23 08:47  | [430. 扁平化多级双向链表](https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list) | MEDIUM | 2 |
+| 2022-11-23 08:38  | [735. 行星碰撞](https://leetcode-cn.com/problems/asteroid-collision) | MEDIUM | 2 |
+| 2022-11-23 08:37  | [剑指 Offer II 037. 小行星碰撞](https://leetcode-cn.com/problems/XagZNi) | MEDIUM | 2 |
+| 2022-11-23 08:36  | [剑指 Offer II 090. 环形房屋偷盗](https://leetcode-cn.com/problems/PzWKhm) | MEDIUM | 2 |
+| 2022-11-23 08:28  | [97. 交错字符串](https://leetcode-cn.com/problems/interleaving-string) | MEDIUM | 2 |
+| 2022-11-23 08:28  | [剑指 Offer II 096. 字符串交织](https://leetcode-cn.com/problems/IY6buf) | MEDIUM | 2 |
+| 2022-11-23 08:20  | [剑指 Offer II 021. 删除链表的倒数第 n 个结点](https://leetcode-cn.com/problems/SLwz0R) | MEDIUM | 2 |
+| 2022-11-23 08:16  | [剑指 Offer II 030. 插入、删除和随机访问都是 O(1) 的容器](https://leetcode-cn.com/problems/FortPu) | MEDIUM | 3 |
+| 2022-11-23 08:14  | [919. 完全二叉树插入器](https://leetcode-cn.com/problems/complete-binary-tree-inserter) | MEDIUM | 4 |
+| 2022-11-23 08:14  | [剑指 Offer II 043. 往完全二叉树添加节点](https://leetcode-cn.com/problems/NaqhDT) | MEDIUM | 4 |
+| 2022-11-23 08:08  | [剑指 Offer II 010. 和为 k 的子数组](https://leetcode-cn.com/problems/QTMn0o) | MEDIUM | 3 |
+| 2022-11-23 08:08  | [560. 和为 K 的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k) | MEDIUM | 3 |
+| 2022-11-23 08:01  | [剑指 Offer II 014. 字符串中的变位词](https://leetcode-cn.com/problems/MPnaiL) | MEDIUM | 3 |
+| 2022-11-23 07:46  | [剑指 Offer II 047. 二叉树剪枝](https://leetcode-cn.com/problems/pOCWxh) | MEDIUM | 2 |
+| 2022-11-23 03:46  | [304. 二维区域和检索 - 矩阵不可变](https://leetcode-cn.com/problems/range-sum-query-2d-immutable) | MEDIUM | 5 |
+| 2022-11-23 03:45  | [剑指 Offer II 013. 二维子矩阵的和](https://leetcode-cn.com/problems/O4NDxx) | MEDIUM | 5 |
+| 2022-11-23 03:35  | [926. 将字符串翻转到单调递增](https://leetcode-cn.com/problems/flip-string-to-monotone-increasing) | MEDIUM | 3 |
+| 2022-11-23 03:35  | [剑指 Offer II 092. 翻转字符](https://leetcode-cn.com/problems/cyJERH) | MEDIUM | 3 |
+| 2022-11-23 03:31  | [剑指 Offer II 015. 字符串中的所有变位词](https://leetcode-cn.com/problems/VabMRr) | MEDIUM | 5 |
+| 2022-11-23 03:31  | [525. 连续数组](https://leetcode-cn.com/problems/contiguous-array) | MEDIUM | 2 |
+| 2022-11-23 03:29  | [剑指 Offer II 011. 0 和 1 个数相同的子数组](https://leetcode-cn.com/problems/A1NYOS) | MEDIUM | 2 |
+| 2022-11-23 03:19  | [剑指 Offer II 089. 房屋偷盗](https://leetcode-cn.com/problems/Gu0c2T) | MEDIUM | 2 |
+| 2022-11-23 03:17  | [剑指 Offer II 009. 乘积小于 K 的子数组](https://leetcode-cn.com/problems/ZVAVXX) | MEDIUM | 4 |
+| 2022-11-23 03:15  | [713. 乘积小于 K 的子数组](https://leetcode-cn.com/problems/subarray-product-less-than-k) | MEDIUM | 4 |
+| 2022-11-23 03:07  | [剑指 Offer II 008. 和大于等于 target 的最短子数组](https://leetcode-cn.com/problems/2VG8Kg) | MEDIUM | 6 |
+| 2022-11-23 02:57  | [剑指 Offer II 082. 含有重复元素集合的组合](https://leetcode-cn.com/problems/4sjJUc) | MEDIUM | 2 |
+| 2022-11-23 02:56  | [剑指 Offer II 007. 数组中和为 0 的三个数](https://leetcode-cn.com/problems/1fGaJU) | MEDIUM | 2 |
+| 2022-11-23 02:54  | [2419. 按位与最大的最长子数组](https://leetcode-cn.com/problems/longest-subarray-with-maximum-bitwise-and) | MEDIUM | 3 |
+| 2022-11-23 02:27  | [1742. 盒子中小球的最大数量](https://leetcode-cn.com/problems/maximum-number-of-balls-in-a-box) | EASY | 5 |
+| 2022-11-22 08:07  | [2414. 最长的字母序连续子字符串的长度](https://leetcode-cn.com/problems/length-of-the-longest-alphabetical-continuous-substring) | MEDIUM | 2 |
+| 2022-11-22 07:47  | [873. 最长的斐波那契子序列的长度](https://leetcode-cn.com/problems/length-of-longest-fibonacci-subsequence) | MEDIUM | 2 |
+| 2022-11-22 07:46  | [剑指 Offer II 093. 最长斐波那契数列](https://leetcode-cn.com/problems/Q91FMA) | MEDIUM | 2 |
+| 2022-11-22 07:37  | [剑指 Offer II 102. 加减的目标值](https://leetcode-cn.com/problems/YaVDxD) | MEDIUM | 4 |
+| 2022-11-22 07:21  | [377. 组合总和 Ⅳ](https://leetcode-cn.com/problems/combination-sum-iv) | MEDIUM | 2 |
+| 2022-11-22 07:21  | [剑指 Offer II 104. 排列的数目](https://leetcode-cn.com/problems/D0F0SV) | MEDIUM | 2 |
+| 2022-11-22 07:15  | [剑指 Offer II 109. 开密码锁](https://leetcode-cn.com/problems/zlDJc7) | MEDIUM | 3 |
+| 2022-11-22 07:11  | [剑指 Offer II 050. 向下的路径节点之和](https://leetcode-cn.com/problems/6eUYwP) | MEDIUM | 5 |
+| 2022-11-22 07:11  | [437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii) | MEDIUM | 4 |
+| 2022-11-22 03:23  | [剑指 Offer II 103. 最少的硬币数目](https://leetcode-cn.com/problems/gaM7Ch) | MEDIUM | 2 |
+| 2022-11-22 03:21  | [剑指 Offer II 036. 后缀表达式](https://leetcode-cn.com/problems/8Zf90G) | MEDIUM | 11 |
+| 2022-11-22 03:01  | [剑指 Offer II 111. 计算除法](https://leetcode-cn.com/problems/vlzXQL) | MEDIUM | 3 |
+| 2022-11-22 03:01  | [399. 除法求值](https://leetcode-cn.com/problems/evaluate-division) | MEDIUM | 4 |
+| 2022-11-22 02:55  | [剑指 Offer II 113. 课程顺序](https://leetcode-cn.com/problems/QA2IGt) | MEDIUM | 5 |
+| 2022-11-22 02:54  | [210. 课程表 II](https://leetcode-cn.com/problems/course-schedule-ii) | MEDIUM | 3 |
+| 2022-11-22 02:49  | [剑指 Offer II 053. 二叉搜索树中的中序后继](https://leetcode-cn.com/problems/P5rCT8) | MEDIUM | 4 |
+| 2022-11-22 02:43  | [剑指 Offer II 118. 多余的边](https://leetcode-cn.com/problems/7LpjUW) | MEDIUM | 2 |
+| 2022-11-22 02:42  | [684. 冗余连接](https://leetcode-cn.com/problems/redundant-connection) | MEDIUM | 2 |
+| 2022-11-22 02:35  | [剑指 Offer II 119. 最长连续序列](https://leetcode-cn.com/problems/WhsWhI) | MEDIUM | 2 |
+| 2022-11-22 02:33  | [剑指 Offer II 057. 值和下标之差都在给定的范围内](https://leetcode-cn.com/problems/7WqeDu) | MEDIUM | 3 |
+| 2022-11-22 02:31  | [220. 存在重复元素 III](https://leetcode-cn.com/problems/contains-duplicate-iii) | HARD | 4 |
+| 2022-11-22 02:15  | [剑指 Offer II 061. 和最小的 k 个数对](https://leetcode-cn.com/problems/qn8gGX) | MEDIUM | 4 |
+| 2022-11-22 02:15  | [373. 查找和最小的 K 对数字](https://leetcode-cn.com/problems/find-k-pairs-with-smallest-sums) | MEDIUM | 4 |
+| 2022-11-22 01:54  | [剑指 Offer II 064. 神奇的字典](https://leetcode-cn.com/problems/US1pGT) | MEDIUM | 4 |
+| 2022-11-22 01:51  | [676. 实现一个魔法字典](https://leetcode-cn.com/problems/implement-magic-dictionary) | MEDIUM | 4 |
+| 2022-11-22 01:37  | [878. 第 N 个神奇数字](https://leetcode-cn.com/problems/nth-magical-number) | HARD | 4 |
+| 2022-11-21 09:10  | [2410. 运动员和训练师的最大匹配数](https://leetcode-cn.com/problems/maximum-matching-of-players-with-trainers) | MEDIUM | 4 |
+| 2022-11-21 08:46  | [1884. 鸡蛋掉落-两枚鸡蛋](https://leetcode-cn.com/problems/egg-drop-with-2-eggs-and-n-floors) | MEDIUM | 13 |
+| 2022-11-21 08:11  | [2336. 无限集中的最小数字](https://leetcode-cn.com/problems/smallest-number-in-infinite-set) | MEDIUM | 2 |
+| 2022-11-21 07:50  | [1314. 矩阵区域和](https://leetcode-cn.com/problems/matrix-block-sum) | MEDIUM | 1 |
+| 2022-11-21 07:38  | [789. 逃脱阻碍者](https://leetcode-cn.com/problems/escape-the-ghosts) | MEDIUM | 2 |
+| 2022-11-21 07:29  | [2420. 找到所有好下标](https://leetcode-cn.com/problems/find-all-good-indices) | MEDIUM | 2 |
+| 2022-11-21 07:19  | [LCP 62. 交通枢纽](https://leetcode-cn.com/problems/D9PW8w) | MEDIUM | 2 |
+| 2022-11-21 07:11  | [2475. 数组中不等三元组的数目](https://leetcode-cn.com/problems/number-of-unequal-triplets-in-array) | EASY | 4 |
+| 2022-11-21 06:57  | [2429. 最小 XOR](https://leetcode-cn.com/problems/minimize-xor) | MEDIUM | 2 |
+| 2022-11-21 03:44  | [2424. 最长上传前缀](https://leetcode-cn.com/problems/longest-uploaded-prefix) | MEDIUM | 2 |
+| 2022-11-21 03:28  | [剑指 Offer II 107. 矩阵中的距离](https://leetcode-cn.com/problems/2bCMpM) | MEDIUM | 4 |
+| 2022-11-21 03:25  | [540. 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array) | MEDIUM | 2 |
+| 2022-11-21 03:25  | [剑指 Offer II 070. 排序数组中只出现一次的数字](https://leetcode-cn.com/problems/skFtm2) | MEDIUM | 4 |
+| 2022-11-21 03:19  | [528. 按权重随机选择](https://leetcode-cn.com/problems/random-pick-with-weight) | MEDIUM | 4 |
+| 2022-11-21 03:16  | [剑指 Offer II 071. 按权重生成随机数](https://leetcode-cn.com/problems/cuyjEf) | MEDIUM | 2 |
+| 2022-11-21 02:44  | [剑指 Offer II 073. 狒狒吃香蕉](https://leetcode-cn.com/problems/nZZqjQ) | MEDIUM | 2 |
+| 2022-11-21 02:41  | [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas) | MEDIUM | 2 |
+| 2022-11-21 02:24  | [剑指 Offer II 074. 合并区间](https://leetcode-cn.com/problems/SsGoHC) | MEDIUM | 3 |
+| 2022-11-21 02:17  | [732. 我的日程安排表 III](https://leetcode-cn.com/problems/my-calendar-iii) | HARD | 4 |
+| 2022-11-21 02:12  | [731. 我的日程安排表 II](https://leetcode-cn.com/problems/my-calendar-ii) | MEDIUM | 6 |
+| 2022-11-21 02:06  | [剑指 Offer II 058. 日程表](https://leetcode-cn.com/problems/fi9suh) | MEDIUM | 6 |
+| 2022-11-21 02:04  | [729. 我的日程安排表 I](https://leetcode-cn.com/problems/my-calendar-i) | MEDIUM | 6 |
 | 2022-11-21 01:56  | [剑指 Offer II 077. 链表排序](https://leetcode-cn.com/problems/7WHec2) | MEDIUM | 4 |
 | 2022-11-21 01:51  | [剑指 Offer II 087. 复原 IP ](https://leetcode-cn.com/problems/0on3uN) | MEDIUM | 1 |
 | 2022-11-21 01:48  | [808. 分汤](https://leetcode-cn.com/problems/soup-servings) | MEDIUM | 4 |
@@ -753,7 +914,6 @@
 | 2021-07-02 03:42  | [1576. 替换所有的问号](https://leetcode-cn.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters) | EASY | 1 |
 | 2021-07-02 03:29  | [1833. 雪糕的最大数量](https://leetcode-cn.com/problems/maximum-ice-cream-bars) | MEDIUM | 2 |
 | 2021-07-02 03:24  | [453. 最小操作次数使数组元素相等](https://leetcode-cn.com/problems/minimum-moves-to-equal-array-elements) | MEDIUM | 2 |
-| 2021-07-02 03:08  | [1668. 最大重复子字符串](https://leetcode-cn.com/problems/maximum-repeating-substring) | EASY | 4 |
 | 2021-07-02 02:50  | [1758. 生成交替二进制字符串的最少操作数](https://leetcode-cn.com/problems/minimum-changes-to-make-alternating-binary-string) | EASY | 1 |
 | 2021-07-02 02:29  | [1736. 替换隐藏数字得到的最晚时间](https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits) | EASY | 2 |
 | 2021-07-02 02:02  | [661. 图片平滑器](https://leetcode-cn.com/problems/image-smoother) | EASY | 2 |
@@ -877,7 +1037,6 @@
 | 2021-06-11 16:18  | [999. 可以被一步捕获的棋子数](https://leetcode-cn.com/problems/available-captures-for-rook) | EASY | 2 |
 | 2021-06-11 09:55  | [1694. 重新格式化电话号码](https://leetcode-cn.com/problems/reformat-phone-number) | EASY | 5 |
 | 2021-06-11 09:16  | [剑指 Offer 21. 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof) | EASY | 1 |
-| 2021-06-11 09:13  | [1742. 盒子中小球的最大数量](https://leetcode-cn.com/problems/maximum-number-of-balls-in-a-box) | EASY | 2 |
 | 2021-06-11 09:01  | [883. 三维形体投影面积](https://leetcode-cn.com/problems/projection-area-of-3d-shapes) | EASY | 2 |
 | 2021-06-11 08:41  | [496. 下一个更大元素 I](https://leetcode-cn.com/problems/next-greater-element-i) | EASY | 1 |
 | 2021-06-11 08:29  | [1122. 数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array) | EASY | 2 |
@@ -893,7 +1052,6 @@
 | 2021-06-11 06:30  | [LCP 02. 分式化简](https://leetcode-cn.com/problems/deep-dark-fraction) | EASY | 1 |
 | 2021-06-11 06:17  | [811. 子域名访问计数](https://leetcode-cn.com/problems/subdomain-visit-count) | MEDIUM | 1 |
 | 2021-06-11 03:53  | [682. 棒球比赛](https://leetcode-cn.com/problems/baseball-game) | EASY | 1 |
-| 2021-06-11 03:38  | [1752. 检查数组是否经排序和轮转得到](https://leetcode-cn.com/problems/check-if-array-is-sorted-and-rotated) | EASY | 1 |
 | 2021-06-11 03:23  | [908. 最小差值 I](https://leetcode-cn.com/problems/smallest-range-i) | EASY | 1 |
 | 2021-06-11 03:00  | [1848. 到目标元素的最小距离](https://leetcode-cn.com/problems/minimum-distance-to-the-target-element) | EASY | 1 |
 | 2021-06-11 02:42  | [476. 数字的补数](https://leetcode-cn.com/problems/number-complement) | EASY | 1 |
