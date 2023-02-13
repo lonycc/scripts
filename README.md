@@ -19,12 +19,19 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 5375, 总通过次数: 4458, 已通过题数: 1635
+> 总提交次数: 5403, 总通过次数: 4485, 已通过题数: 1639
 
-> 已通过题目的难度和数量: EASY = 641, MEDIUM = 889, HARD = 105, 
+> 已通过题目的难度和数量: EASY = 641, MEDIUM = 892, HARD = 106, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2023-02-12 05:39  | [1138. 字母板上的路径](https://leetcode-cn.com/problems/alphabet-board-path) | MEDIUM | 5 |
+| 2023-02-11 01:06  | [2335. 装满杯子需要的最短总时长](https://leetcode-cn.com/problems/minimum-amount-of-time-to-fill-cups) | EASY | 2 |
+| 2023-02-10 02:27  | [1218. 最长定差子序列](https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference) | MEDIUM | 4 |
+| 2023-02-10 02:17  | [1223. 掷骰子模拟](https://leetcode-cn.com/problems/dice-roll-simulation) | HARD | 7 |
+| 2023-02-09 02:23  | [1797. 设计一个验证系统](https://leetcode-cn.com/problems/design-authentication-manager) | MEDIUM | 7 |
+| 2023-02-08 01:58  | [1233. 删除子文件夹](https://leetcode-cn.com/problems/remove-sub-folders-from-the-filesystem) | MEDIUM | 8 |
+| 2023-02-07 01:44  | [1604. 警告一小时内使用相同员工卡大于等于三次的人](https://leetcode-cn.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) | MEDIUM | 8 |
 | 2023-02-06 02:39  | [2561. 重排水果](https://leetcode-cn.com/problems/rearranging-fruits) | HARD | 4 |
 | 2023-02-06 02:31  | [2556. 二进制矩阵中翻转最多一次使路径不连通](https://leetcode-cn.com/problems/disconnect-path-in-a-binary-matrix-by-at-most-one-flip) | MEDIUM | 4 |
 | 2023-02-06 02:24  | [2555. 两个线段获得的最多奖品](https://leetcode-cn.com/problems/maximize-win-from-two-segments) | MEDIUM | 4 |
@@ -270,7 +277,6 @@
 | 2022-12-05 10:37  | [319. 灯泡开关](https://leetcode-cn.com/problems/bulb-switcher) | MEDIUM | 5 |
 | 2022-12-05 10:30  | [1901. 寻找峰值 II](https://leetcode-cn.com/problems/find-a-peak-element-ii) | MEDIUM | 5 |
 | 2022-12-05 10:25  | [646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain) | MEDIUM | 12 |
-| 2022-12-05 10:17  | [1797. 设计一个验证系统](https://leetcode-cn.com/problems/design-authentication-manager) | MEDIUM | 6 |
 | 2022-12-05 10:11  | [2240. 买钢笔和铅笔的方案数](https://leetcode-cn.com/problems/number-of-ways-to-buy-pens-and-pencils) | MEDIUM | 4 |
 | 2022-12-05 10:06  | [1003. 检查替换后的词是否有效](https://leetcode-cn.com/problems/check-if-word-is-valid-after-substitutions) | MEDIUM | 7 |
 | 2022-12-05 08:30  | [1052. 爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner) | MEDIUM | 4 |
@@ -992,7 +998,6 @@
 | 2022-08-03 02:30  | [1667. 修复表中的名字](https://leetcode-cn.com/problems/fix-names-in-a-table) | EASY | 4 |
 | 2022-08-03 02:29  | [1484. 按日期分组销售产品](https://leetcode-cn.com/problems/group-sold-products-by-the-date) | EASY | 3 |
 | 2022-08-03 02:28  | [1527. 患某种疾病的患者](https://leetcode-cn.com/problems/patients-with-a-condition) | EASY | 3 |
-| 2022-08-02 07:58  | [2335. 装满杯子需要的最短总时长](https://leetcode-cn.com/problems/minimum-amount-of-time-to-fill-cups) | EASY | 1 |
 | 2022-08-02 07:55  | [2341. 数组能形成多少数对](https://leetcode-cn.com/problems/maximum-number-of-pairs-in-array) | EASY | 2 |
 | 2022-08-02 07:46  | [54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix) | MEDIUM | 3 |
 | 2022-08-02 07:44  | [16. 最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest) | MEDIUM | 1 |
@@ -1600,7 +1605,6 @@
 | 2020-11-06 08:47  | [238. 除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self) | MEDIUM | 8 |
 | 2020-11-06 08:13  | [1356. 根据数字二进制下 1 的数目排序](https://leetcode-cn.com/problems/sort-integers-by-the-number-of-1-bits) | EASY | 1 |
 | 2020-11-06 07:36  | [LCP 01. 猜数字](https://leetcode-cn.com/problems/guess-numbers) | EASY | 1 |
-| 2020-11-06 04:57  | [1604. 警告一小时内使用相同员工卡大于等于三次的人](https://leetcode-cn.com/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period) | MEDIUM | 6 |
 | 2020-11-05 08:30  | [1624. 两个相同字符之间的最长子字符串](https://leetcode-cn.com/problems/largest-substring-between-two-equal-characters) | EASY | 3 |
 | 2020-11-05 02:38  | [LCP 06. 拿硬币](https://leetcode-cn.com/problems/na-ying-bi) | EASY | 3 |
 | 2020-11-04 15:40  | [57. 插入区间](https://leetcode-cn.com/problems/insert-interval) | MEDIUM | 1 |
