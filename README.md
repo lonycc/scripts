@@ -19,12 +19,32 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 6030, 总通过次数: 5067, 已通过题数: 1759
+> 总提交次数: 6102, 总通过次数: 5139, 已通过题数: 1775
 
-> 已通过题目的难度和数量: EASY = 670, MEDIUM = 953, HARD = 136, 
+> 已通过题目的难度和数量: EASY = 672, MEDIUM = 959, HARD = 144, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2023-04-16 03:12  | [1157. 子数组中占绝大多数的元素](https://leetcode-cn.com/problems/online-majority-element-in-subarray) | HARD | 4 |
+| 2023-04-15 02:16  | [1042. 不邻接植花](https://leetcode-cn.com/problems/flower-planting-with-no-adjacent) | MEDIUM | 7 |
+| 2023-04-14 01:19  | [1023. 驼峰式匹配](https://leetcode-cn.com/problems/camelcase-matching) | MEDIUM | 12 |
+| 2023-04-13 01:29  | [736. Lisp 语法解析](https://leetcode-cn.com/problems/parse-lisp-expression) | HARD | 6 |
+| 2023-04-13 01:25  | [1028. 从先序遍历还原二叉树](https://leetcode-cn.com/problems/recover-a-tree-from-preorder-traversal) | HARD | 6 |
+| 2023-04-13 01:19  | [2404. 出现最频繁的偶数元素](https://leetcode-cn.com/problems/most-frequent-even-element) | EASY | 5 |
+| 2023-04-12 01:30  | [1147. 段式回文](https://leetcode-cn.com/problems/longest-chunked-palindrome-decomposition) | HARD | 6 |
+| 2023-04-11 11:41  | [668. 乘法表中第k小的数](https://leetcode-cn.com/problems/kth-smallest-number-in-multiplication-table) | HARD | 6 |
+| 2023-04-11 11:36  | [691. 贴纸拼词](https://leetcode-cn.com/problems/stickers-to-spell-word) | HARD | 5 |
+| 2023-04-11 01:53  | [2612. 最少翻转操作数](https://leetcode-cn.com/problems/minimum-reverse-operations) | HARD | 3 |
+| 2023-04-11 01:51  | [2617. 网格图中最少访问的格子数](https://leetcode-cn.com/problems/minimum-number-of-visited-cells-in-a-grid) | HARD | 4 |
+| 2023-04-11 01:47  | [2616. 最小化数对的最大差值](https://leetcode-cn.com/problems/minimize-the-maximum-difference-of-pairs) | MEDIUM | 3 |
+| 2023-04-11 01:44  | [2615. 等值距离和](https://leetcode-cn.com/problems/sum-of-distances) | MEDIUM | 6 |
+| 2023-04-11 01:40  | [2611. 老鼠和奶酪](https://leetcode-cn.com/problems/mice-and-cheese) | MEDIUM | 4 |
+| 2023-04-11 01:33  | [2610. 转换二维数组](https://leetcode-cn.com/problems/convert-an-array-into-a-2d-array-with-conditions) | MEDIUM | 3 |
+| 2023-04-11 01:29  | [1041. 困于环中的机器人](https://leetcode-cn.com/problems/robot-bounded-in-circle) | MEDIUM | 4 |
+| 2023-04-10 01:52  | [2614. 对角线上的质数](https://leetcode-cn.com/problems/prime-in-diagonal) | EASY | 3 |
+| 2023-04-10 01:50  | [2609. 最长平衡子字符串](https://leetcode-cn.com/problems/find-the-longest-balanced-substring-of-a-binary-string) | EASY | 3 |
+| 2023-04-10 01:42  | [1070. 产品销售分析 III](https://leetcode-cn.com/problems/product-sales-analysis-iii) | MEDIUM | 2 |
+| 2023-04-10 01:37  | [1019. 链表中的下一个更大节点](https://leetcode-cn.com/problems/next-greater-node-in-linked-list) | MEDIUM | 9 |
 | 2023-04-09 04:16  | [2399. 检查相同字母间的距离](https://leetcode-cn.com/problems/check-distances-between-same-letters) | EASY | 3 |
 | 2023-04-08 14:06  | [1125. 最小的必要团队](https://leetcode-cn.com/problems/smallest-sufficient-team) | HARD | 5 |
 | 2023-04-07 12:04  | [1040. 移动石子直到连续 II](https://leetcode-cn.com/problems/moving-stones-until-consecutive-ii) | MEDIUM | 6 |
@@ -360,7 +380,6 @@
 | 2022-12-11 01:39  | [1827. 最少操作使数组递增](https://leetcode-cn.com/problems/minimum-operations-to-make-the-array-increasing) | EASY | 3 |
 | 2022-12-10 15:20  | [930. 和相同的二元子数组](https://leetcode-cn.com/problems/binary-subarrays-with-sum) | MEDIUM | 8 |
 | 2022-12-10 15:17  | [2165. 重排数字的最小值](https://leetcode-cn.com/problems/smallest-value-of-the-rearranged-number) | MEDIUM | 4 |
-| 2022-12-10 14:52  | [1042. 不邻接植花](https://leetcode-cn.com/problems/flower-planting-with-no-adjacent) | MEDIUM | 6 |
 | 2022-12-10 14:45  | [1895. 最大的幻方](https://leetcode-cn.com/problems/largest-magic-square) | MEDIUM | 4 |
 | 2022-12-10 05:44  | [1094. 拼车](https://leetcode-cn.com/problems/car-pooling) | MEDIUM | 3 |
 | 2022-12-10 05:41  | [LCP 34. 二叉树染色](https://leetcode-cn.com/problems/er-cha-shu-ran-se-UGC) | MEDIUM | 5 |
@@ -398,7 +417,6 @@
 | 2022-12-08 03:05  | [688. 骑士在棋盘上的概率](https://leetcode-cn.com/problems/knight-probability-in-chessboard) | MEDIUM | 4 |
 | 2022-12-08 02:59  | [636. 函数的独占时间](https://leetcode-cn.com/problems/exclusive-time-of-functions) | MEDIUM | 5 |
 | 2022-12-08 02:27  | [1105. 填充书架](https://leetcode-cn.com/problems/filling-bookcase-shelves) | MEDIUM | 4 |
-| 2022-12-08 02:19  | [1023. 驼峰式匹配](https://leetcode-cn.com/problems/camelcase-matching) | MEDIUM | 11 |
 | 2022-12-08 01:56  | [1812. 判断国际象棋棋盘中一个格子的颜色](https://leetcode-cn.com/problems/determine-color-of-a-chessboard-square) | EASY | 3 |
 | 2022-12-07 10:19  | [458. 可怜的小猪](https://leetcode-cn.com/problems/poor-pigs) | HARD | 6 |
 | 2022-12-07 10:12  | [1530. 好叶子节点对的数量](https://leetcode-cn.com/problems/number-of-good-leaf-nodes-pairs) | MEDIUM | 3 |
@@ -449,7 +467,6 @@
 | 2022-12-04 06:00  | [2002. 两个回文子序列长度的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences) | MEDIUM | 3 |
 | 2022-12-04 05:57  | [947. 移除最多的同行或同列石头](https://leetcode-cn.com/problems/most-stones-removed-with-same-row-or-column) | MEDIUM | 11 |
 | 2022-12-04 05:52  | [1072. 按列翻转得到最大值等行数](https://leetcode-cn.com/problems/flip-columns-for-maximum-number-of-equal-rows) | MEDIUM | 5 |
-| 2022-12-04 05:48  | [1019. 链表中的下一个更大节点](https://leetcode-cn.com/problems/next-greater-node-in-linked-list) | MEDIUM | 8 |
 | 2022-12-04 05:43  | [449. 序列化和反序列化二叉搜索树](https://leetcode-cn.com/problems/serialize-and-deserialize-bst) | MEDIUM | 4 |
 | 2022-12-04 05:40  | [2150. 找出数组中的所有孤独数字](https://leetcode-cn.com/problems/find-all-lonely-numbers-in-the-array) | MEDIUM | 4 |
 | 2022-12-04 05:35  | [781. 森林中的兔子](https://leetcode-cn.com/problems/rabbits-in-forest) | MEDIUM | 6 |
@@ -955,7 +972,6 @@
 | 2022-09-21 02:18  | [854. 相似度为 K 的字符串](https://leetcode-cn.com/problems/k-similar-strings) | HARD | 3 |
 | 2022-09-19 09:23  | [2376. 统计特殊整数](https://leetcode-cn.com/problems/count-special-integers) | HARD | 1 |
 | 2022-09-15 15:34  | [2406. 将区间分为最少组数](https://leetcode-cn.com/problems/divide-intervals-into-minimum-number-of-groups) | MEDIUM | 3 |
-| 2022-09-15 15:12  | [2404. 出现最频繁的偶数元素](https://leetcode-cn.com/problems/most-frequent-even-element) | EASY | 4 |
 | 2022-09-02 02:56  | [687. 最长同值路径](https://leetcode-cn.com/problems/longest-univalue-path) | MEDIUM | 2 |
 | 2022-09-01 02:25  | [1475. 商品折扣后的最终价格](https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop) | EASY | 4 |
 | 2022-08-31 02:18  | [946. 验证栈序列](https://leetcode-cn.com/problems/validate-stack-sequences) | MEDIUM | 2 |
