@@ -19,12 +19,36 @@
 
 > 重刷次数的计算规则为: 累计所有提交通过且互为不同一天的记录次数
 
-> 总提交次数: 6397, 总通过次数: 5420, 已通过题数: 1847
+> 总提交次数: 6471, 总通过次数: 5493, 已通过题数: 1868
 
-> 已通过题目的难度和数量: EASY = 685, MEDIUM = 986, HARD = 176, 
+> 已通过题目的难度和数量: EASY = 689, MEDIUM = 1000, HARD = 179, 
 
 | 最近提交时间 | 题目 | 题目难度 | 提交次数 |
 | ---- | ---- | ---- | ---- |
+| 2023-05-07 01:26  | [1010. 总持续时间可被 60 整除的歌曲](https://leetcode-cn.com/problems/pairs-of-songs-with-total-durations-divisible-by-60) | MEDIUM | 4 |
+| 2023-05-06 02:28  | [1419. 数青蛙](https://leetcode-cn.com/problems/minimum-number-of-frogs-croaking) | MEDIUM | 5 |
+| 2023-05-05 09:24  | [2139. 得到目标值的最少行动次数](https://leetcode-cn.com/problems/minimum-moves-to-reach-target-score) | MEDIUM | 3 |
+| 2023-05-05 09:19  | [2049. 统计最高分的节点数目](https://leetcode-cn.com/problems/count-nodes-with-the-highest-score) | MEDIUM | 4 |
+| 2023-05-05 09:17  | [2257. 统计网格图中没有被保卫的格子数](https://leetcode-cn.com/problems/count-unguarded-cells-in-the-grid) | MEDIUM | 2 |
+| 2023-05-05 09:15  | [2261. 含最多 K 个可整除元素的子数组](https://leetcode-cn.com/problems/k-divisible-elements-subarrays) | MEDIUM | 3 |
+| 2023-05-05 09:13  | [990. 等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations) | MEDIUM | 3 |
+| 2023-05-05 09:10  | [2659. 将数组清空](https://leetcode-cn.com/problems/make-array-empty) | HARD | 6 |
+| 2023-05-05 09:07  | [2663. 字典序最小的美丽字符串](https://leetcode-cn.com/problems/lexicographically-smallest-beautiful-string) | HARD | 3 |
+| 2023-05-05 09:06  | [2653. 滑动子数组的美丽值](https://leetcode-cn.com/problems/sliding-subarray-beauty) | MEDIUM | 3 |
+| 2023-05-05 09:02  | [2662. 前往目标的最小代价](https://leetcode-cn.com/problems/minimum-cost-of-a-path-with-special-roads) | MEDIUM | 3 |
+| 2023-05-05 09:01  | [2654. 使数组所有元素变成 1 的最少操作次数](https://leetcode-cn.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1) | MEDIUM | 6 |
+| 2023-05-05 08:58  | [2658. 网格图中鱼的最大数目](https://leetcode-cn.com/problems/maximum-number-of-fish-in-a-grid) | MEDIUM | 3 |
+| 2023-05-05 08:56  | [2657. 找到两个数组的前缀公共数组](https://leetcode-cn.com/problems/find-the-prefix-common-array-of-two-arrays) | MEDIUM | 3 |
+| 2023-05-05 07:59  | [2661. 找出叠涂元素](https://leetcode-cn.com/problems/first-completely-painted-row-or-column) | MEDIUM | 2 |
+| 2023-05-05 07:56  | [2660. 保龄球游戏的获胜者](https://leetcode-cn.com/problems/determine-the-winner-of-a-bowling-game) | EASY | 3 |
+| 2023-05-05 07:54  | [2651. 计算列车到站时间](https://leetcode-cn.com/problems/calculate-delayed-arrival-time) | EASY | 3 |
+| 2023-05-05 07:53  | [2652. 倍数求和](https://leetcode-cn.com/problems/sum-multiples) | EASY | 3 |
+| 2023-05-05 07:52  | [2656. K 个元素的最大和](https://leetcode-cn.com/problems/maximum-sum-with-exactly-k-elements) | EASY | 2 |
+| 2023-05-05 07:47  | [2106. 摘水果](https://leetcode-cn.com/problems/maximum-fruits-harvested-after-at-most-k-steps) | HARD | 3 |
+| 2023-05-05 07:45  | [1003. 检查替换后的词是否有效](https://leetcode-cn.com/problems/check-if-word-is-valid-after-substitutions) | MEDIUM | 8 |
+| 2023-05-05 07:44  | [970. 强整数](https://leetcode-cn.com/problems/powerful-integers) | MEDIUM | 4 |
+| 2023-05-05 07:41  | [2432. 处理用时最长的那个任务的员工](https://leetcode-cn.com/problems/the-employee-that-worked-on-the-longest-task) | EASY | 2 |
+| 2023-05-01 14:11  | [1376. 通知所有员工所需的时间](https://leetcode-cn.com/problems/time-needed-to-inform-all-employees) | MEDIUM | 6 |
 | 2023-04-30 15:51  | [1033. 移动石子直到连续](https://leetcode-cn.com/problems/moving-stones-until-consecutive) | MEDIUM | 4 |
 | 2023-04-29 05:27  | [2423. 删除字符使频率相同](https://leetcode-cn.com/problems/remove-letter-to-equalize-frequency) | EASY | 3 |
 | 2023-04-28 00:40  | [1172. 餐盘栈](https://leetcode-cn.com/problems/dinner-plate-stacks) | HARD | 3 |
@@ -244,7 +268,7 @@
 | 2023-03-05 11:30  | [1599. 经营摩天轮的最大利润](https://leetcode-cn.com/problems/maximum-profit-of-operating-a-centennial-wheel) | MEDIUM | 4 |
 | 2023-03-04 09:55  | [982. 按位与为零的三元组](https://leetcode-cn.com/problems/triples-with-bitwise-and-equal-to-zero) | HARD | 10 |
 | 2023-03-03 01:11  | [1487. 保证文件名唯一](https://leetcode-cn.com/problems/making-file-names-unique) | MEDIUM | 5 |
-| 2023-03-02 01:06  | [面试题 05.02. 二进制数转字符串](https://leetcode-cn.com/problems/bianry-number-to-string-lcci) | MEDIUM | 8 |
+| 2023-03-02 01:06  | [面试题 05.02. 二进制数转字符串](https://leetcode-cn.com/problems/binary-number-to-string-lcci) | MEDIUM | 8 |
 | 2023-02-28 02:48  | [2363. 合并相似的物品](https://leetcode-cn.com/problems/merge-similar-items) | EASY | 5 |
 | 2023-02-27 06:38  | [393. UTF-8 编码验证](https://leetcode-cn.com/problems/utf-8-validation) | MEDIUM | 6 |
 | 2023-02-27 06:33  | [2577. 在网格图中访问一个格子的最少时间](https://leetcode-cn.com/problems/minimum-time-to-visit-a-cell-in-a-grid) | HARD | 8 |
@@ -523,7 +547,6 @@
 | 2022-12-05 10:30  | [1901. 寻找峰值 II](https://leetcode-cn.com/problems/find-a-peak-element-ii) | MEDIUM | 5 |
 | 2022-12-05 10:25  | [646. 最长数对链](https://leetcode-cn.com/problems/maximum-length-of-pair-chain) | MEDIUM | 12 |
 | 2022-12-05 10:11  | [2240. 买钢笔和铅笔的方案数](https://leetcode-cn.com/problems/number-of-ways-to-buy-pens-and-pencils) | MEDIUM | 4 |
-| 2022-12-05 10:06  | [1003. 检查替换后的词是否有效](https://leetcode-cn.com/problems/check-if-word-is-valid-after-substitutions) | MEDIUM | 7 |
 | 2022-12-05 08:30  | [1052. 爱生气的书店老板](https://leetcode-cn.com/problems/grumpy-bookstore-owner) | MEDIUM | 4 |
 | 2022-12-05 08:24  | [621. 任务调度器](https://leetcode-cn.com/problems/task-scheduler) | MEDIUM | 8 |
 | 2022-12-05 08:18  | [1493. 删掉一个元素以后全为 1 的最长子数组](https://leetcode-cn.com/problems/longest-subarray-of-1s-after-deleting-one-element) | MEDIUM | 4 |
@@ -1038,7 +1061,6 @@
 | 2022-10-17 01:26  | [2441. 与对应负数同时存在的最大正整数](https://leetcode-cn.com/problems/largest-positive-integer-that-exists-with-its-negative) | EASY | 1 |
 | 2022-10-17 01:22  | [904. 水果成篮](https://leetcode-cn.com/problems/fruit-into-baskets) | MEDIUM | 2 |
 | 2022-10-13 01:53  | [769. 最多能完成排序的块](https://leetcode-cn.com/problems/max-chunks-to-make-sorted) | MEDIUM | 1 |
-| 2022-10-13 01:30  | [2432. 处理用时最长的那个任务的员工](https://leetcode-cn.com/problems/the-employee-that-worked-on-the-longest-task) | EASY | 1 |
 | 2022-10-09 02:54  | [LCP 61. 气温变化趋势](https://leetcode-cn.com/problems/6CE719) | EASY | 2 |
 | 2022-10-09 02:41  | [1460. 通过翻转子数组使两个数组相等](https://leetcode-cn.com/problems/make-two-arrays-equal-by-reversing-subarrays) | EASY | 7 |
 | 2022-10-09 02:19  | [LCP 66. 最小展台数量](https://leetcode-cn.com/problems/600YaG) | EASY | 3 |
@@ -1245,7 +1267,6 @@
 | 2022-08-01 02:49  | [542. 01 矩阵](https://leetcode-cn.com/problems/01-matrix) | MEDIUM | 2 |
 | 2022-08-01 02:48  | [1091. 二进制矩阵中的最短路径](https://leetcode-cn.com/problems/shortest-path-in-binary-matrix) | MEDIUM | 1 |
 | 2022-08-01 02:39  | [1926. 迷宫中离入口最近的出口](https://leetcode-cn.com/problems/nearest-exit-from-entrance-in-maze) | MEDIUM | 1 |
-| 2022-08-01 02:37  | [1376. 通知所有员工所需的时间](https://leetcode-cn.com/problems/time-needed-to-inform-all-employees) | MEDIUM | 5 |
 | 2022-08-01 02:33  | [802. 找到最终的安全状态](https://leetcode-cn.com/problems/find-eventual-safe-states) | MEDIUM | 2 |
 | 2022-08-01 02:31  | [1557. 可以到达所有点的最少点数目](https://leetcode-cn.com/problems/minimum-number-of-vertices-to-reach-all-nodes) | MEDIUM | 1 |
 | 2022-08-01 02:29  | [1319. 连通网络的操作次数](https://leetcode-cn.com/problems/number-of-operations-to-make-network-connected) | MEDIUM | 2 |
